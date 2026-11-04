@@ -212,3 +212,4 @@ export default function WholesaleModal({ isOpen, onClose }) {
     </div>
   );
 }
+

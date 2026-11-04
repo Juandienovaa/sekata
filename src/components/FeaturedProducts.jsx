@@ -202,3 +202,4 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
     </section>
   );
 }
+

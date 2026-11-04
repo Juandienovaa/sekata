@@ -11,7 +11,8 @@ import Footer from './components/Footer';
 import QuickViewModal from './components/QuickViewModal';
 import WholesaleModal from './components/WholesaleModal';
 import CartDrawer from './components/CartDrawer';
-import { ShoppingBag, Check } from 'lucide-react';
+import SearchModal from './components/SearchModal';
+import { Disc, Sparkles } from 'lucide-react';
 
 export default function App() {
   // Shopping Cart state with localStorage persistence
@@ -28,6 +29,7 @@ export default function App() {
   const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
   const [isWholesaleOpen, setIsWholesaleOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
 
   // Sync cart to localStorage
@@ -86,33 +88,45 @@ export default function App() {
 
   const totalCartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
-  const scrollToShop = () => {
-    const el = document.getElementById('shop');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToAbout = () => {
-    const el = document.getElementById('about');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div className="min-h-screen bg-cream paper-texture flex flex-col font-body selection:bg-burnt-orange selection:text-cream">
-      {/* Site-wide Top Navigation */}
+      
+      {/* 1. Giant Hero Video Section at the VERY TOP strictly matching user screenshot & littleampscoffee.com */}
+      <HeroSection
+        onAddToCart={handleAddToCart}
+        onQuickView={handleQuickView}
+      />
+
+      {/* 2. Blue Announcement Bar & Main Navigation pinned right below Hero */}
       <Navbar
         cartCount={totalCartCount}
         onOpenCart={() => setIsCartOpen(true)}
         onOpenWholesale={() => setIsWholesaleOpen(true)}
+        onOpenSearch={() => setIsSearchOpen(true)}
       />
 
-      <main className="flex-1">
-        {/* Hero Section */}
-        <HeroSection
-          onShopClick={scrollToShop}
-          onLearnMoreClick={scrollToAbout}
-        />
+      {/* 3. Brand Mission Ribbon (from live littleampscoffee.com) */}
+      <section className="w-full bg-linen border-b-hairline py-8 sm:py-12">
+        <div className="container-max text-center max-w-4xl mx-auto px-4">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="w-2 h-2 rounded-full bg-burnt-orange animate-pulse"></span>
+            <span className="text-[11px] font-mono text-coffee-dust uppercase tracking-[0.08em]">
+              THE LITTLE AMPS TONE • HARRISBURG, PENNSYLVANIA
+            </span>
+          </div>
+          <p className="font-display text-[24px] sm:text-[32px] lg:text-[36px] leading-[1.15] text-espresso tracking-[-0.04em]">
+            &ldquo;At Little Amps Coffee we&rsquo;re on a never ending quest for the perfect tone, constantly sourcing and roasting the best specialty coffees we can find and serving them to our community in Harrisburg, PA and beyond!&rdquo;
+          </p>
+          <div className="mt-4 flex items-center justify-center gap-4 text-xs font-mono text-coffee-dust uppercase">
+            <span>&bull; VINTAGE DRUM ROAST</span>
+            <span>&bull; DIRECT GROWER TRADE</span>
+            <span>&bull; 33⅓ RPM SOUND</span>
+          </div>
+        </div>
+      </section>
 
-        {/* Featured Products Bar Pour */}
+      <main className="flex-1">
+        {/* Featured Products Bar Pour & Whole Bean Bags */}
         <FeaturedProducts
           onQuickView={handleQuickView}
           onAddToCart={handleAddToCart}
@@ -151,6 +165,13 @@ export default function App() {
       <WholesaleModal
         isOpen={isWholesaleOpen}
         onClose={() => setIsWholesaleOpen(false)}
+      />
+
+      {/* Instant Search Modal */}
+      <SearchModal
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+        onQuickView={handleQuickView}
       />
 
       {/* Shopping Cart Drawer */}

@@ -39,3 +39,4 @@ Then comes the quiet pause. This is where roast masters earn their stripes. Betw
 By calibrating water temperature to a chilly 38°F and setting the drip cadence to exactly one bead of water every 1.5 seconds, we coax out the water-soluble sugars and aromatic citrus terpenes while leaving harsh chlorogenic acids behind. The result is a cold beverage with the mouthfeel of vintage port wine and the clean, sparkling crispness of fresh Rainier cherries.`
   }
 ];
+

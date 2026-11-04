@@ -70,9 +70,9 @@ export default function Footer({ onOpenWholesale }) {
           <div className="lg:col-span-4 space-y-4">
             <a href="#" className="inline-block">
               <img
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Little Amps Coffee Roasters"
-                className="h-12 w-auto object-contain border-hairline rounded-[3px] p-0.5 bg-cream"
+                className="h-10 sm:h-12 w-auto object-contain"
               />
             </a>
             <p className="font-body text-[13px] leading-relaxed text-coffee-dust max-w-sm">

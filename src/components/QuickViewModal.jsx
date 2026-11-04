@@ -302,3 +302,4 @@ export default function QuickViewModal({ product, isOpen, onClose, onAddToCart }
     </div>
   );
 }
+
