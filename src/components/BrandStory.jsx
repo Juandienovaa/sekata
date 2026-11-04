@@ -3,11 +3,11 @@ import { Coffee, HeartHandshake, Sparkles, Sprout } from 'lucide-react';
 
 export default function BrandStory() {
   return (
-    <section id="filosofi" className="w-full py-14 sm:py-20 bg-[#f6eee5] border-y border-espresso/15 scroll-mt-20 select-none">
+    <section id="filosofi" className="w-full py-14 sm:py-20 bg-[#ede1d3] border-y border-espresso/15 scroll-mt-20 select-none">
       <div className="container-max px-4 sm:px-8">
         
-        {/* Main Editorial Card with Distinct Warm Linen Parchment */}
-        <div className="bg-[#fffbf6] rounded-[24px] sm:rounded-[32px] border-2 border-espresso/15 p-6 sm:p-10 lg:p-14 shadow-md relative overflow-hidden">
+        {/* Main Editorial Card with Distinct Warm Organic Linen (Bukan Putih!) */}
+        <div className="bg-[#f6ede2] rounded-[24px] sm:rounded-[32px] border-2 border-espresso/15 p-6 sm:p-10 lg:p-14 shadow-md relative overflow-hidden">
           
           {/* 
             HEADER PERSIS SEPERTI GAMBAR 2 USER:

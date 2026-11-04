@@ -5,6 +5,7 @@ import ColorfulStatement from './components/ColorfulStatement';
 import GrandOpeningCountdown from './components/GrandOpeningCountdown';
 import FeaturedProducts from './components/FeaturedProducts';
 import BrandStory from './components/BrandStory';
+import TickerMarquee from './components/TickerMarquee';
 import ReadyToReserve from './components/ReadyToReserve';
 import WholesaleSplitSection from './components/WholesaleSplitSection';
 import CommunityBoard from './components/CommunityBoard';
@@ -117,6 +118,9 @@ export default function App() {
           onQuickView={handleQuickView}
           onAddToCart={handleAddToCart}
         />
+
+        {/* TULISAN BERGERAK (INFINITE TICKER MARQUEE) DI ATAS FILOSOFI SEKATA — PERSIS GAMBAR 3 */}
+        <TickerMarquee />
 
         {/* SECTION FILOSOFI SEKATA: "Bukan Hanya Tentang Kopi." */}
         <BrandStory />
