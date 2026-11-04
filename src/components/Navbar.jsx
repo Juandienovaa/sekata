@@ -36,13 +36,13 @@ const NAV_EDITORIAL_ITEMS = [
   },
   {
     number: '03',
-    title: 'SLOWBAR & RUANG',
-    english: 'THE SLOWBAR SPACE',
-    category: 'SUASANA',
-    subtitle: 'Meja Seduh Manual, Putaran Piringan Hitam, dan Jeda Tenang',
-    href: '#ruang',
+    title: 'READY TO RESERVE',
+    english: 'BOOK YOUR TABLE',
+    category: 'RESERVASI',
+    subtitle: 'Amankan Spot Meja Slowbar untuk Ngobrol & Menikmati Waktu',
+    href: '#reserve',
     image: '/subscription_bg.jpg',
-    tag: 'ANALOG VIBES'
+    tag: 'DIRECT WA'
   },
   {
     number: '04',

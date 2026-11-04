@@ -105,8 +105,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#ruang" className="text-coffee-dust hover:text-turquoise transition-colors">
-                  &bull; RUANG UNTUK MENIKMATI WAKTU
+                <a href="#reserve" className="text-coffee-dust hover:text-turquoise transition-colors">
+                  &bull; RESERVASI MEJA SLOWBAR
                 </a>
               </li>
               <li>

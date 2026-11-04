@@ -5,7 +5,7 @@ export default function HeroSection() {
   const videoRef = useRef(null);
 
   const scrollToSlowbar = () => {
-    const el = document.getElementById('filosofi') || document.getElementById('ruang');
+    const el = document.getElementById('filosofi') || document.getElementById('reserve');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 

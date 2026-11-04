@@ -5,7 +5,7 @@ import ColorfulStatement from './components/ColorfulStatement';
 import GrandOpeningCountdown from './components/GrandOpeningCountdown';
 import FeaturedProducts from './components/FeaturedProducts';
 import BrandStory from './components/BrandStory';
-import TheSpace from './components/TheSpace';
+import ReadyToReserve from './components/ReadyToReserve';
 import WholesaleSplitSection from './components/WholesaleSplitSection';
 import CommunityBoard from './components/CommunityBoard';
 import KecilBertumbuh from './components/KecilBertumbuh';
@@ -121,8 +121,8 @@ export default function App() {
         {/* SECTION FILOSOFI SEKATA: "Bukan Hanya Tentang Kopi." */}
         <BrandStory />
 
-        {/* SECTION 5 — RUANG: "Ruang untuk Menikmati Waktu." */}
-        <TheSpace onQuickView={handleQuickView} />
+        {/* SECTION READY TO RESERVE — PERSEGI PANJANG DENGAN DIRECT TOMBOL WHATSAPP */}
+        <ReadyToReserve />
 
         {/* SECTION WHOLESALE SPLIT — PERSIS SEPERTI SCREENSHOT USER */}
         <WholesaleSplitSection />
