@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Little Amps Design System — strictly aligned with DESIGN.md */
+:root {
+  /* Colors */
+  --color-espresso: #522c25;
+  --color-burnt-orange: #c03001;
+  --color-amber-ink: #c46500;
+  --color-marigold-wash: #febf6f;
+  --color-dusty-blue: #89b4ca;
+  --color-cream-paper: #fff9f2;
+  --color-linen-beige: #f6ede3;
+  --color-taupe-hairline: #e6dad4;
+  --color-sandstone: #cbbbb4;
+  --color-coffee-dust: #977e77;
+
+  /* Typography — Font Families */
+  --font-little-amps: 'DM Serif Display', 'Little Amps', Georgia, serif;
+  --font-inclusive-sans: 'Inclusive Sans', 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-necto-mono: 'JetBrains Mono', 'Necto Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-roboto-mono: 'Roboto Mono', 'JetBrains Mono', monospace;
+
+  /* Typography — Scale */
+  --text-caption: 10px;
+  --leading-caption: 1.1;
+  --tracking-caption: 0.5px;
+  --text-body: 14px;
+  --leading-body: 1.6;
+  --tracking-body: 0.7px;
+  --text-heading-sm: 20px;
+  --leading-heading-sm: 1;
+  --tracking-heading-sm: -2px;
+  --text-heading: 22px;
+  --leading-heading: 1;
+  --tracking-heading: -2.2px;
+  --text-display: 50px;
+  --leading-display: 0.85;
+  --tracking-display: -5px;
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-5: 5px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-14: 14px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+
+  /* Layout */
+  --page-max-width: 1200px;
+
+  /* Border Radius */
+  --radius-sm: 3px;
+  --radius-cards: 8px;
+  --radius-badges: 3px;
+  --radius-images: 8px;
+  --radius-inputs: 3px;
+  --radius-buttons: 3px;
+}
+
+/* CSS Reset & Global Baseline */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--color-cream-paper);
+  color: var(--color-espresso);
+}
+
+body {
+  font-family: var(--font-inclusive-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--color-espresso);
+  background-color: var(--color-cream-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-burnt-orange);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-burnt-orange);
+  color: var(--color-cream-paper);
+}
+
+/* Paper noise effect for tactile zine feel */
+.paper-texture {
+  background-color: var(--color-cream-paper);
+  background-image: radial-gradient(rgba(82, 44, 37, 0.03) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Typography Utilities */
+.font-display {
+  font-family: var(--font-little-amps);
+  letter-spacing: -0.06em;
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.font-body {
+  font-family: var(--font-inclusive-sans);
+  letter-spacing: 0.03em;
+}
+
+.font-mono {
+  font-family: var(--font-necto-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Color Tokens */
+.text-espresso { color: var(--color-espresso); }
+.text-burnt-orange { color: var(--color-burnt-orange); }
+.text-amber { color: var(--color-amber-ink); }
+.text-coffee-dust { color: var(--color-coffee-dust); }
+.text-dusty-blue { color: var(--color-dusty-blue); }
+.text-cream { color: var(--color-cream-paper); }
+
+.bg-cream { background-color: var(--color-cream-paper); }
+.bg-linen { background-color: var(--color-linen-beige); }
+.bg-sandstone { background-color: var(--color-sandstone); }
+.bg-espresso { background-color: var(--color-espresso); }
+.bg-burnt-orange { background-color: var(--color-burnt-orange); }
+.bg-amber { background-color: var(--color-amber-ink); }
+.bg-marigold { background-color: var(--color-marigold-wash); }
+.bg-dusty-blue { background-color: var(--color-dusty-blue); }
+
+.border-hairline { border: 1px solid var(--color-taupe-hairline); }
+.border-b-hairline { border-bottom: 1px solid var(--color-taupe-hairline); }
+.border-t-hairline { border-top: 1px solid var(--color-taupe-hairline); }
+.border-r-hairline { border-right: 1px solid var(--color-taupe-hairline); }
+.border-l-hairline { border-left: 1px solid var(--color-taupe-hairline); }
+
+/* Buttons strictly matching DESIGN.md */
+.btn-filled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--color-burnt-orange);
+  color: var(--color-cream-paper);
+  border: 1px solid var(--color-burnt-orange);
+  border-radius: var(--radius-buttons);
+  font-family: var(--font-necto-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  line-height: 1;
+}
+
+.btn-filled:hover {
+  background-color: #a32901;
+  border-color: #a32901;
+}
+
+.btn-filled:active {
+  background-color: #8b2301;
+  transform: translateY(1px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--color-espresso);
+  border: 1px solid var(--color-espresso);
+  border-radius: var(--radius-buttons);
+  font-family: var(--font-necto-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 9px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  line-height: 1;
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-linen-beige);
+}
+
+.btn-ghost:active {
+  background-color: var(--color-sandstone);
+  transform: translateY(1px);
+}
+
+.btn-quickview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: var(--color-dusty-blue);
+  color: var(--color-cream-paper);
+  border: 1px solid var(--color-dusty-blue);
+  border-radius: var(--radius-buttons);
+  font-family: var(--font-necto-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+  line-height: 1;
+}
+
+.btn-quickview:hover {
+  background-color: #72a1b7;
+  border-color: #72a1b7;
+}
+
+/* Card Standards */
+.card-product {
+  background-color: var(--color-linen-beige);
+  border: 1px solid var(--color-taupe-hairline);
+  border-radius: var(--radius-cards);
+  transition: border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-product:hover {
+  border-color: var(--color-espresso);
+}
+
+.card-editorial {
+  background-color: var(--color-cream-paper);
+  border: 1px solid var(--color-taupe-hairline);
+  border-radius: var(--radius-cards);
+  transition: border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-editorial:hover {
+  border-color: var(--color-espresso);
+}
+
+/* Container */
+.container-max {
+  max-width: var(--page-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .container-max {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Monospace Date Stamp */
+.date-stamp {
+  font-family: var(--font-necto-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--color-coffee-dust);
+  text-transform: uppercase;
+}
+
+/* Monospace Badge */
+.badge-stamp {
+  font-family: var(--font-necto-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 6px;
+  border-radius: var(--radius-badges);
+  line-height: 1;
+  display: inline-block;
+}
+
+/* Subtle vinyl spin animation */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 16s linear infinite;
+}
+
+.animate-spin-slow-paused {
+  animation: spinSlow 16s linear infinite;
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sandstone);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-coffee-dust);
+}
