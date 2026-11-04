@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, X, ArrowRight } from 'lucide-react';
-import { PRODUCTS } from '../data/products';
+import { PRODUCTS, formatRupiah } from '../data/products';
 
 export default function SearchModal({ isOpen, onClose, onQuickView }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -22,19 +22,20 @@ export default function SearchModal({ isOpen, onClose, onQuickView }) {
       <div className="relative w-full max-w-2xl bg-cream border-hairline rounded-[8px] overflow-hidden z-10 shadow-none">
         
         {/* Search Input Bar */}
-        <div className="flex items-center px-4 py-3 border-b-hairline bg-linen gap-3">
-          <Search className="w-5 h-5 text-coffee-dust" />
+        <div className="flex items-center px-4 py-3.5 border-b-hairline bg-linen gap-3">
+          <Search className="w-5 h-5 text-turquoise" />
           <input
             type="text"
             autoFocus
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="SEARCH BEANS, BAR DRINKS, FLAVORS, OR GEAR..."
+            placeholder="CARI NAMA KOPI, SLOWBAR, RASA, ATAU MERCHANDISE..."
             className="flex-1 bg-transparent text-sm font-mono uppercase text-espresso placeholder:text-coffee-dust/60 focus:outline-none"
           />
           <button
             onClick={onClose}
-            className="p-1 text-espresso hover:text-burnt-orange border-hairline rounded-[3px] bg-cream"
+            className="p-1 text-espresso hover:text-turquoise border-hairline rounded-[3px] bg-cream"
+            aria-label="Tutup pencarian"
           >
             <X className="w-4 h-4" />
           </button>
@@ -43,13 +44,13 @@ export default function SearchModal({ isOpen, onClose, onQuickView }) {
         {/* Results List */}
         <div className="p-4 sm:p-6 max-h-[60vh] overflow-y-auto space-y-3">
           <div className="flex justify-between items-center text-[11px] font-mono text-coffee-dust uppercase mb-2">
-            <span>{searchTerm.trim() === '' ? 'POPULAR PICKS' : `FOUND ${results.length} RESULTS`}</span>
-            <span>PRESS ESC TO CLOSE</span>
+            <span>{searchTerm.trim() === '' ? 'MENU REKOMENDASI KEDAI' : `DITEMUKAN ${results.length} HASIL PENCARIAN`}</span>
+            <span>TEKAN ESC UNTUK KELUAR</span>
           </div>
 
           {results.length === 0 ? (
             <p className="text-center py-8 font-mono text-xs text-coffee-dust">
-              NO MATCHES FOUND FOR "{searchTerm.toUpperCase()}".
+              TIDAK MENEMUKAN MENU UNTUK KATA KUNCI "{searchTerm.toUpperCase()}".
             </p>
           ) : (
             results.map((item) => (
@@ -68,17 +69,17 @@ export default function SearchModal({ isOpen, onClose, onQuickView }) {
                     className="w-12 h-12 object-cover rounded-[4px] border-hairline bg-sandstone flex-shrink-0"
                   />
                   <div className="min-w-0">
-                    <h4 className="font-body text-sm font-semibold text-espresso group-hover:text-burnt-orange truncate">
+                    <h4 className="font-body text-sm font-semibold text-espresso group-hover:text-turquoise truncate">
                       {item.name}
                     </h4>
                     <p className="text-[11px] font-mono text-coffee-dust truncate">
-                      {item.categoryLabel} • ${item.price.toFixed(2)}
+                      {item.categoryLabel} &bull; {formatRupiah(item.price)}
                     </p>
                   </div>
                 </div>
 
-                <span className="text-xs font-mono text-burnt-orange flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                  VIEW <ArrowRight className="w-3.5 h-3.5" />
+                <span className="text-xs font-mono text-turquoise flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
+                  LIHAT DETAIL <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </div>
             ))

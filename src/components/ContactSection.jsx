@@ -1,213 +1,222 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, Check } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Check, MessageCircle, Navigation, ExternalLink } from 'lucide-react';
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    subject: 'General Question',
+    phone: '',
+    topic: 'Tanya Menu / Reservasi',
     message: ''
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+    if (!formData.name || !formData.message) return;
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({ name: '', email: '', subject: 'General Question', message: '' });
+      setFormData({ name: '', phone: '', topic: 'Tanya Menu / Reservasi', message: '' });
     }, 4000);
   };
 
   return (
-    <section id="contact" className="w-full py-16 sm:py-24 bg-cream border-b-hairline scroll-mt-20">
+    <section id="lokasi" className="w-full py-16 sm:py-24 bg-cream border-b-hairline scroll-mt-20">
       <div className="container-max">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b-hairline">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-6 border-b-hairline">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="badge-stamp bg-espresso text-cream">N° 06 — VISIT</span>
+              <span className="badge-stamp bg-turquoise text-cream">KUNJUNGI KAMI</span>
               <p className="text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em]">
-                LOCATIONS, HOURS & ANALOG CORRESPONDENCE
+                TANJUNGPINANG, KEPULAUAN RIAU
               </p>
             </div>
-            <h2 className="font-display text-[36px] sm:text-[46px] leading-[0.95] text-espresso tracking-[-0.06em]">
-              Find Us in Harrisburg.
+            <h2 className="font-display text-[36px] sm:text-[46px] leading-[0.95] text-espresso tracking-[-0.05em] mb-2">
+              Yuk, Bertemu di Sekata.
             </h2>
+            <p className="text-[14px] sm:text-[15px] font-body text-coffee-dust max-w-xl">
+              Luangkan waktu, nikmati kopi, dan ceritakan harimu bersama kami.
+            </p>
           </div>
-          <p className="text-[13px] font-body text-coffee-dust max-w-md">
-            Stop by for a freshly pulled lever shot, thumb through our record crates, or write us a note below.
-          </p>
+          <div className="flex items-center gap-2">
+            <a
+              href="https://maps.google.com/?q=Sekata+Coffee+Tanjungpinang"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-filled text-[12px] px-5 py-3 bg-turquoise border-turquoise hover:bg-turquoise-dark flex items-center gap-2"
+            >
+              <Navigation className="w-3.5 h-3.5" />
+              <span>TEMUKAN LOKASI KAMI (GOOGLE MAPS)</span>
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* Left Column: Locations & Hours Cards */}
+          {/* Left Column: Location & Hours Cards */}
           <div className="lg:col-span-7 space-y-6">
             
-            {/* Location 1: Midtown */}
             <div className="bg-linen p-6 rounded-[8px] border-hairline">
-              <div className="flex items-start justify-between gap-4 mb-3">
+              <div className="flex items-start justify-between gap-4 mb-4">
                 <div>
-                  <span className="badge-stamp bg-burnt-orange text-cream mb-2">FLAGSHIP CAFE</span>
-                  <h3 className="font-display text-[24px] text-espresso">Midtown Espresso & Vinyl Bar</h3>
+                  <span className="badge-stamp bg-turquoise text-cream mb-2">SLOWBAR &amp; COFFEE DESTINATION</span>
+                  <h3 className="font-display text-[26px] text-espresso">Sekata Coffee &amp; Slowbar</h3>
+                  <p className="text-xs font-mono text-coffee-dust uppercase mt-1">
+                    TANJUNGPINANG &bull; KEPULAUAN RIAU
+                  </p>
                 </div>
-                <span className="text-[11px] font-mono text-coffee-dust uppercase">EST. 2011</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono pt-3 border-t-hairline">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs font-mono pt-4 border-t-hairline">
                 <div>
-                  <p className="text-coffee-dust uppercase mb-1 flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-burnt-orange" /> ADDRESS
+                  <p className="text-coffee-dust uppercase mb-1.5 flex items-center gap-1.5 font-medium">
+                    <MapPin className="w-3.5 h-3.5 text-turquoise" /> ALAMAT KEDAI
                   </p>
-                  <p className="text-espresso">1336 N 3rd St</p>
-                  <p className="text-espresso">Harrisburg, PA 17102</p>
+                  <p className="text-espresso font-medium">Jl. Sekata, Tanjungpinang</p>
+                  <p className="text-espresso">Kepulauan Riau, Indonesia</p>
+                  <p className="text-coffee-dust mt-2">Area nyaman, parkir mudah, dan suasana tenang.</p>
                 </div>
 
                 <div>
-                  <p className="text-coffee-dust uppercase mb-1 flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-burnt-orange" /> OPERATING HOURS
+                  <p className="text-coffee-dust uppercase mb-1.5 flex items-center gap-1.5 font-medium">
+                    <Clock className="w-3.5 h-3.5 text-turquoise" /> JAM OPERASIONAL
                   </p>
-                  <p className="text-espresso">Mon – Fri: 7:00 AM – 5:00 PM</p>
-                  <p className="text-espresso">Sat – Sun: 8:00 AM – 5:00 PM</p>
+                  <p className="text-espresso">Senin – Jumat: 10.00 – 22.00 WIB</p>
+                  <p className="text-espresso">Sabtu – Minggu: 09.00 – 23.00 WIB</p>
+                  <p className="text-turquoise font-medium mt-2">&bull; Slowbar buka setiap hari</p>
                 </div>
+              </div>
+
+              <div className="mt-6 pt-4 border-t-hairline flex flex-wrap gap-4 text-xs font-mono">
+                <a
+                  href="https://www.instagram.com/sekata.tnj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-espresso hover:text-turquoise flex items-center gap-1 font-medium"
+                >
+                  <span>Instagram: @sekata.tnj</span>
+                  <ExternalLink className="w-3 h-3 text-turquoise" />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@sekatatnj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-espresso hover:text-turquoise flex items-center gap-1 font-medium"
+                >
+                  <span>TikTok: @sekatatnj</span>
+                  <ExternalLink className="w-3 h-3 text-turquoise" />
+                </a>
               </div>
             </div>
 
-            {/* Location 2: Downtown Lab */}
-            <div className="bg-linen p-6 rounded-[8px] border-hairline">
-              <div className="flex items-start justify-between gap-4 mb-3">
-                <div>
-                  <span className="badge-stamp bg-dusty-blue text-cream mb-2">ROASTING LAB & SOUND ROOM</span>
-                  <h3 className="font-display text-[24px] text-espresso">Downtown Roastery & Tasting Room</h3>
+            {/* Direct WhatsApp Contact Card */}
+            <div className="p-6 bg-linen rounded-[8px] border-hairline flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-cream border-hairline flex items-center justify-center text-turquoise flex-shrink-0">
+                  <MessageCircle className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-mono text-coffee-dust uppercase">CAST IRON DRUM</span>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono pt-3 border-t-hairline">
                 <div>
-                  <p className="text-coffee-dust uppercase mb-1 flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-burnt-orange" /> ADDRESS
+                  <h4 className="font-display text-[18px] text-espresso">Hubungi Barista Sekata</h4>
+                  <p className="text-xs font-body text-coffee-dust">
+                    Tanya ketersediaan biji kopi, reservasi meja kumpul, atau pesanan bawa pulang.
                   </p>
-                  <p className="text-espresso">209 N 2nd St</p>
-                  <p className="text-espresso">Harrisburg, PA 17101</p>
-                </div>
-
-                <div>
-                  <p className="text-coffee-dust uppercase mb-1 flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-burnt-orange" /> TASTING HOURS
-                  </p>
-                  <p className="text-espresso">Thurs – Sun: 9:00 AM – 3:00 PM</p>
-                  <p className="text-espresso">Public Cuppings: Saturdays 11 AM</p>
                 </div>
               </div>
-            </div>
-
-            {/* Direct Lines */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 bg-linen rounded-[6px] border-hairline flex items-center gap-3">
-                <Phone className="w-4 h-4 text-burnt-orange flex-shrink-0" />
-                <div className="text-xs font-mono">
-                  <p className="text-coffee-dust uppercase text-[10px]">DIRECT BAR LINE</p>
-                  <p className="text-espresso font-medium">(717) 695-6995</p>
-                </div>
-              </div>
-
-              <div className="p-4 bg-linen rounded-[6px] border-hairline flex items-center gap-3">
-                <Mail className="w-4 h-4 text-burnt-orange flex-shrink-0" />
-                <div className="text-xs font-mono">
-                  <p className="text-coffee-dust uppercase text-[10px]">ELECTRONIC MAIL</p>
-                  <p className="text-espresso font-medium">hello@littleampscoffee.com</p>
-                </div>
-              </div>
+              <a
+                href="https://wa.me/6281234567890?text=Halo%20Sekata,%20saya%20mau%20tanya%20seputar%20kedai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-filled text-xs py-2.5 px-5 bg-turquoise border-turquoise hover:bg-turquoise-dark whitespace-nowrap"
+              >
+                CHAT WHATSAPP &rarr;
+              </a>
             </div>
 
           </div>
 
-          {/* Right Column: Contact Message Form */}
+          {/* Right Column: Sapa Barista Form */}
           <div className="lg:col-span-5 bg-linen p-6 sm:p-7 rounded-[8px] border-hairline">
             <h3 className="font-display text-[24px] text-espresso mb-1">
-              Drop Us a Line.
+              Kirim Pesan atau Cerita.
             </h3>
             <p className="text-[13px] font-body text-coffee-dust mb-5">
-              Have questions regarding coffee extraction, catering, music curation, or bulk orders? Send a dispatch.
+              Punya ide kolaborasi, pertanyaan seputar seduhan, atau sekadar ingin menyapa? Tinggalkan pesanmu di sini.
             </p>
 
             {submitted ? (
               <div className="p-6 bg-cream rounded-[6px] border-hairline text-center space-y-2">
-                <Check className="w-6 h-6 text-burnt-orange mx-auto" />
+                <Check className="w-6 h-6 text-turquoise mx-auto" />
                 <p className="font-mono text-xs uppercase font-medium text-espresso">
-                  DISPATCH SENT SUCCESSFULLY
+                  PESANMU SUDAH KAMI TERIMA
                 </p>
                 <p className="text-xs font-body text-coffee-dust">
-                  We read every message over morning espresso and respond within 24 hours.
+                  Terima kasih sudah menyapa. Kami akan segera membaca dan menghubungimu kembali!
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3.5">
                 <div>
                   <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em] mb-1">
-                    YOUR NAME *
+                    NAMA LENGKAP *
                   </label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Jane Doe"
-                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-espresso focus:outline-none"
+                    placeholder="Nama kamu..."
+                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none"
                   />
                 </div>
 
                 <div>
                   <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em] mb-1">
-                    EMAIL ADDRESS *
+                    NOMOR WHATSAPP / TELEPON
                   </label>
                   <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="jane@example.com"
-                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-espresso focus:outline-none"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    placeholder="0812-xxxx-xxxx"
+                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none"
                   />
                 </div>
 
                 <div>
                   <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em] mb-1">
-                    INQUIRY TYPE
+                    TOPIK PESAN
                   </label>
                   <select
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-espresso focus:outline-none"
+                    value={formData.topic}
+                    onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
+                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none"
                   >
-                    <option value="General Question">General Question</option>
-                    <option value="Online Order Support">Online Order Support</option>
-                    <option value="Private Event / Catering">Private Event / Catering</option>
-                    <option value="Record Donation / Vinyl Curation">Record Donation / Vinyl</option>
+                    <option value="Tanya Menu / Reservasi">Tanya Menu / Reservasi Meja</option>
+                    <option value="Biji Kopi & Kebutuhan Kantor">Beli Biji Kopi / Kebutuhan Kafe</option>
+                    <option value="Kolaborasi Komunitas / Acara">Kolaborasi Acara Komunitas</option>
+                    <option value="Sekadar Berbagi Cerita">Sekadar Berbagi Cerita &amp; Saran</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em] mb-1">
-                    MESSAGE *
+                    PESAN *
                   </label>
                   <textarea
                     rows="4"
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Write your note here..."
-                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-espresso focus:outline-none resize-none"
+                    placeholder="Tulis pesan atau ceritamu di sini..."
+                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none resize-none"
                   />
                 </div>
 
                 <div className="pt-2">
-                  <button type="submit" className="btn-filled w-full py-2.5 text-xs tracking-[0.05em]">
-                    SEND MESSAGE
+                  <button type="submit" className="btn-filled w-full py-2.5 text-xs tracking-[0.05em] bg-turquoise border-turquoise hover:bg-turquoise-dark">
+                    KIRIM PESAN SEKARANG
                   </button>
                 </div>
               </form>
@@ -220,4 +229,3 @@ export default function ContactSection() {
     </section>
   );
 }
-

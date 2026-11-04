@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Check, ArrowUp, Disc } from 'lucide-react';
+import { Mail, Check, ArrowUp } from 'lucide-react';
 
-export default function Footer({ onOpenWholesale }) {
+export default function Footer() {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
@@ -21,24 +21,24 @@ export default function Footer({ onOpenWholesale }) {
 
   return (
     <footer className="w-full bg-cream border-t-hairline">
-      {/* Newsletter Zine Subscription Strip */}
+      {/* Surat Kabar dari Slowbar Strip */}
       <div className="bg-linen border-b-hairline py-12 sm:py-16">
         <div className="container-max">
           <div className="max-w-2xl mx-auto text-center">
-            <span className="badge-stamp bg-burnt-orange text-cream mb-3">
-              THE PRINTED DISPATCH
+            <span className="badge-stamp bg-turquoise text-cream mb-3">
+              SURAT KABAR DARI SLOWBAR
             </span>
-            <h2 className="font-display text-[32px] sm:text-[42px] leading-[0.95] text-espresso tracking-[-0.06em] mb-3">
-              Get the bi-weekly coffee & vinyl zine.
+            <h2 className="font-display text-[32px] sm:text-[42px] leading-[0.95] text-espresso tracking-[-0.05em] mb-3">
+              Dapatkan Kabar Seduhan &amp; Cerita Terbaru.
             </h2>
             <p className="text-[14px] font-body text-coffee-dust leading-relaxed mb-6">
-              New single-origin lot drops, album recommendations from our turntable counter, and brewing water recipes. No digital spam, just analog letters.
+              Informasi ketersediaan biji kopi sangrai segar, jadwal sesi slowbar mingguan, dan catatan cerita dari Tanjungpinang langsung ke emailmu.
             </p>
 
             {subscribed ? (
-              <div className="p-4 bg-cream border-hairline rounded-[4px] inline-flex items-center gap-2 text-xs font-mono text-burnt-orange">
+              <div className="p-4 bg-cream border-hairline rounded-[4px] inline-flex items-center gap-2 text-xs font-mono text-turquoise">
                 <Check className="w-4 h-4" />
-                <span>SUBSCRIBED TO THE DISPATCH. WELCOME TO THE COFFEE COUNTER.</span>
+                <span>TERIMA KASIH! KAMU SUDAH TERDAFTAR DI SURAT KABAR SEKATA.</span>
               </div>
             ) : (
               <form onSubmit={handleNewsletter} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
@@ -47,14 +47,14 @@ export default function Footer({ onOpenWholesale }) {
                   required
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  placeholder="ENTER YOUR EMAIL FOR ZINE DISPATCHES..."
-                  className="flex-1 px-4 py-2.5 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-espresso focus:outline-none"
+                  placeholder="MASUKKAN ALAMAT EMAIL KAMU..."
+                  className="flex-1 px-4 py-2.5 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none"
                 />
                 <button
                   type="submit"
-                  className="btn-filled text-xs py-2.5 px-6 whitespace-nowrap tracking-[0.05em]"
+                  className="btn-filled text-xs py-2.5 px-6 whitespace-nowrap tracking-[0.05em] bg-turquoise border-turquoise hover:bg-turquoise-dark"
                 >
-                  SUBSCRIBE
+                  LANGGANAN
                 </button>
               </form>
             )}
@@ -66,113 +66,117 @@ export default function Footer({ onOpenWholesale }) {
       <div className="container-max py-14 sm:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           
-          {/* Col 1: Original Brand Logo & Manifesto */}
+          {/* Col 1: Original Brand Logo & Intro */}
           <div className="lg:col-span-4 space-y-4">
             <a href="#" className="inline-block">
               <img
                 src="/logo.png"
-                alt="Little Amps Coffee Roasters"
-                className="h-10 sm:h-12 w-auto object-contain"
+                alt="Sekata Coffee &amp; Slowbar"
+                className="h-12 w-auto object-contain"
               />
             </a>
             <p className="font-body text-[13px] leading-relaxed text-coffee-dust max-w-sm">
-              Little Amps Coffee Roasters is an independent specialty coffee roasting company based in Harrisburg, Pennsylvania. Dedicated to small-batch cast-iron roasting, direct producer equity, and analog music culture.
+              Sekata Coffee &amp; Slowbar adalah ruang temu dan kedai seduh lambat independen di Tanjungpinang, Kepulauan Riau. Didedikasikan untuk apresiasi rasa kopi yang ramah bagi semua orang dan kehangatan bertukar cerita kehidupan.
             </p>
-            <div className="pt-2 text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em]">
-              ROASTING IN HARRISBURG SINCE 2011 • INDEPENDENT FOREVER
+            <div className="pt-2 text-[11px] font-mono text-turquoise uppercase tracking-[0.05em] font-medium">
+              TANJUNGPINANG &bull; KEPULAUAN RIAU &bull; #KECILBERTUMBUH
             </div>
           </div>
 
           {/* Col 2: Navigation */}
           <div className="lg:col-span-3 space-y-3">
             <p className="text-xs font-mono font-medium text-espresso uppercase tracking-[0.05em] pb-1 border-b-hairline">
-              SITE DIRECTORY
+              NAVIGASI SITUS
             </p>
             <ul className="space-y-2 text-xs font-mono">
               <li>
-                <a href="#shop" className="text-coffee-dust hover:text-burnt-orange transition-colors">
-                  &bull; CURRENT BAR MENU
+                <a href="#menu" className="text-coffee-dust hover:text-turquoise transition-colors">
+                  &bull; PILIHAN MENU &amp; SEDUHAN
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-coffee-dust hover:text-burnt-orange transition-colors">
-                  &bull; ROASTING PHILOSOPHY
+                <a href="#slowbar" className="text-coffee-dust hover:text-turquoise transition-colors">
+                  &bull; PENGALAMAN SLOWBAR
                 </a>
               </li>
               <li>
-                <button
-                  onClick={onOpenWholesale}
-                  className="text-coffee-dust hover:text-burnt-orange transition-colors text-left"
-                >
-                  &bull; WHOLESALE PARTNERSHIPS
-                </button>
-              </li>
-              <li>
-                <a href="#community" className="text-coffee-dust hover:text-burnt-orange transition-colors">
-                  &bull; COMMUNITY BOARD & DISPATCHES
+                <a href="#filosofi" className="text-coffee-dust hover:text-turquoise transition-colors">
+                  &bull; FILOSOFI KAMI
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-coffee-dust hover:text-burnt-orange transition-colors">
-                  &bull; TASTING ROOMS & HOURS
+                <a href="#ruang" className="text-coffee-dust hover:text-turquoise transition-colors">
+                  &bull; RUANG UNTUK MENIKMATI WAKTU
+                </a>
+              </li>
+              <li>
+                <a href="#cerita" className="text-coffee-dust hover:text-turquoise transition-colors">
+                  &bull; CERITA DI BALIK SEDUHAN
+                </a>
+              </li>
+              <li>
+                <a href="#lokasi" className="text-coffee-dust hover:text-turquoise transition-colors">
+                  &bull; LOKASI &amp; PETUNJUK ARAH
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Harrisburg Cafes */}
+          {/* Col 3: Kedai Sekata Info */}
           <div className="lg:col-span-3 space-y-3">
             <p className="text-xs font-mono font-medium text-espresso uppercase tracking-[0.05em] pb-1 border-b-hairline">
-              TASTING ROOMS
+              KEDAI &amp; JAM BUKA
             </p>
             <div className="space-y-3 text-xs font-mono">
               <div>
-                <p className="text-espresso font-medium uppercase">MIDTOWN ESPRESSO</p>
-                <p className="text-coffee-dust">1336 N 3rd St, Harrisburg, PA</p>
-                <p className="text-coffee-dust">Daily 7:00 AM – 5:00 PM</p>
+                <p className="text-espresso font-medium uppercase">SEKATA SLOWBAR</p>
+                <p className="text-coffee-dust">Tanjungpinang, Kepulauan Riau</p>
+                <p className="text-coffee-dust mt-1">Senin – Jumat: 10.00 – 22.00 WIB</p>
+                <p className="text-coffee-dust">Sabtu – Minggu: 09.00 – 23.00 WIB</p>
               </div>
               <div className="pt-2 border-t-hairline">
-                <p className="text-espresso font-medium uppercase">DOWNTOWN LAB & SOUND</p>
-                <p className="text-coffee-dust">209 N 2nd St, Harrisburg, PA</p>
-                <p className="text-coffee-dust">Thurs – Sun 9:00 AM – 3:00 PM</p>
+                <p className="text-espresso font-medium uppercase">MEDIA SOSIAL</p>
+                <p className="text-coffee-dust">Instagram: <a href="https://instagram.com/sekata.tnj" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@sekata.tnj</a></p>
+                <p className="text-coffee-dust">TikTok: <a href="https://tiktok.com/@sekatatnj" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@sekatatnj</a></p>
               </div>
             </div>
           </div>
 
-          {/* Col 4: Audio & Back to Top */}
+          {/* Col 4: Tagline & Back to Top */}
           <div className="lg:col-span-2 space-y-4">
             <p className="text-xs font-mono font-medium text-espresso uppercase tracking-[0.05em] pb-1 border-b-hairline">
-              VINYL SOUND
+              SEMANGAT KAMI
             </p>
             <div className="text-xs font-mono text-coffee-dust space-y-2">
-              <p>Turntable: Technics 1200</p>
-              <p>Cartridge: Ortofon 2M Bronze</p>
-              <p>Current Spin: Blue Note 1595</p>
+              <p className="text-turquoise font-medium">#KecilBertumbuh</p>
+              <p className="italic font-display text-[15px] text-espresso leading-snug">
+                &ldquo;Mari Bertemu &amp; Bercerita Tentang Kehidupan.&rdquo;
+              </p>
             </div>
 
             <div className="pt-4">
               <button
                 onClick={scrollToTop}
-                className="btn-ghost w-full flex items-center justify-center gap-1.5 text-xs py-2"
-                aria-label="Scroll back to top"
+                className="btn-ghost w-full flex items-center justify-center gap-1.5 text-xs py-2 hover:border-turquoise hover:text-turquoise"
+                aria-label="Kembali ke atas halaman"
               >
                 <ArrowUp className="w-3.5 h-3.5" />
-                <span>BACK TO TOP</span>
+                <span>KEMBALI KE ATAS</span>
               </button>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom Colophon strictly matching DESIGN.md */}
+        {/* Bottom Colophon */}
         <div className="mt-14 pt-8 border-t-hairline flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em]">
           <div>
-            &copy; 2026 LITTLE AMPS COFFEE ROASTERS. ALL RIGHTS RESERVED.
+            &copy; 2026 SEKATA COFFEE &amp; SLOWBAR. HAK CIPTA DILINDUNGI.
           </div>
           <div className="flex flex-wrap items-center gap-4 text-center sm:text-right">
-            <span>SET IN DM SERIF & JETBRAINS MONO</span>
+            <span>SETIAP SEDUHAN PUNYA CERITA</span>
             <span>&bull;</span>
-            <span>PRINTED ON CREAM PAPER</span>
+            <span className="text-turquoise font-medium">#KECILBERTUMBUH</span>
           </div>
         </div>
 

@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        'turquoise': '#317576',
+        'turquoise-dark': '#235758',
+        'turquoise-light': '#e8f3f3',
         'espresso': '#522c25',
         'burnt-orange': '#c03001',
         'amber': '#c46500',

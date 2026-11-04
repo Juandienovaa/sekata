@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Little Amps Coffee Roasters &mdash; Vinyl Sleeves &amp; Analog Coffee</title>
-    <meta name="description" content="Little Amps Coffee Roasters &mdash; warm analog coffee-shop world. Cream paper, rich espresso type, and burnt-orange accents. Roasted fresh in small batches." />
+    <title>Sekata Coffee &amp; Slowbar | Pengalaman Slowbar di Tanjungpinang</title>
+    <meta
+      name="description"
+      content="Kenali Sekata Coffee &amp; Slowbar di Tanjungpinang. Nikmati pengalaman slowbar, temukan pilihan kopi, dan luangkan waktu untuk bertemu serta bercerita. #KecilBertumbuh"
+    />
+    <meta
+      name="keywords"
+      content="Sekata Coffee Tanjungpinang, Slowbar Tanjungpinang, Coffee Shop Tanjungpinang, Tempat Ngopi Tanjungpinang, Kedai Kopi Tanjungpinang, Kecil Bertumbuh"
+    />
 
     <!-- Google Fonts: DM Serif Display, Inclusive Sans, JetBrains Mono, Roboto Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,10 +21,43 @@
       rel="stylesheet"
     />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+    <!-- Favicon: Logo Sekata -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!-- Open Graph Local SEO -->
+    <meta property="og:title" content="Sekata Coffee &amp; Slowbar — Setiap Seduhan Punya Cerita" />
+    <meta property="og:description" content="Mari bertemu dan bercerita tentang kehidupan di Sekata Coffee &amp; Slowbar, Tanjungpinang, Kepulauan Riau." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/logo.png" />
+
+    <!-- Local Business Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Sekata Coffee & Slowbar",
+      "image": "https://sekatacoffee.com/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tanjungpinang",
+        "addressRegion": "Kepulauan Riau",
+        "addressCountry": "ID"
+      },
+      "description": "Tempat ngopi dan slowbar di Tanjungpinang di mana seni seduhan kopi bertemu dengan momen obrolan bermakna.",
+      "servesCuisine": "Specialty Coffee, Slowbar, Manual Brew, Tea & Mocktails",
+      "priceRange": "Rp 15.000 - Rp 45.000",
+      "openingHours": [
+        "Mo-Fr 10:00-22:00",
+        "Sa-Su 09:00-23:00"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/sekata.tnj",
+        "https://www.tiktok.com/@sekatatnj"
+      ]
+    }
+    </script>
   </head>
-  <body class="bg-cream-paper text-espresso selection:bg-burnt-orange selection:text-cream-paper min-h-screen">
+  <body class="bg-cream-paper text-espresso selection:bg-turquoise selection:text-cream-paper min-h-screen">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

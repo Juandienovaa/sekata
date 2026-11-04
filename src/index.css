@@ -5,6 +5,9 @@
 /* Little Amps Design System — strictly aligned with DESIGN.md */
 :root {
   /* Colors */
+  --color-turquoise: #317576;
+  --color-turquoise-dark: #235758;
+  --color-turquoise-light: #e8f3f3;
   --color-espresso: #522c25;
   --color-burnt-orange: #c03001;
   --color-amber-ink: #c46500;
@@ -132,6 +135,7 @@ body {
 }
 
 /* Color Tokens */
+.text-turquoise { color: var(--color-turquoise); }
 .text-espresso { color: var(--color-espresso); }
 .text-burnt-orange { color: var(--color-burnt-orange); }
 .text-amber { color: var(--color-amber-ink); }
@@ -139,6 +143,7 @@ body {
 .text-dusty-blue { color: var(--color-dusty-blue); }
 .text-cream { color: var(--color-cream-paper); }
 
+.bg-turquoise { background-color: var(--color-turquoise); }
 .bg-cream { background-color: var(--color-cream-paper); }
 .bg-linen { background-color: var(--color-linen-beige); }
 .bg-sandstone { background-color: var(--color-sandstone); }

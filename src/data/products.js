@@ -1,255 +1,264 @@
 export const PRODUCTS = [
-  // Signature Whole Bean Bags
+  // Menu Biji Kopi
   {
-    id: 'friend-blend',
-    name: 'Friend Blend',
-    subtitle: 'Signature House Blend • Washed & Natural Process',
+    id: 'sekata-house-blend',
+    name: 'Sekata House Blend',
+    subtitle: 'Biji Kopi Sangrai Segar • Arabika Pilihan untuk Slowbar',
     category: 'beans',
-    categoryLabel: 'WHOLE BEAN COFFEE',
-    price: 17.00,
+    categoryLabel: 'BIJI KOPI',
+    price: 85000,
     image: '/friend_blend_bag.jpg',
     roastLevel: 3,
     roastTitle: 'Medium Roast',
     acidity: 2,
     complexity: 4,
-    tastingNotes: ['Milk Chocolate', 'Toffee', 'Candied Pecan', 'Sweet Citrus'],
-    badge: 'FLAGSHIP BLEND',
-    description: 'Our pride and joy. Friend Blend is roasted to be forgiving, balanced, and deeply comforting across all brew methods—whether you are pulling lever shots or brewing a Sunday morning Chemex.',
+    tastingNotes: ['Cokelat Manis', 'Karamel', 'Kacang Panggang', 'Citrus Segar'],
+    badge: 'PILIHAN UTAMA',
+    description: 'Biji kopi signature Sekata yang diracik khusus untuk menghasilkan seduhan yang seimbang, manis, dan nyaman dinikmati kapan saja. Cocok untuk seduh manual V60, tubruk, maupun espresso rumahan.',
     details: {
-      origin: 'Huila, Colombia & Minas Gerais, Brazil',
-      process: 'Washed & Natural Arabica',
-      elevation: '1,650m - 1,900m',
-      brewMethod: 'Drip, French Press, Pour Over, Espresso'
+      origin: 'Gayo, Aceh & Mandheling, Sumatera Utara',
+      process: 'Washed & Natural Arabika',
+      elevation: '1.400 - 1.650 mdpl',
+      brewMethod: 'V60, French Press, Mokapot, Espresso'
     },
-    sizes: ['12oz Bag', '2lb Bag (+$16.00)', '5lb Bulk Bag (+$48.00)'],
-    temperatures: ['Whole Bean', 'Ground for Drip', 'Ground for Espresso']
+    sizes: ['Bungkus 200g', 'Bungkus 500g (+Rp 95.000)', 'Bungkus 1kg (+Rp 220.000)'],
+    temperatures: ['Biji Utuh (Whole Bean)', 'Giling Halus (Espresso)', 'Giling Sedang (V60/Filter)', 'Giling Kasar (Cold Brew)']
   },
   {
-    id: 'into-the-void',
-    name: 'Into The Void',
-    subtitle: 'Bold Dark Roast • Deep Caramelization & Smoky Cocoa',
+    id: 'into-the-void-dark',
+    name: 'Sekata Bold Dark Roast',
+    subtitle: 'Sangrai Gelap Mantap • Karamelisasi Pekat & Kakao',
     category: 'beans',
-    categoryLabel: 'WHOLE BEAN COFFEE',
-    price: 17.50,
+    categoryLabel: 'BIJI KOPI',
+    price: 85000,
     image: '/into_the_void_bag.jpg',
     roastLevel: 5,
     roastTitle: 'Dark Roast',
     acidity: 1,
     complexity: 4,
-    tastingNotes: ['Dark Cocoa', 'Smoky Cedar', 'Molasses', 'Toasted Marshmallow'],
-    badge: 'DARK ROAST HIT',
-    description: 'For those who want rich, heavy-bodied coffee with zero astringency. We push this lot into crack two on cast-iron, caramelizing every natural oil without scorching.',
+    tastingNotes: ['Kakao Hitam', 'Gula Palem', 'Kayu Manis', 'Aroma Bakar'],
+    badge: 'RASA TEGAS',
+    description: 'Bagi pencinta kopi dengan profil rasa yang kuat, tebal, dan bebas asam. Dipanggang hingga tahap second crack dengan penuh perhatian agar minyak alaminya matang sempurna tanpa gosong.',
     details: {
-      origin: 'Antigua, Guatemala & Sumatra, Indonesia',
-      process: 'Wet-Hulled & Washed',
-      elevation: '1,500m - 1,800m',
-      brewMethod: 'French Press, Cold Brew, Stovetop Moka'
+      origin: 'Temanggung Robusta & Flores Bajawa Arabika',
+      process: 'Dry Hulled & Washed',
+      elevation: '1.200 - 1.500 mdpl',
+      brewMethod: 'Kopi Tubruk, Mokapot, Kopi Susu, Vietnam Drip'
     },
-    sizes: ['12oz Bag', '2lb Bag (+$16.00)', '5lb Bulk Bag (+$48.00)'],
-    temperatures: ['Whole Bean', 'Ground for Drip', 'Ground for French Press']
+    sizes: ['Bungkus 200g', 'Bungkus 500g (+Rp 95.000)', 'Bungkus 1kg (+Rp 220.000)'],
+    temperatures: ['Biji Utuh (Whole Bean)', 'Giling Halus', 'Giling Sedang', 'Giling Kasar']
   },
 
-  // Handcrafted Bar Beverages
+  // Minuman Bar & Kopi
   {
     id: 'classic-americano',
-    name: 'Classic Americano',
-    subtitle: 'Double Ristretto & Pure Mountain Spring Water',
+    name: 'Caffe Americano',
+    subtitle: 'Double Ristretto & Air Mineral Terfiltrasi Murni',
     category: 'drinks',
-    categoryLabel: 'BAR POUR',
-    price: 4.25,
+    categoryLabel: 'MINUMAN KOPI',
+    price: 18000,
     image: '/americano.jpg',
     roastLevel: 4,
     roastTitle: 'Medium-Dark Roast',
     acidity: 2,
     complexity: 3,
-    tastingNotes: ['Dark Chocolate', 'Roasted Walnut', 'Warm Caramel', 'Toasted Cedar'],
-    badge: 'HOUSE STAPLE',
-    description: 'Pulled from our vintage two-group lever machine, combining double ristretto with temperature-tuned spring water. Deep roasted cocoa nuances with a clean, sweet finish that lingers like an acoustic coda.',
+    tastingNotes: ['Cokelat Gelap', 'Kenari Panggang', 'Aftertaste Bersih'],
+    badge: 'MENU KLASIK',
+    description: 'Ekstraksi ganda ristretto dari biji kopi pilihan Sekata dipadukan dengan air mineral bersuhu ideal. Menghasilkan karakter cokelat pekat dengan sensasi akhir yang manis dan jernih.',
     details: {
-      origin: 'Huila, Colombia & Minas Gerais, Brazil',
-      process: 'Washed & Natural Blend',
-      elevation: '1,650m - 1,900m',
-      brewMethod: 'Espresso + 195°F Water'
+      origin: 'Blend Arabika & Robusta Pilihan',
+      process: 'Full Washed',
+      elevation: '1.400 mdpl',
+      brewMethod: 'Espresso Bar 9 Bar'
     },
-    sizes: ['12oz Regular', '16oz Large'],
-    temperatures: ['Hot', 'Iced']
+    sizes: ['Ukuran Reguler', 'Ukuran Besar (+Rp 4.000)'],
+    temperatures: ['Dingin (Es)', 'Panas']
   },
   {
     id: 'caramel-macchiato',
     name: 'Caramel Macchiato',
-    subtitle: 'Steamed Microfoam, Espresso Float & Hand-Cooked Amber Drizzle',
+    subtitle: 'Susu UHT Segar, Tuangan Espresso & Saus Karamel Buatan Sendiri',
     category: 'drinks',
-    categoryLabel: 'BAR POUR',
-    price: 5.75,
+    categoryLabel: 'MINUMAN KOPI',
+    price: 25000,
     image: '/Caramel_macchiato.jpg',
     roastLevel: 3,
     roastTitle: 'Medium Roast',
     acidity: 1,
     complexity: 4,
-    tastingNotes: ['Burnt Brown Sugar', 'Vanilla Custard', 'Toasted Hazelnut', 'Velvet Crema'],
-    badge: 'BARISTA FAVORITE',
-    description: 'Layered perfection in clear glass: silky steamed whole milk kissed with organic Madagascar vanilla, marked with an espresso drop, and crowned with house-made amber burnt sugar drizzle.',
+    tastingNotes: ['Gula Karamel Bakar', 'Krim Vanila', 'Crema Lembut'],
+    badge: 'FAVORIT KEDAI',
+    description: 'Perpaduan bertingkat dalam gelas transparan: susu lembut beraroma vanila dipadukan tetesan espresso harum, lalu diberi lelehan saus karamel legit di bagian atas.',
     details: {
-      origin: 'Antigua, Guatemala',
-      process: 'Washed / Sun-Dried on Patios',
-      elevation: '1,800m',
-      brewMethod: 'Steamed Microfoam & Espresso Float'
+      origin: 'Arabika Single Origin',
+      process: 'Washed Process',
+      elevation: '1.500 mdpl',
+      brewMethod: 'Steamed Microfoam & Float Espresso'
     },
-    sizes: ['12oz Regular', '16oz Large'],
-    temperatures: ['Hot', 'Iced']
+    sizes: ['Ukuran Reguler', 'Ukuran Besar (+Rp 4.000)'],
+    temperatures: ['Dingin (Es)', 'Panas']
   },
   {
-    id: 'madagascar-vanilla-latte',
+    id: 'vanilla-latte',
     name: 'Madagascar Vanilla Latte',
-    subtitle: 'Double Espresso, Velvety Microfoam & Hand-Scraped Vanilla Pods',
+    subtitle: 'Espresso Halus, Susu Steam Lembut & Ekstrak Vanila Asli',
     category: 'drinks',
-    categoryLabel: 'BAR POUR',
-    price: 5.50,
+    categoryLabel: 'MINUMAN KOPI',
+    price: 23000,
     image: '/vanillalatte.jpg',
     roastLevel: 3,
     roastTitle: 'Medium Roast',
     acidity: 2,
     complexity: 4,
-    tastingNotes: ['Bourbon Vanilla', 'Silky Honeycomb', 'Golden Almond', 'Sweet Cream'],
-    badge: 'SEASONAL CLASSIC',
-    description: 'Real vanilla bean pods simmered with unrefined cane sugar, paired with our house espresso and textured microfoam. Comforting, sweet, and tactile without masking the coffee’s natural stone fruit notes.',
+    tastingNotes: ['Aroma Vanila', 'Madu Ringan', 'Susu Gurih Manis'],
+    badge: 'BEST SELLER',
+    description: 'Susu bertekstur lembut dipadukan dengan sirup vanila organik dan espresso ganda. Manisnya pas, lembut di lidah, dan tetap menonjolkan karakter rasa kopi yang harum.',
     details: {
-      origin: 'Yirgacheffe, Ethiopia & Jinotega, Nicaragua',
-      process: 'Honey Process',
-      elevation: '1,750m',
-      brewMethod: 'Double Ristretto + Velvet Milk'
+      origin: 'Arabika Aceh Gayo & Toraja',
+      process: 'Semi-Washed',
+      elevation: '1.600 mdpl',
+      brewMethod: 'Double Ristretto + Microfoam Susu'
     },
-    sizes: ['12oz Regular', '16oz Large'],
-    temperatures: ['Hot', 'Iced']
+    sizes: ['Ukuran Reguler', 'Ukuran Besar (+Rp 4.000)'],
+    temperatures: ['Dingin (Es)', 'Panas']
   },
   {
-    id: 'signature-cold-pour',
+    id: 'slow-drip-cold-pour',
     name: 'Signature Slow-Drip Cold Pour',
-    subtitle: 'Single-Origin Cold Extraction Chilled on Hand-Carved Ice',
+    subtitle: 'Seduhan Tetes Lambat 14 Jam Disajikan di Atas Es Jernih',
     category: 'drinks',
-    categoryLabel: 'COLD EXTRACTION',
-    price: 5.25,
+    categoryLabel: 'SLOWBAR CRAFT',
+    price: 24000,
     image: '/Sokata_beverage_product_photography_c823fac9_2K.jpg',
     roastLevel: 3,
-    roastTitle: 'Kyoto Drip Extraction',
+    roastTitle: 'Slow Drip Extraction',
     acidity: 3,
     complexity: 5,
-    tastingNotes: ['Blackberry Compote', 'Dark Chocolate Nibs', 'Meyer Lemon', 'Sweet Bourbon'],
-    badge: 'LIMITED COLD BATCH',
-    description: 'Extracted drop-by-drop through our custom Japanese glass tower over 18 hours. Ultra-clean body with sparkling berry brightness and dark chocolate liqueur finish, served over carved clear ice.',
+    tastingNotes: ['Buah Beri Manis', 'Kakao Nibs', 'Segar Dingin', 'Aroma Bunga'],
+    badge: 'SLOWBAR SPESIAL',
+    description: 'Kopi yang diseduh tetes demi tetes menggunakan menara ekstraksi dingin selama belasan jam. Menghasilkan rasa yang luar biasa bersih, rasa manis alami yang keluar maksimal, dan aroma buah yang segar.',
     details: {
-      origin: 'Nyeri Hill, Kenya',
-      process: 'Double Washed',
-      elevation: '1,950m',
-      brewMethod: '18-Hour Slow Kyoto Tower'
+      origin: 'Single Origin Arabika Specialty',
+      process: 'Natural Anaerob',
+      elevation: '1.700 mdpl',
+      brewMethod: 'Ekstraksi Dingin Tetes Lambat'
     },
-    sizes: ['16oz Jar', '32oz Growler (+$9.00)'],
-    temperatures: ['Chilled / Over Ice']
+    sizes: ['Gelas Sajian', 'Botol Bawa Pulang 500ml (+Rp 18.000)'],
+    temperatures: ['Dingin dengan Es Jernih']
   },
   {
-    id: 'red-velvet-botanical-latte',
-    name: 'Red Velvet Botanical Latte',
-    subtitle: 'Roasted Cacao, Beetroot Botanicals & Steamed Oat Milk',
+    id: 'red-velvet-latte',
+    name: 'Red Velvet Artisan Latte',
+    subtitle: 'Bubuk Kakao Pilihan, Ekstrak Bit Alami & Susu Lembut Gurih',
     category: 'specialty',
-    categoryLabel: 'BOTANICAL & TEA',
-    price: 5.85,
+    categoryLabel: 'NON-KOPI',
+    price: 22000,
     image: '/redvelvet.jpg',
-    roastLevel: 2,
-    roastTitle: 'Specialty Craft',
+    roastLevel: 1,
+    roastTitle: 'Non-Coffee',
     acidity: 1,
-    complexity: 5,
-    tastingNotes: ['Dutch Cocoa', 'Raspberry Blossom', 'Sweet Beetroot', 'Malted Vanilla'],
-    badge: 'CAFFEINE-FREE OPTION',
-    description: 'An all-day crowd favorite: antioxidant-rich organic red beet reduction whipped with raw Ecuadorian heirloom cacao, lightly sweetened with maple and poured with creamy micro-foamed oat milk.',
+    complexity: 4,
+    tastingNotes: ['Cokelat Velvet', 'Krim Gurih', 'Manis Pas'],
+    badge: 'BEBAS KAFEIN',
+    description: 'Pilihan pas bagi kamu yang ingin bersantai di Sekata tanpa kafein. Dibuat dari cokelat beludru merah yang lembut dan gurih, disajikan hangat maupun dingin dengan busa susu halus.',
     details: {
-      origin: 'Manabí, Ecuador (Cacao) & Local Beet Harvest',
-      process: 'Single-Estate Fermented Cacao & Cold-Pressed Botanical',
-      elevation: 'Lowland Shade Canopy',
-      brewMethod: 'Steamed Botanical Microfoam'
+      origin: 'Kakao Olahan Alami Nusantara',
+      process: 'Artisan Blend',
+      elevation: '-',
+      brewMethod: 'Steamed Microfoam'
     },
-    sizes: ['12oz Regular', '16oz Large'],
-    temperatures: ['Hot', 'Iced']
+    sizes: ['Ukuran Reguler', 'Ukuran Besar (+Rp 4.000)'],
+    temperatures: ['Dingin (Es)', 'Panas']
   },
   {
     id: 'sun-steeped-lemon-tea',
-    name: 'Sun-Steeped Artisan Lemon Tea',
-    subtitle: 'Cold-Pressed Citrus, Mountain Black Tea & Raw Wildflower Honey',
+    name: 'Artisan Iced Lemon Tea',
+    subtitle: 'Seduhan Daun Teh Hitam Pegunungan & Perasan Lemon Segar',
     category: 'specialty',
-    categoryLabel: 'BOTANICAL & TEA',
-    price: 4.75,
+    categoryLabel: 'TEH & MOCKTAIL',
+    price: 18000,
     image: '/lemon tea.jpg',
     roastLevel: 1,
-    roastTitle: 'Sun-Cured Black Leaf',
+    roastTitle: 'Artisan Tea',
     acidity: 4,
     complexity: 3,
-    tastingNotes: ['Sicilian Lemon Zest', 'Crisp Bergamot', 'Wildflower Nectar', 'Sun-Dried Leaf'],
-    badge: 'AFTERNOON COOLER',
-    description: 'Loose-leaf high mountain black tea steeped slow and chilled over carved ice, stirred with freshly squeezed organic lemon juice and fragrant peel oil. The antidote to a humid afternoon.',
+    tastingNotes: ['Lemon Segar', 'Sepat Teh Alami', 'Madu Bunga Liar'],
+    badge: 'SEGAR HARIAN',
+    description: 'Daun teh hitam utuh yang diseduh perlahan, dipadukan perasan buah lemon segar dan sentuhan madu. Pilihan pelepas dahaga paling pas di cuaca Tanjungpinang yang cerah.',
     details: {
-      origin: 'Nilgiri Hills, India',
-      process: 'Whole Leaf Orthodox Black',
-      elevation: '2,000m',
-      brewMethod: 'Cold Steep 14 Hours'
+      origin: 'Kebun Teh Pegunungan Jawa Barat',
+      process: 'Orthodox Black Tea',
+      elevation: '1.500 mdpl',
+      brewMethod: 'Cold Infusion & Perasan Lemon Asli'
     },
-    sizes: ['16oz Tall', '24oz Pitcher (+$5.00)'],
-    temperatures: ['Iced']
+    sizes: ['Ukuran Reguler', 'Ukuran Pitcher (+Rp 15.000)'],
+    temperatures: ['Dingin dengan Irisan Lemon']
   },
 
-  // Amps Gear & Merch
+  // Merchandise & Aksesoris
   {
-    id: 'amps-gear-tshirt',
-    name: 'Bean Hunters Heavyweight Tee',
-    subtitle: '100% Combed Cotton • Screenprinted in Harrisburg, PA',
+    id: 'kaos-sekata',
+    name: 'Kaos Sekata #KecilBertumbuh',
+    subtitle: 'Katun Combed 24s Premium • Sablon Sablon Manual Halus',
     category: 'merch',
-    categoryLabel: 'AMPS GEAR',
-    price: 32.00,
+    categoryLabel: 'MERCHANDISE',
+    price: 135000,
     image: '/amps_gear_tshirt.jpg',
     roastLevel: 0,
-    roastTitle: 'Custom Apparel',
+    roastTitle: 'Apparel',
     acidity: 0,
     complexity: 5,
-    tastingNotes: ['Heavyweight 6.5oz', 'Vintage Washed Cream', 'Relaxed Boxy Fit', 'Soft Hand Feel'],
-    badge: 'OFFICIAL MERCH',
-    description: 'Printed locally with water-based burnt orange ink on a heavy natural cream cotton shirt. Built to survive hundreds of espresso dial-in sessions and record digging runs.',
+    tastingNotes: ['Katun Lembut Adem', 'Warna Cream Natural', 'Potongan Santai Unisex'],
+    badge: 'EDISI SPESIAL',
+    description: 'Kaos resmi Sekata dengan cetakan grafis #KecilBertumbuh dan identitas Tanjungpinang. Bahan katun nyaman dipakai nongkrong berlama-lama di slowbar maupun bepergian santai.',
     details: {
-      origin: 'Cut & Sewn in USA, Printed in PA',
-      process: 'Water-based discharge screenprint',
-      elevation: 'N/A',
-      brewMethod: 'Cold Wash, Hang Dry'
+      origin: 'Produksi Lokal Kreatif Tanjungpinang',
+      process: 'Sablon Waterbased Discharge',
+      elevation: '-',
+      brewMethod: 'Cuci Dingin, Jangan Setrika Sablon Langsung'
     },
-    sizes: ['Small', 'Medium', 'Large', 'X-Large', '2X-Large'],
-    temperatures: ['Unisex Fit']
+    sizes: ['Ukuran S', 'Ukuran M', 'Ukuran L', 'Ukuran XL', 'Ukuran XXL'],
+    temperatures: ['Unisex']
   },
   {
-    id: 'diner-mug',
-    name: 'Little Amps Vintage Diner Mug',
-    subtitle: '10oz Heavy Ceramic • Heat Retentive Vitrified Porcelain',
+    id: 'diner-mug-sekata',
+    name: 'Cangkir Keramik Sekata Vintage',
+    subtitle: 'Cangkir Tebal 280ml • Menjaga Suhu Seduhan Kopi Tetap Hangat',
     category: 'merch',
-    categoryLabel: 'AMPS GEAR',
-    price: 18.00,
+    categoryLabel: 'MERCHANDISE',
+    price: 65000,
     image: '/diner_mug.jpg',
     roastLevel: 0,
-    roastTitle: 'Barware',
+    roastTitle: 'Keramik Bar',
     acidity: 0,
     complexity: 4,
-    tastingNotes: ['10oz Capacity', 'Ultra-Thick Wall', 'Vitrified Ceramic', 'Comfort Finger Grip'],
-    badge: 'COUNTER ICON',
-    description: 'The exact ceramic mug clinking across our Harrisburg counter every morning. Super thick walls keep your drip coffee hot while you flip an album over.',
+    tastingNotes: ['Keramik Tahan Panas', 'Gagang Ergonomis', 'Logo Cetak Bakar Awet'],
+    badge: 'KLASIK MEJA',
+    description: 'Cangkir keramik tebal bergaya vintage yang sama persis dengan yang kami gunakan saat menyajikan kopi hangat di meja Sekata. Menahan panas kopi lebih lama saat kamu asyik bertukar cerita.',
     details: {
-      origin: 'Vitrified High-Fire Porcelain',
-      process: 'Fired Ceramic Decal Print',
-      elevation: 'N/A',
-      brewMethod: 'Dishwasher & Microwave Safe'
+      origin: 'Keramik Bakar Porselen',
+      process: 'Cetak Sablon Decal Bakar',
+      elevation: '-',
+      brewMethod: 'Aman untuk Microwave & Dishwasher'
     },
-    sizes: ['10oz Classic Diner Size'],
-    temperatures: ['Standard']
+    sizes: ['Kapasitas 280ml Standar'],
+    temperatures: ['Keramik']
   }
 ];
 
 export const CATEGORIES = [
-  { id: 'all', label: 'ALL PRODUCTS' },
-  { id: 'beans', label: 'ROASTED BEANS' },
-  { id: 'drinks', label: 'BAR CRAFT' },
-  { id: 'specialty', label: 'BOTANICAL & TEA' },
-  { id: 'merch', label: 'AMPS GEAR' }
+  { id: 'all', label: 'SEMUA MENU' },
+  { id: 'drinks', label: 'MINUMAN BAR & KOPI' },
+  { id: 'beans', label: 'BIJI KOPI SANGRAI' },
+  { id: 'specialty', label: 'NON-KOPI & TEH' },
+  { id: 'merch', label: 'MERCHANDISE' }
 ];
+
+export const formatRupiah = (number) => {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }).format(number);
+};
