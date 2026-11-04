@@ -62,15 +62,12 @@ export default function SlowbarExperience() {
         {/* Slowbar Showcase Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left: Video / Media Preview */}
+          {/* Left: Foto Asli Meja Slowbar (konten1.jpg) */}
           <div className="lg:col-span-6 bg-cream p-3 sm:p-4 rounded-[12px] border-hairline">
             <div className="relative w-full aspect-[4/3] rounded-[8px] overflow-hidden border-hairline bg-sandstone">
-              <video
-                src="/herosection.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="/konten1.jpg"
+                alt="Dokumentasi Meja Slowbar Sekata Coffee Tanjungpinang"
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-3 left-3 bg-cream/90 backdrop-blur-sm px-2.5 py-1 rounded-[3px] border-hairline text-[10px] font-mono text-turquoise uppercase tracking-[0.05em] flex items-center gap-1.5 font-medium">
@@ -152,3 +149,4 @@ export default function SlowbarExperience() {
     </section>
   );
 }
+
