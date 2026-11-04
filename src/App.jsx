@@ -93,24 +93,23 @@ export default function App() {
   return (
     <div className="min-h-screen bg-cream paper-texture flex flex-col font-body selection:bg-turquoise selection:text-cream">
       
-      {/* NAVBAR SELALU TERLIHAT (ALWAYS VISIBLE FIXED TOP) */}
+      {/* NAVBAR SELALU TERLIHAT (TRANSPARENT AT TOP, GLASSMORPHISM ON SCROLL) */}
       <Navbar
         cartCount={totalCartCount}
         onOpenCart={() => setIsCartOpen(true)}
         onOpenSearch={() => setIsSearchOpen(true)}
       />
 
-      <div className="pt-16 sm:pt-20">
-        {/* SECTION 1 — HERO DENGAN VIDEO & LOGO SEKATA */}
-        <HeroSection
-          onAddToCart={handleAddToCart}
-          onQuickView={handleQuickView}
-        />
+      {/* SECTION 1 — HERO FULLSCREEN DESKTOP */}
+      <HeroSection
+        onAddToCart={handleAddToCart}
+        onQuickView={handleQuickView}
+      />
 
-        {/* PERNYATAAN WARNA-WARNI KREATIF (SESUAI REQUEST USER) */}
-        <ColorfulStatement />
+      {/* PERNYATAAN WARNA-WARNI KREATIF (SESUAI REQUEST USER) */}
+      <ColorfulStatement />
 
-        <main className="flex-1">
+      <main className="flex-1">
         {/* SECTION COUNTDOWN GRAND OPENING JUMAT MINGGU INI (MENGGANTIKAN GAMBAR 3) */}
         <GrandOpeningCountdown />
 
@@ -153,7 +152,6 @@ export default function App() {
 
       {/* SECTION 9 — FOOTER DENGAN TAGLINE LENGKAP */}
       <Footer />
-    </div>
 
       {/* MODAL DETAIL PRODUK */}
       <QuickViewModal

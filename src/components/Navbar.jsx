@@ -135,16 +135,15 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
     <>
       {/* 
         ========================================================================
-        1. ALWAYS VISIBLE NAVBAR (Clean, Minimal, Editorial)
-        Left: Logo
-        Right: Menu Button (+ Cart & Vinyl Toggle)
+        1. ALWAYS VISIBLE NAVBAR (Transparent at Hero, Glassmorphism on Scroll)
+        Sesuai request: Transparan saat di Hero / bagian atas, tanpa background cream
         ========================================================================
       */}
       <header
         className={`fixed top-0 left-0 right-0 z-40 w-full transition-all duration-300 ${
           scrolled
-            ? 'bg-cream/95 backdrop-blur-md border-b border-espresso/15 shadow-[0_4px_20px_rgba(82,44,37,0.06)]'
-            : 'bg-cream/90 backdrop-blur-sm border-b border-espresso/10'
+            ? 'bg-cream/95 backdrop-blur-md border-b border-espresso/15 shadow-[0_4px_20px_rgba(82,44,37,0.06)] py-0'
+            : 'bg-transparent border-b border-transparent py-1 sm:py-2'
         }`}
       >
         <div className="container-max h-16 sm:h-20 flex items-center justify-between px-4 sm:px-8">
@@ -153,12 +152,14 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
           <a
             href="#"
             className="flex items-center group focus:outline-none"
-            aria-label="Sekata Coffee & Slowbar — Halaman Utama"
+            aria-label="Sekata Coffee &amp; Slowbar — Halaman Utama"
           >
             <img
               src="/logo.png"
-              alt="Sekata Coffee & Slowbar"
-              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              alt="Sekata Coffee &amp; Slowbar"
+              className={`h-9 sm:h-11 w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
+                !scrolled ? 'filter drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]' : ''
+              }`}
             />
           </a>
 
@@ -168,7 +169,11 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
             {/* Cart / Orders Pill */}
             <button
               onClick={onOpenCart}
-              className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-espresso/25 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5 transition-all duration-200 font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium focus:outline-none"
+              className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium transition-all duration-200 focus:outline-none ${
+                scrolled
+                  ? 'border border-espresso/25 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
+                  : 'bg-black/35 backdrop-blur-md border border-white/30 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
+              }`}
               aria-label={`Buka Keranjang Pesanan (${cartCount} item)`}
             >
               <ShoppingBag className="w-3.5 h-3.5 text-turquoise" />
@@ -181,13 +186,21 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
             {/* MINIMAL MENU TRIGGER BUTTON */}
             <button
               onClick={() => setIsMenuOpen(true)}
-              className="group relative flex items-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-espresso text-cream hover:bg-burnt-orange transition-all duration-300 font-mono text-xs sm:text-sm uppercase tracking-[0.16em] font-semibold shadow-md active:scale-95 focus:outline-none"
+              className={`group relative flex items-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-mono text-xs sm:text-sm uppercase tracking-[0.16em] font-semibold transition-all duration-300 active:scale-95 focus:outline-none ${
+                scrolled
+                  ? 'bg-espresso text-cream hover:bg-burnt-orange shadow-md'
+                  : 'bg-cream text-espresso hover:bg-burnt-orange hover:text-cream shadow-[0_4px_16px_rgba(0,0,0,0.3)]'
+              }`}
               aria-label="Buka Menu Navigasi Fullscreen"
             >
               <span>MENU</span>
               <span className="flex flex-col gap-[3.5px] w-4 justify-center items-end">
-                <span className="w-4 h-[1.5px] bg-cream group-hover:w-4 transition-all duration-200" />
-                <span className="w-2.5 h-[1.5px] bg-cream group-hover:w-4 transition-all duration-200" />
+                <span className={`w-4 h-[1.5px] transition-all duration-200 ${
+                  scrolled ? 'bg-cream group-hover:w-4' : 'bg-espresso group-hover:bg-cream group-hover:w-4'
+                }`} />
+                <span className={`w-2.5 h-[1.5px] transition-all duration-200 ${
+                  scrolled ? 'bg-cream group-hover:w-4' : 'bg-espresso group-hover:bg-cream group-hover:w-4'
+                }`} />
               </span>
             </button>
 
