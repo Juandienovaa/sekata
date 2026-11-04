@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingBag, X, ArrowUpRight, MessageCircle, MapPin, Sparkles } from 'lucide-react';
-import VinylPlayer from './VinylPlayer';
 
 // Custom inline SVG for Instagram
 function InstagramIcon({ className = "w-3.5 h-3.5" }) {
@@ -150,10 +149,10 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
       >
         <div className="container-max h-16 sm:h-20 flex items-center justify-between px-4 sm:px-8">
           
-          {/* LEFT: SEKATA LOGO */}
+          {/* LEFT: SEKATA LOGO ONLY */}
           <a
             href="#"
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center group focus:outline-none"
             aria-label="Sekata Coffee & Slowbar — Halaman Utama"
           >
             <img
@@ -161,23 +160,10 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
               alt="Sekata Coffee & Slowbar"
               className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="hidden sm:flex flex-col text-left">
-              <span className="font-mono text-[11px] font-bold tracking-[0.2em] text-espresso uppercase leading-none">
-                SEKATA
-              </span>
-              <span className="font-mono text-[9px] tracking-[0.14em] text-coffee-dust uppercase mt-0.5">
-                SLOWBAR &bull; TANJUNGPINANG
-              </span>
-            </div>
           </a>
 
-          {/* RIGHT: VINYL TOGGLE + PESANAN + MENU BUTTON */}
-          <div className="flex items-center gap-2 sm:gap-4">
-            
-            {/* Ambient Vinyl Player Toggle */}
-            <div className="hidden md:flex items-center pr-2 border-r border-espresso/15">
-              <VinylPlayer />
-            </div>
+          {/* RIGHT: PESANAN + MENU BUTTON */}
+          <div className="flex items-center gap-2 sm:gap-3">
 
             {/* Cart / Orders Pill */}
             <button
