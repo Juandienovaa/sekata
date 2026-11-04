@@ -145,15 +145,15 @@ export default function ColorfulStatement() {
           <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8 pb-4 border-b border-espresso/10">
             <div className="inline-flex items-center gap-2.5">
               <span className="w-2.5 h-2.5 rounded-full bg-turquoise animate-pulse" />
-              <span className="text-[11px] sm:text-xs font-mono text-coffee-dust uppercase tracking-[0.14em] font-semibold">
-                SEKATA COFFEE &amp; SLOWBAR &bull; TANJUNGPINANG, KEPRI
+              <span className="text-[13px] sm:text-[14px] font-body text-[#5c4d44] font-medium">
+                Sekata Coffee &amp; Slowbar &bull; Tanjungpinang, Kepri
               </span>
             </div>
 
             {/* Interactive Awwwards Scroll Scrub Counter */}
             <div className="inline-flex items-center gap-3">
-              <span className="text-[11px] sm:text-xs font-mono text-coffee-dust uppercase tracking-[0.1em]">
-                SCROLL REVEAL
+              <span className="text-[12px] font-body text-[#735e54]">
+                Scroll to reveal
               </span>
               <div className="w-20 sm:w-28 h-[3px] bg-espresso/15 rounded-full overflow-hidden">
                 <div
@@ -164,7 +164,7 @@ export default function ColorfulStatement() {
               </div>
               <span
                 ref={counterRef}
-                className="text-xs sm:text-[13px] font-mono text-burnt-orange font-bold min-w-[36px] text-right"
+                className="text-[12px] sm:text-[13px] font-mono text-burnt-orange font-bold min-w-[36px] text-right"
               >
                 0%
               </span>
@@ -190,22 +190,22 @@ export default function ColorfulStatement() {
               })}
             </p>
 
-            {/* Bottom Meta Badges */}
+            {/* Bottom Meta Badges (Image 5 Human Typography) */}
             <div
               ref={bottomPillsRef}
-              className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-[13px] font-mono text-coffee-dust uppercase tracking-[0.06em]"
+              className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-6 text-[13px] sm:text-[14px] font-body"
             >
-              <span className="text-turquoise font-bold flex items-center gap-1.5">
+              <span className="text-turquoise font-medium flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-turquoise" />
-                MEJA SLOWBAR INTERAKTIF
+                Meja Slowbar Interaktif
               </span>
-              <span className="text-burnt-orange font-bold flex items-center gap-1.5">
+              <span className="text-burnt-orange font-medium flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-burnt-orange" />
-                TEMPAT BERCERITA
+                Tempat Bertukar Cerita
               </span>
-              <span className="text-amber font-bold flex items-center gap-1.5">
+              <span className="text-amber font-medium flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber" />
-                #KECILBERTUMBUH
+                #KecilBertumbuh
               </span>
             </div>
           </div>

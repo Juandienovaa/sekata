@@ -83,40 +83,40 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Navigation */}
+          {/* Col 2: Navigation (Image 5 Human Typography) */}
           <div className="lg:col-span-3 space-y-3">
-            <p className="text-xs font-mono font-medium text-espresso uppercase tracking-[0.05em] pb-1 border-b-hairline">
+            <p className="text-[11px] font-mono font-semibold text-espresso uppercase tracking-[0.08em] pb-1 border-b-hairline">
               NAVIGASI SITUS
             </p>
-            <ul className="space-y-2 text-xs font-mono">
+            <ul className="space-y-2.5 font-body text-[14px] text-[#5c4d44]">
               <li>
-                <a href="#menu" className="text-coffee-dust hover:text-turquoise transition-colors">
-                  &bull; PILIHAN MENU &amp; SEDUHAN
+                <a href="#menu" className="hover:text-espresso hover:underline underline-offset-2 transition-colors">
+                  Pilihan Menu &amp; Seduhan
                 </a>
               </li>
               <li>
-                <a href="#slowbar" className="text-coffee-dust hover:text-turquoise transition-colors">
-                  &bull; PENGALAMAN SLOWBAR
+                <a href="#slowbar" className="hover:text-espresso hover:underline underline-offset-2 transition-colors">
+                  Pengalaman Meja Slowbar
                 </a>
               </li>
               <li>
-                <a href="#filosofi" className="text-coffee-dust hover:text-turquoise transition-colors">
-                  &bull; FILOSOFI KAMI
+                <a href="#filosofi" className="hover:text-espresso hover:underline underline-offset-2 transition-colors">
+                  Filosofi Sekata
                 </a>
               </li>
               <li>
-                <a href="#reserve" className="text-coffee-dust hover:text-turquoise transition-colors">
-                  &bull; RESERVASI MEJA SLOWBAR
+                <a href="#reserve" className="hover:text-espresso hover:underline underline-offset-2 transition-colors">
+                  Reservasi Meja Slowbar
                 </a>
               </li>
               <li>
-                <a href="#cerita" className="text-coffee-dust hover:text-turquoise transition-colors">
-                  &bull; CERITA DI BALIK SEDUHAN
+                <a href="#cerita" className="hover:text-espresso hover:underline underline-offset-2 transition-colors">
+                  Setiap Pertemuan Punya Cerita
                 </a>
               </li>
               <li>
-                <a href="#lokasi" className="text-coffee-dust hover:text-turquoise transition-colors">
-                  &bull; LOKASI &amp; PETUNJUK ARAH
+                <a href="#lokasi" className="hover:text-espresso hover:underline underline-offset-2 transition-colors">
+                  Lokasi &amp; Petunjuk Arah
                 </a>
               </li>
             </ul>
@@ -124,20 +124,20 @@ export default function Footer() {
 
           {/* Col 3: Kedai Sekata Info */}
           <div className="lg:col-span-3 space-y-3">
-            <p className="text-xs font-mono font-medium text-espresso uppercase tracking-[0.05em] pb-1 border-b-hairline">
+            <p className="text-[11px] font-mono font-semibold text-espresso uppercase tracking-[0.08em] pb-1 border-b-hairline">
               KEDAI &amp; JAM BUKA
             </p>
-            <div className="space-y-3 text-xs font-mono">
+            <div className="space-y-3 font-body text-[13px] sm:text-[14px] text-[#5c4d44]">
               <div>
-                <p className="text-espresso font-medium uppercase">SEKATA SLOWBAR</p>
-                <p className="text-coffee-dust">Tanjungpinang, Kepulauan Riau</p>
-                <p className="text-coffee-dust mt-1">Senin – Jumat: 10.00 – 22.00 WIB</p>
-                <p className="text-coffee-dust">Sabtu – Minggu: 09.00 – 23.00 WIB</p>
+                <p className="text-espresso font-medium">Sekata Slowbar Tanjungpinang</p>
+                <p className="text-[#6b584f]">Kepulauan Riau &bull; Indonesia</p>
+                <p className="text-[#6b584f] mt-1">Senin – Jumat: 10.00 – 22.00 WIB</p>
+                <p className="text-[#6b584f]">Sabtu – Minggu: 09.00 – 23.00 WIB</p>
               </div>
-              <div className="pt-2 border-t-hairline">
-                <p className="text-espresso font-medium uppercase">MEDIA SOSIAL</p>
-                <p className="text-coffee-dust">Instagram: <a href="https://instagram.com/sekata.tnj" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@sekata.tnj</a></p>
-                <p className="text-coffee-dust">TikTok: <a href="https://tiktok.com/@sekatatnj" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@sekatatnj</a></p>
+              <div className="pt-2 border-t border-espresso/10">
+                <p className="text-espresso font-medium">Media Sosial</p>
+                <p className="text-[#6b584f]">Instagram: <a href="https://instagram.com/sekata.tnj" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@sekata.tnj</a></p>
+                <p className="text-[#6b584f]">TikTok: <a href="https://tiktok.com/@sekatatnj" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@sekatatnj</a></p>
               </div>
             </div>
           </div>

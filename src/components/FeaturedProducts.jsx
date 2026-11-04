@@ -59,19 +59,18 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
     <section id="menu" className="w-full py-12 sm:py-20 bg-cream border-b-hairline scroll-mt-20">
       <div className="container-max">
         
-        {/* Section Header */}
+        {/* Section Header (Image 5 Human Typography) */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 pb-6 border-b-hairline">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="badge-stamp bg-turquoise text-cream font-mono">MENU &amp; PILIHAN</span>
-              <p className="text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em]">
-                SEKATA COFFEE &amp; SLOWBAR TANJUNGPINANG
-              </p>
+              <span className="text-[13px] font-body text-amber font-medium">
+                Pilihan Menu &bull; Sekata Tanjungpinang
+              </span>
             </div>
             <h2 className="font-display text-[32px] sm:text-[42px] leading-[0.95] text-espresso tracking-[-0.05em] mb-2">
               Temukan Rasa yang Kamu Suka.
             </h2>
-            <p className="text-[13px] sm:text-[14px] font-body text-coffee-dust max-w-xl">
+            <p className="text-[14px] font-body text-[#6b584f] max-w-xl">
               Pilih tampilan kartu foto ringkas atau papan menu kedai lengkap untuk melihat harga dan karakter seduhan.
             </p>
           </div>
@@ -80,13 +79,13 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             
             {/* View Mode Switcher (Kartu Foto vs Papan Menu Kedai) */}
-            <div className="flex items-center bg-linen p-1 rounded-[6px] border border-hairline">
+            <div className="flex items-center bg-linen p-1 rounded-[8px] border border-hairline">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[4px] font-mono text-[11px] uppercase tracking-wider transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] font-body text-[13px] transition-all ${
                   viewMode === 'grid'
-                    ? 'bg-cream text-espresso shadow-xs font-bold border border-espresso/15'
-                    : 'text-coffee-dust hover:text-espresso'
+                    ? 'bg-cream text-espresso shadow-xs font-medium border border-espresso/15'
+                    : 'text-[#6b584f] hover:text-espresso'
                 }`}
                 aria-label="Tampilan Kartu Foto"
               >
@@ -96,10 +95,10 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
 
               <button
                 onClick={() => setViewMode('board')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[4px] font-mono text-[11px] uppercase tracking-wider transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] font-body text-[13px] transition-all ${
                   viewMode === 'board'
-                    ? 'bg-espresso text-cream shadow-xs font-bold'
-                    : 'text-coffee-dust hover:text-espresso'
+                    ? 'bg-espresso text-cream shadow-xs font-medium'
+                    : 'text-[#6b584f] hover:text-espresso'
                 }`}
                 aria-label="Tampilan Papan Menu Kedai"
               >
