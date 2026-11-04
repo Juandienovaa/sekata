@@ -65,12 +65,12 @@ export default function HeroSection({ onAddToCart, onQuickView }) {
         {/* Content Overlay */}
         <div className="relative z-10 w-full h-full flex flex-col justify-between p-6 sm:p-10 lg:p-12">
           
-          {/* Top-Left: Little Amps Brand Lockup SVG */}
-          <div className="max-w-[280px] sm:max-w-[380px] lg:max-w-[460px]">
+          {/* Top-Left: User's Official logo.png */}
+          <div className="max-w-[240px] sm:max-w-[340px] lg:max-w-[400px]">
             <img
-              src="/hero-little-amps.svg"
-              alt="Little Amps Coffee"
-              className="w-full h-auto object-contain filter drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]"
+              src="/logo.png"
+              alt="Brand Logo"
+              className="h-16 sm:h-24 lg:h-32 w-auto object-contain filter drop-shadow-[0_3px_12px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:scale-105"
             />
           </div>
 
