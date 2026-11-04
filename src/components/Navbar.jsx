@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ShoppingBag, X, ArrowUpRight, MessageCircle, MapPin, Sparkles, Music } from 'lucide-react';
+import { ShoppingBag, X, ArrowUpRight, MessageCircle, MapPin, Sparkles } from 'lucide-react';
 import VinylPlayer from './VinylPlayer';
 
 // Custom inline SVG for Instagram
-function InstagramIcon({ className = "w-4 h-4" }) {
+function InstagramIcon({ className = "w-3.5 h-3.5" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
@@ -71,7 +70,7 @@ const NAV_EDITORIAL_ITEMS = [
     title: 'LOKASI KEDAI',
     english: 'VISIT OUR COFFEE BAR',
     category: 'KUNJUNGI',
-    subtitle: 'Tanjungpinang, Kepulauan Riau • Buka Setiap Hari: 09.00 - 23.00 WIB',
+    subtitle: 'Tanjungpinang, Kepri • Buka Setiap Hari: 09.00 - 23.00 WIB',
     href: '#lokasi',
     image: '/americano.jpg',
     tag: 'TANJUNGPINANG, KEPRI'
@@ -127,7 +126,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
       } else {
         window.location.hash = href;
       }
-    }, 400);
+    }, 350);
   };
 
   // Active preview image
@@ -213,13 +212,12 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
 
       {/* 
         ========================================================================
-        2. FULLSCREEN EDITORIAL NAVIGATION MENU (Clip-path Circle Reveal)
-        Philosophy: An interactive editorial film where typography is a spatial
-        element inside the story.
+        2. FULLSCREEN EDITORIAL NAVIGATION MENU (PROPORTIONED TO FIT 100VH)
+        Sesuai request: Ukuran disesuaikan agar pas 1 layar desktop tanpa terpotong
         ========================================================================
       */}
       <div
-        className="fixed inset-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)]"
+        className="fixed inset-0 z-50 transition-all duration-600 ease-[cubic-bezier(0.77,0,0.175,1)]"
         style={{
           clipPath: isMenuOpen
             ? 'circle(150% at calc(100% - 48px) 40px)'
@@ -228,37 +226,37 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
           visibility: isMenuOpen ? 'visible' : 'hidden'
         }}
       >
-        <div className="w-full h-full bg-[#150f0d] text-cream flex flex-col justify-between overflow-y-auto overflow-x-hidden p-6 sm:p-10 lg:p-14 select-none relative">
+        <div className="w-full h-full max-h-[100dvh] bg-[#140e0c] text-cream flex flex-col justify-between overflow-y-auto sm:overflow-hidden p-5 sm:p-7 lg:p-8 select-none relative">
           
           {/* Subtle Atmospheric Watermark */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 font-display text-[20vw] text-cream/[0.02] select-none pointer-events-none leading-none tracking-tight">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 font-display text-[18vw] text-cream/[0.02] select-none pointer-events-none leading-none tracking-tight">
             SEKATA
           </div>
 
           {/* TOP AREA: Logo, Subtitle & Tutup [X] */}
-          <div className="relative z-10 w-full flex items-center justify-between border-b border-cream/15 pb-6">
+          <div className="relative z-10 w-full flex items-center justify-between border-b border-cream/15 pb-3 sm:pb-4 flex-shrink-0">
             
             {/* White Logo */}
             <div className="flex items-center gap-3">
               <img
                 src="/logo.png"
                 alt="Sekata Coffee & Slowbar"
-                className="h-8 sm:h-10 w-auto object-contain filter invert brightness-0"
+                className="h-7 sm:h-9 w-auto object-contain filter invert brightness-0"
               />
               <div className="flex flex-col text-left">
-                <span className="font-mono text-xs font-bold tracking-[0.2em] text-cream uppercase">
+                <span className="font-mono text-[11px] sm:text-xs font-bold tracking-[0.2em] text-cream uppercase">
                   SEKATA SLOWBAR
                 </span>
-                <span className="font-mono text-[9px] tracking-[0.15em] text-cream/50 uppercase mt-0.5">
+                <span className="font-mono text-[8px] sm:text-[9px] tracking-[0.15em] text-cream/50 uppercase">
                   EDITORIAL ARCHIVE &bull; TANJUNGPINANG
                 </span>
               </div>
             </div>
 
             {/* Center Editorial Film Pill (Desktop) */}
-            <div className="hidden lg:flex items-center gap-2 px-4 py-1.5 rounded-full border border-cream/20 bg-cream/5 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-burnt-orange animate-pulse" />
-              <span className="font-mono text-[10px] tracking-[0.2em] text-cream/70 uppercase">
+            <div className="hidden md:flex items-center gap-2 px-3.5 py-1 rounded-full border border-cream/20 bg-cream/5 backdrop-blur-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-burnt-orange animate-pulse" />
+              <span className="font-mono text-[9px] tracking-[0.2em] text-cream/70 uppercase">
                 INTERACTIVE EDITORIAL FILM
               </span>
             </div>
@@ -266,23 +264,23 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
             {/* TUTUP [X] BUTTON */}
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="group flex items-center gap-2 sm:gap-3 px-5 sm:px-7 py-2 sm:py-2.5 rounded-full border border-cream/30 hover:border-cream text-cream hover:bg-cream hover:text-espresso transition-all duration-300 font-mono text-xs sm:text-sm uppercase tracking-[0.18em] focus:outline-none active:scale-95"
+              className="group flex items-center gap-2 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full border border-cream/30 hover:border-cream text-cream hover:bg-cream hover:text-espresso transition-all duration-300 font-mono text-xs uppercase tracking-[0.16em] focus:outline-none active:scale-95"
               aria-label="Tutup menu navigasi"
             >
               <span>TUTUP</span>
-              <X className="w-4 h-4 group-hover:rotate-90 transition-transform duration-300" />
+              <X className="w-3.5 h-3.5 group-hover:rotate-90 transition-transform duration-300" />
             </button>
 
           </div>
 
           {/* 
-            MIDDLE AREA: MASSIVE TYPOGRAPHIC NAVIGATION LINKS + HOVER REVEALS
+            MIDDLE AREA: MASSIVE TYPOGRAPHIC NAVIGATION LINKS (COMPACT PROPORTIONS)
           */}
-          <div className="relative z-10 w-full my-auto py-8 sm:py-12">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="relative z-10 w-full my-auto py-3 sm:py-4 flex-1 flex items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center w-full">
               
-              {/* Massive Typographic Links Column (8 cols on desktop) */}
-              <nav className="lg:col-span-8 flex flex-col space-y-2 sm:space-y-4 text-left">
+              {/* Massive Typographic Links Column (7-8 cols on desktop) */}
+              <nav className="lg:col-span-8 flex flex-col space-y-1 sm:space-y-2 text-left">
                 {NAV_EDITORIAL_ITEMS.map((item, index) => {
                   const isHovered = hoveredIndex === index;
                   const hasHover = hoveredIndex !== null;
@@ -295,41 +293,41 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                       onClick={(e) => handleNavigate(e, item.href)}
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
-                      className={`group block py-1.5 sm:py-2 transition-all duration-300 ${
-                        isDimmed ? 'opacity-30 blur-[0.5px]' : 'opacity-100'
+                      className={`group block py-1 transition-all duration-300 ${
+                        isDimmed ? 'opacity-30 blur-[0.3px]' : 'opacity-100'
                       }`}
                     >
-                      <div className="flex items-baseline gap-3 sm:gap-6">
+                      <div className="flex items-baseline gap-2.5 sm:gap-4">
                         
                         {/* Number Prefix */}
-                        <span className="font-mono text-xs sm:text-sm md:text-base text-burnt-orange tracking-[0.2em] font-medium transition-transform duration-300 group-hover:translate-x-1">
+                        <span className="font-mono text-[11px] sm:text-xs md:text-sm text-burnt-orange tracking-[0.18em] font-medium transition-transform duration-300 group-hover:translate-x-1">
                           {item.number}
                         </span>
 
-                        {/* Massive Typographic Headline with Letter-Spacing Animation */}
+                        {/* Typographic Headline with Proportional Sizing & Letter-Spacing */}
                         <div className="flex flex-col">
                           <span
-                            className={`font-display text-[38px] sm:text-[56px] md:text-[68px] lg:text-[76px] xl:text-[84px] leading-[0.92] uppercase transition-all duration-500 ease-out inline-flex items-center gap-3 sm:gap-6 ${
+                            className={`font-display text-[26px] sm:text-[34px] md:text-[42px] lg:text-[46px] xl:text-[50px] leading-[1.05] uppercase transition-all duration-400 ease-out inline-flex items-center gap-2.5 sm:gap-4 ${
                               isHovered
-                                ? 'text-marigold tracking-[0.06em] translate-x-2 sm:translate-x-4'
+                                ? 'text-marigold tracking-[0.05em] translate-x-2'
                                 : 'text-cream tracking-[-0.03em]'
                             }`}
                           >
                             <span>{item.title}</span>
                             <ArrowUpRight
-                              className={`w-6 h-6 sm:w-10 sm:h-10 transition-all duration-300 ${
+                              className={`w-4 h-4 sm:w-6 sm:h-6 transition-all duration-300 ${
                                 isHovered ? 'opacity-100 translate-x-1 -translate-y-1 text-burnt-orange' : 'opacity-0 scale-75'
                               }`}
                             />
                           </span>
 
-                          {/* Hover Reveal Subtitle */}
+                          {/* Hover Reveal Subtitle (Compact) */}
                           <div
                             className={`overflow-hidden transition-all duration-300 ${
-                              isHovered ? 'max-h-12 mt-1 sm:mt-2 opacity-100 translate-x-2 sm:translate-x-4' : 'max-h-0 opacity-0'
+                              isHovered ? 'max-h-8 mt-0.5 opacity-100 translate-x-2' : 'max-h-0 opacity-0'
                             }`}
                           >
-                            <p className="font-mono text-[11px] sm:text-xs text-cream/70 tracking-[0.08em]">
+                            <p className="font-mono text-[10px] sm:text-[11px] text-cream/70 tracking-[0.06em]">
                               &mdash; {item.subtitle}
                             </p>
                           </div>
@@ -341,37 +339,37 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                 })}
               </nav>
 
-              {/* Editorial Hover Reveal Preview Frame (4 cols on desktop) */}
+              {/* Editorial Hover Reveal Preview Frame (4 cols on desktop, compact height) */}
               <div className="lg:col-span-4 hidden lg:flex flex-col justify-center">
-                <div className="relative w-full aspect-[4/5] rounded-[18px] overflow-hidden border border-cream/20 bg-cream/5 shadow-2xl p-2.5 backdrop-blur-md">
+                <div className="relative w-full max-w-[280px] xl:max-w-[300px] aspect-[4/4.8] rounded-[16px] overflow-hidden border border-cream/20 bg-cream/5 shadow-2xl p-2 backdrop-blur-md mx-auto">
                   
                   {/* Active Preview Image */}
-                  <div className="relative w-full h-full rounded-[12px] overflow-hidden">
+                  <div className="relative w-full h-full rounded-[10px] overflow-hidden">
                     <img
                       src={activeItem.image}
                       alt={activeItem.title}
-                      className="w-full h-full object-cover transition-all duration-700 filter contrast-110"
+                      className="w-full h-full object-cover transition-all duration-500 filter contrast-110"
                     />
                     
                     {/* Dark gradient for caption */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
                     {/* Tag badge */}
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-full bg-burnt-orange text-cream font-mono text-[10px] tracking-[0.18em] uppercase font-bold shadow-md">
+                    <div className="absolute top-3 left-3">
+                      <span className="px-2.5 py-0.5 rounded-full bg-burnt-orange text-cream font-mono text-[9px] tracking-[0.16em] uppercase font-bold shadow-md">
                         {activeItem.tag}
                       </span>
                     </div>
 
                     {/* Bottom Caption */}
-                    <div className="absolute bottom-4 left-4 right-4 text-left">
-                      <span className="font-mono text-[10px] text-marigold tracking-[0.2em] uppercase block mb-1">
+                    <div className="absolute bottom-3 left-3 right-3 text-left">
+                      <span className="font-mono text-[9px] text-marigold tracking-[0.18em] uppercase block mb-0.5">
                         {activeItem.category} // {activeItem.english}
                       </span>
-                      <h4 className="font-display text-xl sm:text-2xl text-cream leading-tight">
+                      <h4 className="font-display text-lg text-cream leading-tight">
                         {activeItem.title}
                       </h4>
-                      <p className="font-body text-xs text-cream/80 mt-1 line-clamp-2">
+                      <p className="font-body text-[11px] text-cream/80 mt-0.5 line-clamp-2">
                         {activeItem.subtitle}
                       </p>
                     </div>
@@ -381,7 +379,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                 </div>
 
                 {/* Subtle caption below frame */}
-                <p className="font-mono text-[10px] text-cream/40 text-center tracking-[0.15em] uppercase mt-3">
+                <p className="font-mono text-[9px] text-cream/40 text-center tracking-[0.14em] uppercase mt-2">
                   ARAHKAN KURSOR KE MENU UNTUK REVEAL
                 </p>
               </div>
@@ -390,17 +388,17 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
           </div>
 
           {/* 
-            BOTTOM AREA: Social Links, Contact Info, & Design Philosophy
+            BOTTOM AREA: Compact Social Links, Contact Info, & Design Philosophy
           */}
-          <div className="relative z-10 w-full border-t border-cream/15 pt-6 sm:pt-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-left font-mono text-xs">
+          <div className="relative z-10 w-full border-t border-cream/15 pt-3 sm:pt-4 flex-shrink-0">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-left font-mono text-[11px]">
               
               {/* Column 1: Social Links */}
               <div>
-                <span className="text-burnt-orange tracking-[0.2em] uppercase block mb-2 font-medium">
+                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[10px]">
                   // IKUTI JEJAK KAMI
                 </span>
-                <ul className="space-y-1.5 text-cream/80">
+                <ul className="space-y-1 text-cream/80">
                   <li>
                     <a
                       href="https://www.instagram.com/reel/DfRJl9QPe13/?utm_source=ig_web_button_share_sheet&psln=MzRlODBiNWFlZA=="
@@ -408,18 +406,8 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 hover:text-marigold transition-colors"
                     >
-                      <InstagramIcon className="w-3.5 h-3.5 text-marigold" />
+                      <InstagramIcon className="w-3 h-3 text-marigold" />
                       <span>Instagram: @sekata.tnj</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.tiktok.com/@sekatatnj"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-marigold transition-colors"
-                    >
-                      TikTok: @sekatatnj
                     </a>
                   </li>
                   <li>
@@ -429,7 +417,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 hover:text-marigold transition-colors"
                     >
-                      <MessageCircle className="w-3.5 h-3.5 text-marigold" />
+                      <MessageCircle className="w-3 h-3 text-marigold" />
                       <span>WhatsApp: +62 812-3456-7890</span>
                     </a>
                   </li>
@@ -438,32 +426,29 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
 
               {/* Column 2: Contact Info */}
               <div>
-                <span className="text-burnt-orange tracking-[0.2em] uppercase block mb-2 font-medium">
+                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[10px]">
                   // LOKASI & JAM SEDUH
                 </span>
-                <div className="space-y-1 text-cream/80 leading-relaxed">
+                <div className="space-y-0.5 text-cream/80 leading-relaxed text-[10.5px]">
                   <p className="flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-marigold flex-shrink-0" />
+                    <MapPin className="w-3 h-3 text-marigold flex-shrink-0" />
                     <span>Tanjungpinang, Kepulauan Riau</span>
                   </p>
                   <p className="text-cream/60">
                     Buka Setiap Hari: 09.00 &mdash; 23.00 WIB
-                  </p>
-                  <p className="text-[11px] text-marigold">
-                    Manual Brew Slowbar &bull; Communal Space
                   </p>
                 </div>
               </div>
 
               {/* Column 3: Design Philosophy Manifesto */}
               <div>
-                <span className="text-burnt-orange tracking-[0.2em] uppercase block mb-2 font-medium">
+                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[10px]">
                   // FILOSOFI PENGALAMAN
                 </span>
-                <p className="font-body italic text-cream/80 text-[13px] leading-relaxed">
-                  &ldquo;This experience should feel less like a website and more like an interactive editorial film, where typography is not an interface, but a spatial element inside the story.&rdquo;
+                <p className="font-body italic text-cream/75 text-[11px] leading-snug line-clamp-2">
+                  &ldquo;This experience should feel less like a website and more like an interactive editorial film, where typography is a spatial element.&rdquo;
                 </p>
-                <span className="font-mono text-[10px] text-marigold uppercase tracking-[0.14em] block mt-1.5">
+                <span className="font-mono text-[9px] text-marigold uppercase tracking-[0.12em] block mt-0.5">
                   &mdash; Sekata Coffee &bull; #KecilBertumbuh
                 </span>
               </div>
