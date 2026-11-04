@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import ColorfulStatement from './components/ColorfulStatement';
 import SlowbarExperience from './components/SlowbarExperience';
 import FeaturedProducts from './components/FeaturedProducts';
+import SubscriptionSection from './components/SubscriptionSection';
 import BrandStory from './components/BrandStory';
 import TheSpace from './components/TheSpace';
 import WholesaleSplitSection from './components/WholesaleSplitSection';
@@ -117,6 +118,9 @@ export default function App() {
           onQuickView={handleQuickView}
           onAddToCart={handleAddToCart}
         />
+
+        {/* SECTION LANGGANAN BIJI KOPI — PERSIS SEPERTI SCREENSHOT USER */}
+        <SubscriptionSection />
 
         {/* SECTION 4 — FILOSOFI KAMI: "Bukan Hanya Tentang Kopi." */}
         <BrandStory />

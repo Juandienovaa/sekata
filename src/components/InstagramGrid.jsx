@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Heart, MessageCircle, ExternalLink, Sparkles, Film } from 'lucide-react';
+import { Play, Heart, MessageCircle, ExternalLink, Film } from 'lucide-react';
 
 function InstagramIcon({ className = "w-4 h-4" }) {
   return (
@@ -21,12 +21,9 @@ export default function InstagramGrid() {
       isReel: true,
       url: featuredReelUrl,
       image: '/konten1.jpg',
-      videoUrl: '/herosection.mp4',
       likes: '1.4K',
       comments: '86',
       caption: 'Ritme tenang dan cerita di balik meja slowbar Tanjungpinang sore ini. #KecilBertumbuh',
-      date: 'Terbaru',
-      badge: 'REEL POPULER'
     },
     {
       id: 'post-2',
@@ -36,7 +33,6 @@ export default function InstagramGrid() {
       likes: '842',
       comments: '39',
       caption: 'Layer espresso pekat berpadu saus karamel lembut. Teman terbaik buat ngobrol santai.',
-      date: '2 hari lalu'
     },
     {
       id: 'post-3',
@@ -45,8 +41,7 @@ export default function InstagramGrid() {
       image: '/vanillalatte.jpg',
       likes: '1.1K',
       comments: '54',
-      caption: 'Latte art hangat di cangkir keramik. Sederhana, tapi selalu bikin hari terasa lebih baik.',
-      date: '4 hari lalu'
+      caption: 'Latte art hangat di cangkir keramik. Sederhana tapi selalu bikin hari terasa lebih baik.',
     },
     {
       id: 'post-4',
@@ -55,8 +50,7 @@ export default function InstagramGrid() {
       image: '/partner-roasting.jpg',
       likes: '978',
       comments: '41',
-      caption: 'Mencari titik sangrai terbaik. Karena setiap biji kopi Nusantara punya karakter uniknya.',
-      date: '6 hari lalu'
+      caption: 'Mencari titik sangrai terbaik untuk setiap biji kopi Nusantara.',
     },
     {
       id: 'post-5',
@@ -65,8 +59,7 @@ export default function InstagramGrid() {
       image: '/lemon tea.jpg',
       likes: '723',
       comments: '28',
-      caption: 'Kesegaran perasan lemon segar & teh pilihan buat siang Tanjungpinang yang terik.',
-      date: '1 minggu lalu'
+      caption: 'Kesegaran lemon segar & teh pilihan buat siang Tanjungpinang yang terik.',
     },
     {
       id: 'post-6',
@@ -75,8 +68,7 @@ export default function InstagramGrid() {
       image: '/redvelvet.jpg',
       likes: '889',
       comments: '47',
-      caption: 'Pilihan non-kopi yang legit dan lembut. Semua orang selalu punya tempat di meja kami.',
-      date: '1 minggu lalu'
+      caption: 'Pilihan non-kopi yang legit dan lembut. Semua orang punya tempat di meja kami.',
     },
     {
       id: 'post-7',
@@ -86,7 +78,6 @@ export default function InstagramGrid() {
       likes: '1.3K',
       comments: '72',
       caption: 'Matcha artesanal dingin dengan susu segar. Hijau menenangkan di tengah kesibukan.',
-      date: '2 minggu lalu'
     },
     {
       id: 'post-8',
@@ -96,169 +87,113 @@ export default function InstagramGrid() {
       likes: '694',
       comments: '33',
       caption: 'Americano bersih dengan crema tipis. Menemani baca buku dan bertukar ide.',
-      date: '2 minggu lalu'
     }
   ];
 
   return (
-    <section className="w-full bg-cream border-t-hairline border-b-hairline py-16 sm:py-24 relative overflow-hidden">
+    <section className="w-full bg-burnt-orange text-cream border-t-2 border-b-2 border-espresso py-12 sm:py-16 relative overflow-hidden">
       
-      {/* Background Subtle Stamp Accent */}
-      <div className="absolute right-4 top-8 pointer-events-none opacity-5 hidden lg:block select-none">
-        <span className="font-display text-[160px] text-espresso leading-none">
-          @sekata
-        </span>
-      </div>
+      {/* Subtle halftone background dots pattern */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-10"
+        style={{
+          backgroundImage: 'radial-gradient(#fff9f2 1.5px, transparent 1.5px)',
+          backgroundSize: '24px 24px'
+        }}
+      />
 
       <div className="container-max relative z-10">
         
-        {/* Section Header: Instagram Profile Callout */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-6 border-b-hairline">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="badge-stamp bg-[#c13584] text-cream flex items-center gap-1">
-                <InstagramIcon className="w-3 h-3" />
-                <span>INSTAGRAM FEED</span>
-              </span>
-              <span className="text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em]">
-                DARI MEJA SLOWBAR TANJUNGPINANG
-              </span>
+        {/* Top Header Row matching Little Amps Screenshot 2 */}
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 sm:mb-10">
+          
+          {/* Left Mascot Sticker & Speech Bubble */}
+          <div className="flex items-center gap-4 sm:gap-6">
+            
+            {/* Hand-drawn Mascot Coffee Cup with Steam */}
+            <div className="relative flex-shrink-0 group cursor-pointer" title="Sekata Instagram">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-cream border-2 border-espresso flex items-center justify-center shadow-md rotate-[-4deg] group-hover:rotate-0 transition-transform">
+                <img
+                  src="/logo.png"
+                  alt="Maskot Sekata"
+                  className="w-12 sm:w-14 h-auto object-contain"
+                />
+              </div>
             </div>
 
-            <h2 className="font-display text-[36px] sm:text-[46px] leading-[0.95] text-espresso tracking-[-0.05em] mb-3">
-              Kabar &amp; Momen di <span className="text-turquoise">@sekata.tnj</span>
-            </h2>
+            {/* Hand-drawn Speech Bubble (Matching Screenshot 2: "FOLLOW US ON THE 'GRAM") */}
+            <div className="relative bg-cream text-espresso px-4 py-2 sm:px-5 sm:py-2.5 rounded-[18px] border-2 border-espresso shadow-md rotate-[2deg]">
+              {/* Bubble pointer triangle */}
+              <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent border-r-[10px] border-r-espresso" />
+              <div className="absolute -left-[6px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-r-[8px] border-r-cream" />
+              
+              <div className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-[0.08em] leading-tight text-burnt-orange">
+                FOLLOW US ON THE &lsquo;GRAM
+              </div>
+              <div className="font-mono text-[10px] sm:text-[11px] text-espresso uppercase tracking-[0.05em] font-medium">
+                @SEKATA.TNJ &bull; SLOWBAR &amp; COFFEE
+              </div>
+            </div>
 
-            <p className="font-body text-[14px] sm:text-[15px] leading-relaxed text-coffee-dust max-w-xl">
-              Intip suasana seduhan harian, rilisan biji kopi musiman, proses di balik meja slowbar, dan obrolan hangat kawan-kawan kami.
-            </p>
           </div>
 
-          {/* Follow Instagram Button */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+          {/* Right Action: Direct Link Button to Instagram Profile */}
+          <div className="flex items-center gap-3">
             <a
               href={profileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-filled text-xs py-3 px-6 bg-espresso border-espresso hover:bg-turquoise hover:border-turquoise tracking-[0.05em] inline-flex items-center gap-2 group transition-all"
+              className="btn-filled text-xs py-2.5 px-5 bg-cream text-espresso border-espresso hover:bg-espresso hover:text-cream tracking-[0.05em] inline-flex items-center gap-2 shadow-sm font-bold"
             >
-              <InstagramIcon className="w-4 h-4 text-cream group-hover:scale-110 transition-transform" />
+              <InstagramIcon className="w-4 h-4 text-burnt-orange" />
               <span>IKUTI DI INSTAGRAM</span>
-              <ExternalLink className="w-3.5 h-3.5 text-cream/70" />
+              <ExternalLink className="w-3.5 h-3.5 opacity-70" />
             </a>
           </div>
+
         </div>
 
-        {/* Dynamic Editorial Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+        {/* Continuous Horizontal Strip of Instagram Photos (Matching Screenshot 2) */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5 sm:gap-3">
           
-          {/* Post 1: FEATURED REEL (Double Size / Highlighted) */}
-          <div className="col-span-2 row-span-2 group relative rounded-[12px] overflow-hidden border-2 border-turquoise bg-espresso shadow-md flex flex-col justify-between">
-            {/* Background Image / Video Poster */}
-            <div className="absolute inset-0 z-0">
-              <img
-                src={posts[0].image}
-                alt="Cuplikan Reel Instagram Sekata Coffee"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/40 to-black/30" />
-            </div>
-
-            {/* Reel Badge & Audio Tag */}
-            <div className="relative z-10 p-4 sm:p-6 flex items-start justify-between gap-2">
-              <div className="flex items-center gap-2">
-                <span className="badge-stamp bg-turquoise text-cream font-mono flex items-center gap-1.5 shadow-sm">
-                  <Film className="w-3 h-3" />
-                  <span>REEL UNGGULAN</span>
-                </span>
-                <span className="hidden sm:inline-block px-2 py-0.5 rounded-[3px] bg-black/40 backdrop-blur-sm text-[10px] font-mono text-cream uppercase tracking-[0.05em]">
-                  ♫ Audio Asli &bull; Sekata
-                </span>
-              </div>
-
-              {/* Big Play Button */}
-              <a
-                href={posts[0].url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-cream/90 backdrop-blur-md text-espresso flex items-center justify-center hover:scale-110 hover:bg-turquoise hover:text-cream transition-all shadow-lg"
-                title="Tonton Reel di Instagram"
-              >
-                <Play className="w-5 h-5 ml-0.5 fill-current" />
-              </a>
-            </div>
-
-            {/* Reel Caption & Action Footer */}
-            <div className="relative z-10 p-5 sm:p-7 mt-auto space-y-3">
-              <p className="font-body text-[14px] sm:text-[16px] text-cream leading-snug font-medium line-clamp-3">
-                &ldquo;{posts[0].caption}&rdquo;
-              </p>
-
-              <div className="flex items-center justify-between pt-3 border-t border-cream/20 text-xs font-mono text-cream/90">
-                <div className="flex items-center gap-4">
-                  <span className="flex items-center gap-1.5">
-                    <Heart className="w-4 h-4 text-burnt-orange fill-burnt-orange" />
-                    <span>{posts[0].likes}</span>
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <MessageCircle className="w-4 h-4 text-cream" />
-                    <span>{posts[0].comments}</span>
-                  </span>
-                </div>
-
-                <a
-                  href={posts[0].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-turquoise-light hover:text-white font-mono text-xs uppercase tracking-[0.05em] font-medium underline underline-offset-4"
-                >
-                  <span>TONTON REEL</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Remaining 7 Grid Tiles */}
-          {posts.slice(1).map((post, idx) => (
+          {posts.map((post, idx) => (
             <a
               key={post.id}
               href={post.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-square rounded-[8px] sm:rounded-[10px] overflow-hidden border-hairline bg-sandstone block transition-all duration-300 hover:border-turquoise hover:shadow-sm"
+              className="group relative aspect-square rounded-[8px] overflow-hidden border-2 border-espresso bg-sandstone block shadow-sm hover:scale-[1.04] hover:z-20 transition-all duration-300"
             >
-              {/* Image */}
               <img
                 src={post.image}
                 alt={post.caption}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                className="w-full h-full object-cover"
               />
 
-              {/* Instagram Icon Badge */}
-              <div className="absolute top-2.5 right-2.5 z-10 opacity-70 group-hover:opacity-100 transition-opacity">
-                <div className="w-6 h-6 rounded-full bg-cream/80 backdrop-blur-sm text-espresso flex items-center justify-center">
-                  <InstagramIcon className="w-3.5 h-3.5" />
+              {/* Reel Play Badge on Post 1 */}
+              {post.isReel && (
+                <div className="absolute top-2 left-2 z-10 bg-burnt-orange text-cream p-1 rounded-[3px] border border-espresso shadow-sm">
+                  <Play className="w-3 h-3 fill-current" />
                 </div>
-              </div>
-
-              {/* Tape Effect on Every Alternate Post to break AI sterility */}
-              {idx % 2 === 0 && (
-                <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-10 h-3 bg-[#e6dad4]/70 rotate-[-2deg] border border-taupe-hairline/50 pointer-events-none z-10" />
               )}
 
-              {/* Hover Dark Overlay with Stats & Caption */}
-              <div className="absolute inset-0 bg-espresso/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-3 sm:p-4 text-cream z-20">
-                <span className="text-[10px] font-mono text-turquoise-light uppercase">
-                  {post.date}
+              {/* Instagram Icon Badge */}
+              <div className="absolute top-2 right-2 z-10 text-cream opacity-80 group-hover:opacity-100 drop-shadow">
+                <InstagramIcon className="w-3 h-3" />
+              </div>
+
+              {/* Hover Dark Overlay with Stats */}
+              <div className="absolute inset-0 bg-espresso/85 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-2.5 text-cream text-[11px] font-mono z-20">
+                <span className="text-[9px] uppercase text-marigold truncate">
+                  {post.isReel ? 'REEL' : 'POST'}
                 </span>
 
-                <p className="text-[11px] sm:text-xs font-body text-cream/90 line-clamp-3 leading-snug">
+                <p className="font-body text-[10px] leading-tight text-cream/90 line-clamp-3">
                   {post.caption}
                 </p>
 
-                <div className="flex items-center justify-between text-[11px] font-mono border-t border-cream/20 pt-2 text-cream/90">
+                <div className="flex items-center justify-between text-[10px] border-t border-cream/20 pt-1 text-cream/90">
                   <span className="flex items-center gap-1">
                     <Heart className="w-3 h-3 fill-current text-burnt-orange" />
                     <span>{post.likes}</span>
@@ -274,17 +209,17 @@ export default function InstagramGrid() {
 
         </div>
 
-        {/* Tactile Marquee Ribbon right below the grid */}
-        <div className="mt-12 bg-linen rounded-[8px] border-hairline py-3 px-4 overflow-hidden relative">
-          <div className="flex whitespace-nowrap animate-marquee font-mono text-xs text-espresso font-medium tracking-[0.08em] gap-8">
-            <span>&bull; MARI BERTEMU &amp; BERCERITA TENTANG KEHIDUPAN</span>
-            <span className="text-turquoise">&bull; SLOWBAR TANJUNGPINANG</span>
-            <span>&bull; TAG @SEKATA.TNJ DI INSTAGRAM</span>
-            <span className="text-burnt-orange">&bull; #KECILBERTUMBUH</span>
+        {/* Bottom Marquee Tape Ribbon */}
+        <div className="mt-8 bg-espresso/80 text-cream rounded-[6px] border border-cream/30 py-2.5 px-4 overflow-hidden">
+          <div className="flex whitespace-nowrap animate-marquee font-mono text-[11px] uppercase tracking-[0.08em] font-medium gap-8">
+            <span className="text-marigold">&bull; MARI BERTEMU &amp; BERCERITA TENTANG KEHIDUPAN</span>
+            <span>&bull; @SEKATA.TNJ</span>
+            <span className="text-turquoise-light">&bull; SLOWBAR TANJUNGPINANG</span>
             <span>&bull; SETIAP SEDUHAN PUNYA CERITA</span>
-            <span className="text-amber">&bull; TANJUNGPINANG &bull; KEPULAUAN RIAU</span>
-            <span>&bull; MARI BERTEMU &amp; BERCERITA TENTANG KEHIDUPAN</span>
-            <span className="text-turquoise">&bull; SLOWBAR TANJUNGPINANG</span>
+            <span className="text-marigold">&bull; #KECILBERTUMBUH</span>
+            <span>&bull; TAG KAMI DI SETIAP CANGKIRMU</span>
+            <span className="text-marigold">&bull; MARI BERTEMU &amp; BERCERITA TENTANG KEHIDUPAN</span>
+            <span>&bull; @SEKATA.TNJ</span>
           </div>
         </div>
 
