@@ -12,67 +12,35 @@ function InstagramIcon({ className = "w-3.5 h-3.5" }) {
   );
 }
 
-// Menu items with massive editorial typography & preview assets
+// Menu items persis request user: Home, Menu, Filosofi Kami, Lokasi Kami
 const NAV_EDITORIAL_ITEMS = [
   {
-    number: '01',
-    title: 'PILIHAN MENU',
-    english: 'MENU & BEVERAGES',
-    category: 'KATALOG RASA',
-    subtitle: 'Kopi Susu Aren, Klasik Manual, Mocktail Soda & Cemilan',
+    title: 'HOME',
+    href: '#hero',
+    image: '/konten1.jpg',
+    tag: 'BERANDA',
+    subtitle: 'Setiap Seduhan Punya Cerita'
+  },
+  {
+    title: 'MENU',
     href: '#menu',
     image: '/Caramel_macchiato.jpg',
-    tag: '30+ VARIAN MENU'
+    tag: '30+ VARIAN',
+    subtitle: 'Kopi Klasik, Kopi Susu, Mocktail & Cemilan'
   },
   {
-    number: '02',
-    title: 'GRAND OPENING',
-    english: 'COUNTDOWN JUMAT INI',
-    category: 'SPECIAL EVENT',
-    subtitle: 'Jumat Ini, 6 Nov 2026 • Free 50 Cups Pertama untuk Kawan Sekata',
-    href: '#countdown',
-    image: '/konten1.jpg',
-    tag: 'FREE 50 CUPS'
-  },
-  {
-    number: '03',
-    title: 'READY TO RESERVE',
-    english: 'BOOK YOUR TABLE',
-    category: 'RESERVASI',
-    subtitle: 'Amankan Spot Meja Slowbar untuk Ngobrol & Menikmati Waktu',
-    href: '#reserve',
-    image: '/subscription_bg.jpg',
-    tag: 'DIRECT WA'
-  },
-  {
-    number: '04',
     title: 'FILOSOFI KAMI',
-    english: 'OUR PHILOSOPHY',
-    category: 'GERAKAN',
-    subtitle: '#KecilBertumbuh — Bukan Hanya Sekadar Tentang Kopi',
     href: '#filosofi',
     image: '/ilustrasi1.jpg',
-    tag: '#KECILBERTUMBUH'
+    tag: '#KECILBERTUMBUH',
+    subtitle: 'Bukan Hanya Sekadar Tentang Kopi'
   },
   {
-    number: '05',
-    title: 'CERITA KAWAN',
-    english: 'COMMUNITY STORIES',
-    category: 'KOMUNITAS',
-    subtitle: 'Setiap Pertemuan Punya Cerita Hangat untuk Dibagi',
-    href: '#cerita',
-    image: '/subscription_farm.jpg',
-    tag: 'KOLABORASI LOKAL'
-  },
-  {
-    number: '06',
-    title: 'LOKASI KEDAI',
-    english: 'VISIT OUR COFFEE BAR',
-    category: 'KUNJUNGI',
-    subtitle: 'Tanjungpinang, Kepri • Buka Setiap Hari: 09.00 - 23.00 WIB',
+    title: 'LOKASI KAMI',
     href: '#lokasi',
-    image: '/americano.jpg',
-    tag: 'TANJUNGPINANG, KEPRI'
+    image: '/subscription_farm.jpg',
+    tag: 'TANJUNGPINANG',
+    subtitle: 'Kunjungi Slowbar Sekata di Tanjungpinang'
   }
 ];
 
@@ -211,8 +179,9 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
 
       {/* 
         ========================================================================
-        2. FULLSCREEN EDITORIAL NAVIGATION MENU (PROPORTIONED TO FIT 100VH)
-        Sesuai request: Ukuran disesuaikan agar pas 1 layar desktop tanpa terpotong
+        2. FULLSCREEN NAVIGATION MENU — PERSIS SEPERTI GAMBAR 2 (SERU.NI STYLE)
+        4 Menu Utama: HOME, MENU, FILOSOFI KAMI, LOKASI KAMI
+        Tipografi tebal, percaya diri, rapi, dan bersih
         ========================================================================
       */}
       <div
@@ -225,38 +194,15 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
           visibility: isMenuOpen ? 'visible' : 'hidden'
         }}
       >
-        <div className="w-full h-full max-h-[100dvh] bg-[#140e0c] text-cream flex flex-col justify-between overflow-y-auto sm:overflow-hidden p-5 sm:p-7 lg:p-8 select-none relative">
+        <div className="w-full h-full max-h-[100dvh] bg-[#0c0807] text-cream flex flex-col justify-between overflow-y-auto sm:overflow-hidden p-6 sm:p-8 lg:p-12 select-none relative">
           
-          {/* Subtle Atmospheric Watermark */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 font-display text-[18vw] text-cream/[0.02] select-none pointer-events-none leading-none tracking-tight">
-            SEKATA
-          </div>
-
-          {/* TOP AREA: Logo, Subtitle & Tutup [X] */}
-          <div className="relative z-10 w-full flex items-center justify-between border-b border-cream/15 pb-3 sm:pb-4 flex-shrink-0">
+          {/* TOP AREA: PERSIS GAMBAR 2 (SERU.NI — MENU) */}
+          <div className="relative z-10 w-full flex items-center justify-between border-b border-cream/15 pb-4 sm:pb-5 flex-shrink-0">
             
-            {/* White Logo */}
-            <div className="flex items-center gap-3">
-              <img
-                src="/logo.png"
-                alt="Sekata Coffee & Slowbar"
-                className="h-7 sm:h-9 w-auto object-contain filter invert brightness-0"
-              />
-              <div className="flex flex-col text-left">
-                <span className="font-mono text-[11px] sm:text-xs font-bold tracking-[0.2em] text-cream uppercase">
-                  SEKATA SLOWBAR
-                </span>
-                <span className="font-mono text-[8px] sm:text-[9px] tracking-[0.15em] text-cream/50 uppercase">
-                  EDITORIAL ARCHIVE &bull; TANJUNGPINANG
-                </span>
-              </div>
-            </div>
-
-            {/* Center Editorial Film Pill (Desktop) */}
-            <div className="hidden md:flex items-center gap-2 px-3.5 py-1 rounded-full border border-cream/20 bg-cream/5 backdrop-blur-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-burnt-orange animate-pulse" />
-              <span className="font-mono text-[9px] tracking-[0.2em] text-cream/70 uppercase">
-                INTERACTIVE EDITORIAL FILM
+            {/* Top-left small breadcrumb persis Gambar 2 */}
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-[0.2em] text-cream/70 uppercase">
+                SEKATA &mdash; MENU
               </span>
             </div>
 
@@ -273,13 +219,14 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
           </div>
 
           {/* 
-            MIDDLE AREA: MASSIVE TYPOGRAPHIC NAVIGATION LINKS (COMPACT PROPORTIONS)
+            MIDDLE AREA: MASSIVE CLEAN TYPOGRAPHY (PERSIS SEPERTI GAMBAR 2)
+            4 Menu Saja: HOME, MENU, FILOSOFI KAMI, LOKASI KAMI
           */}
-          <div className="relative z-10 w-full my-auto py-3 sm:py-4 flex-1 flex items-center">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center w-full">
+          <div className="relative z-10 w-full my-auto py-6 sm:py-8 flex-1 flex items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
               
-              {/* Massive Typographic Links Column (7-8 cols on desktop) */}
-              <nav className="lg:col-span-8 flex flex-col space-y-1 sm:space-y-2 text-left">
+              {/* Massive Typographic Links Column */}
+              <nav className="lg:col-span-8 flex flex-col space-y-2 sm:space-y-4 text-left">
                 {NAV_EDITORIAL_ITEMS.map((item, index) => {
                   const isHovered = hoveredIndex === index;
                   const hasHover = hoveredIndex !== null;
@@ -287,174 +234,102 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
 
                   return (
                     <a
-                      key={item.number}
+                      key={item.title}
                       href={item.href}
                       onClick={(e) => handleNavigate(e, item.href)}
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
-                      className={`group block py-1 transition-all duration-300 ${
-                        isDimmed ? 'opacity-30 blur-[0.3px]' : 'opacity-100'
+                      className={`group block py-1 sm:py-2 transition-all duration-300 ${
+                        isDimmed ? 'opacity-30 blur-[0.4px]' : 'opacity-100'
                       }`}
                     >
-                      <div className="flex items-baseline gap-2.5 sm:gap-4">
-                        
-                        {/* Number Prefix */}
-                        <span className="font-mono text-[11px] sm:text-xs md:text-sm text-burnt-orange tracking-[0.18em] font-medium transition-transform duration-300 group-hover:translate-x-1">
-                          {item.number}
-                        </span>
-
-                        {/* Typographic Headline with Proportional Sizing & Letter-Spacing */}
-                        <div className="flex flex-col">
-                          <span
-                            className={`font-display text-[26px] xs:text-[30px] sm:text-[36px] md:text-[42px] lg:text-[46px] xl:text-[50px] leading-[1.08] uppercase transition-all duration-400 ease-out inline-flex items-center gap-2 sm:gap-4 ${
-                              isHovered
-                                ? 'text-marigold tracking-[0.05em] translate-x-2'
-                                : 'text-cream tracking-[-0.03em]'
-                            }`}
-                          >
-                            <span>{item.title}</span>
-                            <ArrowUpRight
-                              className={`w-4 h-4 sm:w-6 sm:h-6 transition-all duration-300 ${
-                                isHovered ? 'opacity-100 translate-x-1 -translate-y-1 text-burnt-orange' : 'opacity-0 sm:opacity-0 scale-75'
-                              }`}
-                            />
-                          </span>
-
-                          {/* Mobile Subtitle (Selalu tampil di HP agar tidak sepi & proporsional) */}
-                          <span className="sm:hidden font-mono text-[10px] text-cream/60 tracking-wider block mt-0.5">
-                            &bull; {item.subtitle}
-                          </span>
-
-                          {/* Desktop Hover Reveal Subtitle */}
-                          <div
-                            className={`hidden sm:block overflow-hidden transition-all duration-300 ${
-                              isHovered ? 'max-h-8 mt-0.5 opacity-100 translate-x-2' : 'max-h-0 opacity-0'
-                            }`}
-                          >
-                            <p className="font-mono text-[10px] sm:text-[11px] text-cream/70 tracking-[0.06em]">
-                              &mdash; {item.subtitle}
-                            </p>
-                          </div>
-                        </div>
-
-                      </div>
+                      <span
+                        className={`font-sans font-black text-[42px] xs:text-[48px] sm:text-[64px] md:text-[76px] lg:text-[88px] leading-[0.98] uppercase tracking-tight transition-all duration-300 inline-flex items-center gap-3 sm:gap-6 ${
+                          isHovered
+                            ? 'text-burnt-orange translate-x-3'
+                            : index === 1 // MENU default highlight seperti ORDER ONLINE di Gambar 2
+                            ? 'text-burnt-orange hover:text-burnt-orange'
+                            : 'text-cream hover:text-burnt-orange'
+                        }`}
+                      >
+                        <span>{item.title}</span>
+                        <ArrowUpRight
+                          className={`w-6 h-6 sm:w-10 sm:h-10 transition-all duration-300 ${
+                            isHovered
+                              ? 'opacity-100 translate-x-1.5 -translate-y-1.5 text-burnt-orange scale-100'
+                              : 'opacity-0 scale-75'
+                          }`}
+                        />
+                      </span>
                     </a>
                   );
                 })}
               </nav>
 
-              {/* Editorial Hover Reveal Preview Frame (4 cols on desktop, compact height) */}
+              {/* Minimalist Editorial Hover Preview Frame (Desktop only) */}
               <div className="lg:col-span-4 hidden lg:flex flex-col justify-center">
-                <div className="relative w-full max-w-[280px] xl:max-w-[300px] aspect-[4/4.8] rounded-[16px] overflow-hidden border border-cream/20 bg-cream/5 shadow-2xl p-2 backdrop-blur-md mx-auto">
-                  
-                  {/* Active Preview Image */}
-                  <div className="relative w-full h-full rounded-[10px] overflow-hidden">
+                <div className="relative w-full max-w-[270px] aspect-[4/4.8] rounded-[20px] overflow-hidden border border-cream/20 bg-cream/5 shadow-2xl p-2.5 backdrop-blur-md mx-auto">
+                  <div className="relative w-full h-full rounded-[14px] overflow-hidden">
                     <img
                       src={activeItem.image}
                       alt={activeItem.title}
                       className="w-full h-full object-cover transition-all duration-500 filter contrast-110"
                     />
-                    
-                    {/* Dark gradient for caption */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-
-                    {/* Tag badge */}
+                    
                     <div className="absolute top-3 left-3">
-                      <span className="px-2.5 py-0.5 rounded-full bg-burnt-orange text-cream font-mono text-[9px] tracking-[0.16em] uppercase font-bold shadow-md">
+                      <span className="px-2.5 py-0.5 rounded-full bg-burnt-orange text-cream font-mono text-[9px] tracking-wider uppercase font-bold shadow-md">
                         {activeItem.tag}
                       </span>
                     </div>
 
-                    {/* Bottom Caption */}
                     <div className="absolute bottom-3 left-3 right-3 text-left">
-                      <span className="font-mono text-[9px] text-marigold tracking-[0.18em] uppercase block mb-0.5">
-                        {activeItem.category} // {activeItem.english}
-                      </span>
                       <h4 className="font-display text-lg text-cream leading-tight">
                         {activeItem.title}
                       </h4>
-                      <p className="font-body text-[11px] text-cream/80 mt-0.5 line-clamp-2">
+                      <p className="font-body text-[12px] text-cream/80 mt-0.5">
                         {activeItem.subtitle}
                       </p>
                     </div>
-
                   </div>
-
                 </div>
-
-                {/* Subtle caption below frame */}
-                <p className="font-mono text-[9px] text-cream/40 text-center tracking-[0.14em] uppercase mt-2">
-                  ARAHKAN KURSOR KE MENU UNTUK REVEAL
-                </p>
               </div>
 
             </div>
           </div>
 
           {/* 
-            BOTTOM AREA: Compact Social Links, Contact Info, & Design Philosophy
+            BOTTOM AREA: Clean, Minimalist Contact & Social Info
           */}
-          <div className="relative z-10 w-full border-t border-cream/15 pt-3 sm:pt-4 flex-shrink-0">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 text-left font-mono text-[10px] sm:text-[11px]">
+          <div className="relative z-10 w-full border-t border-cream/15 pt-4 sm:pt-5 flex-shrink-0">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-left font-body text-[12px] sm:text-[13px] text-cream/70">
               
-              {/* Column 1: Social Links */}
-              <div>
-                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[9px] sm:text-[10px]">
-                  // IKUTI JEJAK KAMI
-                </span>
-                <ul className="space-y-1 text-cream/80">
-                  <li>
-                    <a
-                      href="https://www.instagram.com/reel/DfRJl9QPe13/?utm_source=ig_web_button_share_sheet&psln=MzRlODBiNWFlZA=="
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 hover:text-marigold transition-colors"
-                    >
-                      <InstagramIcon className="w-3 h-3 text-marigold" />
-                      <span>@sekata.tnj</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://wa.me/6281234567890?text=Halo%20Sekata,%20saya%20ingin%20tanya%20seputar%20kedai%20dan%20menu"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 hover:text-marigold transition-colors"
-                    >
-                      <MessageCircle className="w-3 h-3 text-marigold" />
-                      <span>WhatsApp</span>
-                    </a>
-                  </li>
-                </ul>
+              <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
+                <span className="text-cream font-medium">Sekata Coffee &amp; Slowbar</span>
+                <span>&bull;</span>
+                <span>Tanjungpinang, Kepri</span>
+                <span>&bull;</span>
+                <span className="text-burnt-orange font-medium">Buka 10:00 – 22:00 WIB</span>
               </div>
 
-              {/* Column 2: Contact Info */}
-              <div>
-                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[9px] sm:text-[10px]">
-                  // LOKASI & JAM SEDUH
-                </span>
-                <div className="space-y-0.5 text-cream/80 leading-relaxed text-[10px] sm:text-[10.5px]">
-                  <p className="flex items-center gap-1">
-                    <MapPin className="w-3 h-3 text-marigold flex-shrink-0" />
-                    <span>Tanjungpinang, Kepri</span>
-                  </p>
-                  <p className="text-cream/60">
-                    Setiap Hari: 09.00 &mdash; 23.00
-                  </p>
-                </div>
-              </div>
-
-              {/* Column 3: Design Philosophy Manifesto */}
-              <div className="col-span-2 md:col-span-1 hidden xs:block">
-                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[9px] sm:text-[10px]">
-                  // FILOSOFI PENGALAMAN
-                </span>
-                <p className="font-body italic text-cream/75 text-[10px] sm:text-[11px] leading-snug line-clamp-2">
-                  &ldquo;This experience should feel less like a website and more like an interactive editorial film.&rdquo;
-                </p>
-                <span className="font-mono text-[8px] sm:text-[9px] text-marigold uppercase tracking-[0.12em] block mt-0.5">
-                  &mdash; Sekata &bull; #KecilBertumbuh
-                </span>
+              <div className="flex items-center gap-4 text-cream/80">
+                <a
+                  href="https://instagram.com/sekata.tnj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cream underline underline-offset-2 transition-colors"
+                >
+                  Instagram: @sekata.tnj
+                </a>
+                <span>&bull;</span>
+                <a
+                  href="https://wa.me/6281234567890"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cream underline underline-offset-2 transition-colors"
+                >
+                  WhatsApp
+                </a>
               </div>
 
             </div>
