@@ -92,7 +92,7 @@ export default function BrandStory() {
 
               <div className="mt-3 px-1 text-center">
                 <p className="text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em]">
-                  FOTO ASLI PRODUK &amp; SEDUHAN SEKATA &bull; TANPA STOCK PHOTO ASING
+                  DOKUMENTASI MEJA SLOWBAR &bull; TANJUNGPINANG, KEPRI &bull; #KECILBERTUMBUH
                 </p>
               </div>
             </div>
