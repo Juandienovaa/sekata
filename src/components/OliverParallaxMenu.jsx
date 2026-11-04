@@ -269,3 +269,4 @@ function ParallaxColumn({ products, y, offset, activeItem, onSelect, onAdd, just
     </motion.div>
   );
 }
+

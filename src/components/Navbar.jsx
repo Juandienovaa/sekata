@@ -1,228 +1,478 @@
-import React, { useState } from 'react';
-import { ShoppingBag, Menu, X, ChevronDown, Search, MapPin } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ShoppingBag, X, ArrowUpRight, MessageCircle, MapPin, Sparkles, Music } from 'lucide-react';
 import VinylPlayer from './VinylPlayer';
 
-export default function Navbar({ cartCount, onOpenCart, onOpenSearch }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [menuDropdownOpen, setMenuDropdownOpen] = useState(false);
+// Custom inline SVG for Instagram
+function InstagramIcon({ className = "w-4 h-4" }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+    </svg>
+  );
+}
+
+// Menu items with massive editorial typography & preview assets
+const NAV_EDITORIAL_ITEMS = [
+  {
+    number: '01',
+    title: 'PILIHAN MENU',
+    english: 'MENU & BEVERAGES',
+    category: 'KATALOG RASA',
+    subtitle: 'Kopi Susu Aren, Klasik Manual, Mocktail Soda & Cemilan',
+    href: '#menu',
+    image: '/Caramel_macchiato.jpg',
+    tag: '30+ VARIAN MENU'
+  },
+  {
+    number: '02',
+    title: 'GRAND OPENING',
+    english: 'COUNTDOWN JUMAT INI',
+    category: 'SPECIAL EVENT',
+    subtitle: 'Jumat Ini, 6 Nov 2026 • Free 50 Cups Pertama untuk Kawan Sekata',
+    href: '#countdown',
+    image: '/konten1.jpg',
+    tag: 'FREE 50 CUPS'
+  },
+  {
+    number: '03',
+    title: 'SLOWBAR & RUANG',
+    english: 'THE SLOWBAR SPACE',
+    category: 'SUASANA',
+    subtitle: 'Meja Seduh Manual, Putaran Piringan Hitam, dan Jeda Tenang',
+    href: '#ruang',
+    image: '/subscription_bg.jpg',
+    tag: 'ANALOG VIBES'
+  },
+  {
+    number: '04',
+    title: 'FILOSOFI KAMI',
+    english: 'OUR PHILOSOPHY',
+    category: 'GERAKAN',
+    subtitle: '#KecilBertumbuh — Bukan Hanya Sekadar Tentang Kopi',
+    href: '#filosofi',
+    image: '/ilustrasi1.jpg',
+    tag: '#KECILBERTUMBUH'
+  },
+  {
+    number: '05',
+    title: 'CERITA KAWAN',
+    english: 'COMMUNITY STORIES',
+    category: 'KOMUNITAS',
+    subtitle: 'Setiap Pertemuan Punya Cerita Hangat untuk Dibagi',
+    href: '#cerita',
+    image: '/subscription_farm.jpg',
+    tag: 'KOLABORASI LOKAL'
+  },
+  {
+    number: '06',
+    title: 'LOKASI KEDAI',
+    english: 'VISIT OUR COFFEE BAR',
+    category: 'KUNJUNGI',
+    subtitle: 'Tanjungpinang, Kepulauan Riau • Buka Setiap Hari: 09.00 - 23.00 WIB',
+    href: '#lokasi',
+    image: '/americano.jpg',
+    tag: 'TANJUNGPINANG, KEPRI'
+  }
+];
+
+export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Monitor scroll for subtle hairline appearance
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Lock body scroll when fullscreen menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
+  // Handle ESC key to close
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isMenuOpen]);
+
+  // Smooth scroll handler
+  const handleNavigate = (e, href) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    setTimeout(() => {
+      const targetId = href.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.hash = href;
+      }
+    }, 400);
+  };
+
+  // Active preview image
+  const activeItem = hoveredIndex !== null ? NAV_EDITORIAL_ITEMS[hoveredIndex] : NAV_EDITORIAL_ITEMS[0];
 
   return (
-    <div className="sticky top-0 z-40 w-full shadow-none">
-      
-      {/* 1. Top Announcement Strip */}
-      <div className="w-full bg-turquoise text-cream py-2 px-4 border-b border-turquoise-dark text-center">
-        <div className="container-max flex items-center justify-between text-[11px] sm:text-[12px] font-mono tracking-[0.06em] uppercase">
-          <span className="hidden md:inline">TANJUNGPINANG, KEPULAUAN RIAU</span>
-          <span className="mx-auto md:mx-0 font-medium">
-            MARI BERTEMU &amp; BERCERITA TENTANG KEHIDUPAN &bull; #KECILBERTUMBUH
-          </span>
-          <span className="hidden md:inline">BUKA SETIAP HARI</span>
-        </div>
-      </div>
-
-      {/* 2. Main Navigation Bar */}
-      <header className="w-full bg-cream border-b-hairline">
-        <div className="container-max h-16 sm:h-20 flex items-center justify-between">
+    <>
+      {/* 
+        ========================================================================
+        1. ALWAYS VISIBLE NAVBAR (Clean, Minimal, Editorial)
+        Left: Logo
+        Right: Menu Button (+ Cart & Vinyl Toggle)
+        ========================================================================
+      */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-40 w-full transition-all duration-300 ${
+          scrolled
+            ? 'bg-cream/95 backdrop-blur-md border-b border-espresso/15 shadow-[0_4px_20px_rgba(82,44,37,0.06)]'
+            : 'bg-cream/90 backdrop-blur-sm border-b border-espresso/10'
+        }`}
+      >
+        <div className="container-max h-16 sm:h-20 flex items-center justify-between px-4 sm:px-8">
           
-          {/* Logo Sekata */}
-          <div className="flex items-center h-full pr-4 sm:pr-6 border-r-hairline">
-            <a href="#" className="flex items-center focus:outline-none" aria-label="Beranda Sekata Coffee">
-              <img
-                src="/logo.png"
-                alt="Sekata Coffee &amp; Slowbar"
-                className="h-8 sm:h-10 w-auto object-contain"
-              />
-            </a>
-          </div>
-
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center h-full text-[12px] xl:text-[13px] font-mono uppercase tracking-[0.05em] text-espresso">
-            
-            {/* MENU dengan Dropdown */}
-            <div
-              className="relative h-full flex items-center px-4 xl:px-5 border-r-hairline"
-              onMouseEnter={() => setMenuDropdownOpen(true)}
-              onMouseLeave={() => setMenuDropdownOpen(false)}
-            >
-              <a
-                href="#menu"
-                className="flex items-center gap-1.5 hover:text-turquoise transition-colors py-2"
-              >
-                <span>MENU</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${menuDropdownOpen ? 'rotate-180 text-turquoise' : ''}`} />
-              </a>
-
-              {menuDropdownOpen && (
-                <div className="absolute top-full left-0 w-60 bg-cream border-hairline rounded-[4px] py-2 z-50">
-                  <a
-                    href="#menu"
-                    onClick={() => setMenuDropdownOpen(false)}
-                    className="block px-4 py-2 text-[11px] font-mono text-espresso hover:bg-linen hover:text-turquoise"
-                  >
-                    Minuman Kopi &amp; Espresso
-                  </a>
-                  <a
-                    href="#menu"
-                    onClick={() => setMenuDropdownOpen(false)}
-                    className="block px-4 py-2 text-[11px] font-mono text-espresso hover:bg-linen hover:text-turquoise"
-                  >
-                    Seduhan Slowbar Dingin
-                  </a>
-                  <a
-                    href="#menu"
-                    onClick={() => setMenuDropdownOpen(false)}
-                    className="block px-4 py-2 text-[11px] font-mono text-espresso hover:bg-linen hover:text-turquoise"
-                  >
-                    Non-Kopi &amp; Teh Artisan
-                  </a>
-                  <a
-                    href="#menu"
-                    onClick={() => setMenuDropdownOpen(false)}
-                    className="block px-4 py-2 text-[11px] font-mono text-espresso hover:bg-linen hover:text-turquoise"
-                  >
-                    Biji Kopi &amp; Merchandise
-                  </a>
-                </div>
-              )}
+          {/* LEFT: SEKATA LOGO */}
+          <a
+            href="#"
+            className="flex items-center gap-3 group focus:outline-none"
+            aria-label="Sekata Coffee & Slowbar — Halaman Utama"
+          >
+            <img
+              src="/logo.png"
+              alt="Sekata Coffee & Slowbar"
+              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+            <div className="hidden sm:flex flex-col text-left">
+              <span className="font-mono text-[11px] font-bold tracking-[0.2em] text-espresso uppercase leading-none">
+                SEKATA
+              </span>
+              <span className="font-mono text-[9px] tracking-[0.14em] text-coffee-dust uppercase mt-0.5">
+                SLOWBAR &bull; TANJUNGPINANG
+              </span>
             </div>
+          </a>
 
-            {/* SLOWBAR */}
-            <a
-              href="#slowbar"
-              className="h-full flex items-center px-4 xl:px-5 border-r-hairline hover:text-turquoise transition-colors"
-            >
-              SLOWBAR
-            </a>
-
-            {/* FILOSOFI */}
-            <a
-              href="#filosofi"
-              className="h-full flex items-center px-4 xl:px-5 border-r-hairline hover:text-turquoise transition-colors"
-            >
-              FILOSOFI
-            </a>
-
-            {/* RUANG */}
-            <a
-              href="#ruang"
-              className="h-full flex items-center px-4 xl:px-5 border-r-hairline hover:text-turquoise transition-colors"
-            >
-              RUANG TEMU
-            </a>
-
-            {/* CERITA */}
-            <a
-              href="#cerita"
-              className="h-full flex items-center px-4 xl:px-5 border-r-hairline hover:text-turquoise transition-colors"
-            >
-              CERITA KAMI
-            </a>
-
-            {/* KUNJUNGI KAMI */}
-            <a
-              href="#lokasi"
-              className="h-full flex items-center px-4 xl:px-5 border-r-hairline hover:text-turquoise transition-colors"
-            >
-              LOKASI
-            </a>
-
-            {/* CARI */}
-            <button
-              onClick={onOpenSearch}
-              className="h-full flex items-center gap-1.5 px-4 xl:px-5 border-r-hairline hover:text-turquoise transition-colors"
-              aria-label="Cari menu atau cerita"
-            >
-              <Search className="w-3.5 h-3.5" />
-              <span>CARI</span>
-            </button>
-          </nav>
-
-          {/* Right: Audio Suasana Slowbar & Keranjang */}
-          <div className="flex items-center h-full">
+          {/* RIGHT: VINYL TOGGLE + PESANAN + MENU BUTTON */}
+          <div className="flex items-center gap-2 sm:gap-4">
             
-            {/* Audio Widget */}
-            <div className="hidden sm:flex items-center px-3 border-l-hairline h-full">
+            {/* Ambient Vinyl Player Toggle */}
+            <div className="hidden md:flex items-center pr-2 border-r border-espresso/15">
               <VinylPlayer />
             </div>
 
-            {/* KERANJANG */}
+            {/* Cart / Orders Pill */}
             <button
               onClick={onOpenCart}
-              className="flex items-center gap-2 px-4 sm:px-6 border-l-hairline h-full font-mono text-[13px] font-medium text-espresso hover:text-turquoise hover:bg-linen transition-colors focus:outline-none"
-              aria-label={`Keranjang pesanan berisi ${cartCount} item`}
+              className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-espresso/25 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5 transition-all duration-200 font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium focus:outline-none"
+              aria-label={`Buka Keranjang Pesanan (${cartCount} item)`}
             >
-              <ShoppingBag className="w-4 h-4 text-turquoise" />
-              <span>PESANAN | {cartCount}</span>
+              <ShoppingBag className="w-3.5 h-3.5 text-turquoise" />
+              <span className="hidden sm:inline">PESANAN</span>
+              <span className="w-5 h-5 rounded-full bg-turquoise text-cream text-[10px] flex items-center justify-center font-bold">
+                {cartCount}
+              </span>
             </button>
 
-            {/* Mobile Hamburger */}
+            {/* MINIMAL MENU TRIGGER BUTTON */}
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-3 border-l-hairline h-full flex items-center text-espresso hover:bg-linen focus:outline-none"
-              aria-label={mobileMenuOpen ? 'Tutup menu' : 'Buka menu'}
+              onClick={() => setIsMenuOpen(true)}
+              className="group relative flex items-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-espresso text-cream hover:bg-burnt-orange transition-all duration-300 font-mono text-xs sm:text-sm uppercase tracking-[0.16em] font-semibold shadow-md active:scale-95 focus:outline-none"
+              aria-label="Buka Menu Navigasi Fullscreen"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              <span>MENU</span>
+              <span className="flex flex-col gap-[3.5px] w-4 justify-center items-end">
+                <span className="w-4 h-[1.5px] bg-cream group-hover:w-4 transition-all duration-200" />
+                <span className="w-2.5 h-[1.5px] bg-cream group-hover:w-4 transition-all duration-200" />
+              </span>
             </button>
 
           </div>
 
         </div>
+      </header>
 
-        {/* Mobile Menu Drawer */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-linen border-t-hairline px-6 py-6 animate-fadeIn">
-            <nav className="flex flex-col gap-3 font-mono text-xs uppercase tracking-[0.05em]">
-              <a
-                href="#menu"
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 border-b-hairline text-espresso hover:text-turquoise"
-              >
-                PILIHAN MENU LENGKAP
-              </a>
-              <a
-                href="#slowbar"
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 border-b-hairline text-espresso hover:text-turquoise"
-              >
-                PENGALAMAN SLOWBAR
-              </a>
-              <a
-                href="#filosofi"
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 border-b-hairline text-espresso hover:text-turquoise"
-              >
-                FILOSOFI KAMI
-              </a>
-              <a
-                href="#ruang"
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 border-b-hairline text-espresso hover:text-turquoise"
-              >
-                RUANG UNTUK MENIKMATI WAKTU
-              </a>
-              <a
-                href="#cerita"
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 border-b-hairline text-espresso hover:text-turquoise"
-              >
-                CERITA &amp; KOMUNITAS
-              </a>
-              <a
-                href="#lokasi"
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-2.5 border-b-hairline text-espresso hover:text-turquoise"
-              >
-                LOKASI &amp; JAM BUKA
-              </a>
-            </nav>
+      {/* 
+        ========================================================================
+        2. FULLSCREEN EDITORIAL NAVIGATION MENU (Clip-path Circle Reveal)
+        Philosophy: An interactive editorial film where typography is a spatial
+        element inside the story.
+        ========================================================================
+      */}
+      <div
+        className="fixed inset-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)]"
+        style={{
+          clipPath: isMenuOpen
+            ? 'circle(150% at calc(100% - 48px) 40px)'
+            : 'circle(0% at calc(100% - 48px) 40px)',
+          pointerEvents: isMenuOpen ? 'auto' : 'none',
+          visibility: isMenuOpen ? 'visible' : 'hidden'
+        }}
+      >
+        <div className="w-full h-full bg-[#150f0d] text-cream flex flex-col justify-between overflow-y-auto overflow-x-hidden p-6 sm:p-10 lg:p-14 select-none relative">
+          
+          {/* Subtle Atmospheric Watermark */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 font-display text-[20vw] text-cream/[0.02] select-none pointer-events-none leading-none tracking-tight">
+            SEKATA
+          </div>
 
-            <div className="mt-4 pt-4 border-t-hairline flex items-center justify-between">
-              <span className="text-[11px] font-mono text-coffee-dust">SUASANA SLOWBAR:</span>
-              <VinylPlayer />
+          {/* TOP AREA: Logo, Subtitle & Tutup [X] */}
+          <div className="relative z-10 w-full flex items-center justify-between border-b border-cream/15 pb-6">
+            
+            {/* White Logo */}
+            <div className="flex items-center gap-3">
+              <img
+                src="/logo.png"
+                alt="Sekata Coffee & Slowbar"
+                className="h-8 sm:h-10 w-auto object-contain filter invert brightness-0"
+              />
+              <div className="flex flex-col text-left">
+                <span className="font-mono text-xs font-bold tracking-[0.2em] text-cream uppercase">
+                  SEKATA SLOWBAR
+                </span>
+                <span className="font-mono text-[9px] tracking-[0.15em] text-cream/50 uppercase mt-0.5">
+                  EDITORIAL ARCHIVE &bull; TANJUNGPINANG
+                </span>
+              </div>
+            </div>
+
+            {/* Center Editorial Film Pill (Desktop) */}
+            <div className="hidden lg:flex items-center gap-2 px-4 py-1.5 rounded-full border border-cream/20 bg-cream/5 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-burnt-orange animate-pulse" />
+              <span className="font-mono text-[10px] tracking-[0.2em] text-cream/70 uppercase">
+                INTERACTIVE EDITORIAL FILM
+              </span>
+            </div>
+
+            {/* TUTUP [X] BUTTON */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="group flex items-center gap-2 sm:gap-3 px-5 sm:px-7 py-2 sm:py-2.5 rounded-full border border-cream/30 hover:border-cream text-cream hover:bg-cream hover:text-espresso transition-all duration-300 font-mono text-xs sm:text-sm uppercase tracking-[0.18em] focus:outline-none active:scale-95"
+              aria-label="Tutup menu navigasi"
+            >
+              <span>TUTUP</span>
+              <X className="w-4 h-4 group-hover:rotate-90 transition-transform duration-300" />
+            </button>
+
+          </div>
+
+          {/* 
+            MIDDLE AREA: MASSIVE TYPOGRAPHIC NAVIGATION LINKS + HOVER REVEALS
+          */}
+          <div className="relative z-10 w-full my-auto py-8 sm:py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              
+              {/* Massive Typographic Links Column (8 cols on desktop) */}
+              <nav className="lg:col-span-8 flex flex-col space-y-2 sm:space-y-4 text-left">
+                {NAV_EDITORIAL_ITEMS.map((item, index) => {
+                  const isHovered = hoveredIndex === index;
+                  const hasHover = hoveredIndex !== null;
+                  const isDimmed = hasHover && !isHovered;
+
+                  return (
+                    <a
+                      key={item.number}
+                      href={item.href}
+                      onClick={(e) => handleNavigate(e, item.href)}
+                      onMouseEnter={() => setHoveredIndex(index)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                      className={`group block py-1.5 sm:py-2 transition-all duration-300 ${
+                        isDimmed ? 'opacity-30 blur-[0.5px]' : 'opacity-100'
+                      }`}
+                    >
+                      <div className="flex items-baseline gap-3 sm:gap-6">
+                        
+                        {/* Number Prefix */}
+                        <span className="font-mono text-xs sm:text-sm md:text-base text-burnt-orange tracking-[0.2em] font-medium transition-transform duration-300 group-hover:translate-x-1">
+                          {item.number}
+                        </span>
+
+                        {/* Massive Typographic Headline with Letter-Spacing Animation */}
+                        <div className="flex flex-col">
+                          <span
+                            className={`font-display text-[38px] sm:text-[56px] md:text-[68px] lg:text-[76px] xl:text-[84px] leading-[0.92] uppercase transition-all duration-500 ease-out inline-flex items-center gap-3 sm:gap-6 ${
+                              isHovered
+                                ? 'text-marigold tracking-[0.06em] translate-x-2 sm:translate-x-4'
+                                : 'text-cream tracking-[-0.03em]'
+                            }`}
+                          >
+                            <span>{item.title}</span>
+                            <ArrowUpRight
+                              className={`w-6 h-6 sm:w-10 sm:h-10 transition-all duration-300 ${
+                                isHovered ? 'opacity-100 translate-x-1 -translate-y-1 text-burnt-orange' : 'opacity-0 scale-75'
+                              }`}
+                            />
+                          </span>
+
+                          {/* Hover Reveal Subtitle */}
+                          <div
+                            className={`overflow-hidden transition-all duration-300 ${
+                              isHovered ? 'max-h-12 mt-1 sm:mt-2 opacity-100 translate-x-2 sm:translate-x-4' : 'max-h-0 opacity-0'
+                            }`}
+                          >
+                            <p className="font-mono text-[11px] sm:text-xs text-cream/70 tracking-[0.08em]">
+                              &mdash; {item.subtitle}
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+                  );
+                })}
+              </nav>
+
+              {/* Editorial Hover Reveal Preview Frame (4 cols on desktop) */}
+              <div className="lg:col-span-4 hidden lg:flex flex-col justify-center">
+                <div className="relative w-full aspect-[4/5] rounded-[18px] overflow-hidden border border-cream/20 bg-cream/5 shadow-2xl p-2.5 backdrop-blur-md">
+                  
+                  {/* Active Preview Image */}
+                  <div className="relative w-full h-full rounded-[12px] overflow-hidden">
+                    <img
+                      src={activeItem.image}
+                      alt={activeItem.title}
+                      className="w-full h-full object-cover transition-all duration-700 filter contrast-110"
+                    />
+                    
+                    {/* Dark gradient for caption */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+
+                    {/* Tag badge */}
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 rounded-full bg-burnt-orange text-cream font-mono text-[10px] tracking-[0.18em] uppercase font-bold shadow-md">
+                        {activeItem.tag}
+                      </span>
+                    </div>
+
+                    {/* Bottom Caption */}
+                    <div className="absolute bottom-4 left-4 right-4 text-left">
+                      <span className="font-mono text-[10px] text-marigold tracking-[0.2em] uppercase block mb-1">
+                        {activeItem.category} // {activeItem.english}
+                      </span>
+                      <h4 className="font-display text-xl sm:text-2xl text-cream leading-tight">
+                        {activeItem.title}
+                      </h4>
+                      <p className="font-body text-xs text-cream/80 mt-1 line-clamp-2">
+                        {activeItem.subtitle}
+                      </p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                {/* Subtle caption below frame */}
+                <p className="font-mono text-[10px] text-cream/40 text-center tracking-[0.15em] uppercase mt-3">
+                  ARAHKAN KURSOR KE MENU UNTUK REVEAL
+                </p>
+              </div>
+
             </div>
           </div>
-        )}
-      </header>
-    </div>
+
+          {/* 
+            BOTTOM AREA: Social Links, Contact Info, & Design Philosophy
+          */}
+          <div className="relative z-10 w-full border-t border-cream/15 pt-6 sm:pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-left font-mono text-xs">
+              
+              {/* Column 1: Social Links */}
+              <div>
+                <span className="text-burnt-orange tracking-[0.2em] uppercase block mb-2 font-medium">
+                  // IKUTI JEJAK KAMI
+                </span>
+                <ul className="space-y-1.5 text-cream/80">
+                  <li>
+                    <a
+                      href="https://www.instagram.com/reel/DfRJl9QPe13/?utm_source=ig_web_button_share_sheet&psln=MzRlODBiNWFlZA=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 hover:text-marigold transition-colors"
+                    >
+                      <InstagramIcon className="w-3.5 h-3.5 text-marigold" />
+                      <span>Instagram: @sekata.tnj</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.tiktok.com/@sekatatnj"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-marigold transition-colors"
+                    >
+                      TikTok: @sekatatnj
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://wa.me/6281234567890?text=Halo%20Sekata,%20saya%20ingin%20tanya%20seputar%20kedai%20dan%20menu"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 hover:text-marigold transition-colors"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5 text-marigold" />
+                      <span>WhatsApp: +62 812-3456-7890</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Column 2: Contact Info */}
+              <div>
+                <span className="text-burnt-orange tracking-[0.2em] uppercase block mb-2 font-medium">
+                  // LOKASI & JAM SEDUH
+                </span>
+                <div className="space-y-1 text-cream/80 leading-relaxed">
+                  <p className="flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-marigold flex-shrink-0" />
+                    <span>Tanjungpinang, Kepulauan Riau</span>
+                  </p>
+                  <p className="text-cream/60">
+                    Buka Setiap Hari: 09.00 &mdash; 23.00 WIB
+                  </p>
+                  <p className="text-[11px] text-marigold">
+                    Manual Brew Slowbar &bull; Communal Space
+                  </p>
+                </div>
+              </div>
+
+              {/* Column 3: Design Philosophy Manifesto */}
+              <div>
+                <span className="text-burnt-orange tracking-[0.2em] uppercase block mb-2 font-medium">
+                  // FILOSOFI PENGALAMAN
+                </span>
+                <p className="font-body italic text-cream/80 text-[13px] leading-relaxed">
+                  &ldquo;This experience should feel less like a website and more like an interactive editorial film, where typography is not an interface, but a spatial element inside the story.&rdquo;
+                </p>
+                <span className="font-mono text-[10px] text-marigold uppercase tracking-[0.14em] block mt-1.5">
+                  &mdash; Sekata Coffee &bull; #KecilBertumbuh
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </>
   );
 }
