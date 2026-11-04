@@ -6,6 +6,7 @@ import SlowbarExperience from './components/SlowbarExperience';
 import FeaturedProducts from './components/FeaturedProducts';
 import BrandStory from './components/BrandStory';
 import TheSpace from './components/TheSpace';
+import WholesaleSplitSection from './components/WholesaleSplitSection';
 import CommunityBoard from './components/CommunityBoard';
 import KecilBertumbuh from './components/KecilBertumbuh';
 import ContactSection from './components/ContactSection';
@@ -120,6 +121,9 @@ export default function App() {
 
         {/* SECTION 5 — RUANG: "Ruang untuk Menikmati Waktu." */}
         <TheSpace />
+
+        {/* SECTION WHOLESALE SPLIT — PERSIS SEPERTI SCREENSHOT USER */}
+        <WholesaleSplitSection />
 
         {/* SECTION 6 — CERITA & KOMUNITAS: "Setiap Pertemuan Punya Cerita." */}
         <CommunityBoard />
