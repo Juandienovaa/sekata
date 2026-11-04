@@ -126,7 +126,7 @@ export default function App() {
         <BrandStory />
 
         {/* SECTION 5 — RUANG: "Ruang untuk Menikmati Waktu." */}
-        <TheSpace />
+        <TheSpace onQuickView={handleQuickView} />
 
         {/* SECTION WHOLESALE SPLIT — PERSIS SEPERTI SCREENSHOT USER */}
         <WholesaleSplitSection />
