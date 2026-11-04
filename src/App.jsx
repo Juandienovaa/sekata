@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import ColorfulStatement from './components/ColorfulStatement';
-import SlowbarExperience from './components/SlowbarExperience';
+import GrandOpeningCountdown from './components/GrandOpeningCountdown';
+import OliverParallaxMenu from './components/OliverParallaxMenu';
 import FeaturedProducts from './components/FeaturedProducts';
 import SubscriptionSection from './components/SubscriptionSection';
 import BrandStory from './components/BrandStory';
@@ -110,10 +111,16 @@ export default function App() {
       <ColorfulStatement />
 
       <main className="flex-1">
-        {/* SECTION 2 — PENGALAMAN SLOWBAR: "Menikmati Kopi, Menghargai Prosesnya." */}
-        <SlowbarExperience />
+        {/* SECTION COUNTDOWN GRAND OPENING JUMAT MINGGU INI (MENGGANTIKAN GAMBAR 3) */}
+        <GrandOpeningCountdown />
 
-        {/* SECTION 3 — KOPI & MENU: "Temukan Rasa yang Kamu Suka." */}
+        {/* SECTION OLIVER PARALLAX SHOWCASE (SKIPER 30) SEBELUM MASUK MENU */}
+        <OliverParallaxMenu
+          onAddToCart={handleAddToCart}
+          onQuickView={handleQuickView}
+        />
+
+        {/* SECTION KOPI & MENU LENGKAP: "Temukan Rasa yang Kamu Suka." */}
         <FeaturedProducts
           onQuickView={handleQuickView}
           onAddToCart={handleAddToCart}
