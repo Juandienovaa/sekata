@@ -96,9 +96,6 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
     }, 350);
   };
 
-  // Active preview image
-  const activeItem = hoveredIndex !== null ? NAV_EDITORIAL_ITEMS[hoveredIndex] : NAV_EDITORIAL_ITEMS[0];
-
   return (
     <>
       {/* 
@@ -266,32 +263,147 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                 })}
               </nav>
 
-              {/* Minimalist Editorial Hover Preview Frame (Desktop only) */}
-              <div className="lg:col-span-4 hidden lg:flex flex-col justify-center">
-                <div className="relative w-full max-w-[270px] aspect-[4/4.8] rounded-[20px] overflow-hidden border border-cream/20 bg-cream/5 shadow-2xl p-2.5 backdrop-blur-md mx-auto">
-                  <div className="relative w-full h-full rounded-[14px] overflow-hidden">
-                    <img
-                      src={activeItem.image}
-                      alt={activeItem.title}
-                      className="w-full h-full object-cover transition-all duration-500 filter contrast-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-                    
-                    <div className="absolute top-3 left-3">
-                      <span className="px-2.5 py-0.5 rounded-full bg-burnt-orange text-cream font-mono text-[9px] tracking-wider uppercase font-bold shadow-md">
-                        {activeItem.tag}
+              {/* Sisi Kanan: Hub Informasi Lebih Lanjut (Lokasi, Kontak HP/WA, Jam Buka, Tautan Sosmed) */}
+              <div className="lg:col-span-4 w-full flex flex-col justify-center">
+                <div className="relative w-full max-w-[380px] rounded-2xl border border-cream/20 bg-[#16100d]/90 backdrop-blur-xl shadow-2xl p-5 sm:p-6 text-left mx-auto lg:mx-0">
+                  
+                  {/* Status Operasional Kedai */}
+                  <div className="flex items-center justify-between gap-2 pb-4 border-b border-cream/15">
+                    <div className="flex items-center gap-2">
+                      <span className="relative flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                      </span>
+                      <span className="font-mono text-[11px] font-bold text-emerald-400 uppercase tracking-widest">
+                        KEDAI BUKA HARI INI
                       </span>
                     </div>
+                    <span className="font-mono text-[10px] text-cream/60">
+                      10.00 – 22.00 WIB
+                    </span>
+                  </div>
 
-                    <div className="absolute bottom-3 left-3 right-3 text-left">
-                      <h4 className="font-display text-lg text-cream leading-tight">
-                        {activeItem.title}
-                      </h4>
-                      <p className="font-body text-[12px] text-cream/80 mt-0.5">
-                        {activeItem.subtitle}
-                      </p>
+                  {/* Brand & Tagline Singkat */}
+                  <div className="py-4 border-b border-cream/15">
+                    <div className="flex items-center gap-2.5 mb-1.5">
+                      <img
+                        src="/logo.png"
+                        alt="Logo Sekata"
+                        className="w-7 h-7 object-contain rounded-full bg-cream/10 p-1 border border-cream/20"
+                      />
+                      <div>
+                        <h4 className="font-sans font-bold text-base text-cream leading-tight">
+                          SEKATA COMMUNAL SPACE
+                        </h4>
+                        <p className="font-mono text-[10px] text-burnt-orange tracking-wider uppercase font-semibold">
+                          Specialty Slowbar &bull; Tanjungpinang
+                        </p>
+                      </div>
+                    </div>
+                    <p className="font-body text-xs text-cream/75 leading-relaxed mt-2">
+                      Ruang berteduh dan bertukar cerita di kawasan kota lama Tanjungpinang. Tempat kecil untuk seduhan bermakna.
+                    </p>
+                  </div>
+
+                  {/* Lokasi & Alamat */}
+                  <div className="py-3.5 border-b border-cream/15">
+                    <div className="flex items-start gap-2.5">
+                      <MapPin className="w-4 h-4 text-burnt-orange flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <span className="font-mono text-[10px] text-cream/50 uppercase tracking-wider block mb-0.5">
+                          LOKASI KEDAI
+                        </span>
+                        <p className="font-body text-xs text-cream/90 leading-snug">
+                          Jl. Pos No. 12, Kawasan Kota Lama, Tanjungpinang Kota, Kepulauan Riau 29111
+                        </p>
+                        <a
+                          href="https://maps.google.com/?q=Sekata+Coffee+Tanjungpinang"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 font-mono text-[11px] text-burnt-orange hover:text-marigold underline underline-offset-2 mt-1.5 font-semibold transition-colors"
+                        >
+                          <span>Petunjuk Arah Google Maps</span>
+                          <ArrowUpRight className="w-3 h-3" />
+                        </a>
+                      </div>
                     </div>
                   </div>
+
+                  {/* Kontak WhatsApp & Nomor HP */}
+                  <div className="py-3.5 border-b border-cream/15">
+                    <div className="flex items-start gap-2.5">
+                      <MessageCircle className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <span className="font-mono text-[10px] text-cream/50 uppercase tracking-wider block mb-0.5">
+                          NOMOR HP &amp; WHATSAPP
+                        </span>
+                        <p className="font-mono text-xs text-cream font-bold">
+                          +62 812-7001-9281
+                        </p>
+                        <a
+                          href="https://wa.me/6281270019281?text=Halo%20Sekata,%20saya%20ingin%20tanya%20tentang%20slowbar%20dan%20menu"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-cream font-mono text-[11px] font-bold uppercase tracking-wider transition-colors shadow-md"
+                        >
+                          <span>Chat WhatsApp Barista</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tautan Media Sosial Resmi */}
+                  <div className="pt-3.5">
+                    <span className="font-mono text-[10px] text-cream/50 uppercase tracking-wider block mb-2">
+                      MEDIA SOSIAL &amp; KANAL RESMI
+                    </span>
+                    <div className="grid grid-cols-2 gap-2">
+                      <a
+                        href="https://instagram.com/sekata.tnj"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 p-2 rounded-lg bg-cream/5 hover:bg-cream/15 border border-cream/10 transition-colors group"
+                      >
+                        <InstagramIcon className="w-4 h-4 text-burnt-orange group-hover:scale-110 transition-transform" />
+                        <div className="text-left overflow-hidden">
+                          <span className="font-mono text-[11px] text-cream block font-semibold truncate">
+                            @sekata.tnj
+                          </span>
+                          <span className="font-mono text-[9px] text-cream/60 block">
+                            Instagram
+                          </span>
+                        </div>
+                      </a>
+
+                      <a
+                        href="https://tiktok.com/@sekatatnj"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 p-2 rounded-lg bg-cream/5 hover:bg-cream/15 border border-cream/10 transition-colors group"
+                      >
+                        <span className="font-mono font-bold text-xs text-turquoise group-hover:scale-110 transition-transform">
+                          ♪
+                        </span>
+                        <div className="text-left overflow-hidden">
+                          <span className="font-mono text-[11px] text-cream block font-semibold truncate">
+                            @sekatatnj
+                          </span>
+                          <span className="font-mono text-[9px] text-cream/60 block">
+                            TikTok
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Tagline footer card */}
+                  <div className="mt-4 pt-3 border-t border-cream/10 text-center">
+                    <span className="font-mono text-[10px] text-burnt-orange tracking-widest uppercase font-semibold">
+                      #KECILBERTUMBUH &bull; TANJUNGPINANG
+                    </span>
+                  </div>
+
                 </div>
               </div>
 
