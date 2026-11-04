@@ -62,21 +62,40 @@ export default function SlowbarExperience() {
         {/* Slowbar Showcase Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left: Foto Asli Meja Slowbar (konten1.jpg) */}
-          <div className="lg:col-span-6 bg-cream p-3 sm:p-4 rounded-[12px] border-hairline">
-            <div className="relative w-full aspect-[4/3] rounded-[8px] overflow-hidden border-hairline bg-sandstone">
+          {/* Left: Foto Asli Meja Slowbar (Caramel_macchiato.jpg sesuai Gambar 5) */}
+          <div className="lg:col-span-6 bg-cream p-3 sm:p-4 rounded-[16px] border-2 border-hairline shadow-md">
+            <div className="relative w-full aspect-[4/3] rounded-[10px] overflow-hidden border-hairline bg-sandstone group">
               <img
-                src="/konten1.jpg"
+                src="/Caramel_macchiato.jpg"
                 alt="Dokumentasi Meja Slowbar Sekata Coffee Tanjungpinang"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
               />
-              <div className="absolute top-3 left-3 bg-cream/90 backdrop-blur-sm px-2.5 py-1 rounded-[3px] border-hairline text-[10px] font-mono text-turquoise uppercase tracking-[0.05em] flex items-center gap-1.5 font-medium">
+              
+              {/* Top Badge (Sesuai Gambar 5) */}
+              <div className="absolute top-3 left-3 bg-cream/90 backdrop-blur-sm px-2.5 py-1 rounded-[3px] border-hairline text-[10px] font-mono text-turquoise uppercase tracking-[0.05em] flex items-center gap-1.5 font-medium shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-turquoise animate-pulse"></span>
-                DOKUMENTASI MEJA SLOWBAR
+                <span>DOKUMENTASI MEJA SLOWBAR</span>
+              </div>
+
+              {/* Graphic Sticker: "Tasty Coffee and Chill Vibes" (Sesuai Gambar 5) */}
+              <div className="absolute top-10 left-3 select-none pointer-events-none">
+                <div className="bg-espresso/80 backdrop-blur-sm text-cream px-3 py-2 rounded-[8px] border border-cream/30 shadow-md rotate-[-3deg]">
+                  <div className="flex items-center gap-2">
+                    <div className="leading-tight">
+                      <div className="font-display text-[16px] sm:text-[18px] text-cream">Tasty Coffee</div>
+                      <div className="font-display text-[14px] sm:text-[16px] text-marigold">and Chill Vibes.</div>
+                    </div>
+                    <img
+                      src="/logo.png"
+                      alt="Maskot"
+                      className="w-7 h-7 object-contain filter invert"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="mt-3 px-1 flex items-center justify-between text-[11px] font-mono text-coffee-dust uppercase">
+            <div className="mt-3 px-1 flex items-center justify-between text-[11px] font-mono text-coffee-dust uppercase font-medium">
               <span>INTERAKSI LANGSUNG BERSAMA BARISTA</span>
               <span>BEBAS BERTANYA &amp; SHARING</span>
             </div>

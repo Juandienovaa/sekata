@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import { Eye, Plus, Check } from 'lucide-react';
+import { Eye, Plus, Check, Sparkles } from 'lucide-react';
 import { PRODUCTS, CATEGORIES, formatRupiah } from '../data/products';
 
 export default function FeaturedProducts({ onQuickView, onAddToCart }) {
   const [activeCategory, setActiveCategory] = useState('all');
   const [recentlyAddedId, setRecentlyAddedId] = useState(null);
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
   const filteredProducts = activeCategory === 'all'
     ? PRODUCTS
     : PRODUCTS.filter((p) => p.category === activeCategory);
 
-  const handleAdd = (product) => {
+  const handleAdd = (product, e) => {
+    if (e) e.stopPropagation();
     onAddToCart({
       id: product.id,
       name: product.name,
@@ -22,9 +24,37 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
     });
 
     setRecentlyAddedId(product.id);
+    setSelectedProductId(product.id);
     setTimeout(() => {
       setRecentlyAddedId(null);
     }, 1500);
+  };
+
+  const handleCardClick = (product) => {
+    setSelectedProductId(product.id);
+    onQuickView(product);
+  };
+
+  // Dynamic vibrant hover & active color schemes based on beverage category
+  const getCategoryColorClasses = (category, isSelected) => {
+    if (isSelected) {
+      return 'bg-[#e8f5f5] border-turquoise shadow-md ring-2 ring-turquoise -translate-y-1';
+    }
+
+    switch (category) {
+      case 'slowbar':
+        return 'hover:bg-[#eaf5f5] hover:border-turquoise hover:shadow-lg hover:-translate-y-1';
+      case 'coffee':
+        return 'hover:bg-[#fef3e7] hover:border-burnt-orange hover:shadow-lg hover:-translate-y-1';
+      case 'non-coffee':
+        return 'hover:bg-[#fcf0f4] hover:border-[#d9658b] hover:shadow-lg hover:-translate-y-1';
+      case 'tea':
+        return 'hover:bg-[#f7f9e8] hover:border-[#8da435] hover:shadow-lg hover:-translate-y-1';
+      case 'beans':
+        return 'hover:bg-[#fff7e6] hover:border-amber hover:shadow-lg hover:-translate-y-1';
+      default:
+        return 'hover:bg-[#fff2e2] hover:border-turquoise hover:shadow-lg hover:-translate-y-1';
+    }
   };
 
   return (
@@ -44,7 +74,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
               Temukan Rasa yang Kamu Suka.
             </h2>
             <p className="text-[14px] sm:text-[15px] font-body text-coffee-dust max-w-xl">
-              Setiap orang punya selera berbeda. Temukan pilihan kopi dan minuman yang menemani waktumu di Sekata.
+              Setiap orang punya selera berbeda. Klik pada menu untuk melihat detail seduhan, karakter rasa, dan pesan langsung.
             </p>
           </div>
 
@@ -54,10 +84,10 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`text-[11px] sm:text-[12px] font-mono uppercase tracking-[0.05em] px-3 py-1.5 rounded-[3px] border transition-colors ${
+                className={`text-[11px] sm:text-[12px] font-mono uppercase tracking-[0.05em] px-3.5 py-1.5 rounded-[4px] border font-medium transition-all ${
                   activeCategory === cat.id
-                    ? 'bg-turquoise text-cream border-turquoise'
-                    : 'bg-linen text-espresso border-hairline hover:border-turquoise'
+                    ? 'bg-turquoise text-cream border-turquoise shadow-sm'
+                    : 'bg-linen text-espresso border-hairline hover:border-turquoise hover:bg-cream'
                 }`}
               >
                 {cat.label}
@@ -70,43 +100,55 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {filteredProducts.map((product) => {
             const isJustAdded = recentlyAddedId === product.id;
+            const isSelected = selectedProductId === product.id;
+            const colorClass = getCategoryColorClasses(product.category, isSelected);
 
             return (
               <div
                 key={product.id}
-                className="card-product p-6 flex flex-col justify-between group hover:border-turquoise transition-colors"
+                onClick={() => handleCardClick(product)}
+                className={`card-product p-6 flex flex-col justify-between group cursor-pointer transition-all duration-300 ${colorClass}`}
               >
                 <div>
                   {/* Top Header */}
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="badge-stamp bg-cream text-coffee-dust border-hairline">
+                    <span className={`badge-stamp border-hairline transition-colors ${
+                      isSelected ? 'bg-turquoise text-cream border-turquoise' : 'bg-cream text-coffee-dust group-hover:bg-cream/90 group-hover:text-espresso'
+                    }`}>
                       {product.categoryLabel}
                     </span>
-                    <span className="text-[12px] font-mono font-medium text-amber tracking-[0.05em]">
+                    <span className="text-[13px] font-mono font-bold text-amber tracking-[0.05em] group-hover:scale-105 transition-transform">
                       {formatRupiah(product.price)}
                     </span>
                   </div>
 
                   {/* Product Image Frame */}
-                  <div className="relative w-full aspect-[4/5] rounded-[8px] overflow-hidden border-hairline bg-sandstone mb-5">
+                  <div className="relative w-full aspect-[4/5] rounded-[10px] overflow-hidden border-hairline bg-sandstone mb-5 shadow-sm">
                     <img
                       src={product.image}
                       alt={product.name}
                       loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                      className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
                     />
 
                     {product.badge && (
                       <div className="absolute top-3 left-3">
-                        <span className="badge-stamp bg-turquoise text-cream">
+                        <span className="badge-stamp bg-turquoise text-cream shadow-sm">
                           {product.badge}
                         </span>
+                      </div>
+                    )}
+
+                    {/* Active Selected Stamp */}
+                    {isSelected && (
+                      <div className="absolute bottom-3 right-3 bg-cream/95 text-turquoise px-2 py-0.5 rounded-[3px] border border-turquoise text-[10px] font-mono font-bold uppercase shadow-sm">
+                        TERPILIH ✓
                       </div>
                     )}
                   </div>
 
                   {/* Name & Subtitle */}
-                  <h3 className="font-body text-[18px] sm:text-[20px] font-semibold text-espresso leading-snug mb-1">
+                  <h3 className="font-body text-[18px] sm:text-[20px] font-semibold text-espresso leading-snug mb-1 group-hover:text-turquoise transition-colors">
                     {product.name}
                   </h3>
 
@@ -123,7 +165,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                       {product.tastingNotes.map((note, idx) => (
                         <span
                           key={idx}
-                          className="text-[11px] font-body bg-cream border-hairline px-2 py-0.5 rounded-[3px] text-espresso"
+                          className="text-[11px] font-body bg-cream border-hairline px-2 py-0.5 rounded-[3px] text-espresso group-hover:border-espresso/30 transition-colors"
                         >
                           {note}
                         </span>
@@ -153,10 +195,10 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                 </div>
 
                 {/* Card Actions */}
-                <div className="grid grid-cols-2 gap-2 pt-2 border-t-hairline">
+                <div className="grid grid-cols-2 gap-2 pt-3 border-t-hairline" onClick={(e) => e.stopPropagation()}>
                   <button
-                    onClick={() => onQuickView(product)}
-                    className="btn-quickview flex items-center justify-center gap-1.5"
+                    onClick={() => handleCardClick(product)}
+                    className="btn-quickview flex items-center justify-center gap-1.5 group-hover:bg-turquoise group-hover:border-turquoise transition-all"
                     aria-label={`Lihat detail ${product.name}`}
                   >
                     <Eye className="w-3.5 h-3.5" />
@@ -164,8 +206,8 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                   </button>
 
                   <button
-                    onClick={() => handleAdd(product)}
-                    className="btn-filled flex items-center justify-center gap-1.5 bg-turquoise border-turquoise hover:bg-turquoise-dark"
+                    onClick={(e) => handleAdd(product, e)}
+                    className="btn-filled flex items-center justify-center gap-1.5 bg-turquoise border-turquoise hover:bg-turquoise-dark active:scale-95 transition-all"
                     aria-label={`Tambah ${product.name} ke pesanan`}
                   >
                     {isJustAdded ? (
@@ -184,24 +226,6 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
               </div>
             );
           })}
-        </div>
-
-        {/* WhatsApp Consultation Notice */}
-        <div className="mt-12 p-6 bg-linen rounded-[8px] border-hairline flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <span className="w-3 h-3 rounded-full bg-turquoise flex-shrink-0"></span>
-            <p className="text-[13px] font-body text-espresso">
-              Ingin pesan langsung lewat WhatsApp atau tanya stok beans mingguan ke barista Sekata?
-            </p>
-          </div>
-          <a
-            href="https://wa.me/6281234567890?text=Halo%20Sekata%20Coffee,%20saya%20mau%20tanya%20menu%20dan%20beans%20hari%20ini"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-ghost text-[12px] whitespace-nowrap hover:border-turquoise hover:text-turquoise"
-          >
-            HUBUNGI BARISTA DI WHATSAPP &rarr;
-          </a>
         </div>
 
       </div>
