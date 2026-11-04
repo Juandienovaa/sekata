@@ -306,7 +306,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                         {/* Typographic Headline with Proportional Sizing & Letter-Spacing */}
                         <div className="flex flex-col">
                           <span
-                            className={`font-display text-[26px] sm:text-[34px] md:text-[42px] lg:text-[46px] xl:text-[50px] leading-[1.05] uppercase transition-all duration-400 ease-out inline-flex items-center gap-2.5 sm:gap-4 ${
+                            className={`font-display text-[26px] xs:text-[30px] sm:text-[36px] md:text-[42px] lg:text-[46px] xl:text-[50px] leading-[1.08] uppercase transition-all duration-400 ease-out inline-flex items-center gap-2 sm:gap-4 ${
                               isHovered
                                 ? 'text-marigold tracking-[0.05em] translate-x-2'
                                 : 'text-cream tracking-[-0.03em]'
@@ -315,14 +315,19 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                             <span>{item.title}</span>
                             <ArrowUpRight
                               className={`w-4 h-4 sm:w-6 sm:h-6 transition-all duration-300 ${
-                                isHovered ? 'opacity-100 translate-x-1 -translate-y-1 text-burnt-orange' : 'opacity-0 scale-75'
+                                isHovered ? 'opacity-100 translate-x-1 -translate-y-1 text-burnt-orange' : 'opacity-0 sm:opacity-0 scale-75'
                               }`}
                             />
                           </span>
 
-                          {/* Hover Reveal Subtitle (Compact) */}
+                          {/* Mobile Subtitle (Selalu tampil di HP agar tidak sepi & proporsional) */}
+                          <span className="sm:hidden font-mono text-[10px] text-cream/60 tracking-wider block mt-0.5">
+                            &bull; {item.subtitle}
+                          </span>
+
+                          {/* Desktop Hover Reveal Subtitle */}
                           <div
-                            className={`overflow-hidden transition-all duration-300 ${
+                            className={`hidden sm:block overflow-hidden transition-all duration-300 ${
                               isHovered ? 'max-h-8 mt-0.5 opacity-100 translate-x-2' : 'max-h-0 opacity-0'
                             }`}
                           >
@@ -390,11 +395,11 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
             BOTTOM AREA: Compact Social Links, Contact Info, & Design Philosophy
           */}
           <div className="relative z-10 w-full border-t border-cream/15 pt-3 sm:pt-4 flex-shrink-0">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-left font-mono text-[11px]">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 text-left font-mono text-[10px] sm:text-[11px]">
               
               {/* Column 1: Social Links */}
               <div>
-                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[10px]">
+                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[9px] sm:text-[10px]">
                   // IKUTI JEJAK KAMI
                 </span>
                 <ul className="space-y-1 text-cream/80">
@@ -406,7 +411,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                       className="inline-flex items-center gap-1.5 hover:text-marigold transition-colors"
                     >
                       <InstagramIcon className="w-3 h-3 text-marigold" />
-                      <span>Instagram: @sekata.tnj</span>
+                      <span>@sekata.tnj</span>
                     </a>
                   </li>
                   <li>
@@ -417,7 +422,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                       className="inline-flex items-center gap-1.5 hover:text-marigold transition-colors"
                     >
                       <MessageCircle className="w-3 h-3 text-marigold" />
-                      <span>WhatsApp: +62 812-3456-7890</span>
+                      <span>WhatsApp</span>
                     </a>
                   </li>
                 </ul>
@@ -425,30 +430,30 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
 
               {/* Column 2: Contact Info */}
               <div>
-                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[10px]">
+                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[9px] sm:text-[10px]">
                   // LOKASI & JAM SEDUH
                 </span>
-                <div className="space-y-0.5 text-cream/80 leading-relaxed text-[10.5px]">
-                  <p className="flex items-center gap-1.5">
+                <div className="space-y-0.5 text-cream/80 leading-relaxed text-[10px] sm:text-[10.5px]">
+                  <p className="flex items-center gap-1">
                     <MapPin className="w-3 h-3 text-marigold flex-shrink-0" />
-                    <span>Tanjungpinang, Kepulauan Riau</span>
+                    <span>Tanjungpinang, Kepri</span>
                   </p>
                   <p className="text-cream/60">
-                    Buka Setiap Hari: 09.00 &mdash; 23.00 WIB
+                    Setiap Hari: 09.00 &mdash; 23.00
                   </p>
                 </div>
               </div>
 
               {/* Column 3: Design Philosophy Manifesto */}
-              <div>
-                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[10px]">
+              <div className="col-span-2 md:col-span-1 hidden xs:block">
+                <span className="text-burnt-orange tracking-[0.18em] uppercase block mb-1 font-medium text-[9px] sm:text-[10px]">
                   // FILOSOFI PENGALAMAN
                 </span>
-                <p className="font-body italic text-cream/75 text-[11px] leading-snug line-clamp-2">
-                  &ldquo;This experience should feel less like a website and more like an interactive editorial film, where typography is a spatial element.&rdquo;
+                <p className="font-body italic text-cream/75 text-[10px] sm:text-[11px] leading-snug line-clamp-2">
+                  &ldquo;This experience should feel less like a website and more like an interactive editorial film.&rdquo;
                 </p>
-                <span className="font-mono text-[9px] text-marigold uppercase tracking-[0.12em] block mt-0.5">
-                  &mdash; Sekata Coffee &bull; #KecilBertumbuh
+                <span className="font-mono text-[8px] sm:text-[9px] text-marigold uppercase tracking-[0.12em] block mt-0.5">
+                  &mdash; Sekata &bull; #KecilBertumbuh
                 </span>
               </div>
 

@@ -35,87 +35,97 @@ export default function GrandOpeningCountdown() {
   }, [targetDate]);
 
   return (
-    <section id="countdown" className="w-full relative min-h-screen flex flex-col justify-between bg-[#19110f] text-cream overflow-hidden py-14 sm:py-20 px-4 sm:px-8 border-b-2 border-hairline select-none">
-      
-      {/* Background Illustrated Atmosphere with warm dark espresso vignette */}
+    <section
+      id="countdown"
+      className="w-full relative min-h-[85vh] lg:min-h-screen flex flex-col justify-between bg-[#19110f] text-cream overflow-hidden py-12 sm:py-16 lg:py-20 px-4 sm:px-8 border-b-2 border-hairline select-none"
+    >
+      {/* 
+        FESTIVAL BACKGROUND WITH OPENING.JPG
+        Menyatu dalam latar poster festival sinematik:
+        Ilustrasi kerumunan perayaan & balon terlihat artistik di latar belakang
+      */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
           src="/opening.jpg"
           alt="Suasana Grand Opening Sekata"
-          className="w-full h-full object-cover opacity-10 filter blur-[2px] scale-105"
+          className="w-full h-full object-cover opacity-25 filter contrast-125 brightness-90 scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#19110f] via-[#19110f]/85 to-[#19110f]/90" />
+        {/* Soft vignette gradient for high text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#19110f] via-[#19110f]/75 to-[#19110f]/85" />
       </div>
 
-      {/* 1. TOP HEADER: FESTIVAL TITLE & MONOGRAM */}
-      <div className="relative z-10 w-full text-center pt-2 sm:pt-4">
+      {/* 1. TOP HEADER: CIRCULAR FESTIVAL BADGE & EVENT TITLE (Persis Format Shuffle Festival) */}
+      <div className="relative z-10 w-full text-center pt-2 sm:pt-6">
         
-        {/* Monogram Pill Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-marigold/40 bg-marigold/10 text-marigold font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] mb-3 backdrop-blur-sm">
-          <Sparkles className="w-3.5 h-3.5 text-marigold" />
-          <span>HITUNG MUNDUR HARI-H &bull; JUMAT, 6 NOVEMBER 2026</span>
+        {/* Small Logo Monogram Badge */}
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-cream/40 mx-auto mb-3 flex items-center justify-center bg-cream/10 backdrop-blur-sm shadow-md">
+          <img
+            src="/logo.png"
+            alt="Sekata"
+            className="w-6 h-6 sm:w-8 sm:h-8 object-contain filter invert"
+          />
         </div>
 
         {/* Festival Title */}
-        <h2 className="font-display text-[30px] sm:text-[44px] lg:text-[52px] uppercase tracking-[0.14em] text-cream leading-none drop-shadow-md">
+        <h2 className="font-display text-[24px] sm:text-[34px] lg:text-[44px] uppercase tracking-[0.14em] text-cream leading-none drop-shadow-md">
           GRAND OPENING SEKATA
         </h2>
         
-        <p className="font-mono text-[11px] sm:text-xs text-marigold tracking-[0.2em] uppercase mt-2 font-medium">
-          06, 07, 08 NOVEMBER 2026 &bull; TANJUNGPINANG, KEPULAUAN RIAU
+        <p className="font-mono text-[10px] sm:text-xs text-marigold tracking-[0.2em] uppercase mt-2 font-medium">
+          06, 07, 08 NOVEMBER 2026 &bull; TANJUNGPINANG
         </p>
 
       </div>
 
-      {/* 2. CENTER: COLOSSAL FESTIVAL COUNTDOWN NUMBERS */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto my-6 sm:my-8">
-        <div className="flex items-center justify-center gap-2 sm:gap-6 md:gap-10 text-center">
+      {/* 2. CENTER: COLOSSAL COUNTDOWN NUMBERS WITH VERTICAL DIVIDERS (Persis Referensi Festival) */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto my-auto py-8 sm:py-12">
+        <div className="flex items-center justify-center gap-1.5 sm:gap-6 md:gap-10 text-center">
           
           {/* DAYS */}
           <div className="flex-1 min-w-0">
-            <div className="font-display text-[50px] sm:text-[80px] md:text-[110px] lg:text-[130px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+            <div className="font-display text-[46px] sm:text-[80px] md:text-[115px] lg:text-[150px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
               {String(timeLeft.days).padStart(2, '0')}
             </div>
-            <div className="font-display italic text-[14px] sm:text-[20px] md:text-[24px] text-cream/90 lowercase tracking-normal mt-2 sm:mt-3">
+            <div className="font-display italic text-[13px] sm:text-[20px] md:text-[28px] text-cream/90 lowercase tracking-normal mt-2 sm:mt-4">
               hari
             </div>
           </div>
 
           {/* Thin Vertical Divider 1 */}
-          <div className="h-14 sm:h-20 md:h-28 w-px bg-cream/30 flex-shrink-0" />
+          <div className="h-12 sm:h-20 md:h-28 lg:h-32 w-px bg-cream/30 flex-shrink-0" />
 
           {/* HOURS */}
           <div className="flex-1 min-w-0">
-            <div className="font-display text-[50px] sm:text-[80px] md:text-[110px] lg:text-[130px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+            <div className="font-display text-[46px] sm:text-[80px] md:text-[115px] lg:text-[150px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
               {String(timeLeft.hours).padStart(2, '0')}
             </div>
-            <div className="font-display italic text-[14px] sm:text-[20px] md:text-[24px] text-cream/90 lowercase tracking-normal mt-2 sm:mt-3">
+            <div className="font-display italic text-[13px] sm:text-[20px] md:text-[28px] text-cream/90 lowercase tracking-normal mt-2 sm:mt-4">
               jam
             </div>
           </div>
 
           {/* Thin Vertical Divider 2 */}
-          <div className="h-14 sm:h-20 md:h-28 w-px bg-cream/30 flex-shrink-0" />
+          <div className="h-12 sm:h-20 md:h-28 lg:h-32 w-px bg-cream/30 flex-shrink-0" />
 
           {/* MINUTES */}
           <div className="flex-1 min-w-0">
-            <div className="font-display text-[50px] sm:text-[80px] md:text-[110px] lg:text-[130px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+            <div className="font-display text-[46px] sm:text-[80px] md:text-[115px] lg:text-[150px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
               {String(timeLeft.minutes).padStart(2, '0')}
             </div>
-            <div className="font-display italic text-[14px] sm:text-[20px] md:text-[24px] text-cream/90 lowercase tracking-normal mt-2 sm:mt-3">
+            <div className="font-display italic text-[13px] sm:text-[20px] md:text-[28px] text-cream/90 lowercase tracking-normal mt-2 sm:mt-4">
               menit
             </div>
           </div>
 
           {/* Thin Vertical Divider 3 */}
-          <div className="h-14 sm:h-20 md:h-28 w-px bg-cream/30 flex-shrink-0" />
+          <div className="h-12 sm:h-20 md:h-28 lg:h-32 w-px bg-cream/30 flex-shrink-0" />
 
           {/* SECONDS */}
           <div className="flex-1 min-w-0">
-            <div className="font-display text-[50px] sm:text-[80px] md:text-[110px] lg:text-[130px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+            <div className="font-display text-[46px] sm:text-[80px] md:text-[115px] lg:text-[150px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
               {String(timeLeft.seconds).padStart(2, '0')}
             </div>
-            <div className="font-display italic text-[14px] sm:text-[20px] md:text-[24px] text-cream/90 lowercase tracking-normal mt-2 sm:mt-3">
+            <div className="font-display italic text-[13px] sm:text-[20px] md:text-[28px] text-cream/90 lowercase tracking-normal mt-2 sm:mt-4">
               detik
             </div>
           </div>
@@ -123,37 +133,16 @@ export default function GrandOpeningCountdown() {
         </div>
       </div>
 
-      {/* 3. HERO VISUAL: OPENING.JPG CARICATURE SHOWCASE */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto my-4 sm:my-6">
-        <div className="rounded-[18px] sm:rounded-[22px] overflow-hidden border-2 border-cream/25 shadow-[0_16px_50px_rgba(0,0,0,0.6)] bg-[#fcf8f2] relative group">
-          <img
-            src="/opening.jpg"
-            alt="Ilustrasi Grand Opening Sekata Coffee Shop"
-            className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.015]"
-          />
-          
-          {/* Bottom Caption Pill Overlays */}
-          <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 flex flex-col sm:flex-row items-center justify-between gap-2 pointer-events-none">
-            <span className="bg-espresso/90 backdrop-blur-md text-cream px-3.5 py-1.5 rounded-full font-mono text-[10px] sm:text-xs uppercase tracking-wider border border-cream/25 shadow-lg">
-              🎉 Pesta Perayaan Bersama Kawan &amp; Warga Sekata
-            </span>
-            <span className="bg-burnt-orange text-cream px-3.5 py-1.5 rounded-full font-mono text-[10px] sm:text-xs uppercase tracking-wider font-bold shadow-lg">
-              JUMAT INI &bull; MULAI 09.00 WIB
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* 4. BOTTOM ACTION: JOIN THE WAITLIST BUTTON */}
-      <div className="relative z-10 w-full text-center pt-2 sm:pt-4 pb-2 space-y-3">
+      {/* 3. BOTTOM ACTION: JOIN THE WAITLIST BUTTON (Persis Format Festival Gambar Referensi) */}
+      <div className="relative z-10 w-full text-center pb-2 sm:pb-6 space-y-3 sm:space-y-4">
         
-        {/* Pill Button CTA */}
+        {/* Bordered Pill CTA Button */}
         <div>
           <a
             href="https://wa.me/6281234567890?text=Halo%20Sekata,%20saya%20mau%20daftar%20waitlist%20Grand%20Opening%20Jumat%20ini!"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-8 sm:px-12 py-3.5 sm:py-4 rounded-full border-2 border-cream/80 text-cream font-mono text-xs sm:text-sm uppercase tracking-[0.15em] font-bold hover:bg-cream hover:text-espresso hover:border-cream transition-all duration-300 shadow-xl group"
+            className="inline-flex items-center gap-2.5 px-6 sm:px-12 py-3 sm:py-4 rounded-full border-2 border-cream/75 text-cream font-mono text-xs sm:text-sm uppercase tracking-[0.15em] font-bold hover:bg-cream hover:text-espresso hover:border-cream transition-all duration-300 shadow-xl group active:scale-95"
           >
             <Sparkles className="w-4 h-4 text-marigold group-hover:rotate-12 transition-transform" />
             <span>JOIN THE WAITLIST (FREE 50 CUPS)</span>
@@ -161,8 +150,8 @@ export default function GrandOpeningCountdown() {
           </a>
         </div>
 
-        {/* Location & Tagline */}
-        <p className="font-mono text-[10px] sm:text-[11px] text-cream/70 uppercase tracking-[0.1em]">
+        {/* Location & Tagline Note */}
+        <p className="font-mono text-[9px] sm:text-[11px] text-cream/70 uppercase tracking-[0.1em]">
           TANJUNGPINANG, KEPRI &bull; &ldquo;MARI BERTEMU &amp; BERCERITA TENTANG KEHIDUPAN.&rdquo;
         </p>
 

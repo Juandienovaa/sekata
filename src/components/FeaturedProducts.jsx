@@ -110,7 +110,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
 
             {/* Category Filter Tabs (Only relevant in grid mode) */}
             {viewMode === 'grid' && (
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex overflow-x-auto no-scrollbar gap-1.5 pb-1 max-w-full -mx-2 px-2 sm:mx-0 sm:px-0 sm:flex-wrap">
                 {CATEGORIES.map((cat) => (
                   <button
                     key={cat.id}
@@ -118,7 +118,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                       setActiveCategory(cat.id);
                       setIsExpanded(false); // Reset to 6 cards on category switch
                     }}
-                    className={`text-[11px] font-mono uppercase tracking-[0.05em] px-3 py-1.5 rounded-[4px] border font-medium transition-all ${
+                    className={`text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.05em] px-3 py-1.5 rounded-[4px] border font-medium whitespace-nowrap transition-all flex-shrink-0 ${
                       activeCategory === cat.id
                         ? 'bg-turquoise text-cream border-turquoise shadow-sm'
                         : 'bg-cream text-espresso border-hairline hover:border-turquoise hover:bg-linen'
@@ -135,13 +135,13 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
 
         {/* 
           ======================================================================
-          VIEW MODE 1: KARTU FOTO (Grid Ringkas Max 6 Cards + Expand Toggle)
-          Solusi anti-scroll kepanjangan: Hanya tampil 6 kartu default
+          VIEW MODE 1: KARTU FOTO (Grid 2 Kolom di Mobile, 3 Kolom di Desktop)
+          Solusi anti-scroll kepanjangan: Tampil rapi & proporsional di semua layar
           ======================================================================
         */}
         {viewMode === 'grid' && (
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
               {displayedCards.map((product) => {
                 const isJustAdded = recentlyAddedId === product.id;
                 const isSelected = selectedProductId === product.id;
@@ -150,7 +150,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                   <div
                     key={product.id}
                     onClick={() => handleCardClick(product)}
-                    className={`card-product p-5 flex flex-col justify-between group cursor-pointer transition-all duration-300 rounded-[12px] border ${
+                    className={`card-product p-3 sm:p-5 flex flex-col justify-between group cursor-pointer transition-all duration-300 rounded-[10px] sm:rounded-[12px] border ${
                       isSelected
                         ? 'bg-[#e8f5f5] border-turquoise shadow-md ring-2 ring-turquoise'
                         : 'bg-linen hover:bg-cream hover:border-turquoise hover:shadow-md'
@@ -158,17 +158,17 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                   >
                     <div>
                       {/* Top Header */}
-                      <div className="flex items-center justify-between gap-2 mb-2.5">
-                        <span className="badge-stamp bg-cream text-coffee-dust border-hairline group-hover:text-espresso text-[10px]">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                        <span className="badge-stamp bg-cream text-coffee-dust border-hairline group-hover:text-espresso text-[9px] sm:text-[10px] self-start">
                           {product.categoryLabel}
                         </span>
-                        <span className="text-[13px] font-mono font-bold text-amber tracking-[0.05em]">
+                        <span className="text-xs sm:text-[13px] font-mono font-bold text-amber tracking-[0.05em]">
                           {formatRupiah(product.price)}
                         </span>
                       </div>
 
                       {/* Product Image Frame */}
-                      <div className="relative w-full aspect-[4/3.8] rounded-[8px] overflow-hidden border-hairline bg-sandstone mb-4 shadow-xs">
+                      <div className="relative w-full aspect-[4/3.5] rounded-[6px] sm:rounded-[8px] overflow-hidden border-hairline bg-sandstone mb-2 sm:mb-4 shadow-xs">
                         <img
                           src={product.image}
                           alt={product.name}
@@ -177,8 +177,8 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                         />
 
                         {product.badge && (
-                          <div className="absolute top-2.5 left-2.5">
-                            <span className="badge-stamp bg-turquoise text-cream shadow-xs text-[9px]">
+                          <div className="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5">
+                            <span className="badge-stamp bg-turquoise text-cream shadow-xs text-[8px] sm:text-[9px]">
                               {product.badge}
                             </span>
                           </div>
@@ -186,16 +186,16 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                       </div>
 
                       {/* Name & Subtitle */}
-                      <h3 className="font-body text-[17px] sm:text-[18px] font-semibold text-espresso leading-snug mb-1 group-hover:text-turquoise transition-colors">
+                      <h3 className="font-body text-xs sm:text-[17px] font-semibold text-espresso leading-snug mb-1 group-hover:text-turquoise transition-colors truncate sm:whitespace-normal">
                         {product.name}
                       </h3>
 
-                      <p className="text-[12px] font-body text-coffee-dust leading-relaxed mb-3 line-clamp-2">
+                      <p className="hidden sm:block text-[12px] font-body text-coffee-dust leading-relaxed mb-3 line-clamp-2">
                         {product.subtitle}
                       </p>
 
                       {/* Tasting Notes */}
-                      <div className="mb-3">
+                      <div className="hidden sm:block mb-3">
                         <div className="flex flex-wrap gap-1">
                           {product.tastingNotes.slice(0, 3).map((note, idx) => (
                             <span
@@ -210,30 +210,30 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                     </div>
 
                     {/* Card Actions */}
-                    <div className="grid grid-cols-2 gap-2 pt-3 border-t-hairline mt-auto" onClick={(e) => e.stopPropagation()}>
+                    <div className="grid grid-cols-2 gap-1.5 sm:gap-2 pt-2 sm:pt-3 border-t-hairline mt-auto" onClick={(e) => e.stopPropagation()}>
                       <button
                         onClick={() => handleCardClick(product)}
-                        className="btn-quickview py-1.5 flex items-center justify-center gap-1.5 text-xs group-hover:bg-turquoise group-hover:border-turquoise transition-all"
+                        className="btn-quickview py-1 sm:py-1.5 flex items-center justify-center gap-1 text-[10px] sm:text-xs group-hover:bg-turquoise group-hover:border-turquoise transition-all"
                         aria-label={`Lihat detail ${product.name}`}
                       >
                         <Eye className="w-3 h-3" />
-                        <span>DETAIL</span>
+                        <span className="hidden xs:inline">DETAIL</span>
                       </button>
 
                       <button
                         onClick={(e) => handleAdd(product, e)}
-                        className="btn-filled py-1.5 flex items-center justify-center gap-1.5 text-xs bg-turquoise border-turquoise hover:bg-turquoise-dark active:scale-95 transition-all"
+                        className="btn-filled py-1 sm:py-1.5 flex items-center justify-center gap-1 text-[10px] sm:text-xs bg-turquoise border-turquoise hover:bg-turquoise-dark active:scale-95 transition-all font-bold"
                         aria-label={`Tambah ${product.name} ke pesanan`}
                       >
                         {isJustAdded ? (
                           <>
                             <Check className="w-3 h-3 text-cream" />
-                            <span>DITAMBAH</span>
+                            <span>OK!</span>
                           </>
                         ) : (
                           <>
                             <Plus className="w-3 h-3" />
-                            <span>PESAN +</span>
+                            <span>PESAN</span>
                           </>
                         )}
                       </button>

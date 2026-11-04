@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import ColorfulStatement from './components/ColorfulStatement';
 import GrandOpeningCountdown from './components/GrandOpeningCountdown';
-import OliverParallaxMenu from './components/OliverParallaxMenu';
 import FeaturedProducts from './components/FeaturedProducts';
 import BrandStory from './components/BrandStory';
 import TheSpace from './components/TheSpace';
@@ -110,14 +109,8 @@ export default function App() {
       <ColorfulStatement />
 
       <main className="flex-1">
-        {/* SECTION COUNTDOWN GRAND OPENING JUMAT MINGGU INI (MENGGANTIKAN GAMBAR 3) */}
+        {/* SECTION COUNTDOWN GRAND OPENING JUMAT MINGGU INI */}
         <GrandOpeningCountdown />
-
-        {/* SECTION OLIVER PARALLAX SHOWCASE (SKIPER 30) SEBELUM MASUK MENU */}
-        <OliverParallaxMenu
-          onAddToCart={handleAddToCart}
-          onQuickView={handleQuickView}
-        />
 
         {/* SECTION KOPI & MENU LENGKAP: "Temukan Rasa yang Kamu Suka." */}
         <FeaturedProducts
