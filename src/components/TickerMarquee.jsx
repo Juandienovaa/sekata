@@ -1,4 +1,5 @@
 import React from 'react';
+import { Sparkles } from 'lucide-react';
 
 export default function TickerMarquee() {
   const marqueeItems = [
@@ -11,21 +12,19 @@ export default function TickerMarquee() {
   ];
 
   return (
-    <div className="w-full bg-[#140e0c] text-white py-3 sm:py-3.5 border-y-2 border-espresso/35 overflow-hidden select-none relative z-20">
-      {/* Infinite Scrolling Ticker (Persis Gambar 3 User) */}
+    <div className="w-full bg-[#110b09] text-white py-3.5 sm:py-4 border-y-2 border-espresso/40 overflow-hidden select-none relative z-20 shadow-md">
+      {/* Infinite Scrolling Ticker (Persis Gambar 5 User) */}
       <div className="flex animate-marquee whitespace-nowrap will-change-transform">
         {[0, 1].map((blockIdx) => (
           <div
             key={blockIdx}
-            className="flex items-center gap-6 sm:gap-10 pr-6 sm:pr-10 flex-shrink-0"
+            className="flex items-center gap-8 sm:gap-12 pr-8 sm:pr-12 flex-shrink-0"
           >
             {marqueeItems.map((text, idx) => (
-              <div key={idx} className="flex items-center gap-6 sm:gap-10 flex-shrink-0">
-                {/* Retro Sparkle Star Icon Persis Gambar 3 */}
-                <span className="text-burnt-orange text-lg sm:text-xl font-bold flex-shrink-0 select-none">
-                  ✦
-                </span>
-                <span className="font-sans font-black italic text-[15px] sm:text-[18px] md:text-[20px] tracking-[0.05em] text-white uppercase">
+              <div key={idx} className="flex items-center gap-6 sm:gap-8 flex-shrink-0">
+                {/* Retro Sparkle Star Icon Persis Gambar 5 */}
+                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-burnt-orange stroke-[2] flex-shrink-0 animate-pulse" />
+                <span className="font-sans font-black italic text-[16px] sm:text-[19px] md:text-[22px] tracking-[0.06em] text-white uppercase">
                   {text}
                 </span>
               </div>

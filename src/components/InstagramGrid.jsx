@@ -70,7 +70,7 @@ export default function InstagramGrid() {
       id: 'post-6',
       isReel: false,
       url: profileUrl,
-      image: '/lemon tea.jpg',
+      image: '/lemon%20tea.jpg',
       tag: 'SEGAR SIANG',
       likes: '723',
       comments: '28',
@@ -145,10 +145,10 @@ export default function InstagramGrid() {
               <div className="absolute -left-[6px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-r-[8px] border-r-cream" />
               
               <div className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-[0.08em] leading-tight text-burnt-orange">
-                FOLLOW US ON THE &lsquo;GRAM
+                DOKUMENTASI KEDAI &bull; @SEKATA.TNJ
               </div>
               <div className="font-mono text-[10px] sm:text-[11px] text-espresso uppercase tracking-[0.05em] font-medium">
-                @SEKATA.TNJ &bull; SLOWBAR &amp; COFFEE
+                TANGKAPAN LENSA KESEHARIAN SLOWBAR
               </div>
             </div>
           </div>

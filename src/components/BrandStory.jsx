@@ -1,13 +1,22 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import TickerMarquee from './TickerMarquee';
 
 export default function BrandStory() {
   return (
-    <section id="filosofi" className="w-full py-16 sm:py-24 bg-[#ede1d3] border-y border-espresso/15 scroll-mt-20 select-none">
-      <div className="container-max px-4 sm:px-8">
+    <section id="filosofi" className="w-full bg-[#ede2d5] border-y border-espresso/15 scroll-mt-20 select-none">
+      
+      {/* 
+        TULISAN BERGERAK (INFINITE TICKER MARQUEE) PERSIS GAMBAR 5 USER
+        Menyatu di bagian paling atas section Filosofi Sekata, full-bleed mentok ke samping
+      */}
+      <TickerMarquee />
+
+      <div className="py-14 sm:py-20">
+        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         
-        {/* Main Editorial Card with Distinct Warm Organic Linen Background */}
-        <div className="bg-[#f6ede2] rounded-[26px] sm:rounded-[36px] border border-espresso/15 p-6 sm:p-10 lg:p-14 shadow-sm relative overflow-hidden">
+          {/* Main Editorial Card with Distinct Warm Organic Linen Background (Bukan Putih Mentah) */}
+          <div className="bg-[#f8f2eb] rounded-[24px] sm:rounded-[32px] border border-espresso/15 p-6 sm:p-10 lg:p-12 shadow-sm relative overflow-hidden">
           
           {/* 
             HEADER SECTION: Clean Human Editorial
@@ -131,8 +140,8 @@ export default function BrandStory() {
               {/* Documentary Photograph with Scale Micro-Interaction */}
               <div className="absolute inset-0 overflow-hidden">
                 <img
-                  src="/konten1.jpg"
-                  alt="Suasana Meja Slowbar Sekata Coffee Tanjungpinang"
+                  src="/partner-roasting.jpg"
+                  alt="Suasana Roastery & Meja Slowbar Sekata Coffee Tanjungpinang"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] filter contrast-105 brightness-95"
                 />
                 {/* Cinematic Vignette Overlay */}
@@ -156,7 +165,7 @@ export default function BrandStory() {
                   Setiap biji kopi Nusantara diseduh dengan sabar, mengiringi obrolan hangat antara barista dan kawan yang singgah.
                 </p>
                 <div className="flex items-center justify-between pt-2.5 border-t border-white/15 text-[11px] font-mono text-[#d88d63]">
-                  <span>📍 JL. POS NO. 12, TANJUNGPINANG</span>
+                  <span>📍 JL. YOS SUDARSO, TANJUNGPINANG</span>
                   <span className="font-bold text-[#fcf9f5] flex items-center gap-1 group-hover:text-marigold transition-colors">
                     #KecilBertumbuh <ArrowUpRight className="w-3 h-3" />
                   </span>
@@ -170,6 +179,9 @@ export default function BrandStory() {
         </div>
 
       </div>
-    </section>
+
+    </div>
+
+  </section>
   );
 }

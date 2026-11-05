@@ -129,26 +129,26 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
           </a>
 
           {/* RIGHT: PENCARIAN + PESANAN + MENU BUTTON */}
-          <div className="flex items-center gap-2 sm:gap-2.5">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
 
             {/* Quick Search Button */}
             <button
               onClick={onOpenSearch}
-              className={`flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full font-mono transition-all duration-200 focus:outline-none active:scale-[0.97] ${
+              className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-mono transition-all duration-200 focus:outline-none active:scale-[0.97] ${
                 scrolled
                   ? 'border border-espresso/20 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
                   : 'bg-black/35 backdrop-blur-md border border-white/25 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
               }`}
               aria-label="Cari Menu atau Biji Kopi"
-              title="Cari Menu (Cmd/Ctrl + K)"
+              title="Cari Menu"
             >
-              <Search className="w-4 h-4 stroke-[1.5]" />
+              <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[1.5]" />
             </button>
 
             {/* Cart / Orders Pill */}
             <button
               onClick={onOpenCart}
-              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium transition-all duration-200 focus:outline-none active:scale-[0.97] ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium transition-all duration-200 focus:outline-none active:scale-[0.97] ${
                 scrolled
                   ? 'border border-espresso/20 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
                   : 'bg-black/35 backdrop-blur-md border border-white/25 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
@@ -156,8 +156,8 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
               aria-label={`Buka Keranjang Pesanan (${cartCount} item)`}
             >
               <ShoppingBag className="w-3.5 h-3.5 text-turquoise stroke-[1.5]" />
-              <span className="hidden sm:inline">PESANAN</span>
-              <span className="w-5 h-5 rounded-full bg-turquoise text-cream text-[10px] flex items-center justify-center font-bold">
+              <span className="hidden md:inline">PESANAN</span>
+              <span className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-turquoise text-cream text-[9px] sm:text-[10px] flex items-center justify-center font-bold">
                 {cartCount}
               </span>
             </button>
@@ -165,7 +165,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
             {/* MINIMAL MENU TRIGGER BUTTON */}
             <button
               onClick={() => setIsMenuOpen(true)}
-              className={`group relative flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-mono text-xs sm:text-sm uppercase tracking-[0.16em] font-semibold transition-all duration-200 ease-out active:scale-[0.97] focus:outline-none ${
+              className={`group relative flex items-center gap-2 sm:gap-2.5 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-200 ease-out active:scale-[0.97] focus:outline-none ${
                 scrolled
                   ? 'bg-espresso text-cream hover:bg-burnt-orange shadow-md'
                   : 'bg-cream text-espresso hover:bg-burnt-orange hover:text-cream shadow-[0_4px_16px_rgba(0,0,0,0.3)]'
@@ -173,11 +173,11 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
               aria-label="Buka Menu Navigasi Fullscreen"
             >
               <span>MENU</span>
-              <span className="flex flex-col gap-[3.5px] w-4 justify-center items-end">
-                <span className={`w-4 h-[1.5px] transition-all duration-200 ${
+              <span className="flex flex-col gap-[3px] w-3.5 sm:w-4 justify-center items-end">
+                <span className={`w-3.5 sm:w-4 h-[1.5px] transition-all duration-200 ${
                   scrolled ? 'bg-cream group-hover:w-4' : 'bg-espresso group-hover:bg-cream group-hover:w-4'
                 }`} />
-                <span className={`w-2.5 h-[1.5px] transition-all duration-200 ${
+                <span className={`w-2 sm:w-2.5 h-[1.5px] transition-all duration-200 ${
                   scrolled ? 'bg-cream group-hover:w-4' : 'bg-espresso group-hover:bg-cream group-hover:w-4'
                 }`} />
               </span>
@@ -237,7 +237,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
               
               {/* Massive Typographic Links Column */}
-              <nav className="lg:col-span-8 flex flex-col space-y-2 sm:space-y-4 text-left">
+              <nav className="lg:col-span-7 flex flex-col space-y-2 sm:space-y-4 text-left">
                 {NAV_EDITORIAL_ITEMS.map((item, index) => {
                   const isHovered = hoveredIndex === index;
                   const hasHover = hoveredIndex !== null;
@@ -277,40 +277,70 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                 })}
               </nav>
 
-              {/* Sisi Kanan: Informasi Kontak & Alamat Sekata yang Simple (Persis Gambar 1) */}
-              <div className="lg:col-span-4 flex flex-col justify-center text-left pl-0 lg:pl-10 mt-8 lg:mt-0">
-                <div className="space-y-5 sm:space-y-6 text-cream/90">
+              {/* Sisi Kanan: Informasi Kontak & Alamat Sekata yang Simple (Persis Request User) */}
+              <div className="lg:col-span-5 flex flex-col justify-center text-left pl-0 lg:pl-12 mt-8 lg:mt-0 border-t lg:border-t-0 lg:border-l border-cream/15 pt-6 lg:pt-0">
+                <div className="space-y-6 text-cream/90">
                   
-                  {/* Telepon / WhatsApp */}
-                  <a
-                    href="https://wa.me/6283125525115"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 text-cream/90 hover:text-burnt-orange transition-colors group"
-                  >
-                    <Phone className="w-5 h-5 text-cream/75 group-hover:text-burnt-orange transition-colors flex-shrink-0" />
-                    <span className="font-sans text-[17px] sm:text-[19px] tracking-wide font-normal">
-                      +62 831-2552-5115
+                  {/* Subtle Badge */}
+                  <div>
+                    <span className="inline-block px-3 py-1 rounded-full bg-cream/10 border border-cream/20 text-marigold font-mono text-[11px] uppercase tracking-[0.14em] font-semibold">
+                      RUANG KOMUNAL &bull; TANJUNGPINANG
                     </span>
-                  </a>
+                  </div>
+
+                  {/* Telepon / WhatsApp */}
+                  <div>
+                    <span className="block font-mono text-[11px] text-cream/50 uppercase tracking-[0.12em] mb-1">
+                      KONTAK &bull; RESERVASI
+                    </span>
+                    <a
+                      href="https://wa.me/6283125525115"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-cream/90 hover:text-burnt-orange transition-colors group"
+                    >
+                      <Phone className="w-4 h-4 text-marigold group-hover:text-burnt-orange transition-colors flex-shrink-0" />
+                      <span className="font-sans text-[17px] sm:text-[19px] tracking-wide font-medium">
+                        +62 831-2552-5115
+                      </span>
+                    </a>
+                  </div>
 
                   {/* Email */}
-                  <a
-                    href="mailto:halo@sekatacoffee.com"
-                    className="flex items-center gap-4 text-cream/90 hover:text-burnt-orange transition-colors group"
-                  >
-                    <Mail className="w-5 h-5 text-cream/75 group-hover:text-burnt-orange transition-colors flex-shrink-0" />
-                    <span className="font-sans text-[17px] sm:text-[19px] tracking-wide font-normal">
-                      halo@sekatacoffee.com
+                  <div>
+                    <span className="block font-mono text-[11px] text-cream/50 uppercase tracking-[0.12em] mb-1">
+                      SUREL RESMI
                     </span>
-                  </a>
+                    <a
+                      href="mailto:halo@sekatacoffee.com"
+                      className="flex items-center gap-3 text-cream/90 hover:text-burnt-orange transition-colors group"
+                    >
+                      <Mail className="w-4 h-4 text-marigold group-hover:text-burnt-orange transition-colors flex-shrink-0" />
+                      <span className="font-sans text-[16px] sm:text-[18px] tracking-wide font-normal">
+                        halo@sekatacoffee.com
+                      </span>
+                    </a>
+                  </div>
 
                   {/* Alamat Sekata yang Simple Persis Permintaan User */}
-                  <div className="flex items-start gap-4">
-                    <MapPin className="w-5 h-5 text-cream/75 flex-shrink-0 mt-1" />
-                    <p className="font-sans text-[15px] sm:text-[17px] text-cream/85 leading-relaxed max-w-sm font-normal">
-                      Jl. Pos No. 12, Tanjungpinang Kota, Kepulauan Riau
-                    </p>
+                  <div>
+                    <span className="block font-mono text-[11px] text-cream/50 uppercase tracking-[0.12em] mb-1">
+                      LOKASI KEDAI
+                    </span>
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-4 h-4 text-marigold flex-shrink-0 mt-1" />
+                      <p className="font-sans text-[15px] sm:text-[16px] text-cream/85 leading-relaxed font-normal">
+                        Jl. Yos Sudarso, Tanjungpinang Barat, Kota Tanjungpinang, Kepulauan Riau
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Jam Buka */}
+                  <div className="pt-2">
+                    <span className="inline-flex items-center gap-2 text-xs font-mono text-cream/70 bg-cream/5 px-3 py-1.5 rounded-[6px] border border-cream/10">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span>Buka Setiap Hari: 10:00 &ndash; 22:00 WIB</span>
+                    </span>
                   </div>
 
                 </div>

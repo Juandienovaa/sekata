@@ -47,8 +47,8 @@ export default function Footer() {
                   required
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  placeholder="MASUKKAN ALAMAT EMAIL KAMU..."
-                  className="flex-1 px-4 py-2.5 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none"
+                  placeholder="Masukkan alamat email kamu..."
+                  className="flex-1 px-4 py-2.5 text-xs font-body bg-cream border-hairline rounded-[6px] text-espresso focus:border-turquoise focus:outline-none placeholder:text-coffee-dust/60"
                 />
                 <button
                   type="submit"

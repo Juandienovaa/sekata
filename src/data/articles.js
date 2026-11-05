@@ -5,7 +5,7 @@ export const ARTICLES = [
     title: 'Cerita di Balik Meja Slowbar: Mengapa Kami Memilih Menyeduh Perlahan',
     author: 'TIM BARISTA SEKATA',
     readTime: '3 MENIT BACA',
-    image: '/konten1.jpg',
+    image: '/subscription_farm.jpg',
     tag: 'SLOWBAR & PROSES',
     excerpt: 'Di tengah dunia yang serba cepat, meja slowbar Sekata hadir sebagai ruang jeda. Menikmati tetes demi tetes air panas yang mengekstraksi rasa terbaik dari biji kopi.',
     content: `Di Sekata, meja slowbar bukan sekadar tempat membuat kopi. Ini adalah ruang terbuka di mana kamu bisa duduk berhadapan langsung dengan barista, melihat timbangan bekerja presisi, dan mencium aroma mekar (blooming) pertama saat air panas bersuhu 92°C membasahi bubuk kopi.

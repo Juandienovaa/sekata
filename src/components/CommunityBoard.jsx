@@ -73,8 +73,8 @@ export default function CommunityBoard() {
                   KUNJUNGI KEDAI
                 </span>
                 <div className="font-body text-[13px] sm:text-[14px] text-[#5c4d44] space-y-1">
-                  <p>Jl. Pos No. 12, Kota Tanjungpinang</p>
-                  <p>Kepulauan Riau &bull; Buka Setiap Hari: 10:00 – 22:00 WIB</p>
+                  <p>Jl. Yos Sudarso, Tanjungpinang Barat</p>
+                  <p>Kota Tanjungpinang, Kepulauan Riau &bull; Buka Setiap Hari: 10:00 &ndash; 22:00 WIB</p>
                 </div>
                 
                 {/* Social links (Image 5 style) */}
@@ -337,8 +337,8 @@ export default function CommunityBoard() {
                   />
                   
                   {/* Subtle category tag in Image 5 font */}
-                  <div className="absolute top-3 left-3 bg-[#fffbf6]/95 backdrop-blur-sm px-2.5 py-1 rounded-[6px] border border-espresso/10 text-[11px] font-body text-espresso font-medium shadow-sm">
-                    {article.category}
+                  <div className="absolute top-3 left-3 bg-[#fffbf6]/95 backdrop-blur-sm px-2.5 py-1 rounded-[6px] border border-espresso/10 text-[10px] font-mono uppercase tracking-[0.06em] text-espresso font-semibold shadow-xs">
+                    {article.tag}
                   </div>
                 </div>
 

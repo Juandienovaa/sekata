@@ -58,11 +58,11 @@ export default function GrandOpeningCountdown() {
       <div className="relative z-10 w-full text-center pt-2 sm:pt-6">
         
         {/* Small Logo Monogram Badge */}
-        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-cream/25 mx-auto mb-3 flex items-center justify-center bg-cream/10 backdrop-blur-sm shadow-sm transition-transform duration-300 hover:scale-105">
+        <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full border-2 border-cream/50 mx-auto mb-3 flex items-center justify-center bg-cream shadow-md transition-transform duration-300 hover:scale-105">
           <img
             src="/logo.png"
             alt="Sekata"
-            className="w-6 h-6 sm:w-8 sm:h-8 object-contain filter invert"
+            className="w-7 h-7 sm:w-8 sm:h-8 object-contain"
           />
         </div>
 

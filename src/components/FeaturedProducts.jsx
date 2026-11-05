@@ -151,10 +151,10 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                     }`}
                   >
                     <div>
-                      {/* Top Header */}
+                      {/* Top Header: SubCategory + Price */}
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                        <span className="badge-stamp bg-cream text-coffee-dust border-hairline group-hover:text-espresso text-[9px] sm:text-[10px] self-start">
-                          {product.categoryLabel}
+                        <span className="font-mono text-[9px] sm:text-[10px] text-coffee-dust uppercase tracking-[0.08em] font-medium self-start">
+                          // {product.subCategory.toUpperCase()}
                         </span>
                         <span className="text-xs sm:text-[13px] font-mono font-bold text-amber tracking-[0.05em]">
                           {formatRupiah(product.price)}
@@ -203,31 +203,31 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                       </div>
                     </div>
 
-                    {/* Card Actions */}
-                    <div className="grid grid-cols-2 gap-1.5 sm:gap-2 pt-2 sm:pt-3 border-t-hairline mt-auto" onClick={(e) => e.stopPropagation()}>
+                    {/* Card Actions: Refined Editorial Split (Ghost Detail + Primary Order) */}
+                    <div className="grid grid-cols-2 gap-2 pt-2.5 sm:pt-3 border-t border-espresso/10 mt-auto" onClick={(e) => e.stopPropagation()}>
                       <button
                         onClick={() => handleCardClick(product)}
-                        className="btn-quickview py-1 sm:py-1.5 flex items-center justify-center gap-1 text-[10px] sm:text-xs group-hover:bg-turquoise group-hover:border-turquoise transition-all duration-200 active:scale-[0.97]"
+                        className="py-1.5 sm:py-2 px-2 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-mono uppercase tracking-[0.05em] font-medium rounded-[6px] border border-espresso/20 bg-cream text-espresso hover:border-turquoise hover:text-turquoise transition-all duration-150 ease-out active:scale-[0.97]"
                         aria-label={`Lihat detail ${product.name}`}
                       >
-                        <Eye className="w-3 h-3 stroke-[1.5]" />
-                        <span className="hidden xs:inline">DETAIL</span>
+                        <Eye className="w-3.5 h-3.5 stroke-[1.5]" />
+                        <span>DETAIL</span>
                       </button>
 
                       <button
                         onClick={(e) => handleAdd(product, e)}
-                        className="btn-filled py-1 sm:py-1.5 flex items-center justify-center gap-1 text-[10px] sm:text-xs bg-turquoise border-turquoise hover:bg-turquoise-dark active:scale-[0.97] transition-all duration-200 font-bold"
+                        className="py-1.5 sm:py-2 px-2 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-mono uppercase tracking-[0.05em] font-semibold rounded-[6px] bg-burnt-orange text-cream border border-burnt-orange hover:bg-[#a52901] hover:border-[#a52901] active:scale-[0.97] transition-all duration-150 ease-out shadow-xs"
                         aria-label={`Tambah ${product.name} ke pesanan`}
                       >
                         {isJustAdded ? (
                           <>
-                            <Check className="w-3 h-3 text-cream stroke-[1.5]" />
+                            <Check className="w-3.5 h-3.5 text-cream stroke-[1.5]" />
                             <span>OK!</span>
                           </>
                         ) : (
                           <>
-                            <Plus className="w-3 h-3 stroke-[1.5]" />
-                            <span>PESAN</span>
+                            <Plus className="w-3.5 h-3.5 stroke-[1.5]" />
+                            <span>+ PESAN</span>
                           </>
                         )}
                       </button>

@@ -119,10 +119,7 @@ export default function App() {
           onAddToCart={handleAddToCart}
         />
 
-        {/* TULISAN BERGERAK (INFINITE TICKER MARQUEE) DI ATAS FILOSOFI SEKATA — PERSIS GAMBAR 3 */}
-        <TickerMarquee />
-
-        {/* SECTION FILOSOFI SEKATA: "Bukan Hanya Tentang Kopi." */}
+        {/* SECTION FILOSOFI SEKATA DENGAN TICKER MARQUEE DI ATASNYA */}
         <BrandStory />
 
         {/* SECTION READY TO RESERVE — PERSEGI PANJANG DENGAN DIRECT TOMBOL WHATSAPP */}

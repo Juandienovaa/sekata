@@ -68,8 +68,8 @@ export default function ContactSection() {
                   <p className="text-coffee-dust uppercase mb-1.5 flex items-center gap-1.5 font-medium">
                     <MapPin className="w-3.5 h-3.5 text-turquoise" /> ALAMAT KEDAI
                   </p>
-                  <p className="text-espresso font-medium">Jl. Pos No. 12, Kawasan Kota Lama</p>
-                  <p className="text-espresso">Tanjungpinang, Kepulauan Riau</p>
+                  <p className="text-espresso font-medium">Jl. Yos Sudarso, Tanjungpinang Barat</p>
+                  <p className="text-espresso">Kota Tanjungpinang, Kepulauan Riau</p>
                   <p className="text-coffee-dust mt-2">Area nyaman, parkir mudah, dan suasana tenang.</p>
                 </div>
 
@@ -150,9 +150,9 @@ export default function ContactSection() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-3.5">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em] mb-1">
+                  <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.08em] mb-1.5 font-medium">
                     NAMA LENGKAP *
                   </label>
                   <input
@@ -160,32 +160,32 @@ export default function ContactSection() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Nama kamu..."
-                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none"
+                    placeholder="cth. Bagas Pratama"
+                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso placeholder:text-coffee-dust/50 focus:border-burnt-orange focus:ring-2 focus:ring-burnt-orange/20 focus:outline-none transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em] mb-1">
+                  <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.08em] mb-1.5 font-medium">
                     NOMOR WHATSAPP / TELEPON
                   </label>
                   <input
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="0812-xxxx-xxxx"
-                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none"
+                    placeholder="cth. 0812 3456 7890"
+                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso placeholder:text-coffee-dust/50 focus:border-burnt-orange focus:ring-2 focus:ring-burnt-orange/20 focus:outline-none transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em] mb-1">
+                  <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.08em] mb-1.5 font-medium">
                     TOPIK PESAN
                   </label>
                   <select
                     value={formData.topic}
                     onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none"
+                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso focus:border-burnt-orange focus:ring-2 focus:ring-burnt-orange/20 focus:outline-none transition-all cursor-pointer"
                   >
                     <option value="Tanya Menu / Reservasi">Tanya Menu / Reservasi Meja</option>
                     <option value="Biji Kopi & Kebutuhan Kantor">Beli Biji Kopi / Kebutuhan Kafe</option>
@@ -195,7 +195,7 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em] mb-1">
+                  <label className="block text-[11px] font-mono text-coffee-dust uppercase tracking-[0.08em] mb-1.5 font-medium">
                     PESAN *
                   </label>
                   <textarea
@@ -203,13 +203,13 @@ export default function ContactSection() {
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tulis pesan atau ceritamu di sini..."
-                    className="w-full px-3 py-2 text-xs font-mono bg-cream border-hairline rounded-[3px] text-espresso focus:border-turquoise focus:outline-none resize-none"
+                    placeholder="Ceritakan rencana kunjungan, pertanyaan biji kopi, atau sekadar menyapa..."
+                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso placeholder:text-coffee-dust/50 focus:border-burnt-orange focus:ring-2 focus:ring-burnt-orange/20 focus:outline-none resize-none transition-all"
                   />
                 </div>
 
                 <div className="pt-2">
-                  <button type="submit" className="btn-filled w-full py-2.5 text-xs tracking-[0.05em] bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]">
+                  <button type="submit" className="btn-filled w-full py-3 text-xs tracking-[0.08em] font-bold bg-burnt-orange border-burnt-orange hover:bg-espresso text-cream rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97] shadow-sm">
                     KIRIM PESAN SEKARANG
                   </button>
                 </div>

@@ -6,19 +6,19 @@ export default function WholesaleSplitSection() {
     <section className="w-full py-12 sm:py-16 bg-cream border-b-hairline">
       <div className="container-max">
         
-        {/* Outer Frame with Dusty Blue / Turquoise Padding matching the User's Screenshot */}
-        <div className="bg-[#89b4ca] p-3 sm:p-4 rounded-[26px] shadow-sm">
+        {/* Outer Frame with Deep Artisan Slate-Turquoise Padding matching Sekata Brand System */}
+        <div className="bg-[#244549] p-3 sm:p-5 rounded-[26px] shadow-sm border border-espresso/20">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-4 items-stretch">
             
             {/* Left Column: Roaster Photo Frame */}
-            <div className="lg:col-span-6 relative w-full min-h-[360px] sm:min-h-[460px] rounded-[20px] overflow-hidden bg-sandstone">
+            <div className="lg:col-span-6 relative w-full min-h-[360px] sm:min-h-[460px] rounded-[20px] overflow-hidden bg-espresso">
               <img
                 src="/partner-roasting.jpg"
                 alt="Proses sangrai biji kopi di workshop Sekata"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover filter brightness-95 contrast-105"
               />
-              <div className="absolute top-4 left-4 bg-cream/90 backdrop-blur-sm px-3 py-1 rounded-[4px] border-hairline text-[10px] font-mono text-espresso uppercase tracking-[0.05em] font-medium">
+              <div className="absolute top-4 left-4 bg-cream/95 backdrop-blur-sm px-3 py-1 rounded-[4px] border border-espresso/15 text-[10px] font-mono text-espresso uppercase tracking-[0.08em] font-semibold shadow-sm">
                 ROASTERY WORKSHOP &bull; SANGRAI SEGAR
               </div>
             </div>
