@@ -24,10 +24,10 @@ export default function CtaPromoSection() {
   return (
     <section
       id="grab-sekata"
-      className="w-full bg-[#fff5e3] border-t border-b border-espresso/15 py-10 sm:py-16 lg:py-20 px-4 sm:px-8 relative overflow-hidden select-none"
+      className="w-full bg-[#fff5e3] border-t border-b border-espresso/15 py-4 sm:py-16 lg:py-20 px-3 sm:px-8 relative overflow-hidden select-none"
     >
-      {/* Background Typography Watermark */}
-      <div className="absolute -right-6 -bottom-10 select-none pointer-events-none opacity-[0.06] font-sans font-black text-[120px] sm:text-[180px] lg:text-[220px] leading-none text-espresso whitespace-nowrap">
+      {/* Background Typography Watermark — Only on desktop to avoid awkward vertical space on mobile */}
+      <div className="hidden lg:block absolute -right-6 -bottom-10 select-none pointer-events-none opacity-[0.06] font-sans font-black text-[220px] leading-none text-espresso whitespace-nowrap">
         SEKATA
       </div>
 
@@ -35,21 +35,22 @@ export default function CtaPromoSection() {
         
         {/* ===================================================================
             1. MOBILE LAYOUT (KHUSUS HP / < lg): 
-               Elemen vertikal proporsional, tulisan besar terbaca jelas, 
-               dan foto buket 5 cangkir tampil memikat & tidak kekecilan.
+               - Gambar terekspose penuh dalam rasio portrait alami 3:4 (tidak terpotong).
+               - Tata letak bento editorial rapi, terstruktur, zero space kosong.
+               - Penempatan tombol proporsional: WhatsApp & GoFood sejajar seimbang.
            =================================================================== */}
-        <div className="flex flex-col lg:hidden text-left">
+        <div className="block lg:hidden w-full max-w-[390px] mx-auto text-left py-2">
           
-          {/* Top Badges Row: Hashtag + GoFood Badge */}
-          <div className="flex flex-wrap items-center gap-2 mb-3.5">
-            <div className="inline-flex items-center gap-1.5 bg-espresso text-[#f5ba31] px-3 py-1 rounded-full shadow-xs">
+          {/* Top Kicker Bar: Hashtag + GoFood Badge */}
+          <div className="flex items-center justify-between gap-2 mb-2.5">
+            <div className="inline-flex items-center gap-1.5 bg-espresso text-[#f5ba31] px-2.5 py-1 rounded-full shadow-xs">
               <span className="w-1.5 h-1.5 rounded-full bg-[#f5ba31] animate-pulse"></span>
-              <span className="font-mono text-[10px] font-black uppercase tracking-wider">
+              <span className="font-mono text-[9px] font-black uppercase tracking-wider">
                 #GRABYOURSEKATATODAY
               </span>
             </div>
 
-            {/* GoFood Availability Badge */}
+            {/* GoFood Delivery Badge */}
             <a
               href={gofoodUrl}
               target="_blank"
@@ -60,30 +61,29 @@ export default function CtaPromoSection() {
                 <GoFoodIcon className="w-2 h-2 text-white" />
               </span>
               <span className="font-sans font-black text-[11px] text-[#EE2737] tracking-tight">gofood</span>
-              <span className="text-[9.5px] font-mono text-espresso/70 font-semibold">• Tersedia Delivery</span>
+              <span className="text-[9px] font-mono text-espresso/70 font-semibold">• Delivery</span>
             </a>
           </div>
 
-          {/* Large Bold English Headline (Terbaca Jelas & Gagah di HP) */}
-          <h2 className="font-sans font-black text-2xl xs:text-[28px] sm:text-3xl text-espresso uppercase leading-[0.95] tracking-tight mb-4">
-            GOOD COFFEE,<br />
-            HONEST TALKS.<br />
+          {/* Large Bold English Headline — Sangat Jelas & Tegas */}
+          <h2 className="font-sans font-black text-[22px] xs:text-[25px] text-espresso uppercase leading-[0.96] tracking-tight mb-3">
+            GOOD COFFEE, HONEST TALKS.<br />
             <span className="text-turquoise">GRAB YOUR SEKATA TODAY.</span>
           </h2>
 
-          {/* Centerpiece Hero Photo Card (Cukup Besar, Tidak Terjepit) */}
-          <div className="w-full max-w-[340px] mx-auto my-3 relative">
+          {/* Hero Photo Card: EXPOSED IN FULL 3:4 NATURAL PORTRAIT RATIO (5 Cangkir Lengkap) */}
+          <div className="w-full relative my-2">
             {/* Warm Marigold Offset Backdrop */}
-            <div className="absolute inset-0 bg-[#f5ba31] rounded-2xl transform rotate-2 translate-x-1.5 translate-y-1.5 opacity-85 shadow-md"></div>
+            <div className="absolute inset-0 bg-[#f5ba31] rounded-2xl transform rotate-1 translate-x-1.5 translate-y-1.5 opacity-85 shadow-md"></div>
 
-            {/* Photo Card Container */}
+            {/* Natural Aspect 3:4 Photo Frame (Tanpa Pemotongan Cangkir) */}
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="relative aspect-[4/3.8] rounded-2xl overflow-hidden shadow-xl border border-espresso/15 bg-espresso group"
+              className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-xl border border-espresso/15 bg-espresso group"
             >
               <img
                 src="/CTA.jpg"
-                alt="Grab Your Sekata Today — Signature Drinks"
+                alt="Grab Your Sekata Today — 5 Signature Drinks"
                 className="w-full h-full object-cover"
               />
 
@@ -94,69 +94,68 @@ export default function CtaPromoSection() {
               </div>
 
               {/* Bottom Frosted Glass Tagline */}
-              <div className="absolute inset-x-0 bottom-0 p-2.5 bg-gradient-to-t from-black/85 via-black/50 to-transparent text-cream">
-                <p className="font-sans font-bold text-[11px] leading-tight text-white">
+              <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/85 via-black/50 to-transparent text-cream">
+                <p className="font-sans font-bold text-xs leading-tight text-white">
                   Always a cup that matches your story.
                 </p>
-                <span className="font-mono text-[8.5px] text-[#f5ba31] block font-bold tracking-wider">
-                  #GRABYOURSEKATATODAY
+                <span className="font-mono text-[9px] text-[#f5ba31] block font-bold tracking-wider mt-0.5">
+                  Americano &bull; Matcha &bull; Lemon Tea &bull; Cold Brew
                 </span>
               </div>
             </motion.div>
           </div>
 
-          {/* Clear Lead Paragraph */}
-          <p className="font-sans text-xs sm:text-sm text-espresso/85 leading-relaxed my-3 max-w-md">
-            From rich single origin manual brews to refreshing iced citrus tea and chilled matcha. Stop by our open slowbar table or order directly to your door in Tanjungpinang.
+          {/* Clear Lead Copy */}
+          <p className="font-sans text-xs text-espresso/85 leading-relaxed my-3">
+            Dari manual brew Nusantara hingga matcha dan citrus tea dingin. Nikmati langsung di slowbar kami atau pesan antar ke rumahmu.
           </p>
 
-          {/* Action Buttons Cluster for Mobile */}
-          <div className="flex flex-col gap-2 mt-2 w-full max-w-md">
+          {/* Action Buttons: WhatsApp & GoFood Balanced 2-Column Grid */}
+          <div className="grid grid-cols-2 gap-2 mt-2">
             <motion.a
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-full bg-turquoise hover:bg-turquoise-dark text-cream font-sans text-xs font-bold tracking-wider uppercase transition-colors shadow-md shadow-turquoise/25 cursor-pointer"
+              className="inline-flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-turquoise hover:bg-turquoise-dark text-cream font-sans text-xs font-bold tracking-wider uppercase transition-colors shadow-md shadow-turquoise/25 cursor-pointer text-center"
             >
-              <span>PESAN VIA WHATSAPP</span>
-              <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+              <span>WHATSAPP</span>
+              <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
             </motion.a>
 
-            <div className="grid grid-cols-2 gap-2">
-              <motion.a
-                href={gofoodUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full bg-white hover:bg-red-50 text-[#EE2737] border border-[#EE2737]/40 font-sans text-[11px] font-bold tracking-wider uppercase transition-colors shadow-xs cursor-pointer"
-              >
-                <span className="w-3.5 h-3.5 rounded-full bg-[#EE2737] flex items-center justify-center shrink-0 text-white">
-                  <GoFoodIcon className="w-2 h-2 text-white" />
-                </span>
-                <span>GOFOOD</span>
-                <ArrowUpRight className="w-3 h-3 stroke-[2.5]" />
-              </motion.a>
+            <motion.a
+              href={gofoodUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-white hover:bg-red-50 text-[#EE2737] border-2 border-[#EE2737] font-sans text-xs font-bold tracking-wider uppercase transition-colors shadow-xs cursor-pointer text-center"
+            >
+              <span className="w-3.5 h-3.5 rounded-full bg-[#EE2737] flex items-center justify-center shrink-0 text-white">
+                <GoFoodIcon className="w-2 h-2 text-white" />
+              </span>
+              <span>GOFOOD</span>
+              <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
+            </motion.a>
+          </div>
 
-              <motion.button
-                onClick={scrollToMenu}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full bg-cream/90 hover:bg-cream border border-espresso/20 text-espresso font-sans text-[11px] font-bold tracking-wider uppercase transition-colors cursor-pointer"
-              >
-                <span>LIHAT MENU</span>
-                <ArrowDown className="w-3 h-3 text-espresso/70" />
-              </motion.button>
-            </div>
+          {/* Clean Sub-Action Menu Link */}
+          <div className="text-center mt-2.5 pb-1">
+            <button
+              onClick={scrollToMenu}
+              className="inline-flex items-center gap-1 font-sans text-[11px] font-bold text-espresso/70 hover:text-espresso uppercase tracking-wider transition-colors cursor-pointer"
+            >
+              <span>LIHAT MENU LENGKAP</span>
+              <ArrowDown className="w-3 h-3 text-espresso/60" />
+            </button>
           </div>
 
         </div>
 
         {/* ===================================================================
             2. DESKTOP / PC LAYOUT (KHUSUS PC / lg:):
-               Sama persis seperti screenshot PC Gambar 1 yang disukai user:
+               Sama persis seperti screenshot PC Gambar 1 (Tidak Dirubah):
                Foto di kiri 5 kolom, Tipografi besar di kanan 7 kolom.
            =================================================================== */}
         <div className="hidden lg:grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
