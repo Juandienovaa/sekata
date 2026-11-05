@@ -20,7 +20,7 @@ export default function BrandStory() {
       num: '03',
       tag: 'GERAKAN LOKAL',
       title: '#KecilBertumbuh Bersama',
-      desc: 'Merawat langkah sederhana, menyemai kolaborasi kreatif, dan tumbuh bersama denyut pesisir Tanjungpinang.'
+      desc: 'Merawat langkah sederhana, menyemai kolaborasi kreatif, dan tumbuh bersama denyut komunitas lokal.'
     }
   ];
 
@@ -42,12 +42,12 @@ export default function BrandStory() {
           <div className="flex items-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-turquoise" />
             <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-turquoise font-semibold">
-              FILOSOFI SLOWBAR &bull; TANJUNGPINANG
+              FILOSOFI SLOWBAR &bull; EST. 2026
             </span>
           </div>
 
           <h2 className="font-sans font-black text-[36px] sm:text-[54px] lg:text-[68px] leading-[0.98] tracking-[-0.04em] text-espresso uppercase max-w-5xl">
-            Di Tanjungpinang, waktu sering berjalan terburu-buru.{' '}
+            Waktu sering kali berjalan terburu-buru.{' '}
             <span className="text-turquoise italic font-bold">
               Kami memilih melambat.
             </span>
@@ -59,7 +59,7 @@ export default function BrandStory() {
           
           <div className="lg:col-span-6 font-sans text-[16px] sm:text-[18px] leading-[1.7] text-espresso font-normal">
             <p>
-              Sekata Coffee &amp; Space hadir di Sei Jang bukan sekadar untuk menjual kafein harian, melainkan sebagai ruang jeda bersama. Meja slowbar kami adalah panggung terbuka: tempat barista menyeduh dengan kesadaran penuh, dan setiap cangkir menjadi awal perjumpaan yang jujur.
+              Sekata Coffee &amp; Space hadir bukan sekadar untuk menjual kafein harian, melainkan sebagai ruang jeda bersama. Meja slowbar kami adalah panggung terbuka: tempat barista menyeduh dengan kesadaran penuh, dan setiap cangkir menjadi awal perjumpaan yang jujur.
             </p>
           </div>
 
@@ -68,7 +68,7 @@ export default function BrandStory() {
               Tanpa sekat pemisah, tanpa istilah kopi yang rumit dan mengintimidasi. Kami percaya obrolan terbaik tentang kehidupan selalu dimulai saat kita duduk sejajar, menghela napas, dan merayakan perjumpaan di tengah hangatnya seduhan lokal Nusantara.
             </p>
             <div className="mt-4 pt-4 border-t border-espresso/10 flex items-center justify-between text-xs font-mono text-espresso/60">
-              <span>📍 JLN BUNGURAN NO.53, SEI JANG</span>
+              <span>SLOWBAR &bull; SINGLE ORIGIN ROASTERY</span>
               <span className="text-turquoise font-semibold">EST. 2026 &bull; #KECILBERTUMBUH</span>
             </div>
           </div>

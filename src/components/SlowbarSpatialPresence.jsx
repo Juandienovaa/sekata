@@ -46,10 +46,10 @@ export default function SlowbarSpatialPresence() {
 
           <div className="text-left md:text-right max-w-sm">
             <p className="font-sans text-[13px] sm:text-[14px] text-espresso/75 leading-relaxed font-normal">
-              Slowbar independen di pesisir Tanjungpinang. Menghadirkan ritual seduhan kopi yang jujur dan kehangatan bertukar cerita kehidupan.
+              Slowbar independen dengan ritual seduhan kopi yang jujur dan kehangatan bertukar cerita kehidupan.
             </p>
-            <div className="mt-2 font-mono text-[11px] text-espresso/50 uppercase tracking-wider">
-              SEI JANG, BUKIT BESTARI &bull; TANJUNGPINANG
+            <div className="mt-2 font-mono text-[11px] text-turquoise uppercase tracking-wider font-semibold">
+              EST. 2026 &bull; #KECILBERTUMBUH
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function SlowbarSpatialPresence() {
         <div className="relative w-full rounded-[24px] sm:rounded-[32px] overflow-hidden border border-espresso/15 bg-espresso shadow-lg min-h-[320px] sm:min-h-[460px] lg:min-h-[520px] mb-8 group">
           <img
             src="/partner-roasting.jpg"
-            alt="Suasana Ruang Seduh dan Roastery Sekata Slowbar Tanjungpinang"
+            alt="Suasana Ruang Seduh dan Roastery Sekata"
             className="w-full h-full object-cover filter contrast-105 brightness-95 transition-transform duration-700 ease-out group-hover:scale-[1.02]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20" />

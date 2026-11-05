@@ -23,3 +23,4 @@ export default function SectionReveal({ children, className = "", delay = 0 }) {
     </motion.div>
   );
 }
+

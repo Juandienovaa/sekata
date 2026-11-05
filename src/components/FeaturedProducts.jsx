@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Eye, Plus, Check, LayoutGrid, List, Sparkles, ChevronDown, ChevronUp, Coffee, Utensils, CupSoda } from 'lucide-react';
 import { PRODUCTS, CATEGORIES, formatRupiah } from '../data/products';
 
@@ -93,9 +94,11 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
             
             {/* View Mode Switcher (Kartu Foto vs Papan Menu Kedai) */}
             <div className="inline-flex items-center bg-[#ede4d8] p-1 rounded-full border border-espresso/15 shadow-inner self-start">
-              <button
+              <motion.button
                 onClick={() => setViewMode('grid')}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-all duration-200 active:scale-[0.97] ${
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.96 }}
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-colors duration-200 cursor-pointer ${
                   viewMode === 'grid'
                     ? 'bg-cream text-espresso shadow-sm'
                     : 'text-[#6b584f] hover:text-espresso'
@@ -104,11 +107,13 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
               >
                 <LayoutGrid className="w-3.5 h-3.5 stroke-[2]" />
                 <span>Kartu Foto</span>
-              </button>
+              </motion.button>
 
-              <button
+              <motion.button
                 onClick={() => setViewMode('board')}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-all duration-200 active:scale-[0.97] ${
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.96 }}
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-colors duration-200 cursor-pointer ${
                   viewMode === 'board'
                     ? 'bg-espresso text-cream shadow-sm'
                     : 'text-[#6b584f] hover:text-espresso'
@@ -117,27 +122,30 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
               >
                 <List className="w-3.5 h-3.5 stroke-[2]" />
                 <span>Papan Menu Kedai</span>
-              </button>
+              </motion.button>
             </div>
 
             {/* Category Filter Tabs (Only relevant in grid mode) */}
             {viewMode === 'grid' && (
               <div className="flex overflow-x-auto no-scrollbar gap-1.5 pb-1 max-w-full -mx-2 px-2 sm:mx-0 sm:px-0 sm:flex-wrap">
                 {CATEGORIES.map((cat) => (
-                  <button
+                  <motion.button
                     key={cat.id}
                     onClick={() => {
                       setActiveCategory(cat.id);
                       setIsExpanded(false);
                     }}
-                    className={`text-[11px] font-mono uppercase tracking-[0.08em] px-3.5 py-2 rounded-full border font-semibold whitespace-nowrap transition-all duration-200 flex-shrink-0 active:scale-95 ${
+                    whileHover={{ scale: 1.04, y: -1 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                    className={`text-[11px] font-mono uppercase tracking-[0.08em] px-3.5 py-2 rounded-full border font-semibold whitespace-nowrap transition-colors duration-200 flex-shrink-0 cursor-pointer ${
                       activeCategory === cat.id
                         ? 'bg-turquoise text-cream border-turquoise shadow-sm'
                         : 'bg-cream/80 text-espresso border-espresso/15 hover:border-espresso hover:bg-cream'
                     }`}
                   >
                     {cat.label}
-                  </button>
+                  </motion.button>
                 ))}
               </div>
             )}
@@ -224,18 +232,22 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
 
                     {/* Card Actions: Refined Editorial Split (Ghost Detail + Primary Order) */}
                     <div className="grid grid-cols-2 gap-2 pt-2.5 sm:pt-3 border-t border-espresso/10 mt-auto" onClick={(e) => e.stopPropagation()}>
-                      <button
+                      <motion.button
                         onClick={() => handleCardClick(product)}
-                        className="py-1.5 sm:py-2 px-2 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-mono uppercase tracking-[0.05em] font-medium rounded-[6px] border border-espresso/20 bg-cream text-espresso hover:border-turquoise hover:text-turquoise transition-all duration-150 ease-out active:scale-[0.97]"
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.96 }}
+                        className="py-1.5 sm:py-2 px-2 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-mono uppercase tracking-[0.05em] font-medium rounded-[6px] border border-espresso/20 bg-cream text-espresso hover:border-turquoise hover:text-turquoise transition-colors duration-150 cursor-pointer"
                         aria-label={`Lihat detail ${product.name}`}
                       >
                         <Eye className="w-3.5 h-3.5 stroke-[1.5]" />
                         <span>DETAIL</span>
-                      </button>
+                      </motion.button>
 
-                      <button
+                      <motion.button
                         onClick={(e) => handleAdd(product, e)}
-                        className="py-1.5 sm:py-2 px-2 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-mono uppercase tracking-[0.05em] font-semibold rounded-[6px] bg-burnt-orange text-cream border border-burnt-orange hover:bg-[#a52901] hover:border-[#a52901] active:scale-[0.97] transition-all duration-150 ease-out shadow-xs"
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="py-1.5 sm:py-2 px-2 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-mono uppercase tracking-[0.05em] font-semibold rounded-[6px] bg-turquoise text-cream border border-turquoise hover:bg-turquoise-dark hover:border-turquoise-dark transition-colors duration-150 shadow-xs cursor-pointer"
                         aria-label={`Tambah ${product.name} ke pesanan`}
                       >
                         {isJustAdded ? (
@@ -249,7 +261,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                             <span>+ PESAN</span>
                           </>
                         )}
-                      </button>
+                      </motion.button>
                     </div>
                   </div>
                 );
@@ -259,9 +271,11 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
             {/* Expand / Collapse Button if products > 6 */}
             {filteredProducts.length > 6 && (
               <div className="mt-8 text-center">
-                <button
+                <motion.button
                   onClick={() => setIsExpanded(!isExpanded)}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-espresso/25 bg-cream text-espresso hover:bg-espresso hover:text-cream font-mono text-xs uppercase tracking-[0.14em] font-medium shadow-sm transition-all duration-200 ease-out active:scale-[0.97]"
+                  whileHover={{ scale: 1.03, y: -1 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-espresso/25 bg-cream text-espresso hover:bg-espresso hover:text-cream font-mono text-xs uppercase tracking-[0.14em] font-medium shadow-sm transition-colors duration-200 cursor-pointer"
                 >
                   {isExpanded ? (
                     <>
@@ -274,7 +288,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                       <ChevronDown className="w-4 h-4 stroke-[1.5]" />
                     </>
                   )}
-                </button>
+                </motion.button>
               </div>
             )}
           </div>
@@ -631,26 +645,6 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                         </div>
                       </div>
                     ))}
-                  </div>
-                </div>
-
-                {/* Special Hand-drawn Barista Stamp Badges */}
-                <div className="pt-4 border-t border-dashed border-espresso/20 grid grid-cols-2 gap-2">
-                  <div className="border border-dashed border-turquoise/50 bg-turquoise/5 rounded-[6px] p-2.5 text-center">
-                    <span className="font-mono text-[9px] uppercase tracking-wider text-turquoise font-bold block">
-                      KOPI FILTER
-                    </span>
-                    <span className="font-mono text-[9px] text-coffee-dust block">
-                      TANYA BARISTA
-                    </span>
-                  </div>
-                  <div className="border border-dashed border-burnt-orange/50 bg-burnt-orange/5 rounded-[6px] p-2.5 text-center">
-                    <span className="font-mono text-[9px] uppercase tracking-wider text-burnt-orange font-bold block">
-                      RACIK SENDIRI
-                    </span>
-                    <span className="font-mono text-[9px] text-coffee-dust block">
-                      TANYA BARISTA
-                    </span>
                   </div>
                 </div>
 

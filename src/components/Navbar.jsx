@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { ShoppingBag, X, ArrowUpRight, Phone, Mail, MapPin, Search } from 'lucide-react';
 
 // Custom inline SVG for Instagram
@@ -132,9 +133,11 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
           <div className="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
 
             {/* Quick Search Button */}
-            <button
+            <motion.button
               onClick={onOpenSearch}
-              className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-mono transition-all duration-200 focus:outline-none active:scale-[0.97] ${
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.94 }}
+              className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-mono transition-colors duration-200 focus:outline-none cursor-pointer ${
                 scrolled
                   ? 'border border-espresso/20 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
                   : 'bg-black/35 backdrop-blur-md border border-white/25 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
@@ -143,12 +146,14 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
               title="Cari Menu"
             >
               <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[1.5]" />
-            </button>
+            </motion.button>
 
             {/* Cart / Orders Pill */}
-            <button
+            <motion.button
               onClick={onOpenCart}
-              className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium transition-all duration-200 focus:outline-none active:scale-[0.97] ${
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.94 }}
+              className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium transition-colors duration-200 focus:outline-none cursor-pointer ${
                 scrolled
                   ? 'border border-espresso/20 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
                   : 'bg-black/35 backdrop-blur-md border border-white/25 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
@@ -160,15 +165,17 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
               <span className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-turquoise text-cream text-[9px] sm:text-[10px] flex items-center justify-center font-bold">
                 {cartCount}
               </span>
-            </button>
+            </motion.button>
 
             {/* MINIMAL MENU TRIGGER BUTTON */}
-            <button
+            <motion.button
               onClick={() => setIsMenuOpen(true)}
-              className={`group relative flex items-center gap-2 sm:gap-2.5 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-200 ease-out active:scale-[0.97] focus:outline-none ${
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.94 }}
+              className={`group relative flex items-center gap-2 sm:gap-2.5 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.16em] font-semibold transition-colors duration-200 focus:outline-none cursor-pointer ${
                 scrolled
-                  ? 'bg-espresso text-cream hover:bg-burnt-orange shadow-md'
-                  : 'bg-cream text-espresso hover:bg-burnt-orange hover:text-cream shadow-[0_4px_16px_rgba(0,0,0,0.3)]'
+                  ? 'bg-espresso text-cream hover:bg-turquoise shadow-md'
+                  : 'bg-cream text-espresso hover:bg-turquoise hover:text-cream shadow-[0_4px_16px_rgba(0,0,0,0.3)]'
               }`}
               aria-label="Buka Menu Navigasi Fullscreen"
             >
@@ -181,7 +188,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                   scrolled ? 'bg-cream group-hover:w-4' : 'bg-espresso group-hover:bg-cream group-hover:w-4'
                 }`} />
               </span>
-            </button>
+            </motion.button>
 
           </div>
 
@@ -288,7 +295,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                   {/* Brand & Address */}
                   <div>
                     <span className="font-mono text-[11px] text-turquoise tracking-[0.18em] uppercase font-bold block mb-1">
-                      KEDAI &bull; TANJUNGPINANG
+                      KEDAI &bull; OPEN DAILY
                     </span>
                     <h3 className="font-sans font-bold text-[22px] sm:text-[24px] text-cream mb-1 tracking-tight">
                       Sekata Coffee &amp; Space
@@ -302,26 +309,30 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                     </p>
                   </div>
 
-                  {/* Clean Direct Actions: WhatsApp & Instagram */}
+                  {/* Clean Direct Actions: WhatsApp & Instagram with Spring Motion */}
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                    <a
+                    <motion.a
                       href="https://wa.me/6281991445331?text=Halo%20Sekata!%20Saya%20ingin%20tanya%20seputar%20kedai%20atau%20reservasi."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-sans text-xs font-bold uppercase tracking-wider bg-turquoise text-cream hover:bg-turquoise-dark transition-all duration-200 active:scale-95 shadow-md shadow-turquoise/20"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.96 }}
+                      className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-sans text-xs font-bold uppercase tracking-wider bg-turquoise text-cream hover:bg-turquoise-dark transition-colors duration-200 shadow-md shadow-turquoise/20 cursor-pointer"
                     >
                       <Phone className="w-3.5 h-3.5" />
                       <span>WhatsApp: 0819-9144-5331</span>
-                    </a>
+                    </motion.a>
 
-                    <a
+                    <motion.a
                       href="https://instagram.com/sekata.tnj"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-sans text-xs font-semibold bg-white/10 hover:bg-white/20 text-cream transition-all duration-200 active:scale-95"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.96 }}
+                      className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-sans text-xs font-semibold bg-white/10 hover:bg-white/20 text-cream transition-colors duration-200 cursor-pointer"
                     >
                       <span>@sekata.tnj</span>
-                    </a>
+                    </motion.a>
                   </div>
 
                 </div>

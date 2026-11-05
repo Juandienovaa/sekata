@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight } from 'lucide-react';
 
 export default function GrandOpeningCountdown() {
-  // Target: Jumat minggu ini (6 November 2026, 09:00 WIB)
+  // Target: Jumat 6 November 2026, 09:00 WIB
   const targetDate = new Date('2026-11-06T09:00:00+07:00').getTime();
 
   const [timeLeft, setTimeLeft] = useState({
@@ -37,126 +38,104 @@ export default function GrandOpeningCountdown() {
   return (
     <section
       id="countdown"
-      className="w-full relative min-h-[85vh] lg:min-h-screen flex flex-col justify-between bg-[#140e0c] text-cream overflow-hidden py-12 sm:py-16 lg:py-20 px-4 sm:px-8 border-b-2 border-espresso/30 select-none"
+      className="w-full relative bg-[#130d0b] text-cream overflow-hidden py-14 sm:py-20 px-4 sm:px-8 border-b border-white/10 select-none"
     >
-      {/* 
-        FESTIVAL BACKGROUND WITH OPENING.JPG
-        Menyatu dalam latar poster festival sinematik:
-        Ilustrasi kerumunan perayaan & balon terlihat artistik di latar belakang
-      */}
+      {/* Subtle Analog Festival Background Scrim */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
           src="/opening.jpg"
           alt="Suasana Grand Opening Sekata"
-          className="w-full h-full object-cover opacity-20 filter contrast-125 brightness-90 scale-105"
+          className="w-full h-full object-cover opacity-15 filter contrast-125 brightness-75 scale-105"
         />
-        {/* Soft vignette gradient for high text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#140e0c] via-[#140e0c]/80 to-[#140e0c]/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#130d0b] via-[#130d0b]/85 to-[#130d0b]" />
+        {/* Soft centered radial aura */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-turquoise/10 via-transparent to-transparent pointer-events-none" />
       </div>
 
-      {/* 1. TOP HEADER: CIRCULAR FESTIVAL BADGE & EVENT TITLE */}
-      <div className="relative z-10 w-full text-center pt-2 sm:pt-6">
+      <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
         
-        {/* Small Logo Monogram Badge */}
-        <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full border-2 border-cream/50 mx-auto mb-3 flex items-center justify-center bg-cream shadow-md transition-transform duration-300 hover:scale-105">
-          <img
-            src="/logo.png"
-            alt="Sekata"
-            className="w-7 h-7 sm:w-8 sm:h-8 object-contain"
-          />
+        {/* Top Badge: Special Event */}
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-turquoise/15 border border-turquoise/30 text-turquoise text-[11px] font-mono tracking-widest uppercase mb-4">
+          <Sparkles className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '6s' }} />
+          <span>GRAND OPENING CELEBRATION</span>
         </div>
 
-        {/* Festival Title */}
-        <h2 className="font-display text-[24px] sm:text-[34px] lg:text-[44px] uppercase tracking-[0.12em] text-cream leading-none">
-          GRAND OPENING SEKATA
+        {/* Headline: Focus on Joining Grand Opening */}
+        <h2 className="font-sans font-black text-2xl sm:text-4xl lg:text-[42px] leading-tight text-cream uppercase tracking-tight mb-2.5">
+          Join the Grand Opening
         </h2>
         
-        <p className="font-mono text-[10px] sm:text-xs text-marigold tracking-[0.2em] uppercase mt-2 font-medium">
-          06, 07, 08 NOVEMBER 2026 &bull; TANJUNGPINANG
+        {/* Subtitle with Date and Free 50 Cups Benefit (No Location Clutter) */}
+        <p className="font-sans text-[13.5px] sm:text-[15px] text-cream/75 max-w-lg leading-relaxed mb-8">
+          06, 07, 08 November 2026. Jadilah bagian dari ritual perdana kami dan nikmati <strong>50 cangkir seduhan gratis</strong> pertama.
         </p>
 
-      </div>
-
-      {/* 2. CENTER: COLOSSAL COUNTDOWN NUMBERS WITH VERTICAL DIVIDERS */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto my-auto py-8 sm:py-12">
-        <div className="flex items-center justify-center gap-1.5 sm:gap-6 md:gap-10 text-center">
+        {/* Compact, Aesthetic Countdown Timer */}
+        <div className="grid grid-cols-4 gap-2 sm:gap-4 w-full max-w-md mx-auto mb-8">
           
           {/* DAYS */}
-          <div className="flex-1 min-w-0">
-            <div className="font-display text-[48px] sm:text-[84px] md:text-[120px] lg:text-[150px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_24px_rgba(0,0,0,0.6)]">
+          <div className="bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-xl py-3 sm:py-4 px-2 flex flex-col items-center shadow-inner hover:border-turquoise/40 transition-colors duration-200">
+            <span className="font-mono text-2xl sm:text-3xl lg:text-4xl font-black text-cream tracking-tight">
               {String(timeLeft.days).padStart(2, '0')}
-            </div>
-            <div className="font-display italic text-[13px] sm:text-[20px] md:text-[26px] text-cream/80 lowercase tracking-normal mt-2 sm:mt-4">
+            </span>
+            <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-turquoise-light/80 mt-1 font-medium">
               hari
-            </div>
+            </span>
           </div>
-
-          {/* Thin Vertical Divider 1 */}
-          <div className="h-12 sm:h-20 md:h-28 lg:h-32 w-px bg-cream/20 flex-shrink-0" />
 
           {/* HOURS */}
-          <div className="flex-1 min-w-0">
-            <div className="font-display text-[48px] sm:text-[84px] md:text-[120px] lg:text-[150px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_24px_rgba(0,0,0,0.6)]">
+          <div className="bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-xl py-3 sm:py-4 px-2 flex flex-col items-center shadow-inner hover:border-turquoise/40 transition-colors duration-200">
+            <span className="font-mono text-2xl sm:text-3xl lg:text-4xl font-black text-cream tracking-tight">
               {String(timeLeft.hours).padStart(2, '0')}
-            </div>
-            <div className="font-display italic text-[13px] sm:text-[20px] md:text-[26px] text-cream/80 lowercase tracking-normal mt-2 sm:mt-4">
+            </span>
+            <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-turquoise-light/80 mt-1 font-medium">
               jam
-            </div>
+            </span>
           </div>
-
-          {/* Thin Vertical Divider 2 */}
-          <div className="h-12 sm:h-20 md:h-28 lg:h-32 w-px bg-cream/20 flex-shrink-0" />
 
           {/* MINUTES */}
-          <div className="flex-1 min-w-0">
-            <div className="font-display text-[48px] sm:text-[84px] md:text-[120px] lg:text-[150px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_24px_rgba(0,0,0,0.6)]">
+          <div className="bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-xl py-3 sm:py-4 px-2 flex flex-col items-center shadow-inner hover:border-turquoise/40 transition-colors duration-200">
+            <span className="font-mono text-2xl sm:text-3xl lg:text-4xl font-black text-cream tracking-tight">
               {String(timeLeft.minutes).padStart(2, '0')}
-            </div>
-            <div className="font-display italic text-[13px] sm:text-[20px] md:text-[26px] text-cream/80 lowercase tracking-normal mt-2 sm:mt-4">
+            </span>
+            <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-turquoise-light/80 mt-1 font-medium">
               menit
-            </div>
+            </span>
           </div>
-
-          {/* Thin Vertical Divider 3 */}
-          <div className="h-12 sm:h-20 md:h-28 lg:h-32 w-px bg-cream/20 flex-shrink-0" />
 
           {/* SECONDS */}
-          <div className="flex-1 min-w-0">
-            <div className="font-display text-[48px] sm:text-[84px] md:text-[120px] lg:text-[150px] leading-[0.85] text-cream font-normal tracking-[-0.04em] drop-shadow-[0_4px_24px_rgba(0,0,0,0.6)]">
+          <div className="bg-white/[0.04] backdrop-blur-sm border border-turquoise/30 rounded-xl py-3 sm:py-4 px-2 flex flex-col items-center shadow-inner hover:border-turquoise transition-colors duration-200">
+            <span className="font-mono text-2xl sm:text-3xl lg:text-4xl font-black text-turquoise tracking-tight animate-pulse">
               {String(timeLeft.seconds).padStart(2, '0')}
-            </div>
-            <div className="font-display italic text-[13px] sm:text-[20px] md:text-[26px] text-cream/80 lowercase tracking-normal mt-2 sm:mt-4">
+            </span>
+            <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-turquoise-light/80 mt-1 font-medium">
               detik
-            </div>
+            </span>
           </div>
 
         </div>
-      </div>
 
-      {/* 3. BOTTOM ACTION: JOIN THE WAITLIST BUTTON WITH UNIFIED WHATSAPP */}
-      <div className="relative z-10 w-full text-center pb-2 sm:pb-6 space-y-3 sm:space-y-4">
-        
-        {/* Bordered Pill CTA Button with Tactile Scale Physics */}
-        <div>
-          <a
-            href="https://wa.me/6281991445331?text=Halo%20Sekata,%20saya%20mau%20daftar%20waitlist%20Grand%20Opening%20Jumat%20ini!"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-7 sm:px-12 py-3.5 sm:py-4 rounded-full border border-cream/70 text-cream font-mono text-xs sm:text-sm uppercase tracking-[0.14em] font-semibold hover:bg-cream hover:text-espresso hover:border-cream transition-all duration-200 ease-out shadow-lg group active:scale-[0.97]"
-          >
-            <Sparkles className="w-4 h-4 text-marigold stroke-[1.5] group-hover:rotate-12 transition-transform duration-200" />
-            <span>JOIN THE WAITLIST (FREE 50 CUPS)</span>
-            <ArrowRight className="w-4 h-4 text-cream stroke-[1.5] group-hover:translate-x-1 transition-transform duration-200 group-hover:text-espresso" />
-          </a>
-        </div>
+        {/* CTA Button with Tactile Spring React Animation */}
+        <motion.a
+          href="https://wa.me/6281991445331?text=Halo%20Sekata,%20saya%20mau%20daftar%20waitlist%20Grand%20Opening%20Jumat%20ini!"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.04, y: -1 }}
+          whileTap={{ scale: 0.96 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+          className="inline-flex items-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full bg-turquoise text-cream font-sans text-xs sm:text-sm uppercase tracking-wider font-bold hover:bg-turquoise-dark transition-colors duration-200 shadow-lg shadow-turquoise/25 group cursor-pointer"
+        >
+          <Sparkles className="w-4 h-4 text-cream/90 group-hover:rotate-12 transition-transform duration-200" />
+          <span>JOIN THE WAITLIST (FREE 50 CUPS)</span>
+          <ArrowRight className="w-4 h-4 text-cream group-hover:translate-x-1 transition-transform duration-200" />
+        </motion.a>
 
-        {/* Location & Tagline Note */}
-        <p className="font-mono text-[9px] sm:text-[11px] text-cream/65 uppercase tracking-[0.1em]">
-          TANJUNGPINANG, KEPRI &bull; &ldquo;MARI BERTEMU &amp; BERCERITA TENTANG KEHIDUPAN.&rdquo;
+        {/* Minimal clean motto */}
+        <p className="font-mono text-[10px] text-cream/45 uppercase tracking-[0.16em] mt-5">
+          &ldquo;Mari Bertemu &amp; Bercerita Tentang Kehidupan.&rdquo;
         </p>
 
       </div>
-
     </section>
   );
 }
