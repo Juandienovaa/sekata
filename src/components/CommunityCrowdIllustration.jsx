@@ -6,7 +6,7 @@ export default function CommunityCrowdIllustration({ className = "" }) {
       
       {/* Top Centered Caption Badge (Persis seperti Banner Animated Crowd di Gambar 2) */}
       <div className="absolute top-3 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 px-3.5 py-1 bg-cream/95 backdrop-blur-md rounded-[4px] border-hairline text-[10px] font-mono text-coffee-dust uppercase tracking-[0.08em] shadow-sm whitespace-nowrap">
-        <span className="w-1.5 h-1.5 rounded-full bg-turquoise animate-pulse"></span>
+        <span className="w-1.5 h-1.5 rounded-full bg-turquoise"></span>
         <span>WARGA &amp; SAHABAT DUDUK DI MEJA SLOWBAR &bull; #KECILBERTUMBUH</span>
       </div>
 

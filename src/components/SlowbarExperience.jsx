@@ -73,7 +73,7 @@ export default function SlowbarExperience() {
               
               {/* Top Badge (Sesuai Gambar 5) */}
               <div className="absolute top-3 left-3 bg-cream/90 backdrop-blur-sm px-2.5 py-1 rounded-[3px] border-hairline text-[10px] font-mono text-turquoise uppercase tracking-[0.05em] flex items-center gap-1.5 font-medium shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-turquoise animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-turquoise"></span>
                 <span>DOKUMENTASI MEJA SLOWBAR</span>
               </div>
 

@@ -93,7 +93,7 @@ export default function BrandStory() {
             {/* Minimalist Floating Tag */}
             <div className="absolute top-4 left-4 z-10">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-cream font-mono text-[10px] sm:text-[11px] uppercase tracking-wider">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                 <span>DOKUMENTER MEJA SLOWBAR</span>
               </span>
             </div>

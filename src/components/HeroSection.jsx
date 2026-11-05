@@ -15,15 +15,15 @@ export default function HeroSection() {
     <section id="hero" className="relative w-full min-h-[100dvh] bg-espresso flex flex-col justify-between overflow-hidden select-none">
       
       {/* Background Video — Fullscreen Edge-to-Edge with Film Scrim */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      <div className="absolute inset-0 w-full h-full z-0 bg-[#140e0c]">
         <video
           ref={videoRef}
           src="/herosection.mp4"
-          poster="/konten1.jpg"
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           className="w-full h-full object-cover scale-105"
         />
         {/* Layered cinematic scrim */}
@@ -42,7 +42,7 @@ export default function HeroSection() {
           
           {/* Subtle slowbar category badge */}
           <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
-            <span className="w-2 h-2 rounded-full bg-turquoise animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-turquoise" />
             <span className="font-mono text-[10.5px] sm:text-xs uppercase tracking-[0.22em] text-turquoise-light font-medium">
               SPECIALTY COFFEE &bull; ARTISAN SLOWBAR
             </span>

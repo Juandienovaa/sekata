@@ -22,8 +22,8 @@ export default function TickerMarquee() {
           >
             {marqueeItems.map((text, idx) => (
               <div key={idx} className="flex items-center gap-6 sm:gap-8 flex-shrink-0">
-                {/* Retro Sparkle Star Icon Persis Gambar 5 */}
-                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-burnt-orange stroke-[2] flex-shrink-0 animate-pulse" />
+                {/* Retro Sparkle Star Icon */}
+                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-turquoise stroke-[2] flex-shrink-0" />
                 <span className="font-sans font-black italic text-[16px] sm:text-[19px] md:text-[22px] tracking-[0.06em] text-white uppercase">
                   {text}
                 </span>

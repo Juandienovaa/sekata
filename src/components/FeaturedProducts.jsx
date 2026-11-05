@@ -65,7 +65,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
           
           {/* Top Promotional Kicker & Voucher */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3.5">
-            <span className="w-2 h-2 rounded-full bg-turquoise animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-turquoise" />
             <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-turquoise font-bold">
               KURASI RASA &bull; SEDUHAN ASLI KEDAI
             </span>

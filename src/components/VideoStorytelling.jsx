@@ -71,7 +71,7 @@ export default function VideoStorytelling() {
 
               {/* Timecode & Format Badge */}
               <div className="absolute top-3 left-3 bg-cream/90 backdrop-blur-sm px-2.5 py-1 rounded-[3px] border-hairline text-[10px] font-mono uppercase tracking-[0.05em] text-espresso flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-burnt-orange animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-turquoise"></span>
                 <span>00:10 // 4K 24FPS REEL</span>
               </div>
 

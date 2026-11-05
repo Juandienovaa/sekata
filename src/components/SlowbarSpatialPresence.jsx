@@ -66,7 +66,7 @@ export default function SlowbarSpatialPresence() {
           {/* Floating Spatial Stamp Badge */}
           <div className="absolute top-5 left-5 sm:top-7 sm:left-7 z-10">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-cream font-mono text-[11px] uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
               <span>ROASTERY &bull; SLOWBAR SEDUHAN</span>
             </span>
           </div>

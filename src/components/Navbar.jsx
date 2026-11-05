@@ -304,7 +304,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                       Jln Bunguran No.53, Sei Jang, Bukit Bestari, Kota Tanjung Pinang, Kepulauan Riau 29113
                     </p>
                     <p className="font-mono text-xs text-turquoise-light/80 mt-1.5 flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span className="w-2 h-2 rounded-full bg-emerald-400" />
                       <span>Buka Setiap Hari &bull; Tutup pukul 00:00 WIB</span>
                     </p>
                   </div>

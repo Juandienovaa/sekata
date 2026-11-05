@@ -144,7 +144,7 @@ export default function ColorfulStatement() {
           {/* Top Header: Brand Stamp + Live Scroll Progress Indicator (0% - 100%) */}
           <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8 pb-4 border-b border-espresso/10">
             <div className="inline-flex items-center gap-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-turquoise animate-pulse" />
+              <span className="w-2.5 h-2.5 rounded-full bg-turquoise" />
               <span className="text-[13px] sm:text-[14px] font-body text-[#5c4d44] font-medium">
                 Sekata Coffee &amp; Slowbar &bull; Tanjungpinang, Kepri
               </span>

@@ -56,7 +56,7 @@ export default function GrandOpeningCountdown() {
         
         {/* Top Badge: Special Event */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-turquoise/15 border border-turquoise/30 text-turquoise text-[11px] font-mono tracking-widest uppercase mb-4">
-          <Sparkles className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '6s' }} />
+          <Sparkles className="w-3.5 h-3.5" />
           <span>GRAND OPENING CELEBRATION</span>
         </div>
 
@@ -105,7 +105,7 @@ export default function GrandOpeningCountdown() {
 
           {/* SECONDS */}
           <div className="bg-white/[0.04] backdrop-blur-sm border border-turquoise/30 rounded-xl py-3 sm:py-4 px-2 flex flex-col items-center shadow-inner hover:border-turquoise transition-colors duration-200">
-            <span className="font-mono text-2xl sm:text-3xl lg:text-4xl font-black text-turquoise tracking-tight animate-pulse">
+            <span className="font-mono text-2xl sm:text-3xl lg:text-4xl font-black text-turquoise tracking-tight">
               {String(timeLeft.seconds).padStart(2, '0')}
             </span>
             <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-turquoise-light/80 mt-1 font-medium">
