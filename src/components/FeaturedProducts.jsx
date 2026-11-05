@@ -62,12 +62,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
         {/* Section Header (Image 5 Human Typography) */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 pb-6 border-b-hairline">
           <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-[13px] font-body text-amber font-medium">
-                Pilihan Menu &bull; Sekata Tanjungpinang
-              </span>
-            </div>
-            <h2 className="font-display text-[32px] sm:text-[42px] leading-[0.95] text-espresso tracking-[-0.05em] mb-2">
+            <h2 className="font-display text-[32px] sm:text-[44px] leading-[0.95] text-espresso tracking-[-0.05em] mb-2">
               Temukan Rasa yang Kamu Suka.
             </h2>
             <p className="text-[14px] font-body text-[#6b584f] max-w-xl">

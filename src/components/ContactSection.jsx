@@ -27,17 +27,11 @@ export default function ContactSection() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-6 border-b-hairline">
           <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="badge-stamp bg-turquoise text-cream">KUNJUNGI KAMI</span>
-              <p className="text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em]">
-                TANJUNGPINANG, KEPULAUAN RIAU
-              </p>
-            </div>
             <h2 className="font-display text-[36px] sm:text-[46px] leading-[0.95] text-espresso tracking-[-0.05em] mb-2">
               Yuk, Bertemu di Sekata.
             </h2>
             <p className="text-[14px] sm:text-[15px] font-body text-coffee-dust max-w-xl">
-              Luangkan waktu, nikmati kopi, dan ceritakan harimu bersama kami.
+              Luangkan waktu, nikmati ritual seduh lambat, dan ceritakan harimu bersama kami di Tanjungpinang.
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -74,8 +68,8 @@ export default function ContactSection() {
                   <p className="text-coffee-dust uppercase mb-1.5 flex items-center gap-1.5 font-medium">
                     <MapPin className="w-3.5 h-3.5 text-turquoise" /> ALAMAT KEDAI
                   </p>
-                  <p className="text-espresso font-medium">Jl. Sekata, Tanjungpinang</p>
-                  <p className="text-espresso">Kepulauan Riau, Indonesia</p>
+                  <p className="text-espresso font-medium">Jl. Pos No. 12, Kawasan Kota Lama</p>
+                  <p className="text-espresso">Tanjungpinang, Kepulauan Riau</p>
                   <p className="text-coffee-dust mt-2">Area nyaman, parkir mudah, dan suasana tenang.</p>
                 </div>
 
@@ -125,7 +119,7 @@ export default function ContactSection() {
                 </div>
               </div>
               <a
-                href="https://wa.me/6281234567890?text=Halo%20Sekata,%20saya%20mau%20tanya%20seputar%20kedai"
+                href="https://wa.me/6283125525115?text=Halo%20Sekata,%20saya%20mau%20tanya%20seputar%20kedai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-filled text-xs py-2.5 px-5 bg-turquoise border-turquoise hover:bg-turquoise-dark whitespace-nowrap"

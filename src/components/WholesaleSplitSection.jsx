@@ -47,7 +47,7 @@ export default function WholesaleSplitSection() {
               {/* Bottom Row: CTA Button on Left, Animated Doodles on Right */}
               <div className="flex items-end justify-between gap-4 pt-4 border-t-hairline">
                 <a
-                  href="https://wa.me/6281234567890?text=Halo%20Sekata,%20saya%20punya%20usaha/kedai%20dan%20tertarik%20konsultasi%20pasokan%20biji%20kopi%20wholesale"
+                  href="https://wa.me/6283125525115?text=Halo%20Sekata,%20saya%20punya%20usaha/kedai%20dan%20tertarik%20konsultasi%20pasokan%20biji%20kopi%20wholesale"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-filled text-xs py-3 px-6 bg-turquoise border-turquoise hover:bg-turquoise-dark tracking-[0.05em] inline-flex items-center gap-2"
