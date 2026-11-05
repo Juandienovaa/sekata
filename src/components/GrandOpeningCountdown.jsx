@@ -38,7 +38,7 @@ export default function GrandOpeningCountdown() {
   return (
     <section
       id="countdown"
-      className="w-full relative bg-[#130d0b] text-cream overflow-hidden py-14 sm:py-20 px-4 sm:px-8 border-b border-white/10 select-none"
+      className="w-full relative bg-[#130d0b] text-cream overflow-hidden pt-16 sm:pt-20 pb-14 sm:pb-20 px-4 sm:px-8 border-b border-white/10 select-none scroll-mt-24"
     >
       {/* Subtle Analog Festival Background Scrim */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -57,17 +57,17 @@ export default function GrandOpeningCountdown() {
         {/* Top Badge: Special Event */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-turquoise/15 border border-turquoise/30 text-turquoise text-[11px] font-mono tracking-widest uppercase mb-4">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>GRAND OPENING CELEBRATION</span>
+          <span>GRAND OPENING &bull; 06 — 08 NOVEMBER 2026</span>
         </div>
 
-        {/* Headline: Focus on Joining Grand Opening */}
+        {/* Headline: Clean, Classy & Impactful */}
         <h2 className="font-sans font-black text-2xl sm:text-4xl lg:text-[42px] leading-tight text-cream uppercase tracking-tight mb-2.5">
-          Join the Grand Opening
+          Grand Opening Sekata
         </h2>
         
-        {/* Subtitle with Date and Free 50 Cups Benefit (No Location Clutter) */}
-        <p className="font-sans text-[13.5px] sm:text-[15px] text-cream/75 max-w-lg leading-relaxed mb-8">
-          06, 07, 08 November 2026. Jadilah bagian dari ritual perdana kami dan nikmati <strong>50 cangkir seduhan gratis</strong> pertama.
+        {/* Subtitle: Minimal, Classy, No False Info */}
+        <p className="font-sans text-[13.5px] sm:text-[15px] text-cream/80 max-w-lg leading-relaxed mb-8">
+          Merayakan perjumpaan perdana, menyeduh cerita baru, dan duduk bersama tanpa sekat di Kota Tanjungpinang.
         </p>
 
         {/* Compact, Aesthetic Countdown Timer */}
@@ -115,9 +115,9 @@ export default function GrandOpeningCountdown() {
 
         </div>
 
-        {/* CTA Button with Tactile Spring React Animation */}
+        {/* CTA Button with Tactile Spring React Animation (Clean & Free of 50 cups text) */}
         <motion.a
-          href="https://wa.me/6281991445331?text=Halo%20Sekata,%20saya%20mau%20daftar%20waitlist%20Grand%20Opening%20Jumat%20ini!"
+          href="https://wa.me/6281991445331?text=Halo%20Sekata,%20saya%20mau%20gabung%20waitlist%20Grand%20Opening%20Sekata!"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.04, y: -1 }}
@@ -126,12 +126,12 @@ export default function GrandOpeningCountdown() {
           className="inline-flex items-center gap-2.5 px-8 py-3.5 sm:py-4 rounded-full bg-turquoise text-cream font-sans text-xs sm:text-sm uppercase tracking-wider font-bold hover:bg-turquoise-dark transition-colors duration-200 shadow-lg shadow-turquoise/25 group cursor-pointer"
         >
           <Sparkles className="w-4 h-4 text-cream/90 group-hover:rotate-12 transition-transform duration-200" />
-          <span>JOIN THE WAITLIST (FREE 50 CUPS)</span>
+          <span>JOIN THE WAITLIST</span>
           <ArrowRight className="w-4 h-4 text-cream group-hover:translate-x-1 transition-transform duration-200" />
         </motion.a>
 
         {/* Minimal clean motto */}
-        <p className="font-mono text-[10px] text-cream/45 uppercase tracking-[0.16em] mt-5">
+        <p className="font-mono text-[10px] sm:text-[11px] text-cream/50 uppercase tracking-[0.16em] mt-5">
           &ldquo;Mari Bertemu &amp; Bercerita Tentang Kehidupan.&rdquo;
         </p>
 

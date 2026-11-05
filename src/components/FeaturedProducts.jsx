@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Eye, Plus, Check, LayoutGrid, List, Sparkles, ChevronDown, ChevronUp, Coffee, Utensils, CupSoda } from 'lucide-react';
+import { Eye, Plus, Check, LayoutGrid, List, Sparkles, ChevronDown, ChevronUp, Coffee, Utensils, CupSoda, ShoppingBag } from 'lucide-react';
 import { PRODUCTS, CATEGORIES, formatRupiah } from '../data/products';
 
 export default function FeaturedProducts({ onQuickView, onAddToCart }) {
@@ -178,14 +178,16 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                     }`}
                   >
                     <div>
-                      {/* Top Header: SubCategory + Price */}
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                      {/* Top Header: SubCategory */}
+                      <div className="flex items-center justify-between gap-1 mb-2">
                         <span className="font-mono text-[9px] sm:text-[10px] text-coffee-dust uppercase tracking-[0.08em] font-medium self-start">
                           // {product.subCategory.toUpperCase()}
                         </span>
-                        <span className="text-xs sm:text-[13px] font-mono font-bold text-amber tracking-[0.05em]">
-                          {formatRupiah(product.price)}
-                        </span>
+                        {product.temperatures && product.temperatures.length > 0 && (
+                          <span className="text-[9px] font-mono text-espresso/50 uppercase tracking-wider hidden sm:inline">
+                            {product.temperatures.join(' / ')}
+                          </span>
+                        )}
                       </div>
 
                       {/* Product Image Frame */}
@@ -230,36 +232,37 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                       </div>
                     </div>
 
-                    {/* Card Actions: Refined Editorial Split (Ghost Detail + Primary Order) */}
-                    <div className="grid grid-cols-2 gap-2 pt-2.5 sm:pt-3 border-t border-espresso/10 mt-auto" onClick={(e) => e.stopPropagation()}>
-                      <motion.button
-                        onClick={() => handleCardClick(product)}
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.96 }}
-                        className="py-1.5 sm:py-2 px-2 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-mono uppercase tracking-[0.05em] font-medium rounded-[6px] border border-espresso/20 bg-cream text-espresso hover:border-turquoise hover:text-turquoise transition-colors duration-150 cursor-pointer"
-                        aria-label={`Lihat detail ${product.name}`}
-                      >
-                        <Eye className="w-3.5 h-3.5 stroke-[1.5]" />
-                        <span>DETAIL</span>
-                      </motion.button>
+                    {/* Card Footer: Clean Price + Sleek Shopping Bag Action Button (Eliminates awkward 2-button wrapping) */}
+                    <div
+                      className="flex items-center justify-between pt-2.5 sm:pt-3 border-t border-espresso/10 mt-auto"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <div className="flex flex-col text-left">
+                        <span className="text-[9px] font-mono uppercase tracking-wider text-coffee-dust hidden sm:block">
+                          HARGA
+                        </span>
+                        <span className="text-xs sm:text-[15px] font-mono font-bold text-espresso tracking-[0.02em]">
+                          {formatRupiah(product.price)}
+                        </span>
+                      </div>
 
                       <motion.button
                         onClick={(e) => handleAdd(product, e)}
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="py-1.5 sm:py-2 px-2 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-mono uppercase tracking-[0.05em] font-semibold rounded-[6px] bg-turquoise text-cream border border-turquoise hover:bg-turquoise-dark hover:border-turquoise-dark transition-colors duration-150 shadow-xs cursor-pointer"
+                        whileHover={{ scale: 1.08 }}
+                        whileTap={{ scale: 0.88 }}
+                        transition={{ type: 'spring', stiffness: 450, damping: 20 }}
+                        className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm cursor-pointer ${
+                          isJustAdded
+                            ? 'bg-emerald-600 text-cream shadow-emerald-600/30 ring-2 ring-emerald-500/30'
+                            : 'bg-turquoise text-cream hover:bg-turquoise-dark shadow-turquoise/25'
+                        }`}
+                        title={isJustAdded ? 'Tersimpan di keranjang' : `Tambah ${product.name} ke pesanan`}
                         aria-label={`Tambah ${product.name} ke pesanan`}
                       >
                         {isJustAdded ? (
-                          <>
-                            <Check className="w-3.5 h-3.5 text-cream stroke-[1.5]" />
-                            <span>OK!</span>
-                          </>
+                          <Check className="w-4 h-4 text-cream stroke-[2.5]" />
                         ) : (
-                          <>
-                            <Plus className="w-3.5 h-3.5 stroke-[1.5]" />
-                            <span>+ PESAN</span>
-                          </>
+                          <ShoppingBag className="w-4 h-4 text-cream stroke-[2]" />
                         )}
                       </motion.button>
                     </div>
