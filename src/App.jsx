@@ -138,23 +138,23 @@ export default function App() {
           <SlowbarSpatialPresence />
         </SectionReveal>
 
-        {/* SECTION 7 — #KECILBERTUMBUH: "Kecil Bertumbuh, Bersama Menjadi Berarti." */}
+        {/* 1. SEKAT ILUSTRATOR (Ilustrasi Komunitas / Warga) */}
         <SectionReveal>
           <KecilBertumbuh />
         </SectionReveal>
 
-        {/* SECTION 8 — KUNJUNGI KAMI: "Yuk, Bertemu di Sekata." */}
-        <SectionReveal>
-          <ContactSection />
-        </SectionReveal>
-
-        {/* SECTION PROMOSI — GRAB YOUR SEKATA TODAY */}
+        {/* 2. SECTION PROMOSI — GRAB YOUR SEKATA TODAY */}
         <SectionReveal>
           <CtaPromoSection />
         </SectionReveal>
 
-        {/* ANIMATED LIVING CROWD — KARIKATUR WARGA BERJALAN INTERAKTIF */}
+        {/* 3. SEKAT ILUSTRATOR YANG BERGERAK (Karikatur Warga Berjalan) */}
         <AnimatedCrowdCanvas height="240px" />
+
+        {/* 4. SETELAH ITU BARU SECTION "Yuk, Bertemu di Sekata." (Tepat di atas Footer) */}
+        <SectionReveal>
+          <ContactSection />
+        </SectionReveal>
       </main>
 
       {/* SECTION 9 — FOOTER DENGAN TAGLINE LENGKAP */}
