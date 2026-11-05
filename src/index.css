@@ -1,3 +1,71 @@
+/* ==========================================================================
+   SELF-HOSTED STATIC WEBFONTS (100% RELIABILITY ON ANDROID & ALL DEVICES)
+   ========================================================================== */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-300-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2');
+}
+
+/* Map font-weight: 900 (font-black) directly to 800 so Android never falls back to Roboto */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-latin-700-italic.woff2') format('woff2');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -118,21 +186,16 @@ body {
   background-size: 16px 16px;
 }
 
-/* Typography Utilities */
-.font-display {
-  font-family: var(--font-little-amps);
-  letter-spacing: -0.06em;
-  font-weight: 400;
-  line-height: 0.95;
-}
-
-.font-body {
-  font-family: var(--font-inclusive-sans);
-  letter-spacing: 0.03em;
+/* Typography Utilities & Force Plus Jakarta Sans globally */
+.font-sans,
+.font-display,
+.font-body,
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
 .font-mono {
-  font-family: var(--font-necto-mono);
+  font-family: var(--font-necto-mono) !important;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-feature-settings: "tnum" 1;
