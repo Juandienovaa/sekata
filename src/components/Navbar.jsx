@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, X, ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
+import { ShoppingBag, X, ArrowUpRight, Phone, Mail, MapPin, Search } from 'lucide-react';
 
 // Custom inline SVG for Instagram
 function InstagramIcon({ className = "w-3.5 h-3.5" }) {
@@ -128,20 +128,34 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
             />
           </a>
 
-          {/* RIGHT: PESANAN + MENU BUTTON */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          {/* RIGHT: PENCARIAN + PESANAN + MENU BUTTON */}
+          <div className="flex items-center gap-2 sm:gap-2.5">
+
+            {/* Quick Search Button */}
+            <button
+              onClick={onOpenSearch}
+              className={`flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full font-mono transition-all duration-200 focus:outline-none active:scale-[0.97] ${
+                scrolled
+                  ? 'border border-espresso/20 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
+                  : 'bg-black/35 backdrop-blur-md border border-white/25 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
+              }`}
+              aria-label="Cari Menu atau Biji Kopi"
+              title="Cari Menu (Cmd/Ctrl + K)"
+            >
+              <Search className="w-4 h-4 stroke-[1.5]" />
+            </button>
 
             {/* Cart / Orders Pill */}
             <button
               onClick={onOpenCart}
-              className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium transition-all duration-200 focus:outline-none ${
+              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium transition-all duration-200 focus:outline-none active:scale-[0.97] ${
                 scrolled
-                  ? 'border border-espresso/25 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
-                  : 'bg-black/35 backdrop-blur-md border border-white/30 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
+                  ? 'border border-espresso/20 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
+                  : 'bg-black/35 backdrop-blur-md border border-white/25 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
               }`}
               aria-label={`Buka Keranjang Pesanan (${cartCount} item)`}
             >
-              <ShoppingBag className="w-3.5 h-3.5 text-turquoise" />
+              <ShoppingBag className="w-3.5 h-3.5 text-turquoise stroke-[1.5]" />
               <span className="hidden sm:inline">PESANAN</span>
               <span className="w-5 h-5 rounded-full bg-turquoise text-cream text-[10px] flex items-center justify-center font-bold">
                 {cartCount}
@@ -151,7 +165,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
             {/* MINIMAL MENU TRIGGER BUTTON */}
             <button
               onClick={() => setIsMenuOpen(true)}
-              className={`group relative flex items-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-mono text-xs sm:text-sm uppercase tracking-[0.16em] font-semibold transition-all duration-300 active:scale-95 focus:outline-none ${
+              className={`group relative flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-mono text-xs sm:text-sm uppercase tracking-[0.16em] font-semibold transition-all duration-200 ease-out active:scale-[0.97] focus:outline-none ${
                 scrolled
                   ? 'bg-espresso text-cream hover:bg-burnt-orange shadow-md'
                   : 'bg-cream text-espresso hover:bg-burnt-orange hover:text-cream shadow-[0_4px_16px_rgba(0,0,0,0.3)]'
@@ -330,7 +344,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                 </a>
                 <span>&bull;</span>
                 <a
-                  href="https://wa.me/6281234567890"
+                  href="https://wa.me/6283125525115"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-cream underline underline-offset-2 transition-colors"

@@ -34,20 +34,29 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Content Overlay */}
-      <div className="relative z-10 container-max w-full px-6 sm:px-12 lg:px-16 pt-28 sm:pt-32 pb-12 flex flex-col justify-center">
+      <div className="relative z-10 container-max w-full px-6 sm:px-12 lg:px-16 pt-24 sm:pt-28 pb-8 sm:pb-12 flex flex-col justify-between h-full">
         
+        {/* Top Spacer for fixed navbar */}
+        <div className="h-6 sm:h-10" />
+
         {/* Content Box */}
-        <div className="max-w-2xl text-left">
-          <a href="#" className="inline-block mb-4 sm:mb-6 focus:outline-none">
+        <div className="max-w-2xl text-left my-auto">
+          {/* Editorial Masthead Stamp */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/10 backdrop-blur-md border border-cream/20 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.15em] text-cream/90 mb-4 sm:mb-6">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>KOTA LAMA TANJUNGPINANG &bull; MEJA SLOWBAR BUKA HARI INI</span>
+          </div>
+
+          <a href="#" className="inline-block mb-3 sm:mb-4 focus:outline-none">
             <img
               src="/logo.png"
               alt="Sekata Coffee &amp; Slowbar"
-              className="h-16 sm:h-24 lg:h-28 w-auto object-contain filter drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)] transition-transform duration-300 ease-out hover:scale-[1.03]"
+              className="h-16 sm:h-22 lg:h-24 w-auto object-contain filter drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)] transition-transform duration-300 ease-out hover:scale-[1.03]"
             />
           </a>
 
           {/* Campaign Headline */}
-          <h1 className="font-display text-[40px] sm:text-[56px] lg:text-[68px] leading-[0.92] text-cream tracking-[-0.045em] mb-4">
+          <h1 className="font-display text-[42px] sm:text-[58px] lg:text-[72px] leading-[0.9] text-cream tracking-[-0.045em] mb-4">
             Setiap Seduhan Punya Cerita.
           </h1>
 
@@ -72,6 +81,20 @@ export default function HeroSection() {
               <span>JELAJAHI MENU</span>
               <ArrowRight className="w-4 h-4 ml-2 stroke-[1.5] group-hover:translate-x-1 transition-transform duration-200 ease-out" />
             </button>
+          </div>
+        </div>
+
+        {/* Bottom Editorial Masthead Strip */}
+        <div className="w-full pt-6 border-t border-cream/15 flex flex-wrap items-center justify-between gap-3 text-cream/75 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.12em]">
+          <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
+            <span>01 &bull; SINGLE ORIGIN ROASTERY</span>
+            <span className="hidden sm:inline">&bull;</span>
+            <span>02 &bull; MEJA SLOWBAR INTERAKTIF</span>
+            <span className="hidden sm:inline">&bull;</span>
+            <span className="text-marigold">03 &bull; #KECILBERTUMBUH</span>
+          </div>
+          <div className="hidden lg:block text-cream/60">
+            0°55'18"N 104°27'06"E &bull; KEPRI
           </div>
         </div>
 

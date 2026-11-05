@@ -74,30 +74,30 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             
             {/* View Mode Switcher (Kartu Foto vs Papan Menu Kedai) */}
-            <div className="flex items-center bg-linen p-1 rounded-[8px] border border-hairline">
+            <div className="flex items-center bg-linen p-1 rounded-[8px] border border-hairline shadow-xs">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] font-body text-[13px] transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] font-body text-[13px] transition-all duration-150 active:scale-[0.97] ${
                   viewMode === 'grid'
                     ? 'bg-cream text-espresso shadow-xs font-medium border border-espresso/15'
                     : 'text-[#6b584f] hover:text-espresso'
                 }`}
                 aria-label="Tampilan Kartu Foto"
               >
-                <LayoutGrid className="w-3.5 h-3.5" />
+                <LayoutGrid className="w-3.5 h-3.5 stroke-[1.5]" />
                 <span>Kartu Foto</span>
               </button>
 
               <button
                 onClick={() => setViewMode('board')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] font-body text-[13px] transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] font-body text-[13px] transition-all duration-150 active:scale-[0.97] ${
                   viewMode === 'board'
                     ? 'bg-espresso text-cream shadow-xs font-medium'
                     : 'text-[#6b584f] hover:text-espresso'
                 }`}
                 aria-label="Tampilan Papan Menu Kedai"
               >
-                <List className="w-3.5 h-3.5" />
+                <List className="w-3.5 h-3.5 stroke-[1.5]" />
                 <span>Papan Menu Kedai</span>
               </button>
             </div>

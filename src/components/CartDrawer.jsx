@@ -310,10 +310,14 @@ export default function CartDrawer({
             ) : (
               <div>
                 <div className="flex items-center justify-between pb-3 border-b-hairline mb-4">
-                  <span className="badge-stamp bg-turquoise text-cream">STRUK PESANAN</span>
+                  <div className="flex items-center gap-2">
+                    <span className="badge-stamp bg-turquoise text-cream">STRUK PESANAN</span>
+                    <span className="font-mono text-[11px] text-coffee-dust">SEKATA SLOWBAR</span>
+                  </div>
                   <button
                     onClick={() => setCheckoutModalOpen(false)}
-                    className="p-1 text-espresso hover:text-turquoise"
+                    className="p-1 text-espresso hover:text-turquoise border-hairline rounded-[3px] bg-cream"
+                    aria-label="Tutup dialog struk"
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -326,27 +330,27 @@ export default function CartDrawer({
                   CATATAN: {grindPreference.toUpperCase()}
                 </p>
 
-                <div className="max-h-48 overflow-y-auto space-y-2 mb-4 p-3 bg-linen rounded-[4px] border-hairline text-xs font-mono">
+                <div className="max-h-48 overflow-y-auto space-y-2 mb-4 p-3 bg-linen rounded-[6px] border-hairline text-xs font-mono">
                   {cartItems.map((item) => (
-                    <div key={item.id} className="flex justify-between">
-                      <span className="text-espresso truncate pr-2">
+                    <div key={item.id} className="flex justify-between items-center">
+                      <span className="text-espresso truncate pr-2 font-medium">
                         {item.quantity}x {item.name} ({item.size})
                       </span>
-                      <span className="text-coffee-dust">
+                      <span className="text-coffee-dust whitespace-nowrap">
                         {formatRupiah(item.price * item.quantity)}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="p-3 bg-linen rounded-[4px] border-hairline text-xs font-mono space-y-1 mb-6">
+                <div className="p-3 bg-linen rounded-[6px] border-hairline text-xs font-mono space-y-1.5 mb-6">
                   <div className="flex justify-between">
                     <span className="text-coffee-dust">SUBTOTAL:</span>
                     <span>{formatRupiah(subtotal)}</span>
                   </div>
                   {discountAmount > 0 && (
                     <div className="flex justify-between text-turquoise font-medium">
-                      <span>DISKON:</span>
+                      <span>DISKON ({discountPercent}%):</span>
                       <span>-{formatRupiah(discountAmount)}</span>
                     </div>
                   )}
@@ -354,22 +358,22 @@ export default function CartDrawer({
                     <span className="text-coffee-dust">ONGKIR TANJUNGPINANG:</span>
                     <span>{deliveryFee === 0 ? 'GRATIS' : formatRupiah(deliveryFee)}</span>
                   </div>
-                  <div className="flex justify-between font-bold text-espresso pt-1 border-t-hairline">
+                  <div className="flex justify-between font-bold text-espresso pt-2 border-t-hairline text-sm">
                     <span>TOTAL AKHIR:</span>
-                    <span>{formatRupiah(finalTotal)}</span>
+                    <span className="text-amber">{formatRupiah(finalTotal)}</span>
                   </div>
                 </div>
 
                 <div className="flex gap-3">
                   <button
                     onClick={() => setCheckoutModalOpen(false)}
-                    className="btn-ghost flex-1 py-2.5 text-xs"
+                    className="btn-ghost flex-1 py-2.5 text-xs rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]"
                   >
                     KEMBALI KE KERANJANG
                   </button>
                   <button
                     onClick={finalizeOrder}
-                    className="btn-filled flex-1 py-2.5 text-xs bg-turquoise border-turquoise hover:bg-turquoise-dark"
+                    className="btn-filled flex-1 py-2.5 text-xs bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]"
                   >
                     SELESAIKAN PESANAN
                   </button>
