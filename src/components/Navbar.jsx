@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, X, ArrowUpRight, MessageCircle, MapPin, Sparkles } from 'lucide-react';
+import { ShoppingBag, X, ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
 
 // Custom inline SVG for Instagram
 function InstagramIcon({ className = "w-3.5 h-3.5" }) {
@@ -263,145 +263,40 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                 })}
               </nav>
 
-              {/* Sisi Kanan: Hub Informasi Lebih Lanjut (Lokasi, Kontak HP/WA, Jam Buka, Tautan Sosmed) */}
-              <div className="lg:col-span-4 w-full flex flex-col justify-center">
-                <div className="relative w-full max-w-[380px] rounded-2xl border border-cream/20 bg-[#16100d]/90 backdrop-blur-xl shadow-2xl p-5 sm:p-6 text-left mx-auto lg:mx-0">
+              {/* Sisi Kanan: Informasi Kontak & Alamat Sekata yang Simple (Persis Gambar 1) */}
+              <div className="lg:col-span-4 flex flex-col justify-center text-left pl-0 lg:pl-10 mt-8 lg:mt-0">
+                <div className="space-y-5 sm:space-y-6 text-cream/90">
                   
-                  {/* Status Operasional Kedai */}
-                  <div className="flex items-center justify-between gap-2 pb-4 border-b border-cream/15">
-                    <div className="flex items-center gap-2">
-                      <span className="relative flex h-2.5 w-2.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                      </span>
-                      <span className="font-mono text-[11px] font-bold text-emerald-400 uppercase tracking-widest">
-                        KEDAI BUKA HARI INI
-                      </span>
-                    </div>
-                    <span className="font-mono text-[10px] text-cream/60">
-                      10.00 – 22.00 WIB
+                  {/* Telepon / WhatsApp */}
+                  <a
+                    href="https://wa.me/6283125525115"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 text-cream/90 hover:text-burnt-orange transition-colors group"
+                  >
+                    <Phone className="w-5 h-5 text-cream/75 group-hover:text-burnt-orange transition-colors flex-shrink-0" />
+                    <span className="font-sans text-[17px] sm:text-[19px] tracking-wide font-normal">
+                      +62 831-2552-5115
                     </span>
-                  </div>
+                  </a>
 
-                  {/* Brand & Tagline Singkat */}
-                  <div className="py-4 border-b border-cream/15">
-                    <div className="flex items-center gap-2.5 mb-1.5">
-                      <img
-                        src="/logo.png"
-                        alt="Logo Sekata"
-                        className="w-7 h-7 object-contain rounded-full bg-cream/10 p-1 border border-cream/20"
-                      />
-                      <div>
-                        <h4 className="font-sans font-bold text-base text-cream leading-tight">
-                          SEKATA COMMUNAL SPACE
-                        </h4>
-                        <p className="font-mono text-[10px] text-burnt-orange tracking-wider uppercase font-semibold">
-                          Specialty Slowbar &bull; Tanjungpinang
-                        </p>
-                      </div>
-                    </div>
-                    <p className="font-body text-xs text-cream/75 leading-relaxed mt-2">
-                      Ruang berteduh dan bertukar cerita di kawasan kota lama Tanjungpinang. Tempat kecil untuk seduhan bermakna.
+                  {/* Email */}
+                  <a
+                    href="mailto:halo@sekatacoffee.com"
+                    className="flex items-center gap-4 text-cream/90 hover:text-burnt-orange transition-colors group"
+                  >
+                    <Mail className="w-5 h-5 text-cream/75 group-hover:text-burnt-orange transition-colors flex-shrink-0" />
+                    <span className="font-sans text-[17px] sm:text-[19px] tracking-wide font-normal">
+                      halo@sekatacoffee.com
+                    </span>
+                  </a>
+
+                  {/* Alamat Sekata yang Simple Persis Permintaan User */}
+                  <div className="flex items-start gap-4">
+                    <MapPin className="w-5 h-5 text-cream/75 flex-shrink-0 mt-1" />
+                    <p className="font-sans text-[15px] sm:text-[17px] text-cream/85 leading-relaxed max-w-sm font-normal">
+                      Jl. Pos No. 12, Tanjungpinang Kota, Kepulauan Riau
                     </p>
-                  </div>
-
-                  {/* Lokasi & Alamat */}
-                  <div className="py-3.5 border-b border-cream/15">
-                    <div className="flex items-start gap-2.5">
-                      <MapPin className="w-4 h-4 text-burnt-orange flex-shrink-0 mt-0.5" />
-                      <div className="flex-1">
-                        <span className="font-mono text-[10px] text-cream/50 uppercase tracking-wider block mb-0.5">
-                          LOKASI KEDAI
-                        </span>
-                        <p className="font-body text-xs text-cream/90 leading-snug">
-                          Jl. Pos No. 12, Kawasan Kota Lama, Tanjungpinang Kota, Kepulauan Riau 29111
-                        </p>
-                        <a
-                          href="https://maps.google.com/?q=Sekata+Coffee+Tanjungpinang"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 font-mono text-[11px] text-burnt-orange hover:text-marigold underline underline-offset-2 mt-1.5 font-semibold transition-colors"
-                        >
-                          <span>Petunjuk Arah Google Maps</span>
-                          <ArrowUpRight className="w-3 h-3" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Kontak WhatsApp & Nomor HP */}
-                  <div className="py-3.5 border-b border-cream/15">
-                    <div className="flex items-start gap-2.5">
-                      <MessageCircle className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <div className="flex-1">
-                        <span className="font-mono text-[10px] text-cream/50 uppercase tracking-wider block mb-0.5">
-                          NOMOR HP &amp; WHATSAPP
-                        </span>
-                        <p className="font-mono text-xs text-cream font-bold">
-                          +62 812-7001-9281
-                        </p>
-                        <a
-                          href="https://wa.me/6281270019281?text=Halo%20Sekata,%20saya%20ingin%20tanya%20tentang%20slowbar%20dan%20menu"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-2 inline-flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-cream font-mono text-[11px] font-bold uppercase tracking-wider transition-colors shadow-md"
-                        >
-                          <span>Chat WhatsApp Barista</span>
-                          <ArrowUpRight className="w-3.5 h-3.5" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Tautan Media Sosial Resmi */}
-                  <div className="pt-3.5">
-                    <span className="font-mono text-[10px] text-cream/50 uppercase tracking-wider block mb-2">
-                      MEDIA SOSIAL &amp; KANAL RESMI
-                    </span>
-                    <div className="grid grid-cols-2 gap-2">
-                      <a
-                        href="https://instagram.com/sekata.tnj"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-2 rounded-lg bg-cream/5 hover:bg-cream/15 border border-cream/10 transition-colors group"
-                      >
-                        <InstagramIcon className="w-4 h-4 text-burnt-orange group-hover:scale-110 transition-transform" />
-                        <div className="text-left overflow-hidden">
-                          <span className="font-mono text-[11px] text-cream block font-semibold truncate">
-                            @sekata.tnj
-                          </span>
-                          <span className="font-mono text-[9px] text-cream/60 block">
-                            Instagram
-                          </span>
-                        </div>
-                      </a>
-
-                      <a
-                        href="https://tiktok.com/@sekatatnj"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-2 rounded-lg bg-cream/5 hover:bg-cream/15 border border-cream/10 transition-colors group"
-                      >
-                        <span className="font-mono font-bold text-xs text-turquoise group-hover:scale-110 transition-transform">
-                          ♪
-                        </span>
-                        <div className="text-left overflow-hidden">
-                          <span className="font-mono text-[11px] text-cream block font-semibold truncate">
-                            @sekatatnj
-                          </span>
-                          <span className="font-mono text-[9px] text-cream/60 block">
-                            TikTok
-                          </span>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Tagline footer card */}
-                  <div className="mt-4 pt-3 border-t border-cream/10 text-center">
-                    <span className="font-mono text-[10px] text-burnt-orange tracking-widest uppercase font-semibold">
-                      #KECILBERTUMBUH &bull; TANJUNGPINANG
-                    </span>
                   </div>
 
                 </div>
