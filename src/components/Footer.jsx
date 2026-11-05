@@ -1,66 +1,16 @@
-import React, { useState } from 'react';
-import { Mail, Check, ArrowUp } from 'lucide-react';
+import React from 'react';
+import { ArrowUp } from 'lucide-react';
+import CtaPromoSection from './CtaPromoSection';
 
 export default function Footer() {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleNewsletter = (e) => {
-    e.preventDefault();
-    if (!newsletterEmail) return;
-    setSubscribed(true);
-    setTimeout(() => {
-      setNewsletterEmail('');
-      setSubscribed(false);
-    }, 4000);
-  };
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="w-full bg-cream border-t-hairline">
-      {/* Surat Kabar dari Slowbar Strip */}
-      <div className="bg-linen border-b-hairline py-12 sm:py-16">
-        <div className="container-max">
-          <div className="max-w-2xl mx-auto text-center">
-            <span className="badge-stamp bg-turquoise text-cream mb-3">
-              SURAT KABAR DARI SLOWBAR
-            </span>
-            <h2 className="font-display text-[32px] sm:text-[42px] leading-[0.95] text-espresso tracking-[-0.05em] mb-3">
-              Dapatkan Kabar Seduhan &amp; Cerita Terbaru.
-            </h2>
-            <p className="text-[14px] font-body text-coffee-dust leading-relaxed mb-6">
-              Informasi ketersediaan biji kopi sangrai segar, jadwal sesi slowbar mingguan, dan catatan cerita dari Tanjungpinang langsung ke emailmu.
-            </p>
-
-            {subscribed ? (
-              <div className="p-4 bg-cream border-hairline rounded-[4px] inline-flex items-center gap-2 text-xs font-mono text-turquoise">
-                <Check className="w-4 h-4" />
-                <span>TERIMA KASIH! KAMU SUDAH TERDAFTAR DI SURAT KABAR SEKATA.</span>
-              </div>
-            ) : (
-              <form onSubmit={handleNewsletter} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-                <input
-                  type="email"
-                  required
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  placeholder="Masukkan alamat email kamu..."
-                  className="flex-1 px-4 py-2.5 text-xs font-body bg-cream border-hairline rounded-[6px] text-espresso focus:border-turquoise focus:outline-none placeholder:text-coffee-dust/60"
-                />
-                <button
-                  type="submit"
-                  className="btn-filled text-xs py-2.5 px-6 whitespace-nowrap tracking-[0.05em] bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]"
-                >
-                  LANGGANAN
-                </button>
-              </form>
-            )}
-          </div>
-        </div>
-      </div>
+    <footer className="w-full bg-cream">
+      {/* High-Impact Promotional CTA Section (Replaces Newsletter Strip) */}
+      <CtaPromoSection />
 
       {/* Main Footer Sitemap Columns */}
       <div className="container-max py-14 sm:py-20">
