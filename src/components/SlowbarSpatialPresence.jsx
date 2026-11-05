@@ -24,7 +24,7 @@ export default function SlowbarSpatialPresence() {
   ];
 
   return (
-    <section id="slowbar-space" className="w-full py-16 sm:py-24 bg-[#f5eee6] border-y border-espresso/15 scroll-mt-20 select-none">
+    <section id="slowbar-space" className="w-full py-10 sm:py-20 bg-[#f5eee6] border-y border-espresso/15 scroll-mt-20 select-none">
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Top Header: Ultra-clean, minimal text, Awwwards typography */}

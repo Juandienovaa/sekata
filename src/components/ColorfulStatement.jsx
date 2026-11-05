@@ -54,57 +54,64 @@ export default function ColorfulStatement() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // AWWWARDS SCROLL-DRIVEN REVEAL TIMELINE (0% -> 100%)
-      // Using rock-solid sticky container to prevent premature section cuts
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top top',
-          end: 'bottom bottom',
-          scrub: 0.6,
-          onUpdate: (self) => {
-            const pct = Math.round(self.progress * 100);
-            if (counterRef.current) {
-              counterRef.current.innerText = `${pct}%`;
-            }
-            if (progressBarRef.current) {
-              progressBarRef.current.style.transform = `scaleX(${self.progress})`;
+      const mm = gsap.matchMedia();
+
+      // Desktop only (>= 768px): Smooth sticky scroll scrub (shortened to 130vh for snappy feel)
+      mm.add("(min-width: 768px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 0.6,
+            onUpdate: (self) => {
+              const pct = Math.round(self.progress * 100);
+              if (counterRef.current) {
+                counterRef.current.innerText = `${pct}%`;
+              }
+              if (progressBarRef.current) {
+                progressBarRef.current.style.transform = `scaleX(${self.progress})`;
+              }
             }
           }
+        });
+
+        tl.fromTo(
+          '.reveal-word',
+          {
+            opacity: 0.18,
+            y: 8,
+            filter: 'blur(3px)',
+          },
+          {
+            opacity: 1,
+            y: 0,
+            filter: 'blur(0px)',
+            stagger: 0.025,
+            ease: 'none',
+            duration: 0.18,
+          }
+        );
+
+        if (bottomPillsRef.current) {
+          tl.fromTo(
+            bottomPillsRef.current,
+            { opacity: 0, y: 16 },
+            { opacity: 1, y: 0, ease: 'power2.out', duration: 0.18 },
+            '>-0.05'
+          );
         }
+
+        tl.to({}, { duration: 0.1 });
       });
 
-      // Step 1: Reveal words sequentially across 0% -> 80% scroll progress
-      // Every single word transitions from ghost dormant blur to vibrant crisp brand color
-      tl.fromTo(
-        '.reveal-word',
-        {
-          opacity: 0.18,
-          y: 8,
-          filter: 'blur(3px)',
-        },
-        {
-          opacity: 1,
-          y: 0,
-          filter: 'blur(0px)',
-          stagger: 0.025,
-          ease: 'none',
-          duration: 0.18,
+      // Mobile only (< 768px): Natural flow without sticky pinning, eliminating huge empty void & heavy scroll jank
+      mm.add("(max-width: 767px)", () => {
+        gsap.set('.reveal-word', { opacity: 1, y: 0, filter: 'blur(0px)' });
+        if (bottomPillsRef.current) {
+          gsap.set(bottomPillsRef.current, { opacity: 1, y: 0 });
         }
-      );
-
-      // Step 2: Meta badges pop in gracefully between 80% -> 90%
-      if (bottomPillsRef.current) {
-        tl.fromTo(
-          bottomPillsRef.current,
-          { opacity: 0, y: 16 },
-          { opacity: 1, y: 0, ease: 'power2.out', duration: 0.18 },
-          '>-0.05'
-        );
-      }
-
-      // Step 3: Comfortable buffer hold from 90% -> 100% so full statement is savored
-      tl.to({}, { duration: 0.1 });
+      });
 
     }, containerRef);
 
@@ -130,28 +137,28 @@ export default function ColorfulStatement() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-[220vh] bg-cream border-b-hairline select-none"
+      className="relative w-full md:h-[135vh] bg-cream border-b-hairline select-none py-8 sm:py-12 md:py-0"
     >
       {/* 
-        STICKY STAGE (100vh FULLSCREEN):
-        Stays locked at top: 0 while scrolling through the 220vh container.
-        This guarantees the text finishes 100% revealing before the next section appears!
+        Responsive Stage:
+        - Mobile: Normal flow, compact padding, zero empty void, native 60fps scrolling
+        - Desktop: Sticky locked stage with snappy 135vh scrub reveal
       */}
-      <div className="sticky top-0 w-full h-screen min-h-screen bg-cream flex flex-col justify-center items-center px-4 sm:px-8 z-10 overflow-hidden">
+      <div className="md:sticky md:top-0 w-full md:h-screen md:min-h-screen bg-cream flex flex-col justify-center items-center px-4 sm:px-8 z-10">
         
         <div className="w-full max-w-5xl mx-auto flex flex-col justify-center">
           
-          {/* Top Header: Brand Stamp + Live Scroll Progress Indicator (0% - 100%) */}
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8 pb-4 border-b border-espresso/10">
-            <div className="inline-flex items-center gap-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-turquoise" />
-              <span className="text-[13px] sm:text-[14px] font-body text-[#5c4d44] font-medium">
-                Sekata Coffee &amp; Slowbar &bull; Tanjungpinang, Kepri
+          {/* Top Header: Brand Stamp + Live Scroll Progress Indicator (Desktop only for counter) */}
+          <div className="flex items-center justify-between gap-3 mb-5 sm:mb-8 pb-3 sm:pb-4 border-b border-espresso/10">
+            <div className="inline-flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-turquoise" />
+              <span className="text-[12px] sm:text-[14px] font-body text-[#5c4d44] font-medium">
+                Sekata Coffee &amp; Slowbar &bull; Tanjungpinang
               </span>
             </div>
 
-            {/* Interactive Awwwards Scroll Scrub Counter */}
-            <div className="inline-flex items-center gap-3">
+            {/* Interactive Awwwards Scroll Scrub Counter (Desktop only) */}
+            <div className="hidden md:inline-flex items-center gap-3">
               <span className="text-[12px] font-body text-[#735e54]">
                 Scroll to reveal
               </span>
@@ -171,18 +178,15 @@ export default function ColorfulStatement() {
             </div>
           </div>
 
-          {/* 
-            AWWWARDS GSAP SCROLL-DRIVEN WORD-BY-WORD REVEAL (0% -> 100% Scroll)
-            Right mascot card DIHAPUS. Layout lebar, rapi, dan proporsional.
-          */}
+          {/* Statement Text: Fluid, responsive font size, no excessive vertical blank space */}
           <div className="text-left">
-            <p className="font-display text-[24px] sm:text-[34px] md:text-[40px] lg:text-[46px] leading-[1.3] tracking-[-0.035em]">
+            <p className="font-display text-[21px] xs:text-[23px] sm:text-[32px] md:text-[38px] lg:text-[44px] leading-[1.32] tracking-[-0.03em]">
               {STATEMENT_WORDS.map((item, index) => {
                 const colorClass = getColorClass(item.color);
                 return (
                   <span
                     key={index}
-                    className={`reveal-word inline-block mr-[0.28em] will-change-transform ${colorClass}`}
+                    className={`reveal-word inline-block mr-[0.25em] will-change-transform ${colorClass}`}
                   >
                     {item.text}
                   </span>
@@ -190,10 +194,10 @@ export default function ColorfulStatement() {
               })}
             </p>
 
-            {/* Bottom Meta Badges (Image 5 Human Typography) */}
+            {/* Bottom Meta Badges */}
             <div
               ref={bottomPillsRef}
-              className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-6 text-[13px] sm:text-[14px] font-body"
+              className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2.5 sm:gap-6 text-[12px] sm:text-[14px] font-body"
             >
               <span className="text-turquoise font-medium flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-turquoise" />

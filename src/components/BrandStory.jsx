@@ -35,18 +35,18 @@ export default function BrandStory() {
         Tidak ada kartu rounded berlapis di dalam kartu rounded.
         Konten hidup bebas langsung di atas kanvas dengan garis pembatas hairline elegan.
       */}
-      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 py-10 sm:py-20">
         
         {/* TOP LABEL & BIG MEMORABLE HOOK */}
-        <div className="mb-12 sm:mb-16">
-          <div className="flex items-center gap-2 mb-4">
+        <div className="mb-8 sm:mb-14">
+          <div className="flex items-center gap-2 mb-3">
             <span className="w-2 h-2 rounded-full bg-turquoise" />
             <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-turquoise font-semibold">
               FILOSOFI SLOWBAR &bull; EST. 2026
             </span>
           </div>
 
-          <h2 className="font-sans font-black text-[36px] sm:text-[54px] lg:text-[68px] leading-[0.98] tracking-[-0.04em] text-espresso uppercase max-w-5xl">
+          <h2 className="font-sans font-black text-[30px] sm:text-[48px] lg:text-[64px] leading-[0.98] tracking-[-0.04em] text-espresso uppercase max-w-5xl">
             Waktu sering kali berjalan terburu-buru.{' '}
             <span className="text-turquoise italic font-bold">
               Kami memilih melambat.
@@ -55,15 +55,15 @@ export default function BrandStory() {
         </div>
 
         {/* NARRATIVE MANIFESTO: DUAL EDITORIAL COLUMNS (NO BOXES) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pb-14 sm:pb-20 border-b border-espresso/15 text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 pb-8 sm:pb-16 border-b border-espresso/15 text-left">
           
-          <div className="lg:col-span-6 font-sans text-[16px] sm:text-[18px] leading-[1.7] text-espresso font-normal">
+          <div className="lg:col-span-6 font-sans text-[15px] sm:text-[18px] leading-[1.7] text-espresso font-normal">
             <p>
               Sekata Coffee &amp; Space hadir bukan sekadar untuk menjual kafein harian, melainkan sebagai ruang jeda bersama. Meja slowbar kami adalah panggung terbuka: tempat barista menyeduh dengan kesadaran penuh, dan setiap cangkir menjadi awal perjumpaan yang jujur.
             </p>
           </div>
 
-          <div className="lg:col-span-6 font-sans text-[16px] sm:text-[18px] leading-[1.7] text-espresso font-normal">
+          <div className="lg:col-span-6 font-sans text-[15px] sm:text-[18px] leading-[1.7] text-espresso font-normal">
             <p>
               Tanpa sekat pemisah, tanpa istilah kopi yang rumit dan mengintimidasi. Kami percaya obrolan terbaik tentang kehidupan selalu dimulai saat kita duduk sejajar, menghela napas, dan merayakan perjumpaan di tengah hangatnya seduhan lokal Nusantara.
             </p>
@@ -79,7 +79,7 @@ export default function BrandStory() {
           3. CINEMATIC VISUAL + 3 ARCHITECTURAL PILLARS (NO BOX-IN-BOX):
           Layout asimetris terbuka: Foto sinematik di kiri + 3 baris pilar editorial di kanan
         */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 pt-14 sm:pt-20 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 pt-8 sm:pt-16 items-stretch">
           
           {/* Sisi Kiri: Foto Roastery & Slowbar Bersih Tanpa Frame Kartu Bertumpuk */}
           <div className="lg:col-span-5 relative rounded-[18px] sm:rounded-[24px] overflow-hidden bg-espresso shadow-md min-h-[360px] sm:min-h-[460px] group">

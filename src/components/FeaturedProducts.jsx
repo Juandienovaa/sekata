@@ -57,7 +57,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
   const foodCemilan = PRODUCTS.filter((p) => p.category === 'makanan' && p.subCategory === 'Cemilan');
 
   return (
-    <section id="menu" className="w-full py-12 sm:py-20 bg-cream border-b-hairline scroll-mt-20">
+    <section id="menu" className="w-full py-8 sm:py-16 bg-cream border-b-hairline scroll-mt-20">
       <div className="container-max">
         
         {/* Section Header — Spacious Editorial Layout (Solves Cramped Typography Bug in Gambar 1) */}
@@ -232,7 +232,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                       </div>
                     </div>
 
-                    {/* Card Footer: Clean Price + Sleek Shopping Bag Action Button (Eliminates awkward 2-button wrapping) */}
+                    {/* Card Footer: Clean Price + Action Cluster (Eye Detail + Shopping Bag) */}
                     <div
                       className="flex items-center justify-between pt-2.5 sm:pt-3 border-t border-espresso/10 mt-auto"
                       onClick={(e) => e.stopPropagation()}
@@ -241,30 +241,45 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                         <span className="text-[9px] font-mono uppercase tracking-wider text-coffee-dust hidden sm:block">
                           HARGA
                         </span>
-                        <span className="text-xs sm:text-[15px] font-mono font-bold text-espresso tracking-[0.02em]">
+                        <span className="text-xs sm:text-[14px] font-mono font-bold text-espresso tracking-[0.02em]">
                           {formatRupiah(product.price)}
                         </span>
                       </div>
 
-                      <motion.button
-                        onClick={(e) => handleAdd(product, e)}
-                        whileHover={{ scale: 1.08 }}
-                        whileTap={{ scale: 0.88 }}
-                        transition={{ type: 'spring', stiffness: 450, damping: 20 }}
-                        className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm cursor-pointer ${
-                          isJustAdded
-                            ? 'bg-emerald-600 text-cream shadow-emerald-600/30 ring-2 ring-emerald-500/30'
-                            : 'bg-turquoise text-cream hover:bg-turquoise-dark shadow-turquoise/25'
-                        }`}
-                        title={isJustAdded ? 'Tersimpan di keranjang' : `Tambah ${product.name} ke pesanan`}
-                        aria-label={`Tambah ${product.name} ke pesanan`}
-                      >
-                        {isJustAdded ? (
-                          <Check className="w-4 h-4 text-cream stroke-[2.5]" />
-                        ) : (
-                          <ShoppingBag className="w-4 h-4 text-cream stroke-[2]" />
-                        )}
-                      </motion.button>
+                      {/* Action Icons: Eye (Detail Modal) + Shopping Bag (Add to Cart) */}
+                      <div className="flex items-center gap-1.5">
+                        <motion.button
+                          onClick={() => handleCardClick(product)}
+                          whileHover={{ scale: 1.08 }}
+                          whileTap={{ scale: 0.88 }}
+                          transition={{ type: 'spring', stiffness: 450, damping: 20 }}
+                          className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center bg-cream/90 hover:bg-cream border border-espresso/20 text-espresso hover:text-turquoise hover:border-turquoise transition-all duration-200 shadow-xs cursor-pointer"
+                          title={`Lihat detail ${product.name}`}
+                          aria-label={`Lihat detail ${product.name}`}
+                        >
+                          <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2]" />
+                        </motion.button>
+
+                        <motion.button
+                          onClick={(e) => handleAdd(product, e)}
+                          whileHover={{ scale: 1.08 }}
+                          whileTap={{ scale: 0.88 }}
+                          transition={{ type: 'spring', stiffness: 450, damping: 20 }}
+                          className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm cursor-pointer ${
+                            isJustAdded
+                              ? 'bg-emerald-600 text-cream shadow-emerald-600/30 ring-2 ring-emerald-500/30'
+                              : 'bg-turquoise text-cream hover:bg-turquoise-dark shadow-turquoise/25'
+                          }`}
+                          title={isJustAdded ? 'Tersimpan di keranjang' : `Tambah ${product.name} ke pesanan`}
+                          aria-label={`Tambah ${product.name} ke pesanan`}
+                        >
+                          {isJustAdded ? (
+                            <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cream stroke-[2.5]" />
+                          ) : (
+                            <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cream stroke-[2]" />
+                          )}
+                        </motion.button>
+                      </div>
                     </div>
                   </div>
                 );
