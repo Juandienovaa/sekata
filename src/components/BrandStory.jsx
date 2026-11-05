@@ -84,8 +84,8 @@ export default function BrandStory() {
           {/* Sisi Kiri: Foto Roastery & Slowbar Bersih Tanpa Frame Kartu Bertumpuk */}
           <div className="lg:col-span-5 relative rounded-[18px] sm:rounded-[24px] overflow-hidden bg-espresso shadow-md min-h-[360px] sm:min-h-[460px] group">
             <img
-              src="/partner-roasting.jpg"
-              alt="Suasana Roastery & Meja Slowbar Sekata Coffee Tanjungpinang"
+              src="/konten2.jpg"
+              alt="Dokumentasi Suasana Seduhan dan Meja Slowbar Sekata"
               className="w-full h-full object-cover filter contrast-105 brightness-95 transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
