@@ -77,9 +77,8 @@ export default function ContactSection() {
                   <p className="text-coffee-dust uppercase mb-1.5 flex items-center gap-1.5 font-medium">
                     <Clock className="w-3.5 h-3.5 text-turquoise" /> JAM OPERASIONAL
                   </p>
-                  <p className="text-espresso">Buka Setiap Hari: 10.00 – 00.00 WIB</p>
-                  <p className="text-espresso">Tutup Pukul 00.00 WIB</p>
-                  <p className="text-turquoise font-medium mt-2">&bull; Slowbar buka setiap hari</p>
+                  <p className="text-espresso font-medium">Buka Setiap Hari: 10:00 &ndash; 00:00 WIB</p>
+                  <p className="text-turquoise font-medium mt-1.5">&bull; Slowbar &amp; space siap menyeduh</p>
                 </div>
               </div>
 

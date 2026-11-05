@@ -132,7 +132,7 @@ export default function Footer() {
                 <p className="text-espresso font-medium">Sekata Coffee &amp; Space</p>
                 <p className="text-[#6b584f]">Jln Bunguran No.53, Sei Jang, Bukit Bestari</p>
                 <p className="text-[#6b584f]">Kota Tanjung Pinang, Kepri 29113</p>
-                <p className="text-[#6b584f] mt-1">Buka Setiap Hari: 10.00 – 00.00 WIB</p>
+                <p className="text-[#6b584f] mt-1 font-medium">Buka Setiap Hari: 10:00 &ndash; 00:00 WIB</p>
               </div>
               <div className="pt-2 border-t border-espresso/10">
                 <p className="text-espresso font-medium">Kontak &amp; Sosial</p>

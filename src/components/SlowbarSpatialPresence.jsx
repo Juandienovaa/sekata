@@ -63,14 +63,6 @@ export default function SlowbarSpatialPresence() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20" />
 
-          {/* Floating Spatial Stamp Badge */}
-          <div className="absolute top-5 left-5 sm:top-7 sm:left-7 z-10">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-cream font-mono text-[11px] uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span>ROASTERY &bull; SLOWBAR SEDUHAN</span>
-            </span>
-          </div>
-
           {/* Bottom Overlaid Aesthetic Tag */}
           <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8 z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-cream">
             <div className="max-w-xl text-left">
@@ -84,7 +76,7 @@ export default function SlowbarSpatialPresence() {
 
             <div className="text-left sm:text-right flex-shrink-0">
               <span className="inline-block px-3 py-1 rounded-[6px] bg-white/10 backdrop-blur-sm border border-white/15 text-xs font-mono text-cream/90">
-                BUKA SETIAP HARI &bull; s/d 00:00 WIB
+                BUKA SETIAP HARI &bull; 10:00 &ndash; 00:00 WIB
               </span>
             </div>
           </div>

@@ -63,13 +63,13 @@ export default function BrandStory() {
             </p>
           </div>
 
-          <div className="lg:col-span-6 font-sans text-[15px] sm:text-[16px] leading-[1.75] text-espresso/80 font-normal">
+          <div className="lg:col-span-6 font-sans text-[16px] sm:text-[18px] leading-[1.7] text-espresso font-normal">
             <p>
               Tanpa sekat pemisah, tanpa istilah kopi yang rumit dan mengintimidasi. Kami percaya obrolan terbaik tentang kehidupan selalu dimulai saat kita duduk sejajar, menghela napas, dan merayakan perjumpaan di tengah hangatnya seduhan lokal Nusantara.
             </p>
-            <div className="mt-4 pt-4 border-t border-espresso/10 flex items-center justify-between text-xs font-mono text-espresso/60">
+            <div className="mt-4 pt-4 border-t border-espresso/15 flex items-center justify-between text-xs font-mono text-espresso font-semibold">
               <span>SLOWBAR &bull; SINGLE ORIGIN ROASTERY</span>
-              <span className="text-turquoise font-semibold">EST. 2026 &bull; #KECILBERTUMBUH</span>
+              <span className="text-turquoise font-bold">EST. 2026 &bull; #KECILBERTUMBUH</span>
             </div>
           </div>
 
@@ -89,14 +89,6 @@ export default function BrandStory() {
               className="w-full h-full object-cover filter contrast-105 brightness-95 transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            
-            {/* Minimalist Floating Tag */}
-            <div className="absolute top-4 left-4 z-10">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-cream font-mono text-[10px] sm:text-[11px] uppercase tracking-wider">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                <span>DOKUMENTER MEJA SLOWBAR</span>
-              </span>
-            </div>
 
             {/* Bottom Photo Caption */}
             <div className="absolute bottom-5 left-5 right-5 z-10 text-cream text-left">

@@ -260,12 +260,6 @@ export default function AnimatedCrowdCanvas({
       className={`relative w-full overflow-hidden select-none border-b-hairline bg-cream ${className}`}
       style={{ height }}
     >
-      {/* Decorative Top Caption */}
-      <div className="absolute top-3 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 px-3 py-1 bg-cream/90 backdrop-blur-sm rounded-[3px] border-hairline text-[10px] font-mono text-coffee-dust uppercase tracking-[0.08em] shadow-sm">
-        <span className="w-1.5 h-1.5 rounded-full bg-turquoise animate-ping"></span>
-        <span>WARGA &amp; PENGUNJUNG BERLALU-LALANG DI SEKATA &bull; #KECILBERTUMBUH</span>
-      </div>
-
       {/* The Animated Canvas */}
       <canvas
         ref={canvasRef}
