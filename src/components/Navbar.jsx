@@ -190,20 +190,21 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
 
       {/* 
         ========================================================================
-        2. FULLSCREEN NAVIGATION MENU — PERSIS SEPERTI GAMBAR 2 (SERU.NI STYLE)
-        4 Menu Utama: HOME, MENU, FILOSOFI KAMI, LOKASI KAMI
-        Tipografi tebal, percaya diri, rapi, dan bersih
+        2. FULLSCREEN NAVIGATION MENU — CIRCULAR WIPE TRANSITION (OPEN & CLOSE)
+        Persis sama animasinya saat buka dan tutup:
+        Mengembang melingkar saat dibuka & menyusut halus saat ditutup
         ========================================================================
       */}
       <div
-        className="fixed inset-0 z-50 transition-all duration-600 ease-[cubic-bezier(0.77,0,0.175,1)]"
+        className="fixed inset-0 z-50 select-none overflow-hidden"
         style={{
           clipPath: isMenuOpen
             ? 'circle(150% at calc(100% - 48px) 40px)'
             : 'circle(0% at calc(100% - 48px) 40px)',
-          pointerEvents: isMenuOpen ? 'auto' : 'none',
-          visibility: isMenuOpen ? 'visible' : 'hidden'
+          transition: 'clip-path 600ms cubic-bezier(0.77, 0, 0.175, 1)',
+          pointerEvents: isMenuOpen ? 'auto' : 'none'
         }}
+        aria-hidden={!isMenuOpen}
       >
         <div className="w-full h-full max-h-[100dvh] bg-[#0c0807] text-cream flex flex-col justify-between overflow-y-auto sm:overflow-hidden p-6 sm:p-8 lg:p-12 select-none relative">
           
@@ -250,9 +251,12 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                       onClick={(e) => handleNavigate(e, item.href)}
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
-                      className={`group block py-1 sm:py-2 transition-all duration-300 ${
-                        isDimmed ? 'opacity-30 blur-[0.4px]' : 'opacity-100'
-                      }`}
+                      style={{
+                        transform: isMenuOpen ? 'translateX(0)' : 'translateX(-28px)',
+                        opacity: isMenuOpen ? (isDimmed ? 0.3 : 1) : 0,
+                        transition: `transform 600ms cubic-bezier(0.16, 1, 0.3, 1) ${index * 70 + 180}ms, opacity 450ms ease ${index * 70 + 180}ms`
+                      }}
+                      className="group block py-1 sm:py-2"
                     >
                       <span
                         className={`font-sans font-black text-[42px] xs:text-[48px] sm:text-[64px] md:text-[76px] lg:text-[88px] leading-[0.98] uppercase tracking-tight transition-all duration-300 inline-flex items-center gap-3 sm:gap-6 ${

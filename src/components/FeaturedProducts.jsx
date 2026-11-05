@@ -59,42 +59,43 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
     <section id="menu" className="w-full py-12 sm:py-20 bg-cream border-b-hairline scroll-mt-20">
       <div className="container-max">
         
-        {/* Section Header — Refined Editorial & High-Conversion Promotional Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 pb-8 border-b border-espresso/15">
-          <div className="max-w-2xl">
-            {/* Promotional Tag & Promo Code Pill */}
-            <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="w-2 h-2 rounded-full bg-turquoise animate-pulse" />
-              <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-turquoise font-bold">
-                KURASI RASA &bull; SEDUHAN RESMI KEDAI
-              </span>
-              <span className="hidden sm:inline text-espresso/25">&bull;</span>
-              <span className="inline-flex items-center gap-1.5 font-mono text-[10.5px] sm:text-[11px] text-espresso/80 bg-[#ede4d8] px-2.5 py-0.5 rounded-full border border-espresso/15">
-                <Sparkles className="w-3 h-3 text-turquoise" />
-                <span>KODE HEMAT: <strong className="text-turquoise font-bold">SEKATA10</strong> (DISKON 10%)</span>
-              </span>
-            </div>
-
-            {/* Powerful, Aesthetic Headline */}
-            <h2 className="font-sans font-black text-[34px] sm:text-[48px] lg:text-[58px] leading-[0.95] text-espresso tracking-[-0.04em] uppercase mb-3">
-              Diseduh dengan Niat, <br className="hidden sm:inline" />
-              <span className="text-turquoise italic font-bold">Dinikmati dengan Santai.</span>
-            </h2>
-
-            {/* Clear Promotional Subtitle */}
-            <p className="text-[14px] sm:text-[15.5px] font-sans text-[#6b584f] max-w-xl leading-relaxed">
-              Dari manual brew berkarakter dan espresso legit, hingga minuman buah segar dan camilan pendamping obrolan. Pilih format visual kartu atau papan menu kedai di bawah.
-            </p>
+        {/* Section Header — Spacious Editorial Layout (Solves Cramped Typography Bug in Gambar 1) */}
+        <div className="mb-10 text-left">
+          
+          {/* Top Promotional Kicker & Voucher */}
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3.5">
+            <span className="w-2 h-2 rounded-full bg-turquoise animate-pulse" />
+            <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-turquoise font-bold">
+              KURASI RASA &bull; SEDUHAN ASLI KEDAI
+            </span>
+            <span className="text-espresso/25">&bull;</span>
+            <span className="inline-flex items-center gap-1.5 font-mono text-[10.5px] sm:text-[11px] text-espresso/80 bg-[#ede4d8] px-2.5 py-0.5 rounded-full border border-espresso/15">
+              <Sparkles className="w-3 h-3 text-turquoise" />
+              <span>VOUCHER: <strong className="text-turquoise font-bold">SEKATA10</strong> (DISKON 10%)</span>
+            </span>
           </div>
 
-          {/* Controls: View Mode Switcher + Category Tabs */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 shrink-0">
+          {/* Generous Full-Width Headline (Never wraps single words) */}
+          <h2 className="font-sans font-black text-[30px] sm:text-[42px] lg:text-[52px] leading-[1.02] text-espresso tracking-[-0.03em] uppercase mb-3 max-w-4xl">
+            Diseduh dengan Niat,{' '}
+            <span className="text-turquoise italic font-bold">
+              Dinikmati dengan Santai.
+            </span>
+          </h2>
+
+          {/* Clear Supporting Subtitle */}
+          <p className="text-[14px] sm:text-[16px] font-sans text-[#6b584f] max-w-2xl leading-relaxed">
+            Dari racikan manual brew Nusantara dan espresso legit, hingga minuman buah dingin serta camilan hangat. Pilih tampilan kartu foto atau papan menu kedai lengkap di bawah.
+          </p>
+
+          {/* Dedicated Controls Toolbar (View Switcher + Category Filters) */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mt-6 pt-6 border-t border-espresso/15">
             
-            {/* View Mode Switcher (Kartu Foto vs Papan Menu Kedai) — Aesthetic Pill */}
-            <div className="flex items-center bg-[#ede4d8] p-1 rounded-full border border-espresso/15 shadow-inner">
+            {/* View Mode Switcher (Kartu Foto vs Papan Menu Kedai) */}
+            <div className="inline-flex items-center bg-[#ede4d8] p-1 rounded-full border border-espresso/15 shadow-inner self-start">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-all duration-200 active:scale-[0.97] ${
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-all duration-200 active:scale-[0.97] ${
                   viewMode === 'grid'
                     ? 'bg-cream text-espresso shadow-sm'
                     : 'text-[#6b584f] hover:text-espresso'
@@ -107,7 +108,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
 
               <button
                 onClick={() => setViewMode('board')}
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-all duration-200 active:scale-[0.97] ${
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-all duration-200 active:scale-[0.97] ${
                   viewMode === 'board'
                     ? 'bg-espresso text-cream shadow-sm'
                     : 'text-[#6b584f] hover:text-espresso'
@@ -127,7 +128,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                     key={cat.id}
                     onClick={() => {
                       setActiveCategory(cat.id);
-                      setIsExpanded(false); // Reset to 6 cards on category switch
+                      setIsExpanded(false);
                     }}
                     className={`text-[11px] font-mono uppercase tracking-[0.08em] px-3.5 py-2 rounded-full border font-semibold whitespace-nowrap transition-all duration-200 flex-shrink-0 active:scale-95 ${
                       activeCategory === cat.id
@@ -142,6 +143,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
             )}
 
           </div>
+
         </div>
 
         {/* 

@@ -12,6 +12,7 @@ import KecilBertumbuh from './components/KecilBertumbuh';
 import ContactSection from './components/ContactSection';
 import AnimatedCrowdCanvas from './components/AnimatedCrowdCanvas';
 import Footer from './components/Footer';
+import SectionReveal from './components/SectionReveal';
 import QuickViewModal from './components/QuickViewModal';
 import CartDrawer from './components/CartDrawer';
 import SearchModal from './components/SearchModal';
@@ -109,28 +110,42 @@ export default function App() {
 
       <main className="flex-1">
         {/* SECTION COUNTDOWN GRAND OPENING JUMAT MINGGU INI */}
-        <GrandOpeningCountdown />
+        <SectionReveal>
+          <GrandOpeningCountdown />
+        </SectionReveal>
 
         {/* SECTION KOPI & MENU LENGKAP: "Temukan Rasa yang Kamu Suka." */}
-        <FeaturedProducts
-          onQuickView={handleQuickView}
-          onAddToCart={handleAddToCart}
-        />
+        <SectionReveal>
+          <FeaturedProducts
+            onQuickView={handleQuickView}
+            onAddToCart={handleAddToCart}
+          />
+        </SectionReveal>
 
         {/* SECTION FILOSOFI SEKATA DENGAN TICKER MARQUEE DI ATASNYA */}
-        <BrandStory />
+        <SectionReveal>
+          <BrandStory />
+        </SectionReveal>
 
         {/* SECTION READY TO RESERVE — COMPACT & MINIMAL (SESUAI REQUEST USER) */}
-        <ReadyToReserve />
+        <SectionReveal>
+          <ReadyToReserve />
+        </SectionReveal>
 
         {/* SLOWBAR SPATIAL PRESENCE — MINIM TULISAN & MENGUATKAN BRAND */}
-        <SlowbarSpatialPresence />
+        <SectionReveal>
+          <SlowbarSpatialPresence />
+        </SectionReveal>
 
         {/* SECTION 7 — #KECILBERTUMBUH: "Kecil Bertumbuh, Bersama Menjadi Berarti." */}
-        <KecilBertumbuh />
+        <SectionReveal>
+          <KecilBertumbuh />
+        </SectionReveal>
 
         {/* SECTION 8 — KUNJUNGI KAMI: "Yuk, Bertemu di Sekata." */}
-        <ContactSection />
+        <SectionReveal>
+          <ContactSection />
+        </SectionReveal>
 
         {/* ANIMATED LIVING CROWD — KARIKATUR WARGA BERJALAN INTERAKTIF */}
         <AnimatedCrowdCanvas height="240px" />
