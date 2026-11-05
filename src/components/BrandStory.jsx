@@ -40,15 +40,15 @@ export default function BrandStory() {
         {/* TOP LABEL & BIG MEMORABLE HOOK */}
         <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-2 h-2 rounded-full bg-burnt-orange" />
-            <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-burnt-orange font-semibold">
+            <span className="w-2 h-2 rounded-full bg-turquoise" />
+            <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-turquoise font-semibold">
               FILOSOFI SLOWBAR &bull; TANJUNGPINANG
             </span>
           </div>
 
           <h2 className="font-sans font-black text-[36px] sm:text-[54px] lg:text-[68px] leading-[0.98] tracking-[-0.04em] text-espresso uppercase max-w-5xl">
             Di Tanjungpinang, waktu sering berjalan terburu-buru.{' '}
-            <span className="text-burnt-orange italic font-bold">
+            <span className="text-turquoise italic font-bold">
               Kami memilih melambat.
             </span>
           </h2>
@@ -59,7 +59,7 @@ export default function BrandStory() {
           
           <div className="lg:col-span-6 font-sans text-[16px] sm:text-[18px] leading-[1.7] text-espresso font-normal">
             <p>
-              Sekata hadir di sudut Tanjungpinang Barat bukan sekadar untuk menjual kafein harian, melainkan sebagai ruang jeda bersama. Meja slowbar kami adalah panggung terbuka: tempat barista menyeduh dengan kesadaran penuh, dan setiap cangkir menjadi awal perjumpaan yang jujur.
+              Sekata Coffee &amp; Space hadir di Sei Jang bukan sekadar untuk menjual kafein harian, melainkan sebagai ruang jeda bersama. Meja slowbar kami adalah panggung terbuka: tempat barista menyeduh dengan kesadaran penuh, dan setiap cangkir menjadi awal perjumpaan yang jujur.
             </p>
           </div>
 
@@ -68,8 +68,8 @@ export default function BrandStory() {
               Tanpa sekat pemisah, tanpa istilah kopi yang rumit dan mengintimidasi. Kami percaya obrolan terbaik tentang kehidupan selalu dimulai saat kita duduk sejajar, menghela napas, dan merayakan perjumpaan di tengah hangatnya seduhan lokal Nusantara.
             </p>
             <div className="mt-4 pt-4 border-t border-espresso/10 flex items-center justify-between text-xs font-mono text-espresso/60">
-              <span>📍 JL. YOS SUDARSO, TANJUNGPINANG</span>
-              <span className="text-burnt-orange font-semibold">EST. 2026 &bull; #KECILBERTUMBUH</span>
+              <span>📍 JLN BUNGURAN NO.53, SEI JANG</span>
+              <span className="text-turquoise font-semibold">EST. 2026 &bull; #KECILBERTUMBUH</span>
             </div>
           </div>
 
@@ -119,12 +119,12 @@ export default function BrandStory() {
                 }`}
               >
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="font-mono text-xs font-bold text-burnt-orange tracking-widest">
+                  <span className="font-mono text-xs font-bold text-turquoise tracking-widest">
                     {p.num} &bull; {p.tag}
                   </span>
                 </div>
 
-                <h3 className="font-sans font-bold text-[22px] sm:text-[26px] text-espresso mb-2 tracking-tight group-hover:text-burnt-orange transition-colors">
+                <h3 className="font-sans font-bold text-[22px] sm:text-[26px] text-espresso mb-2 tracking-tight group-hover:text-turquoise transition-colors">
                   {p.title}
                 </h3>
 

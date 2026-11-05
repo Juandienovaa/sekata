@@ -115,11 +115,11 @@ export default function ColorfulStatement() {
   const getColorClass = (color) => {
     switch (color) {
       case 'orange':
-        return 'text-burnt-orange font-semibold';
-      case 'turquoise':
         return 'text-turquoise font-semibold';
+      case 'turquoise':
+        return 'text-turquoise font-bold';
       case 'amber':
-        return 'text-amber font-semibold';
+        return 'text-turquoise-dark font-semibold';
       case 'dusty-blue':
         return 'text-dusty-blue font-semibold';
       default:
@@ -158,13 +158,13 @@ export default function ColorfulStatement() {
               <div className="w-20 sm:w-28 h-[3px] bg-espresso/15 rounded-full overflow-hidden">
                 <div
                   ref={progressBarRef}
-                  className="h-full bg-burnt-orange rounded-full origin-left transition-transform duration-75"
+                  className="h-full bg-turquoise rounded-full origin-left transition-transform duration-75"
                   style={{ transform: 'scaleX(0)' }}
                 />
               </div>
               <span
                 ref={counterRef}
-                className="text-[12px] sm:text-[13px] font-mono text-burnt-orange font-bold min-w-[36px] text-right"
+                className="text-[12px] sm:text-[13px] font-mono text-turquoise font-bold min-w-[36px] text-right"
               >
                 0%
               </span>
@@ -199,8 +199,8 @@ export default function ColorfulStatement() {
                 <span className="w-1.5 h-1.5 rounded-full bg-turquoise" />
                 Meja Slowbar Interaktif
               </span>
-              <span className="text-burnt-orange font-medium flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-burnt-orange" />
+              <span className="text-turquoise font-medium flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-turquoise" />
                 Tempat Bertukar Cerita
               </span>
               <span className="text-amber font-medium flex items-center gap-1.5">

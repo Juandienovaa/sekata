@@ -68,7 +68,7 @@ export default function CartDrawer({
   const waItemsText = cartItems
     .map((item) => `- ${item.quantity}x ${item.name} (${item.size}${item.temperature ? ', ' + item.temperature : ''}): ${formatRupiah(item.price * item.quantity)}`)
     .join('%0A');
-  const waUrl = `https://wa.me/6283125525115?text=Halo%20Sekata%20Coffee,%20saya%20mau%20pesan:%0A${waItemsText}%0A%0ACatatan:%20${encodeURIComponent(grindPreference)}%0ATotal:%20${encodeURIComponent(formatRupiah(finalTotal))}`;
+  const waUrl = `https://wa.me/6281991445331?text=Halo%20Sekata%20Coffee,%20saya%20mau%20pesan:%0A${waItemsText}%0A%0ACatatan:%20${encodeURIComponent(grindPreference)}%0ATotal:%20${encodeURIComponent(formatRupiah(finalTotal))}`;
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">

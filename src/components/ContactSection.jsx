@@ -68,8 +68,8 @@ export default function ContactSection() {
                   <p className="text-coffee-dust uppercase mb-1.5 flex items-center gap-1.5 font-medium">
                     <MapPin className="w-3.5 h-3.5 text-turquoise" /> ALAMAT KEDAI
                   </p>
-                  <p className="text-espresso font-medium">Jl. Yos Sudarso, Tanjungpinang Barat</p>
-                  <p className="text-espresso">Kota Tanjungpinang, Kepulauan Riau</p>
+                  <p className="text-espresso font-medium">Jln Bunguran No.53, Sei Jang</p>
+                  <p className="text-espresso">Bukit Bestari, Kota Tanjung Pinang 29113</p>
                   <p className="text-coffee-dust mt-2">Area nyaman, parkir mudah, dan suasana tenang.</p>
                 </div>
 
@@ -77,8 +77,8 @@ export default function ContactSection() {
                   <p className="text-coffee-dust uppercase mb-1.5 flex items-center gap-1.5 font-medium">
                     <Clock className="w-3.5 h-3.5 text-turquoise" /> JAM OPERASIONAL
                   </p>
-                  <p className="text-espresso">Senin – Jumat: 10.00 – 22.00 WIB</p>
-                  <p className="text-espresso">Sabtu – Minggu: 09.00 – 23.00 WIB</p>
+                  <p className="text-espresso">Buka Setiap Hari: 10.00 – 00.00 WIB</p>
+                  <p className="text-espresso">Tutup Pukul 00.00 WIB</p>
                   <p className="text-turquoise font-medium mt-2">&bull; Slowbar buka setiap hari</p>
                 </div>
               </div>
@@ -94,12 +94,12 @@ export default function ContactSection() {
                   <ExternalLink className="w-3 h-3 text-turquoise" />
                 </a>
                 <a
-                  href="https://www.tiktok.com/@sekatatnj"
+                  href="https://wa.me/6281991445331"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-espresso hover:text-turquoise flex items-center gap-1 font-medium"
                 >
-                  <span>TikTok: @sekatatnj</span>
+                  <span>WhatsApp: 0819-9144-5331</span>
                   <ExternalLink className="w-3 h-3 text-turquoise" />
                 </a>
               </div>
@@ -119,10 +119,10 @@ export default function ContactSection() {
                 </div>
               </div>
               <a
-                href="https://wa.me/6283125525115?text=Halo%20Sekata,%20saya%20mau%20tanya%20seputar%20kedai"
+                href="https://wa.me/6281991445331?text=Halo%20Sekata,%20saya%20mau%20tanya%20seputar%20kedai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-filled text-xs py-2.5 px-5 bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] whitespace-nowrap transition-all duration-200 ease-out active:scale-[0.97]"
+                className="btn-filled text-xs py-2.5 px-5 bg-turquoise border-turquoise hover:bg-turquoise-dark text-cream rounded-[6px] whitespace-nowrap transition-all duration-200 ease-out active:scale-[0.97]"
               >
                 CHAT WHATSAPP &rarr;
               </a>
@@ -161,7 +161,7 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="cth. Bagas Pratama"
-                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso placeholder:text-coffee-dust/50 focus:border-burnt-orange focus:ring-2 focus:ring-burnt-orange/20 focus:outline-none transition-all"
+                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso placeholder:text-coffee-dust/50 focus:border-turquoise focus:ring-2 focus:ring-turquoise/20 focus:outline-none transition-all"
                   />
                 </div>
 
@@ -174,7 +174,7 @@ export default function ContactSection() {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="cth. 0812 3456 7890"
-                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso placeholder:text-coffee-dust/50 focus:border-burnt-orange focus:ring-2 focus:ring-burnt-orange/20 focus:outline-none transition-all"
+                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso placeholder:text-coffee-dust/50 focus:border-turquoise focus:ring-2 focus:ring-turquoise/20 focus:outline-none transition-all"
                   />
                 </div>
 
@@ -185,7 +185,7 @@ export default function ContactSection() {
                   <select
                     value={formData.topic}
                     onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso focus:border-burnt-orange focus:ring-2 focus:ring-burnt-orange/20 focus:outline-none transition-all cursor-pointer"
+                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso focus:border-turquoise focus:ring-2 focus:ring-turquoise/20 focus:outline-none transition-all cursor-pointer"
                   >
                     <option value="Tanya Menu / Reservasi">Tanya Menu / Reservasi Meja</option>
                     <option value="Biji Kopi & Kebutuhan Kantor">Beli Biji Kopi / Kebutuhan Kafe</option>
@@ -204,12 +204,12 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Ceritakan rencana kunjungan, pertanyaan biji kopi, atau sekadar menyapa..."
-                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso placeholder:text-coffee-dust/50 focus:border-burnt-orange focus:ring-2 focus:ring-burnt-orange/20 focus:outline-none resize-none transition-all"
+                    className="w-full px-3.5 py-2.5 text-sm font-body bg-white/90 border border-espresso/20 rounded-[6px] text-espresso placeholder:text-coffee-dust/50 focus:border-turquoise focus:ring-2 focus:ring-turquoise/20 focus:outline-none resize-none transition-all"
                   />
                 </div>
 
                 <div className="pt-2">
-                  <button type="submit" className="btn-filled w-full py-3 text-xs tracking-[0.08em] font-bold bg-burnt-orange border-burnt-orange hover:bg-espresso text-cream rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97] shadow-sm">
+                  <button type="submit" className="btn-filled w-full py-3 text-xs tracking-[0.08em] font-bold bg-turquoise border-turquoise hover:bg-turquoise-dark text-cream rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97] shadow-sm">
                     KIRIM PESAN SEKARANG
                   </button>
                 </div>

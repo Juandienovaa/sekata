@@ -64,21 +64,21 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
           <div className="max-w-2xl">
             {/* Promotional Tag & Promo Code Pill */}
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="w-2 h-2 rounded-full bg-burnt-orange animate-pulse" />
-              <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-burnt-orange font-bold">
+              <span className="w-2 h-2 rounded-full bg-turquoise animate-pulse" />
+              <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-turquoise font-bold">
                 KURASI RASA &bull; SEDUHAN RESMI KEDAI
               </span>
               <span className="hidden sm:inline text-espresso/25">&bull;</span>
               <span className="inline-flex items-center gap-1.5 font-mono text-[10.5px] sm:text-[11px] text-espresso/80 bg-[#ede4d8] px-2.5 py-0.5 rounded-full border border-espresso/15">
-                <Sparkles className="w-3 h-3 text-burnt-orange" />
-                <span>KODE HEMAT: <strong className="text-burnt-orange font-bold">SEKATA10</strong> (DISKON 10%)</span>
+                <Sparkles className="w-3 h-3 text-turquoise" />
+                <span>KODE HEMAT: <strong className="text-turquoise font-bold">SEKATA10</strong> (DISKON 10%)</span>
               </span>
             </div>
 
             {/* Powerful, Aesthetic Headline */}
             <h2 className="font-sans font-black text-[34px] sm:text-[48px] lg:text-[58px] leading-[0.95] text-espresso tracking-[-0.04em] uppercase mb-3">
               Diseduh dengan Niat, <br className="hidden sm:inline" />
-              <span className="text-burnt-orange italic font-bold">Dinikmati dengan Santai.</span>
+              <span className="text-turquoise italic font-bold">Dinikmati dengan Santai.</span>
             </h2>
 
             {/* Clear Promotional Subtitle */}
@@ -131,7 +131,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                     }}
                     className={`text-[11px] font-mono uppercase tracking-[0.08em] px-3.5 py-2 rounded-full border font-semibold whitespace-nowrap transition-all duration-200 flex-shrink-0 active:scale-95 ${
                       activeCategory === cat.id
-                        ? 'bg-burnt-orange text-cream border-burnt-orange shadow-sm'
+                        ? 'bg-turquoise text-cream border-turquoise shadow-sm'
                         : 'bg-cream/80 text-espresso border-espresso/15 hover:border-espresso hover:bg-cream'
                     }`}
                   >

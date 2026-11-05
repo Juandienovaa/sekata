@@ -139,7 +139,7 @@ export default function GrandOpeningCountdown() {
         {/* Bordered Pill CTA Button with Tactile Scale Physics */}
         <div>
           <a
-            href="https://wa.me/6283125525115?text=Halo%20Sekata,%20saya%20mau%20daftar%20waitlist%20Grand%20Opening%20Jumat%20ini!"
+            href="https://wa.me/6281991445331?text=Halo%20Sekata,%20saya%20mau%20daftar%20waitlist%20Grand%20Opening%20Jumat%20ini!"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-7 sm:px-12 py-3.5 sm:py-4 rounded-full border border-cream/70 text-cream font-mono text-xs sm:text-sm uppercase tracking-[0.14em] font-semibold hover:bg-cream hover:text-espresso hover:border-cream transition-all duration-200 ease-out shadow-lg group active:scale-[0.97]"

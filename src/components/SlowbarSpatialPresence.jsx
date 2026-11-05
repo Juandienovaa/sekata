@@ -31,8 +31,8 @@ export default function SlowbarSpatialPresence() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-espresso/15">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="w-2 h-2 rounded-full bg-burnt-orange" />
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-burnt-orange font-semibold">
+              <span className="w-2 h-2 rounded-full bg-turquoise" />
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-turquoise font-semibold">
                 RUANG &bull; SLOWBAR EXPERIENCE
               </span>
             </div>
@@ -49,7 +49,7 @@ export default function SlowbarSpatialPresence() {
               Slowbar independen di pesisir Tanjungpinang. Menghadirkan ritual seduhan kopi yang jujur dan kehangatan bertukar cerita kehidupan.
             </p>
             <div className="mt-2 font-mono text-[11px] text-espresso/50 uppercase tracking-wider">
-              0&deg;55&apos;18&quot;N 104&deg;27&apos;06&quot;E &bull; TANJUNGPINANG BARAT
+              SEI JANG, BUKIT BESTARI &bull; TANJUNGPINANG
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function SlowbarSpatialPresence() {
 
             <div className="text-left sm:text-right flex-shrink-0">
               <span className="inline-block px-3 py-1 rounded-[6px] bg-white/10 backdrop-blur-sm border border-white/15 text-xs font-mono text-cream/90">
-                BUKA SETIAP HARI &bull; 10:00 &ndash; 22:00 WIB
+                BUKA SETIAP HARI &bull; s/d 00:00 WIB
               </span>
             </div>
           </div>
@@ -100,10 +100,10 @@ export default function SlowbarSpatialPresence() {
                 className="bg-[#faf5ef] rounded-[18px] p-6 border border-espresso/10 hover:border-espresso/30 transition-all duration-200 group"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs font-bold text-burnt-orange tracking-wider">
+                  <span className="font-mono text-xs font-bold text-turquoise tracking-wider">
                     {p.number}
                   </span>
-                  <Icon className="w-4 h-4 text-espresso/40 group-hover:text-burnt-orange transition-colors" />
+                  <Icon className="w-4 h-4 text-espresso/40 group-hover:text-turquoise transition-colors" />
                 </div>
                 <h3 className="font-sans font-bold text-[16px] sm:text-[17px] text-espresso mb-1.5 tracking-tight">
                   {p.title}

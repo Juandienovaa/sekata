@@ -129,15 +129,15 @@ export default function Footer() {
             </p>
             <div className="space-y-3 font-body text-[13px] sm:text-[14px] text-[#5c4d44]">
               <div>
-                <p className="text-espresso font-medium">Sekata Slowbar Tanjungpinang</p>
-                <p className="text-[#6b584f]">Kepulauan Riau &bull; Indonesia</p>
-                <p className="text-[#6b584f] mt-1">Senin – Jumat: 10.00 – 22.00 WIB</p>
-                <p className="text-[#6b584f]">Sabtu – Minggu: 09.00 – 23.00 WIB</p>
+                <p className="text-espresso font-medium">Sekata Coffee &amp; Space</p>
+                <p className="text-[#6b584f]">Jln Bunguran No.53, Sei Jang, Bukit Bestari</p>
+                <p className="text-[#6b584f]">Kota Tanjung Pinang, Kepri 29113</p>
+                <p className="text-[#6b584f] mt-1">Buka Setiap Hari: 10.00 – 00.00 WIB</p>
               </div>
               <div className="pt-2 border-t border-espresso/10">
-                <p className="text-espresso font-medium">Media Sosial</p>
+                <p className="text-espresso font-medium">Kontak &amp; Sosial</p>
+                <p className="text-[#6b584f]">WhatsApp: <a href="https://wa.me/6281991445331" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">0819-9144-5331</a></p>
                 <p className="text-[#6b584f]">Instagram: <a href="https://instagram.com/sekata.tnj" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@sekata.tnj</a></p>
-                <p className="text-[#6b584f]">TikTok: <a href="https://tiktok.com/@sekatatnj" target="_blank" rel="noopener noreferrer" className="text-turquoise hover:underline">@sekatatnj</a></p>
               </div>
             </div>
           </div>

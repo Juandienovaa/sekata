@@ -257,17 +257,17 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                       <span
                         className={`font-sans font-black text-[42px] xs:text-[48px] sm:text-[64px] md:text-[76px] lg:text-[88px] leading-[0.98] uppercase tracking-tight transition-all duration-300 inline-flex items-center gap-3 sm:gap-6 ${
                           isHovered
-                            ? 'text-burnt-orange translate-x-3'
-                            : index === 1 // MENU default highlight seperti ORDER ONLINE di Gambar 2
-                            ? 'text-burnt-orange hover:text-burnt-orange'
-                            : 'text-cream hover:text-burnt-orange'
+                            ? 'text-turquoise translate-x-3'
+                            : index === 1
+                            ? 'text-turquoise hover:text-turquoise'
+                            : 'text-cream hover:text-turquoise'
                         }`}
                       >
                         <span>{item.title}</span>
                         <ArrowUpRight
                           className={`w-6 h-6 sm:w-10 sm:h-10 transition-all duration-300 ${
                             isHovered
-                              ? 'opacity-100 translate-x-1.5 -translate-y-1.5 text-burnt-orange scale-100'
+                              ? 'opacity-100 translate-x-1.5 -translate-y-1.5 text-turquoise scale-100'
                               : 'opacity-0 scale-75'
                           }`}
                         />
@@ -277,70 +277,47 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
                 })}
               </nav>
 
-              {/* Sisi Kanan: Informasi Kontak & Alamat Sekata yang Simple (Persis Request User) */}
+              {/* Sisi Kanan: Informasi Kedai Simple & To the Point (Persis Request User Gambar 3) */}
               <div className="lg:col-span-5 flex flex-col justify-center text-left pl-0 lg:pl-12 mt-8 lg:mt-0 border-t lg:border-t-0 lg:border-l border-cream/15 pt-6 lg:pt-0">
-                <div className="space-y-6 text-cream/90">
+                <div className="space-y-5">
                   
-                  {/* Subtle Badge */}
+                  {/* Brand & Address */}
                   <div>
-                    <span className="inline-block px-3 py-1 rounded-full bg-cream/10 border border-cream/20 text-marigold font-mono text-[11px] uppercase tracking-[0.14em] font-semibold">
-                      RUANG KOMUNAL &bull; TANJUNGPINANG
+                    <span className="font-mono text-[11px] text-turquoise tracking-[0.18em] uppercase font-bold block mb-1">
+                      KEDAI &bull; TANJUNGPINANG
                     </span>
+                    <h3 className="font-sans font-bold text-[22px] sm:text-[24px] text-cream mb-1 tracking-tight">
+                      Sekata Coffee &amp; Space
+                    </h3>
+                    <p className="font-sans text-[14px] sm:text-[15px] text-cream/75 leading-relaxed">
+                      Jln Bunguran No.53, Sei Jang, Bukit Bestari, Kota Tanjung Pinang, Kepulauan Riau 29113
+                    </p>
+                    <p className="font-mono text-xs text-turquoise-light/80 mt-1.5 flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span>Buka Setiap Hari &bull; Tutup pukul 00:00 WIB</span>
+                    </p>
                   </div>
 
-                  {/* Telepon / WhatsApp */}
-                  <div>
-                    <span className="block font-mono text-[11px] text-cream/50 uppercase tracking-[0.12em] mb-1">
-                      KONTAK &bull; RESERVASI
-                    </span>
+                  {/* Clean Direct Actions: WhatsApp & Instagram */}
+                  <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <a
-                      href="https://wa.me/6283125525115"
+                      href="https://wa.me/6281991445331?text=Halo%20Sekata!%20Saya%20ingin%20tanya%20seputar%20kedai%20atau%20reservasi."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-cream/90 hover:text-burnt-orange transition-colors group"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-sans text-xs font-bold uppercase tracking-wider bg-turquoise text-cream hover:bg-turquoise-dark transition-all duration-200 active:scale-95 shadow-md shadow-turquoise/20"
                     >
-                      <Phone className="w-4 h-4 text-marigold group-hover:text-burnt-orange transition-colors flex-shrink-0" />
-                      <span className="font-sans text-[17px] sm:text-[19px] tracking-wide font-medium">
-                        +62 831-2552-5115
-                      </span>
+                      <Phone className="w-3.5 h-3.5" />
+                      <span>WhatsApp: 0819-9144-5331</span>
                     </a>
-                  </div>
 
-                  {/* Email */}
-                  <div>
-                    <span className="block font-mono text-[11px] text-cream/50 uppercase tracking-[0.12em] mb-1">
-                      SUREL RESMI
-                    </span>
                     <a
-                      href="mailto:halo@sekatacoffee.com"
-                      className="flex items-center gap-3 text-cream/90 hover:text-burnt-orange transition-colors group"
+                      href="https://instagram.com/sekata.tnj"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-sans text-xs font-semibold bg-white/10 hover:bg-white/20 text-cream transition-all duration-200 active:scale-95"
                     >
-                      <Mail className="w-4 h-4 text-marigold group-hover:text-burnt-orange transition-colors flex-shrink-0" />
-                      <span className="font-sans text-[16px] sm:text-[18px] tracking-wide font-normal">
-                        halo@sekatacoffee.com
-                      </span>
+                      <span>@sekata.tnj</span>
                     </a>
-                  </div>
-
-                  {/* Alamat Sekata yang Simple Persis Permintaan User */}
-                  <div>
-                    <span className="block font-mono text-[11px] text-cream/50 uppercase tracking-[0.12em] mb-1">
-                      LOKASI KEDAI
-                    </span>
-                    <div className="flex items-start gap-3">
-                      <MapPin className="w-4 h-4 text-marigold flex-shrink-0 mt-1" />
-                      <p className="font-sans text-[15px] sm:text-[16px] text-cream/85 leading-relaxed font-normal">
-                        Jl. Yos Sudarso, Tanjungpinang Barat, Kota Tanjungpinang, Kepulauan Riau
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Jam Buka */}
-                  <div className="pt-2">
-                    <span className="inline-flex items-center gap-2 text-xs font-mono text-cream/70 bg-cream/5 px-3 py-1.5 rounded-[6px] border border-cream/10">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>Buka Setiap Hari: 10:00 &ndash; 22:00 WIB</span>
-                    </span>
                   </div>
 
                 </div>
@@ -350,39 +327,16 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
           </div>
 
           {/* 
-            BOTTOM AREA: Clean, Minimalist Contact & Social Info
+            BOTTOM AREA: Clean, Minimalist (No duplicate text)
           */}
           <div className="relative z-10 w-full border-t border-cream/15 pt-4 sm:pt-5 flex-shrink-0">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-left font-body text-[12px] sm:text-[13px] text-cream/70">
-              
-              <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
-                <span className="text-cream font-medium">Sekata Coffee &amp; Slowbar</span>
-                <span>&bull;</span>
-                <span>Tanjungpinang, Kepri</span>
-                <span>&bull;</span>
-                <span className="text-burnt-orange font-medium">Buka 10:00 – 22:00 WIB</span>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-left font-mono text-[11px] sm:text-xs text-cream/60">
+              <div>
+                <span>Sekata Coffee &amp; Space &bull; Sei Jang, Bukit Bestari</span>
               </div>
-
-              <div className="flex items-center gap-4 text-cream/80">
-                <a
-                  href="https://instagram.com/sekata.tnj"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-cream underline underline-offset-2 transition-colors"
-                >
-                  Instagram: @sekata.tnj
-                </a>
-                <span>&bull;</span>
-                <a
-                  href="https://wa.me/6283125525115"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-cream underline underline-offset-2 transition-colors"
-                >
-                  WhatsApp
-                </a>
+              <div>
+                <span>Buka Setiap Hari s/d 00:00 WIB</span>
               </div>
-
             </div>
           </div>
 
