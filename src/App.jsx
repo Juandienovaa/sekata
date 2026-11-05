@@ -7,8 +7,8 @@ import FeaturedProducts from './components/FeaturedProducts';
 import BrandStory from './components/BrandStory';
 import TickerMarquee from './components/TickerMarquee';
 import ReadyToReserve from './components/ReadyToReserve';
-import WholesaleSplitSection from './components/WholesaleSplitSection';
-import CommunityBoard from './components/CommunityBoard';
+import BrandKineticTypography from './components/BrandKineticTypography';
+import SlowbarSpatialPresence from './components/SlowbarSpatialPresence';
 import KecilBertumbuh from './components/KecilBertumbuh';
 import ContactSection from './components/ContactSection';
 import AnimatedCrowdCanvas from './components/AnimatedCrowdCanvas';
@@ -122,14 +122,14 @@ export default function App() {
         {/* SECTION FILOSOFI SEKATA DENGAN TICKER MARQUEE DI ATASNYA */}
         <BrandStory />
 
-        {/* SECTION READY TO RESERVE — PERSEGI PANJANG DENGAN DIRECT TOMBOL WHATSAPP */}
+        {/* SECTION READY TO RESERVE — COMPACT & MINIMAL (SESUAI REQUEST USER) */}
         <ReadyToReserve />
 
-        {/* SECTION WHOLESALE SPLIT — PERSIS SEPERTI SCREENSHOT USER */}
-        <WholesaleSplitSection />
+        {/* KINETIC BRAND TYPOGRAPHY ANIMASI (MENGGANTIKAN WHOLESALE SECTION PERSIS REQUEST GAMBAR 2) */}
+        <BrandKineticTypography />
 
-        {/* SECTION 6 — CERITA & KOMUNITAS: "Setiap Pertemuan Punya Cerita." */}
-        <CommunityBoard />
+        {/* SLOWBAR SPATIAL PRESENCE — MINIM TULISAN & MENGUATKAN BRAND (MENGGANTIKAN COMMUNITY BOARD GAMBAR 3) */}
+        <SlowbarSpatialPresence />
 
         {/* SECTION 7 — #KECILBERTUMBUH: "Kecil Bertumbuh, Bersama Menjadi Berarti." */}
         <KecilBertumbuh />

@@ -110,8 +110,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#cerita" className="hover:text-espresso hover:underline underline-offset-2 transition-colors">
-                  Setiap Pertemuan Punya Cerita
+                <a href="#slowbar-space" className="hover:text-espresso hover:underline underline-offset-2 transition-colors">
+                  Ruang &amp; Seduhan Slowbar
                 </a>
               </li>
               <li>
