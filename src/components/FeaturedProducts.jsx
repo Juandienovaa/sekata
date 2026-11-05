@@ -59,45 +59,62 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
     <section id="menu" className="w-full py-12 sm:py-20 bg-cream border-b-hairline scroll-mt-20">
       <div className="container-max">
         
-        {/* Section Header (Image 5 Human Typography) */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 pb-6 border-b-hairline">
-          <div>
-            <h2 className="font-display text-[32px] sm:text-[44px] leading-[0.95] text-espresso tracking-[-0.05em] mb-2">
-              Temukan Rasa yang Kamu Suka.
+        {/* Section Header — Refined Editorial & High-Conversion Promotional Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 pb-8 border-b border-espresso/15">
+          <div className="max-w-2xl">
+            {/* Promotional Tag & Promo Code Pill */}
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <span className="w-2 h-2 rounded-full bg-burnt-orange animate-pulse" />
+              <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.2em] text-burnt-orange font-bold">
+                KURASI RASA &bull; SEDUHAN RESMI KEDAI
+              </span>
+              <span className="hidden sm:inline text-espresso/25">&bull;</span>
+              <span className="inline-flex items-center gap-1.5 font-mono text-[10.5px] sm:text-[11px] text-espresso/80 bg-[#ede4d8] px-2.5 py-0.5 rounded-full border border-espresso/15">
+                <Sparkles className="w-3 h-3 text-burnt-orange" />
+                <span>KODE HEMAT: <strong className="text-burnt-orange font-bold">SEKATA10</strong> (DISKON 10%)</span>
+              </span>
+            </div>
+
+            {/* Powerful, Aesthetic Headline */}
+            <h2 className="font-sans font-black text-[34px] sm:text-[48px] lg:text-[58px] leading-[0.95] text-espresso tracking-[-0.04em] uppercase mb-3">
+              Diseduh dengan Niat, <br className="hidden sm:inline" />
+              <span className="text-burnt-orange italic font-bold">Dinikmati dengan Santai.</span>
             </h2>
-            <p className="text-[14px] font-body text-[#6b584f] max-w-xl">
-              Pilih tampilan kartu foto ringkas atau papan menu kedai lengkap untuk melihat harga dan karakter seduhan.
+
+            {/* Clear Promotional Subtitle */}
+            <p className="text-[14px] sm:text-[15.5px] font-sans text-[#6b584f] max-w-xl leading-relaxed">
+              Dari manual brew berkarakter dan espresso legit, hingga minuman buah segar dan camilan pendamping obrolan. Pilih format visual kartu atau papan menu kedai di bawah.
             </p>
           </div>
 
-          {/* Controls: Category Tabs + View Mode Switcher */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+          {/* Controls: View Mode Switcher + Category Tabs */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 shrink-0">
             
-            {/* View Mode Switcher (Kartu Foto vs Papan Menu Kedai) */}
-            <div className="flex items-center bg-linen p-1 rounded-[8px] border border-hairline shadow-xs">
+            {/* View Mode Switcher (Kartu Foto vs Papan Menu Kedai) — Aesthetic Pill */}
+            <div className="flex items-center bg-[#ede4d8] p-1 rounded-full border border-espresso/15 shadow-inner">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] font-body text-[13px] transition-all duration-150 active:scale-[0.97] ${
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-all duration-200 active:scale-[0.97] ${
                   viewMode === 'grid'
-                    ? 'bg-cream text-espresso shadow-xs font-medium border border-espresso/15'
+                    ? 'bg-cream text-espresso shadow-sm'
                     : 'text-[#6b584f] hover:text-espresso'
                 }`}
                 aria-label="Tampilan Kartu Foto"
               >
-                <LayoutGrid className="w-3.5 h-3.5 stroke-[1.5]" />
+                <LayoutGrid className="w-3.5 h-3.5 stroke-[2]" />
                 <span>Kartu Foto</span>
               </button>
 
               <button
                 onClick={() => setViewMode('board')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] font-body text-[13px] transition-all duration-150 active:scale-[0.97] ${
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-sans text-[12.5px] font-semibold transition-all duration-200 active:scale-[0.97] ${
                   viewMode === 'board'
-                    ? 'bg-espresso text-cream shadow-xs font-medium'
+                    ? 'bg-espresso text-cream shadow-sm'
                     : 'text-[#6b584f] hover:text-espresso'
                 }`}
                 aria-label="Tampilan Papan Menu Kedai"
               >
-                <List className="w-3.5 h-3.5 stroke-[1.5]" />
+                <List className="w-3.5 h-3.5 stroke-[2]" />
                 <span>Papan Menu Kedai</span>
               </button>
             </div>
@@ -112,10 +129,10 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                       setActiveCategory(cat.id);
                       setIsExpanded(false); // Reset to 6 cards on category switch
                     }}
-                    className={`text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.05em] px-3 py-1.5 rounded-[4px] border font-medium whitespace-nowrap transition-all flex-shrink-0 ${
+                    className={`text-[11px] font-mono uppercase tracking-[0.08em] px-3.5 py-2 rounded-full border font-semibold whitespace-nowrap transition-all duration-200 flex-shrink-0 active:scale-95 ${
                       activeCategory === cat.id
-                        ? 'bg-turquoise text-cream border-turquoise shadow-sm'
-                        : 'bg-cream text-espresso border-hairline hover:border-turquoise hover:bg-linen'
+                        ? 'bg-burnt-orange text-cream border-burnt-orange shadow-sm'
+                        : 'bg-cream/80 text-espresso border-espresso/15 hover:border-espresso hover:bg-cream'
                     }`}
                   >
                     {cat.label}

@@ -11,7 +11,6 @@ import SlowbarSpatialPresence from './components/SlowbarSpatialPresence';
 import KecilBertumbuh from './components/KecilBertumbuh';
 import ContactSection from './components/ContactSection';
 import AnimatedCrowdCanvas from './components/AnimatedCrowdCanvas';
-import InstagramGrid from './components/InstagramGrid';
 import Footer from './components/Footer';
 import QuickViewModal from './components/QuickViewModal';
 import CartDrawer from './components/CartDrawer';
@@ -135,9 +134,6 @@ export default function App() {
 
         {/* ANIMATED LIVING CROWD — KARIKATUR WARGA BERJALAN INTERAKTIF */}
         <AnimatedCrowdCanvas height="240px" />
-
-        {/* SECTION INSTAGRAM FEED & REEL — TEPAT SEBELUM FOOTER */}
-        <InstagramGrid />
       </main>
 
       {/* SECTION 9 — FOOTER DENGAN TAGLINE LENGKAP */}
