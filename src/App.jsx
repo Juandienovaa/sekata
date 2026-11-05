@@ -7,7 +7,6 @@ import FeaturedProducts from './components/FeaturedProducts';
 import BrandStory from './components/BrandStory';
 import TickerMarquee from './components/TickerMarquee';
 import ReadyToReserve from './components/ReadyToReserve';
-import BrandKineticTypography from './components/BrandKineticTypography';
 import SlowbarSpatialPresence from './components/SlowbarSpatialPresence';
 import KecilBertumbuh from './components/KecilBertumbuh';
 import ContactSection from './components/ContactSection';
@@ -125,10 +124,7 @@ export default function App() {
         {/* SECTION READY TO RESERVE — COMPACT & MINIMAL (SESUAI REQUEST USER) */}
         <ReadyToReserve />
 
-        {/* KINETIC BRAND TYPOGRAPHY ANIMASI (MENGGANTIKAN WHOLESALE SECTION PERSIS REQUEST GAMBAR 2) */}
-        <BrandKineticTypography />
-
-        {/* SLOWBAR SPATIAL PRESENCE — MINIM TULISAN & MENGUATKAN BRAND (MENGGANTIKAN COMMUNITY BOARD GAMBAR 3) */}
+        {/* SLOWBAR SPATIAL PRESENCE — MINIM TULISAN & MENGUATKAN BRAND */}
         <SlowbarSpatialPresence />
 
         {/* SECTION 7 — #KECILBERTUMBUH: "Kecil Bertumbuh, Bersama Menjadi Berarti." */}
