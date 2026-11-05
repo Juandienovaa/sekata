@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowUp } from 'lucide-react';
-import CtaPromoSection from './CtaPromoSection';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -8,10 +7,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-cream">
-      {/* High-Impact Promotional CTA Section (Replaces Newsletter Strip) */}
-      <CtaPromoSection />
-
+    <footer className="w-full bg-cream border-t border-espresso/15">
       {/* Main Footer Sitemap Columns */}
       <div className="container-max py-14 sm:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">

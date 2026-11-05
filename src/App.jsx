@@ -10,6 +10,7 @@ import ReadyToReserve from './components/ReadyToReserve';
 import SlowbarSpatialPresence from './components/SlowbarSpatialPresence';
 import KecilBertumbuh from './components/KecilBertumbuh';
 import ContactSection from './components/ContactSection';
+import CtaPromoSection from './components/CtaPromoSection';
 import AnimatedCrowdCanvas from './components/AnimatedCrowdCanvas';
 import Footer from './components/Footer';
 import SectionReveal from './components/SectionReveal';
@@ -145,6 +146,11 @@ export default function App() {
         {/* SECTION 8 — KUNJUNGI KAMI: "Yuk, Bertemu di Sekata." */}
         <SectionReveal>
           <ContactSection />
+        </SectionReveal>
+
+        {/* SECTION PROMOSI — GRAB YOUR SEKATA TODAY */}
+        <SectionReveal>
+          <CtaPromoSection />
         </SectionReveal>
 
         {/* ANIMATED LIVING CROWD — KARIKATUR WARGA BERJALAN INTERAKTIF */}
