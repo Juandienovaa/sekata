@@ -19,12 +19,14 @@
   --color-sandstone: #cbbbb4;
   --color-coffee-dust: #977e77;
 
-  /* Typography — Font Families (Plus Jakarta Sans Across Entire Website per User Request) */
+  /* Typography — Font Families & Variables (Consistent across all devices) */
   --font-plus-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-little-amps: var(--font-plus-jakarta);
-  --font-inclusive-sans: var(--font-plus-jakarta);
-  --font-necto-mono: 'JetBrains Mono', 'Plus Jakarta Sans', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  --font-roboto-mono: 'JetBrains Mono', 'Plus Jakarta Sans', monospace;
+  --font-sans: var(--font-plus-jakarta);
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-little-amps: var(--font-sans);
+  --font-inclusive-sans: var(--font-sans);
+  --font-necto-mono: var(--font-mono);
+  --font-roboto-mono: var(--font-mono);
 
   /* Typography — Scale */
   --text-caption: 10px;
@@ -82,10 +84,11 @@ html {
   font-size: 16px;
   background-color: var(--color-cream-paper);
   color: var(--color-espresso);
+  font-family: var(--font-sans);
 }
 
 body {
-  font-family: var(--font-inclusive-sans);
+  font-family: var(--font-sans);
   font-size: var(--text-body);
   line-height: var(--leading-body);
   letter-spacing: var(--tracking-body);

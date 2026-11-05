@@ -26,10 +26,10 @@ export default {
         'coffee-dust': '#977e77',
       },
       fontFamily: {
-        'sans': ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        'display': ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        'body': ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        'mono': ['"JetBrains Mono"', '"Plus Jakarta Sans"', 'monospace'],
+        'sans': ['var(--font-sans)', 'var(--font-plus-jakarta)', '"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        'display': ['var(--font-sans)', '"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        'body': ['var(--font-sans)', '"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        'mono': ['var(--font-mono)', '"JetBrains Mono"', 'monospace'],
       },
       borderRadius: {
         'sm': '3px',
