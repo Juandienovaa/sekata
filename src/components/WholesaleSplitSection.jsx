@@ -50,9 +50,9 @@ export default function WholesaleSplitSection() {
                   href="https://wa.me/6283125525115?text=Halo%20Sekata,%20saya%20punya%20usaha/kedai%20dan%20tertarik%20konsultasi%20pasokan%20biji%20kopi%20wholesale"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-filled text-xs py-3 px-6 bg-turquoise border-turquoise hover:bg-turquoise-dark tracking-[0.05em] inline-flex items-center gap-2"
+                  className="btn-filled text-xs py-3 px-6 bg-turquoise border-turquoise hover:bg-turquoise-dark tracking-[0.05em] inline-flex items-center gap-2 rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4 stroke-[1.5]" />
                   <span>HUBUNGI TIM ROASTERY</span>
                 </a>
 

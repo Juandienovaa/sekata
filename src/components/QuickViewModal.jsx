@@ -278,16 +278,16 @@ export default function QuickViewModal({ product, isOpen, onClose, onAddToCart }
 
                   <button
                     onClick={handleAdd}
-                    className="flex-1 btn-filled py-3 flex items-center justify-center gap-2 bg-turquoise border-turquoise hover:bg-turquoise-dark"
+                    className="flex-1 btn-filled py-3 flex items-center justify-center gap-2 bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]"
                   >
                     {isAdded ? (
                       <>
-                        <Check className="w-4 h-4 text-cream" />
+                        <Check className="w-4 h-4 text-cream stroke-[1.5]" />
                         <span>DITAMBAHKAN KE DAFTAR PESANAN</span>
                       </>
                     ) : (
                       <>
-                        <ShoppingBag className="w-4 h-4" />
+                        <ShoppingBag className="w-4 h-4 stroke-[1.5]" />
                         <span>PESAN SEKARANG &bull; {formatRupiah(currentPrice * quantity)}</span>
                       </>
                     )}

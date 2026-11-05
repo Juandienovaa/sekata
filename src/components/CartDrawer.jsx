@@ -68,7 +68,7 @@ export default function CartDrawer({
   const waItemsText = cartItems
     .map((item) => `- ${item.quantity}x ${item.name} (${item.size}${item.temperature ? ', ' + item.temperature : ''}): ${formatRupiah(item.price * item.quantity)}`)
     .join('%0A');
-  const waUrl = `https://wa.me/6281234567890?text=Halo%20Sekata%20Coffee,%20saya%20mau%20pesan:%0A${waItemsText}%0A%0ACatatan:%20${encodeURIComponent(grindPreference)}%0ATotal:%20${encodeURIComponent(formatRupiah(finalTotal))}`;
+  const waUrl = `https://wa.me/6283125525115?text=Halo%20Sekata%20Coffee,%20saya%20mau%20pesan:%0A${waItemsText}%0A%0ACatatan:%20${encodeURIComponent(grindPreference)}%0ATotal:%20${encodeURIComponent(formatRupiah(finalTotal))}`;
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
@@ -264,19 +264,19 @@ export default function CartDrawer({
               <div className="space-y-2">
                 <button
                   onClick={handleCheckout}
-                  className="btn-filled w-full py-3 text-xs tracking-[0.05em] flex items-center justify-center gap-2 bg-turquoise border-turquoise hover:bg-turquoise-dark"
+                  className="btn-filled w-full py-3 text-xs tracking-[0.05em] flex items-center justify-center gap-2 bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]"
                 >
                   <span>RINGKASAN &amp; KONFIRMASI PESANAN</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 stroke-[1.5]" />
                 </button>
 
                 <a
                   href={waUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-ghost w-full py-2.5 text-xs tracking-[0.05em] flex items-center justify-center gap-2 border-turquoise text-turquoise hover:bg-turquoise hover:text-cream"
+                  className="btn-ghost w-full py-2.5 text-xs tracking-[0.05em] flex items-center justify-center gap-2 border-turquoise text-turquoise hover:bg-turquoise hover:text-cream rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4 stroke-[1.5]" />
                   <span>KIRIM KE WHATSAPP BARISTA</span>
                 </a>
               </div>

@@ -39,9 +39,9 @@ export default function ContactSection() {
               href="https://maps.google.com/?q=Sekata+Coffee+Tanjungpinang"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-filled text-[12px] px-5 py-3 bg-turquoise border-turquoise hover:bg-turquoise-dark flex items-center gap-2"
+              className="btn-filled text-[12px] px-5 py-3 bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] flex items-center gap-2 transition-all duration-200 ease-out active:scale-[0.97]"
             >
-              <Navigation className="w-3.5 h-3.5" />
+              <Navigation className="w-3.5 h-3.5 stroke-[1.5]" />
               <span>TEMUKAN LOKASI KAMI (GOOGLE MAPS)</span>
             </a>
           </div>
@@ -122,7 +122,7 @@ export default function ContactSection() {
                 href="https://wa.me/6283125525115?text=Halo%20Sekata,%20saya%20mau%20tanya%20seputar%20kedai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-filled text-xs py-2.5 px-5 bg-turquoise border-turquoise hover:bg-turquoise-dark whitespace-nowrap"
+                className="btn-filled text-xs py-2.5 px-5 bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] whitespace-nowrap transition-all duration-200 ease-out active:scale-[0.97]"
               >
                 CHAT WHATSAPP &rarr;
               </a>
@@ -209,7 +209,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="pt-2">
-                  <button type="submit" className="btn-filled w-full py-2.5 text-xs tracking-[0.05em] bg-turquoise border-turquoise hover:bg-turquoise-dark">
+                  <button type="submit" className="btn-filled w-full py-2.5 text-xs tracking-[0.05em] bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]">
                     KIRIM PESAN SEKARANG
                   </button>
                 </div>

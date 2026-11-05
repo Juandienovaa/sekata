@@ -144,10 +144,10 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                   <div
                     key={product.id}
                     onClick={() => handleCardClick(product)}
-                    className={`card-product p-3 sm:p-5 flex flex-col justify-between group cursor-pointer transition-all duration-300 rounded-[10px] sm:rounded-[12px] border ${
+                    className={`card-product p-3 sm:p-5 flex flex-col justify-between group cursor-pointer transition-all duration-200 ease-out rounded-[10px] sm:rounded-[12px] border ${
                       isSelected
                         ? 'bg-[#e8f5f5] border-turquoise shadow-md ring-2 ring-turquoise'
-                        : 'bg-linen hover:bg-cream hover:border-turquoise hover:shadow-md'
+                        : 'bg-linen hover:bg-cream hover:border-turquoise/60 hover:shadow-[0_8px_24px_rgba(82,44,37,0.08)]'
                     }`}
                   >
                     <div>
@@ -167,7 +167,7 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                           src={product.image}
                           alt={product.name}
                           loading="lazy"
-                          className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
+                          className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300 ease-out"
                         />
 
                         {product.badge && (
@@ -207,26 +207,26 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
                     <div className="grid grid-cols-2 gap-1.5 sm:gap-2 pt-2 sm:pt-3 border-t-hairline mt-auto" onClick={(e) => e.stopPropagation()}>
                       <button
                         onClick={() => handleCardClick(product)}
-                        className="btn-quickview py-1 sm:py-1.5 flex items-center justify-center gap-1 text-[10px] sm:text-xs group-hover:bg-turquoise group-hover:border-turquoise transition-all"
+                        className="btn-quickview py-1 sm:py-1.5 flex items-center justify-center gap-1 text-[10px] sm:text-xs group-hover:bg-turquoise group-hover:border-turquoise transition-all duration-200 active:scale-[0.97]"
                         aria-label={`Lihat detail ${product.name}`}
                       >
-                        <Eye className="w-3 h-3" />
+                        <Eye className="w-3 h-3 stroke-[1.5]" />
                         <span className="hidden xs:inline">DETAIL</span>
                       </button>
 
                       <button
                         onClick={(e) => handleAdd(product, e)}
-                        className="btn-filled py-1 sm:py-1.5 flex items-center justify-center gap-1 text-[10px] sm:text-xs bg-turquoise border-turquoise hover:bg-turquoise-dark active:scale-95 transition-all font-bold"
+                        className="btn-filled py-1 sm:py-1.5 flex items-center justify-center gap-1 text-[10px] sm:text-xs bg-turquoise border-turquoise hover:bg-turquoise-dark active:scale-[0.97] transition-all duration-200 font-bold"
                         aria-label={`Tambah ${product.name} ke pesanan`}
                       >
                         {isJustAdded ? (
                           <>
-                            <Check className="w-3 h-3 text-cream" />
+                            <Check className="w-3 h-3 text-cream stroke-[1.5]" />
                             <span>OK!</span>
                           </>
                         ) : (
                           <>
-                            <Plus className="w-3 h-3" />
+                            <Plus className="w-3 h-3 stroke-[1.5]" />
                             <span>PESAN</span>
                           </>
                         )}
@@ -242,17 +242,17 @@ export default function FeaturedProducts({ onQuickView, onAddToCart }) {
               <div className="mt-8 text-center">
                 <button
                   onClick={() => setIsExpanded(!isExpanded)}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-espresso/25 bg-cream text-espresso hover:bg-espresso hover:text-cream font-mono text-xs uppercase tracking-[0.14em] font-medium shadow-sm transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-espresso/25 bg-cream text-espresso hover:bg-espresso hover:text-cream font-mono text-xs uppercase tracking-[0.14em] font-medium shadow-sm transition-all duration-200 ease-out active:scale-[0.97]"
                 >
                   {isExpanded ? (
                     <>
                       <span>TAMPILKAN RINGKAS (6 MENU)</span>
-                      <ChevronUp className="w-4 h-4" />
+                      <ChevronUp className="w-4 h-4 stroke-[1.5]" />
                     </>
                   ) : (
                     <>
                       <span>LIHAT SEMUA ({filteredProducts.length} PILIHAN MENU)</span>
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-4 h-4 stroke-[1.5]" />
                     </>
                   )}
                 </button>

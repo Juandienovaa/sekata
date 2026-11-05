@@ -239,36 +239,36 @@ export default function CommunityBoard() {
                   <div className="flex items-center gap-3">
                     <button
                       onClick={prevTrack}
-                      className="text-cream/75 hover:text-cream transition-colors p-1"
+                      className="text-cream/75 hover:text-cream transition-colors p-1 active:scale-[0.97]"
                       aria-label="Previous track"
                     >
-                      <SkipBack className="w-4 h-4" />
+                      <SkipBack className="w-4 h-4 stroke-[1.5]" />
                     </button>
                     
                     <button
                       onClick={togglePlay}
-                      className="w-9 h-9 rounded-full bg-cream text-espresso hover:bg-white flex items-center justify-center transition-all duration-200 active:scale-95 shadow-md"
+                      className="w-9 h-9 rounded-full bg-cream text-espresso hover:bg-white flex items-center justify-center transition-all duration-200 ease-out active:scale-[0.97] shadow-md"
                       aria-label={isPlaying ? 'Pause' : 'Play'}
                     >
                       {isPlaying ? (
-                        <Pause className="w-4 h-4 fill-current" />
+                        <Pause className="w-4 h-4 fill-current stroke-[1.5]" />
                       ) : (
-                        <Play className="w-4 h-4 fill-current ml-0.5" />
+                        <Play className="w-4 h-4 fill-current ml-0.5 stroke-[1.5]" />
                       )}
                     </button>
                     
                     <button
                       onClick={nextTrack}
-                      className="text-cream/75 hover:text-cream transition-colors p-1"
+                      className="text-cream/75 hover:text-cream transition-colors p-1 active:scale-[0.97]"
                       aria-label="Next track"
                     >
-                      <SkipForward className="w-4 h-4" />
+                      <SkipForward className="w-4 h-4 stroke-[1.5]" />
                     </button>
                   </div>
 
                   {/* Volume / Ambient badge */}
                   <div className="flex items-center gap-1.5 text-[11px] font-mono text-cream/60">
-                    <Volume2 className="w-3.5 h-3.5 text-turquoise" />
+                    <Volume2 className="w-3.5 h-3.5 text-turquoise stroke-[1.5]" />
                     <span>SLOWBAR LO-FI</span>
                   </div>
                 </div>
@@ -362,7 +362,7 @@ export default function CommunityBoard() {
               <div>
                 <button
                   onClick={() => setSelectedArticle(article)}
-                  className="w-full font-body text-[13px] py-2.5 px-4 rounded-[6px] font-medium bg-[#1e6b7b] text-white hover:bg-[#15505c] transition-colors shadow-sm"
+                  className="w-full font-body text-[13px] py-2.5 px-4 rounded-[6px] font-medium bg-[#1e6b7b] text-white hover:bg-[#15505c] transition-all duration-200 ease-out active:scale-[0.97] shadow-sm"
                 >
                   Baca Catatan Lengkap &rarr;
                 </button>

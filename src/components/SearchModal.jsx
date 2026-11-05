@@ -60,7 +60,7 @@ export default function SearchModal({ isOpen, onClose, onQuickView }) {
                   onQuickView(item);
                   onClose();
                 }}
-                className="flex items-center justify-between gap-4 p-3 bg-linen hover:bg-cream border-hairline rounded-[6px] cursor-pointer transition-colors group"
+                className="flex items-center justify-between gap-4 p-3 bg-linen hover:bg-cream border-hairline rounded-[6px] cursor-pointer transition-all duration-150 ease-out active:scale-[0.99] group"
               >
                 <div className="flex items-center gap-3 min-w-0">
                   <img
@@ -79,7 +79,7 @@ export default function SearchModal({ isOpen, onClose, onQuickView }) {
                 </div>
 
                 <span className="text-xs font-mono text-turquoise flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
-                  LIHAT DETAIL <ArrowRight className="w-3.5 h-3.5" />
+                  LIHAT DETAIL <ArrowRight className="w-3.5 h-3.5 stroke-[1.5]" />
                 </span>
               </div>
             ))

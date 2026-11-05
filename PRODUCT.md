@@ -66,3 +66,4 @@ Meja Slowbar Interaktif & Personal di Tanjungpinang: Bukan sekadar tempat membel
 - Kontras warna teks memenuhi standar keterbacaan (espresso gelap di atas kanvas krem, teks krem di atas latar gelap).
 - Navigasi layar penuh ramah keyboard dengan dukungan penutupan tombol `Escape`.
 - Seluruh tautan penting memiliki target ukuran sentuh minimal 44px untuk kenyamanan jempol di perangkat mobile.
+

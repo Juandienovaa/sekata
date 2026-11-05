@@ -52,7 +52,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="btn-filled text-xs py-2.5 px-6 whitespace-nowrap tracking-[0.05em] bg-turquoise border-turquoise hover:bg-turquoise-dark"
+                  className="btn-filled text-xs py-2.5 px-6 whitespace-nowrap tracking-[0.05em] bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]"
                 >
                   LANGGANAN
                 </button>
@@ -157,10 +157,10 @@ export default function Footer() {
             <div className="pt-4">
               <button
                 onClick={scrollToTop}
-                className="btn-ghost w-full flex items-center justify-center gap-1.5 text-xs py-2 hover:border-turquoise hover:text-turquoise"
+                className="btn-ghost w-full flex items-center justify-center gap-1.5 text-xs py-2 rounded-[6px] hover:border-turquoise hover:text-turquoise transition-all duration-200 ease-out active:scale-[0.97]"
                 aria-label="Kembali ke atas halaman"
               >
-                <ArrowUp className="w-3.5 h-3.5" />
+                <ArrowUp className="w-3.5 h-3.5 stroke-[1.5]" />
                 <span>KEMBALI KE ATAS</span>
               </button>
             </div>

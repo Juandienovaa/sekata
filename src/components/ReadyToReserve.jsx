@@ -59,14 +59,14 @@ export default function ReadyToReserve() {
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 font-body text-[14px] px-7 py-3.5 rounded-[8px] font-semibold bg-[#25D366] text-black hover:bg-[#1faa53] hover:text-white shadow-[0_4px_20px_rgba(37,211,102,0.35)] transition-all duration-200 active:scale-95 group whitespace-nowrap"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 font-body text-[14px] px-7 py-3.5 rounded-[8px] font-semibold bg-[#25D366] text-black hover:bg-[#1faa53] hover:text-white shadow-[0_4px_20px_rgba(37,211,102,0.35)] transition-all duration-200 ease-out active:scale-[0.97] group whitespace-nowrap"
           >
             {/* WhatsApp SVG Icon */}
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.059-1.127-.08-.276-.089-.634-.207-1.085-.401-1.905-.823-3.14-2.756-3.235-2.883-.095-.127-.775-1.03-.775-1.964 0-.934.489-1.393.663-1.583.174-.19.38-.237.506-.237.126 0 .253.001.364.007.118.006.276-.045.431.328.158.38.539 1.314.586 1.41.047.095.079.206.016.332-.063.127-.095.206-.19.317-.095.11-.2.246-.285.332-.095.095-.195.198-.084.388.111.19.493.814 1.057 1.317.728.648 1.341.85 1.531.945.19.095.301.079.412-.047.111-.127.475-.554.602-.744.127-.19.253-.158.427-.095.174.063 1.109.522 1.3.617.19.095.317.142.364.222.047.079.047.46-.097.865z"/>
             </svg>
             <span>Reservasi via WhatsApp</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+            <ArrowRight className="w-4 h-4 stroke-[1.5] group-hover:translate-x-1.5 transition-transform duration-200" />
           </a>
         </div>
 

@@ -178,8 +178,8 @@ export default function App() {
       {/* NOTIFIKASI TOAST DENGAN TULISAN INDONESIA */}
       {toastMessage && (
         <div className="fixed bottom-6 right-6 z-50 transition-all duration-300 ease-out transform translate-y-0 opacity-100">
-          <div className="bg-espresso text-cream border-2 border-espresso px-4 py-3 rounded-[6px] shadow-[0_8px_30px_rgba(82,44,37,0.25)] flex items-center gap-3">
-            <span className="w-2 h-2 rounded-full bg-turquoise animate-ping"></span>
+          <div className="bg-[#140e0c] text-cream border border-espresso/40 px-4 py-3 rounded-[8px] shadow-[0_12px_36px_rgba(20,14,12,0.4)] flex items-center gap-3">
+            <span className="w-2 h-2 rounded-full bg-turquoise"></span>
             <span className="font-mono text-xs uppercase tracking-[0.05em]">
               {toastMessage}
             </span>
@@ -188,7 +188,7 @@ export default function App() {
                 setToastMessage(null);
                 setIsCartOpen(true);
               }}
-              className="ml-2 text-marigold hover:underline font-mono text-xs uppercase tracking-[0.05em] font-bold"
+              className="ml-2 text-marigold hover:underline font-mono text-xs uppercase tracking-[0.05em] font-semibold active:scale-[0.97] transition-transform"
             >
               LIHAT PESANAN &rarr;
             </button>
