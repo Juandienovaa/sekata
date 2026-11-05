@@ -55,13 +55,14 @@ export default function SlowbarSpatialPresence() {
         </div>
 
         {/* Cinematic Spatial Visual Frame */}
-        <div className="relative w-full rounded-[24px] sm:rounded-[32px] overflow-hidden border border-espresso/15 bg-espresso shadow-lg min-h-[320px] sm:min-h-[460px] lg:min-h-[520px] mb-8 group">
+        <div className="relative w-full h-[360px] sm:h-[480px] lg:h-[560px] rounded-[24px] sm:rounded-[32px] overflow-hidden border border-espresso/15 bg-espresso shadow-lg mb-8 group">
           <img
-            src="/partner-roasting.jpg"
-            alt="Suasana Ruang Seduh dan Roastery Sekata"
-            className="w-full h-full object-cover filter contrast-105 brightness-95 transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+            src="/konten3.jpg"
+            alt="Suasana Ruang Seduh dan Meja Slowbar Sekata"
+            loading="eager"
+            className="w-full h-full object-cover object-center filter contrast-105 brightness-95 transition-transform duration-700 ease-out group-hover:scale-[1.02]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/15 pointer-events-none" />
 
           {/* Bottom Overlaid Aesthetic Tag */}
           <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8 z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-cream">
