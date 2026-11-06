@@ -149,7 +149,7 @@ export default function App() {
         </SectionReveal>
 
         {/* 3. SEKAT ILUSTRATOR YANG BERGERAK (Karikatur Warga Berjalan) */}
-        <AnimatedCrowdCanvas height="clamp(160px, 20vw, 240px)" />
+        <AnimatedCrowdCanvas height="clamp(190px, 22vw, 240px)" />
 
         {/* 4. SETELAH ITU BARU SECTION "Yuk, Bertemu di Sekata." (Tepat di atas Footer) */}
         <SectionReveal>

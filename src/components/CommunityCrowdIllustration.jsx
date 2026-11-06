@@ -9,7 +9,7 @@ export default function CommunityCrowdIllustration({ className = "" }) {
         <img
           src="/ilustrasi1.jpg"
           alt="Ilustrasi Komunitas dan Warga Sekata Coffee &amp; Slowbar"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-top sm:object-center"
         />
       </div>
 

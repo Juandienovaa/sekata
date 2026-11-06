@@ -48,71 +48,49 @@ const STATEMENT_WORDS = [
 
 export default function ColorfulStatement() {
   const containerRef = useRef(null);
-  const counterRef = useRef(null);
-  const progressBarRef = useRef(null);
   const bottomPillsRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const mm = gsap.matchMedia();
-
-      // Desktop only (>= 768px): Smooth sticky scroll scrub (shortened to 130vh for snappy feel)
-      mm.add("(min-width: 768px)", () => {
-        const tl = gsap.timeline({
+      // Natural, high-performance entrance animation without sticky scroll-trap or empty void
+      gsap.fromTo(
+        '.reveal-word',
+        {
+          opacity: 0.25,
+          y: 8,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.012,
+          duration: 0.5,
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: containerRef.current,
-            start: 'top top',
-            end: 'bottom bottom',
-            scrub: 0.6,
-            onUpdate: (self) => {
-              const pct = Math.round(self.progress * 100);
-              if (counterRef.current) {
-                counterRef.current.innerText = `${pct}%`;
-              }
-              if (progressBarRef.current) {
-                progressBarRef.current.style.transform = `scaleX(${self.progress})`;
-              }
-            }
-          }
-        });
-
-        tl.fromTo(
-          '.reveal-word',
-          {
-            opacity: 0.18,
-            y: 8,
-            filter: 'blur(3px)',
+            start: 'top 82%',
+            once: true,
           },
+        }
+      );
+
+      if (bottomPillsRef.current) {
+        gsap.fromTo(
+          bottomPillsRef.current,
+          { opacity: 0, y: 12 },
           {
             opacity: 1,
             y: 0,
-            filter: 'blur(0px)',
-            stagger: 0.025,
-            ease: 'none',
-            duration: 0.18,
+            duration: 0.55,
+            delay: 0.35,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: 'top 82%',
+              once: true,
+            },
           }
         );
-
-        if (bottomPillsRef.current) {
-          tl.fromTo(
-            bottomPillsRef.current,
-            { opacity: 0, y: 16 },
-            { opacity: 1, y: 0, ease: 'power2.out', duration: 0.18 },
-            '>-0.05'
-          );
-        }
-
-        tl.to({}, { duration: 0.1 });
-      });
-
-      // Mobile only (< 768px): Natural flow without sticky pinning, eliminating huge empty void & heavy scroll jank
-      mm.add("(max-width: 767px)", () => {
-        gsap.set('.reveal-word', { opacity: 1, y: 0, filter: 'blur(0px)' });
-        if (bottomPillsRef.current) {
-          gsap.set(bottomPillsRef.current, { opacity: 1, y: 0 });
-        }
-      });
-
+      }
     }, containerRef);
 
     return () => ctx.revert();
@@ -136,84 +114,61 @@ export default function ColorfulStatement() {
 
   return (
     <section
+      id="statement"
       ref={containerRef}
-      className="relative w-full md:h-[135vh] bg-cream border-b-hairline select-none py-8 sm:py-12 md:py-0"
+      className="relative w-full bg-cream border-b-hairline select-none py-14 sm:py-18 md:py-24 px-4 sm:px-8"
     >
-      {/* 
-        Responsive Stage:
-        - Mobile: Normal flow, compact padding, zero empty void, native 60fps scrolling
-        - Desktop: Sticky locked stage with snappy 135vh scrub reveal
-      */}
-      <div className="md:sticky md:top-0 w-full md:h-screen md:min-h-screen bg-cream flex flex-col justify-center items-center px-4 sm:px-8 z-10">
+      <div className="w-full max-w-5xl mx-auto flex flex-col justify-center">
         
-        <div className="w-full max-w-5xl mx-auto flex flex-col justify-center">
-          
-          {/* Top Header: Brand Stamp + Live Scroll Progress Indicator (Desktop only for counter) */}
-          <div className="flex items-center justify-between gap-3 mb-5 sm:mb-8 pb-3 sm:pb-4 border-b border-espresso/10">
-            <div className="inline-flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-turquoise" />
-              <span className="text-[12px] sm:text-[14px] font-body text-[#5c4d44] font-medium">
-                Sekata Coffee &amp; Slowbar &bull; Tanjungpinang
-              </span>
-            </div>
-
-            {/* Interactive Awwwards Scroll Scrub Counter (Desktop only) */}
-            <div className="hidden md:inline-flex items-center gap-3">
-              <span className="text-[12px] font-body text-[#735e54]">
-                Scroll to reveal
-              </span>
-              <div className="w-20 sm:w-28 h-[3px] bg-espresso/15 rounded-full overflow-hidden">
-                <div
-                  ref={progressBarRef}
-                  className="h-full bg-turquoise rounded-full origin-left transition-transform duration-75"
-                  style={{ transform: 'scaleX(0)' }}
-                />
-              </div>
-              <span
-                ref={counterRef}
-                className="text-[12px] sm:text-[13px] font-mono text-turquoise font-bold min-w-[36px] text-right"
-              >
-                0%
-              </span>
-            </div>
+        {/* Top Header: Brand Stamp & Authentic Tagline */}
+        <div className="flex items-center justify-between gap-3 mb-6 sm:mb-8 pb-3 sm:pb-4 border-b border-espresso/10">
+          <div className="inline-flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-turquoise" />
+            <span className="text-[12px] sm:text-[14px] font-body text-[#5c4d44] font-medium">
+              Sekata Coffee &amp; Slowbar &bull; Tanjungpinang
+            </span>
           </div>
 
-          {/* Statement Text: Fluid, responsive font size, no excessive vertical blank space */}
-          <div className="text-left">
-            <p className="font-display text-[21px] xs:text-[23px] sm:text-[32px] md:text-[38px] lg:text-[44px] leading-[1.32] tracking-[-0.03em]">
-              {STATEMENT_WORDS.map((item, index) => {
-                const colorClass = getColorClass(item.color);
-                return (
-                  <span
-                    key={index}
-                    className={`reveal-word inline-block mr-[0.25em] will-change-transform ${colorClass}`}
-                  >
-                    {item.text}
-                  </span>
-                );
-              })}
-            </p>
-
-            {/* Bottom Meta Badges */}
-            <div
-              ref={bottomPillsRef}
-              className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2.5 sm:gap-6 text-[12px] sm:text-[14px] font-body"
-            >
-              <span className="text-turquoise font-medium flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-turquoise" />
-                Meja Slowbar Interaktif
-              </span>
-              <span className="text-turquoise font-medium flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-turquoise" />
-                Tempat Bertukar Cerita
-              </span>
-              <span className="text-amber font-medium flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber" />
-                #KecilBertumbuh
-              </span>
-            </div>
+          <div className="inline-flex items-center gap-2 text-[12px] sm:text-[13px] font-mono text-turquoise font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-turquoise animate-pulse" />
+            <span>#KecilBertumbuh</span>
           </div>
+        </div>
 
+        {/* Statement Text: Fluid typography, zero unnecessary blank space */}
+        <div className="text-left">
+          <p className="font-display text-[21px] xs:text-[23px] sm:text-[32px] md:text-[38px] lg:text-[44px] leading-[1.32] tracking-[-0.03em]">
+            {STATEMENT_WORDS.map((item, index) => {
+              const colorClass = getColorClass(item.color);
+              return (
+                <span
+                  key={index}
+                  className={`reveal-word inline-block mr-[0.25em] will-change-transform ${colorClass}`}
+                >
+                  {item.text}
+                </span>
+              );
+            })}
+          </p>
+
+          {/* Bottom Meta Badges */}
+          <div
+            ref={bottomPillsRef}
+            className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2.5 sm:gap-6 text-[12px] sm:text-[14px] font-body"
+          >
+            <span className="text-turquoise font-medium flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-turquoise" />
+              Meja Slowbar Interaktif
+            </span>
+            <span className="text-turquoise font-medium flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-turquoise" />
+              Tempat Bertukar Cerita
+            </span>
+            <span className="text-amber font-medium flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber" />
+              #KecilBertumbuh
+            </span>
+          </div>
         </div>
 
       </div>

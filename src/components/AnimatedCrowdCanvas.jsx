@@ -34,18 +34,27 @@ export default function AnimatedCrowdCanvas({
     // TWEEN FACTORIES
     const resetPeep = ({ stage, peep }) => {
       const direction = Math.random() > 0.5 ? 1 : -1;
-      const offsetY = 40 - 100 * gsap.parseEase('power2.in')(Math.random());
-      const startY = stage.height - peep.height + offsetY;
+      
+      // Calculate responsive scale based on current canvas height
+      // Target: peep height occupies ~80% to 88% of canvas height so head & face are 100% visible
+      const targetHeight = Math.min(stage.height * randomRange(0.80, 0.88), 210);
+      peep.scale = targetHeight / peep.height;
+      const renderW = peep.width * peep.scale;
+
+      // Position head comfortably below top edge so faces are NEVER cut off
+      const maxMargin = Math.max(8, stage.height - targetHeight - 6);
+      const startY = randomRange(8, maxMargin);
+
       let startX;
       let endX;
 
       if (direction === 1) {
-        startX = -peep.width;
-        endX = stage.width;
+        startX = -renderW - 20;
+        endX = stage.width + 20;
         peep.scaleX = 1;
       } else {
-        startX = stage.width + peep.width;
-        endX = 0;
+        startX = stage.width + renderW + 20;
+        endX = -renderW - 20;
         peep.scaleX = -1;
       }
 
@@ -62,11 +71,11 @@ export default function AnimatedCrowdCanvas({
 
     const normalWalk = ({ peep, props }) => {
       const { startX, startY, endX } = props;
-      const xDuration = 10;
-      const yDuration = 0.25;
+      const xDuration = randomRange(10, 16);
+      const yDuration = 0.28;
 
       const tl = gsap.timeline();
-      tl.timeScale(randomRange(0.5, 1.4));
+      tl.timeScale(randomRange(0.7, 1.2));
       tl.to(
         peep,
         {
@@ -82,7 +91,8 @@ export default function AnimatedCrowdCanvas({
           duration: yDuration,
           repeat: Math.floor(xDuration / yDuration),
           yoyo: true,
-          y: startY - 8,
+          y: Math.max(4, startY - 5),
+          ease: 'sine.inOut'
         },
         0
       );
@@ -99,6 +109,7 @@ export default function AnimatedCrowdCanvas({
         rect: [],
         width: 0,
         height: 0,
+        scale: 1,
         drawArgs: [],
         x: 0,
         y: 0,
@@ -114,7 +125,7 @@ export default function AnimatedCrowdCanvas({
         render: (c) => {
           c.save();
           c.translate(peep.x, peep.y);
-          c.scale(peep.scaleX, 1);
+          c.scale(peep.scaleX * (peep.scale || 1), peep.scale || 1);
           c.drawImage(
             peep.image,
             peep.rect[0],
