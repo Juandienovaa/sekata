@@ -44,7 +44,7 @@ export default function GrandOpeningCountdown() {
         
         {/* Top Kicker Date */}
         <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-turquoise font-bold block mb-2">
-          MALAM INI &bull; JUMAT 6 NOV 2026 &bull; 20:00 WIB (BA'DA ISYA)
+          MALAM INI &bull; JUMAT 6 NOV 2026 &bull; 20:00 WIB
         </span>
 
         {/* Minimalist Bold Title (Gambar 3 Reference Style) */}
