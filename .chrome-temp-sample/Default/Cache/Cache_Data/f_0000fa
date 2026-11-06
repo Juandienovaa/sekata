@@ -1,0 +1,233 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/SlowbarSpatialPresence.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=0428d391"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=0428d391"; const React = __vite__cjsImport3_react.__esModule ? __vite__cjsImport3_react.default : __vite__cjsImport3_react;
+import { Compass, Flame, Clock, Users } from "/node_modules/.vite/deps/lucide-react.js?v=0338dd00";
+export default function SlowbarSpatialPresence() {
+  const pillars = [
+    {
+      icon: Flame,
+      number: "01",
+      title: "Manual Brew & Sangrai Segar",
+      desc: "Ekstraksi biji kopi pilihan Nusantara dengan presisi rasa tanpa kompromi."
+    },
+    {
+      icon: Clock,
+      number: "02",
+      title: "Seduhan Lambat (Zero Rush)",
+      desc: "Ruang untuk melambatkan tempo, menghela napas, dan menikmati setiap tegukan."
+    },
+    {
+      icon: Users,
+      number: "03",
+      title: "Meja Komunal Terbuka",
+      desc: "Titik temu bagi kawan lama, pencinta seduhan, dan siapa saja yang ingin bercerita."
+    }
+  ];
+  return /* @__PURE__ */ jsxDEV("section", { id: "slowbar-space", className: "w-full py-10 sm:py-20 bg-[#f5eee6] border-y border-espresso/15 scroll-mt-20 select-none", children: /* @__PURE__ */ jsxDEV("div", { className: "w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-espresso/15", children: [
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2 mb-2", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "w-2 h-2 rounded-full bg-turquoise" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+            lineNumber: 53,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "font-mono text-[11px] uppercase tracking-[0.18em] text-turquoise font-semibold", children: "RUANG • SLOWBAR EXPERIENCE" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+            lineNumber: 54,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+          lineNumber: 52,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("h2", { className: "font-sans font-black text-[34px] sm:text-[48px] lg:text-[56px] leading-[0.98] tracking-[-0.04em] text-espresso uppercase", children: [
+          "Satu Meja. Satu Cangkir.",
+          /* @__PURE__ */ jsxDEV("span", { className: "block text-espresso/60 font-medium", children: "Tanpa Sekat." }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+            lineNumber: 60,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+          lineNumber: 58,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+        lineNumber: 51,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "text-left md:text-right max-w-sm", children: [
+        /* @__PURE__ */ jsxDEV("p", { className: "font-sans text-[13px] sm:text-[14px] text-espresso/75 leading-relaxed font-normal", children: "Slowbar independen dengan ritual seduhan kopi yang jujur dan kehangatan bertukar cerita kehidupan." }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+          lineNumber: 67,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "mt-2 font-mono text-[11px] text-turquoise uppercase tracking-wider font-semibold", children: "EST. 2026 • #KECILBERTUMBUH" }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+          lineNumber: 70,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+        lineNumber: 66,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+      lineNumber: 50,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "relative w-full h-[360px] sm:h-[480px] lg:h-[560px] rounded-[24px] sm:rounded-[32px] overflow-hidden border border-espresso/15 bg-espresso shadow-lg mb-8 group", children: [
+      /* @__PURE__ */ jsxDEV(
+        "img",
+        {
+          src: "/konten3.jpg",
+          alt: "Suasana Ruang Seduh dan Meja Slowbar Sekata",
+          loading: "eager",
+          className: "w-full h-full object-cover object-center filter contrast-105 brightness-95 transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+        },
+        void 0,
+        false,
+        {
+          fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+          lineNumber: 78,
+          columnNumber: 11
+        },
+        this
+      ),
+      /* @__PURE__ */ jsxDEV("div", { className: "absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/15 pointer-events-none" }, void 0, false, {
+        fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+        lineNumber: 84,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8 z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-cream", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "max-w-xl text-left", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "font-mono text-[11px] uppercase tracking-[0.2em] text-marigold font-semibold block mb-1", children: "#KECILBERTUMBUH" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+            lineNumber: 89,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "font-sans font-bold text-[20px] sm:text-[28px] leading-tight text-white tracking-tight", children: "Setiap seduhan punya waktu untuk mekar. Begitu pula percakapan kita." }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+            lineNumber: 92,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+          lineNumber: 88,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "text-left sm:text-right flex-shrink-0", children: /* @__PURE__ */ jsxDEV("span", { className: "inline-block px-3 py-1 rounded-[6px] bg-white/10 backdrop-blur-sm border border-white/15 text-xs font-mono text-cream/90", children: "BUKA SETIAP HARI • 10:00 – 00:00 WIB" }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+          lineNumber: 98,
+          columnNumber: 15
+        }, this) }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+          lineNumber: 97,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+        lineNumber: 87,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+      lineNumber: 77,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-left", children: pillars.map((p) => {
+      const Icon = p.icon;
+      return /* @__PURE__ */ jsxDEV(
+        "div",
+        {
+          className: "bg-[#faf5ef] rounded-[18px] p-6 border border-espresso/10 hover:border-espresso/30 transition-all duration-200 group",
+          children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between mb-4", children: [
+              /* @__PURE__ */ jsxDEV("span", { className: "font-mono text-xs font-bold text-turquoise tracking-wider", children: p.number }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+                lineNumber: 115,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV(Icon, { className: "w-4 h-4 text-espresso/40 group-hover:text-turquoise transition-colors" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+                lineNumber: 118,
+                columnNumber: 19
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+              lineNumber: 114,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("h3", { className: "font-sans font-bold text-[16px] sm:text-[17px] text-espresso mb-1.5 tracking-tight", children: p.title }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+              lineNumber: 120,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "font-sans text-[13px] text-espresso/70 leading-relaxed font-normal", children: p.desc }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+              lineNumber: 123,
+              columnNumber: 17
+            }, this)
+          ]
+        },
+        p.number,
+        true,
+        {
+          fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+          lineNumber: 110,
+          columnNumber: 15
+        },
+        this
+      );
+    }) }, void 0, false, {
+      fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+      lineNumber: 106,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+    lineNumber: 47,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx",
+    lineNumber: 46,
+    columnNumber: 5
+  }, this);
+}
+_c = SlowbarSpatialPresence;
+var _c;
+$RefreshReg$(_c, "SlowbarSpatialPresence");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/SEKATA.TNJ/src/components/SlowbarSpatialPresence.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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O0FBQ2xCLFlBQU1DLE9BQU9ELEVBQUVMO0FBQ2YsYUFDRTtBQUFBLFFBQUM7QUFBQTtBQUFBLFVBRUMsV0FBVTtBQUFBLFVBRVY7QUFBQSxtQ0FBQyxTQUFJLFdBQVUsMENBQ2I7QUFBQSxxQ0FBQyxVQUFLLFdBQVUsNkRBQ2JLLFlBQUVKLFVBREw7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFFQTtBQUFBLGNBQ0EsdUJBQUMsUUFBSyxXQUFVLDJFQUFoQjtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQUF1RjtBQUFBLGlCQUp6RjtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUtBO0FBQUEsWUFDQSx1QkFBQyxRQUFHLFdBQVUsc0ZBQ1hJLFlBQUVILFNBREw7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFFQTtBQUFBLFlBQ0EsdUJBQUMsT0FBRSxXQUFVLHNFQUNWRyxZQUFFRixRQURMO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBRUE7QUFBQTtBQUFBO0FBQUEsUUFkS0UsRUFBRUo7QUFBQUEsUUFEVDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLE1BZ0JBO0FBQUEsSUFFSixDQUFDLEtBdEJIO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0F1QkE7QUFBQSxPQWxGRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBb0ZBLEtBckZGO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FzRkE7QUFFSjtBQUFDTSxLQS9HdUJUO0FBQXNCLElBQUFTO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIlJlYWN0IiwiQ29tcGFzcyIsIkZsYW1lIiwiQ2xvY2siLCJVc2VycyIsIlNsb3diYXJTcGF0aWFsUHJlc2VuY2UiLCJwaWxsYXJzIiwiaWNvbiIsIm51bWJlciIsInRpdGxlIiwiZGVzYyIsIm1hcCIsInAiLCJJY29uIiwiX2MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiU2xvd2JhclNwYXRpYWxQcmVzZW5jZS5qc3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IENvbXBhc3MsIEZsYW1lLCBDbG9jaywgVXNlcnMgfSBmcm9tICdsdWNpZGUtcmVhY3QnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBTbG93YmFyU3BhdGlhbFByZXNlbmNlKCkge1xuICBjb25zdCBwaWxsYXJzID0gW1xuICAgIHtcbiAgICAgIGljb246IEZsYW1lLFxuICAgICAgbnVtYmVyOiAnMDEnLFxuICAgICAgdGl0bGU6ICdNYW51YWwgQnJldyAmIFNhbmdyYWkgU2VnYXInLFxuICAgICAgZGVzYzogJ0Vrc3RyYWtzaSBiaWppIGtvcGkgcGlsaWhhbiBOdXNhbnRhcmEgZGVuZ2FuIHByZXNpc2kgcmFzYSB0YW5wYSBrb21wcm9taS4nXG4gICAgfSxcbiAgICB7XG4gICAgICBpY29uOiBDbG9jayxcbiAgICAgIG51bWJlcjogJzAyJyxcbiAgICAgIHRpdGxlOiAnU2VkdWhhbiBMYW1iYXQgKFplcm8gUnVzaCknLFxuICAgICAgZGVzYzogJ1J1YW5nIHVudHVrIG1lbGFtYmF0a2FuIHRlbXBvLCBtZW5naGVsYSBuYXBhcywgZGFuIG1lbmlrbWF0aSBzZXRpYXAgdGVndWthbi4nXG4gICAgfSxcbiAgICB7XG4gICAgICBpY29uOiBVc2VycyxcbiAgICAgIG51bWJlcjogJzAzJyxcbiAgICAgIHRpdGxlOiAnTWVqYSBLb211bmFsIFRlcmJ1a2EnLFxuICAgICAgZGVzYzogJ1RpdGlrIHRlbXUgYmFnaSBrYXdhbiBsYW1hLCBwZW5jaW50YSBzZWR1aGFuLCBkYW4gc2lhcGEgc2FqYSB5YW5nIGluZ2luIGJlcmNlcml0YS4nXG4gICAgfVxuICBdO1xuXG4gIHJldHVybiAoXG4gICAgPHNlY3Rpb24gaWQ9XCJzbG93YmFyLXNwYWNlXCIgY2xhc3NOYW1lPVwidy1mdWxsIHB5LTEwIHNtOnB5LTIwIGJnLVsjZjVlZWU2XSBib3JkZXIteSBib3JkZXItZXNwcmVzc28vMTUgc2Nyb2xsLW10LTIwIHNlbGVjdC1ub25lXCI+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInctZnVsbCBtYXgtdy1bMTQwMHB4XSBteC1hdXRvIHB4LTQgc206cHgtNiBsZzpweC0xMFwiPlxuICAgICAgICBcbiAgICAgICAgey8qIFRvcCBIZWFkZXI6IFVsdHJhLWNsZWFuLCBtaW5pbWFsIHRleHQsIEF3d3dhcmRzIHR5cG9ncmFwaHkgKi99XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBmbGV4LWNvbCBtZDpmbGV4LXJvdyBtZDppdGVtcy1lbmQganVzdGlmeS1iZXR3ZWVuIGdhcC02IG1iLTEwIHBiLTYgYm9yZGVyLWIgYm9yZGVyLWVzcHJlc3NvLzE1XCI+XG4gICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgbWItMlwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ3LTIgaC0yIHJvdW5kZWQtZnVsbCBiZy10dXJxdW9pc2VcIiAvPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJmb250LW1vbm8gdGV4dC1bMTFweF0gdXBwZXJjYXNlIHRyYWNraW5nLVswLjE4ZW1dIHRleHQtdHVycXVvaXNlIGZvbnQtc2VtaWJvbGRcIj5cbiAgICAgICAgICAgICAgICBSVUFORyAmYnVsbDsgU0xPV0JBUiBFWFBFUklFTkNFXG4gICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cImZvbnQtc2FucyBmb250LWJsYWNrIHRleHQtWzM0cHhdIHNtOnRleHQtWzQ4cHhdIGxnOnRleHQtWzU2cHhdIGxlYWRpbmctWzAuOThdIHRyYWNraW5nLVstMC4wNGVtXSB0ZXh0LWVzcHJlc3NvIHVwcGVyY2FzZVwiPlxuICAgICAgICAgICAgICBTYXR1IE1lamEuIFNhdHUgQ2FuZ2tpci5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiYmxvY2sgdGV4dC1lc3ByZXNzby82MCBmb250LW1lZGl1bVwiPlxuICAgICAgICAgICAgICAgIFRhbnBhIFNla2F0LlxuICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICA8L2gyPlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LWxlZnQgbWQ6dGV4dC1yaWdodCBtYXgtdy1zbVwiPlxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1zYW5zIHRleHQtWzEzcHhdIHNtOnRleHQtWzE0cHhdIHRleHQtZXNwcmVzc28vNzUgbGVhZGluZy1yZWxheGVkIGZvbnQtbm9ybWFsXCI+XG4gICAgICAgICAgICAgIFNsb3diYXIgaW5kZXBlbmRlbiBkZW5nYW4gcml0dWFsIHNlZHVoYW4ga29waSB5YW5nIGp1anVyIGRhbiBrZWhhbmdhdGFuIGJlcnR1a2FyIGNlcml0YSBrZWhpZHVwYW4uXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm10LTIgZm9udC1tb25vIHRleHQtWzExcHhdIHRleHQtdHVycXVvaXNlIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBmb250LXNlbWlib2xkXCI+XG4gICAgICAgICAgICAgIEVTVC4gMjAyNiAmYnVsbDsgI0tFQ0lMQkVSVFVNQlVIXG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgey8qIENpbmVtYXRpYyBTcGF0aWFsIFZpc3VhbCBGcmFtZSAqL31cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWxhdGl2ZSB3LWZ1bGwgaC1bMzYwcHhdIHNtOmgtWzQ4MHB4XSBsZzpoLVs1NjBweF0gcm91bmRlZC1bMjRweF0gc206cm91bmRlZC1bMzJweF0gb3ZlcmZsb3ctaGlkZGVuIGJvcmRlciBib3JkZXItZXNwcmVzc28vMTUgYmctZXNwcmVzc28gc2hhZG93LWxnIG1iLTggZ3JvdXBcIj5cbiAgICAgICAgICA8aW1nXG4gICAgICAgICAgICBzcmM9XCIva29udGVuMy5qcGdcIlxuICAgICAgICAgICAgYWx0PVwiU3Vhc2FuYSBSdWFuZyBTZWR1aCBkYW4gTWVqYSBTbG93YmFyIFNla2F0YVwiXG4gICAgICAgICAgICBsb2FkaW5nPVwiZWFnZXJcIlxuICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGgtZnVsbCBvYmplY3QtY292ZXIgb2JqZWN0LWNlbnRlciBmaWx0ZXIgY29udHJhc3QtMTA1IGJyaWdodG5lc3MtOTUgdHJhbnNpdGlvbi10cmFuc2Zvcm0gZHVyYXRpb24tNzAwIGVhc2Utb3V0IGdyb3VwLWhvdmVyOnNjYWxlLVsxLjAyXVwiXG4gICAgICAgICAgLz5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIGluc2V0LTAgYmctZ3JhZGllbnQtdG8tdCBmcm9tLWJsYWNrLzgwIHZpYS1ibGFjay8yNSB0by1ibGFjay8xNSBwb2ludGVyLWV2ZW50cy1ub25lXCIgLz5cblxuICAgICAgICAgIHsvKiBCb3R0b20gT3ZlcmxhaWQgQWVzdGhldGljIFRhZyAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIGJvdHRvbS02IGxlZnQtNiByaWdodC02IHNtOmJvdHRvbS04IHNtOmxlZnQtOCBzbTpyaWdodC04IHotMTAgZmxleCBmbGV4LWNvbCBzbTpmbGV4LXJvdyBzbTppdGVtcy1lbmQganVzdGlmeS1iZXR3ZWVuIGdhcC00IHRleHQtY3JlYW1cIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXcteGwgdGV4dC1sZWZ0XCI+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtbW9ubyB0ZXh0LVsxMXB4XSB1cHBlcmNhc2UgdHJhY2tpbmctWzAuMmVtXSB0ZXh0LW1hcmlnb2xkIGZvbnQtc2VtaWJvbGQgYmxvY2sgbWItMVwiPlxuICAgICAgICAgICAgICAgICNLRUNJTEJFUlRVTUJVSFxuICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImZvbnQtc2FucyBmb250LWJvbGQgdGV4dC1bMjBweF0gc206dGV4dC1bMjhweF0gbGVhZGluZy10aWdodCB0ZXh0LXdoaXRlIHRyYWNraW5nLXRpZ2h0XCI+XG4gICAgICAgICAgICAgICAgU2V0aWFwIHNlZHVoYW4gcHVueWEgd2FrdHUgdW50dWsgbWVrYXIuIEJlZ2l0dSBwdWxhIHBlcmNha2FwYW4ga2l0YS5cbiAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1sZWZ0IHNtOnRleHQtcmlnaHQgZmxleC1zaHJpbmstMFwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJpbmxpbmUtYmxvY2sgcHgtMyBweS0xIHJvdW5kZWQtWzZweF0gYmctd2hpdGUvMTAgYmFja2Ryb3AtYmx1ci1zbSBib3JkZXIgYm9yZGVyLXdoaXRlLzE1IHRleHQteHMgZm9udC1tb25vIHRleHQtY3JlYW0vOTBcIj5cbiAgICAgICAgICAgICAgICBCVUtBIFNFVElBUCBIQVJJICZidWxsOyAxMDowMCAmbmRhc2g7IDAwOjAwIFdJQlxuICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgey8qIDMgTWluaW1hbGlzdCBTZW5zb3J5IFNwZWNzIChSZXBsYWNlcyBvbGQgYXJ0aWNsZSBsaXN0ICYgc3BvdGlmeSBwbGF5ZXIpICovfVxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1jb2xzLTEgbWQ6Z3JpZC1jb2xzLTMgZ2FwLTQgc206Z2FwLTYgdGV4dC1sZWZ0XCI+XG4gICAgICAgICAge3BpbGxhcnMubWFwKChwKSA9PiB7XG4gICAgICAgICAgICBjb25zdCBJY29uID0gcC5pY29uO1xuICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgPGRpdlxuICAgICAgICAgICAgICAgIGtleT17cC5udW1iZXJ9XG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYmctWyNmYWY1ZWZdIHJvdW5kZWQtWzE4cHhdIHAtNiBib3JkZXIgYm9yZGVyLWVzcHJlc3NvLzEwIGhvdmVyOmJvcmRlci1lc3ByZXNzby8zMCB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0yMDAgZ3JvdXBcIlxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gbWItNFwiPlxuICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZm9udC1tb25vIHRleHQteHMgZm9udC1ib2xkIHRleHQtdHVycXVvaXNlIHRyYWNraW5nLXdpZGVyXCI+XG4gICAgICAgICAgICAgICAgICAgIHtwLm51bWJlcn1cbiAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgIDxJY29uIGNsYXNzTmFtZT1cInctNCBoLTQgdGV4dC1lc3ByZXNzby80MCBncm91cC1ob3Zlcjp0ZXh0LXR1cnF1b2lzZSB0cmFuc2l0aW9uLWNvbG9yc1wiIC8+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cImZvbnQtc2FucyBmb250LWJvbGQgdGV4dC1bMTZweF0gc206dGV4dC1bMTdweF0gdGV4dC1lc3ByZXNzbyBtYi0xLjUgdHJhY2tpbmctdGlnaHRcIj5cbiAgICAgICAgICAgICAgICAgIHtwLnRpdGxlfVxuICAgICAgICAgICAgICAgIDwvaDM+XG4gICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1zYW5zIHRleHQtWzEzcHhdIHRleHQtZXNwcmVzc28vNzAgbGVhZGluZy1yZWxheGVkIGZvbnQtbm9ybWFsXCI+XG4gICAgICAgICAgICAgICAgICB7cC5kZXNjfVxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICApO1xuICAgICAgICAgIH0pfVxuICAgICAgICA8L2Rpdj5cblxuICAgICAgPC9kaXY+XG4gICAgPC9zZWN0aW9uPlxuICApO1xufVxuXG4iXSwiZmlsZSI6IkQ6L1NFS0FUQS5UTkovc3JjL2NvbXBvbmVudHMvU2xvd2JhclNwYXRpYWxQcmVzZW5jZS5qc3gifQ==

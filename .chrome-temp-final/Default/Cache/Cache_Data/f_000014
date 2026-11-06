@@ -1,0 +1,435 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/Footer.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=379fe8b8"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("D:/SEKATA.TNJ/src/components/Footer.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=379fe8b8"; const React = __vite__cjsImport3_react.__esModule ? __vite__cjsImport3_react.default : __vite__cjsImport3_react; const useState = __vite__cjsImport3_react["useState"];
+import { Mail, Check, ArrowUp } from "/node_modules/.vite/deps/lucide-react.js?v=379fe8b8";
+export default function Footer() {
+  _s();
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+  const handleNewsletter = (e) => {
+    e.preventDefault();
+    if (!newsletterEmail) return;
+    setSubscribed(true);
+    setTimeout(() => {
+      setNewsletterEmail("");
+      setSubscribed(false);
+    }, 4e3);
+  };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  return /* @__PURE__ */ jsxDEV("footer", { className: "w-full bg-cream border-t-hairline", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "bg-linen border-b-hairline py-12 sm:py-16", children: /* @__PURE__ */ jsxDEV("div", { className: "container-max", children: /* @__PURE__ */ jsxDEV("div", { className: "max-w-2xl mx-auto text-center", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "badge-stamp bg-turquoise text-cream mb-3", children: "SURAT KABAR DARI SLOWBAR" }, void 0, false, {
+        fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+        lineNumber: 47,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDEV("h2", { className: "font-display text-[32px] sm:text-[42px] leading-[0.95] text-espresso tracking-[-0.05em] mb-3", children: "Dapatkan Kabar Seduhan & Cerita Terbaru." }, void 0, false, {
+        fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+        lineNumber: 50,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { className: "text-[14px] font-body text-coffee-dust leading-relaxed mb-6", children: "Informasi ketersediaan biji kopi sangrai segar, jadwal sesi slowbar mingguan, dan catatan cerita dari Tanjungpinang langsung ke emailmu." }, void 0, false, {
+        fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+        lineNumber: 53,
+        columnNumber: 13
+      }, this),
+      subscribed ? /* @__PURE__ */ jsxDEV("div", { className: "p-4 bg-cream border-hairline rounded-[4px] inline-flex items-center gap-2 text-xs font-mono text-turquoise", children: [
+        /* @__PURE__ */ jsxDEV(Check, { className: "w-4 h-4" }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+          lineNumber: 59,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "TERIMA KASIH! KAMU SUDAH TERDAFTAR DI SURAT KABAR SEKATA." }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+          lineNumber: 60,
+          columnNumber: 17
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+        lineNumber: 58,
+        columnNumber: 13
+      }, this) : /* @__PURE__ */ jsxDEV("form", { onSubmit: handleNewsletter, className: "flex flex-col sm:flex-row gap-2 max-w-md mx-auto", children: [
+        /* @__PURE__ */ jsxDEV(
+          "input",
+          {
+            type: "email",
+            required: true,
+            value: newsletterEmail,
+            onChange: (e) => setNewsletterEmail(e.target.value),
+            placeholder: "Masukkan alamat email kamu...",
+            className: "flex-1 px-4 py-2.5 text-xs font-body bg-cream border-hairline rounded-[6px] text-espresso focus:border-turquoise focus:outline-none placeholder:text-coffee-dust/60"
+          },
+          void 0,
+          false,
+          {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 64,
+            columnNumber: 17
+          },
+          this
+        ),
+        /* @__PURE__ */ jsxDEV(
+          "button",
+          {
+            type: "submit",
+            className: "btn-filled text-xs py-2.5 px-6 whitespace-nowrap tracking-[0.05em] bg-turquoise border-turquoise hover:bg-turquoise-dark rounded-[6px] transition-all duration-200 ease-out active:scale-[0.97]",
+            children: "LANGGANAN"
+          },
+          void 0,
+          false,
+          {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 72,
+            columnNumber: 17
+          },
+          this
+        )
+      ] }, void 0, true, {
+        fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+        lineNumber: 63,
+        columnNumber: 13
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+      lineNumber: 46,
+      columnNumber: 11
+    }, this) }, void 0, false, {
+      fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+      lineNumber: 45,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+      lineNumber: 44,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "container-max py-14 sm:py-20", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-4 space-y-4", children: [
+          /* @__PURE__ */ jsxDEV("a", { href: "#", className: "inline-block", children: /* @__PURE__ */ jsxDEV(
+            "img",
+            {
+              src: "/logo.png",
+              alt: "Sekata Coffee & Slowbar",
+              className: "h-12 w-auto object-contain"
+            },
+            void 0,
+            false,
+            {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 91,
+              columnNumber: 15
+            },
+            this
+          ) }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 90,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "font-body text-[13px] leading-relaxed text-coffee-dust max-w-sm", children: "Sekata Coffee & Slowbar adalah ruang temu dan kedai seduh lambat independen di Tanjungpinang, Kepulauan Riau. Didedikasikan untuk apresiasi rasa kopi yang ramah bagi semua orang dan kehangatan bertukar cerita kehidupan." }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 97,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "pt-2 text-[11px] font-mono text-turquoise uppercase tracking-[0.05em] font-medium", children: "TANJUNGPINANG • KEPULAUAN RIAU • #KECILBERTUMBUH" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 100,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+          lineNumber: 89,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-3 space-y-3", children: [
+          /* @__PURE__ */ jsxDEV("p", { className: "text-[11px] font-mono font-semibold text-espresso uppercase tracking-[0.08em] pb-1 border-b-hairline", children: "NAVIGASI SITUS" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 107,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("ul", { className: "space-y-2.5 font-body text-[14px] text-[#5c4d44]", children: [
+            /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV("a", { href: "#menu", className: "hover:text-espresso hover:underline underline-offset-2 transition-colors", children: "Pilihan Menu & Seduhan" }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 112,
+              columnNumber: 17
+            }, this) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 111,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV("a", { href: "#slowbar", className: "hover:text-espresso hover:underline underline-offset-2 transition-colors", children: "Pengalaman Meja Slowbar" }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 117,
+              columnNumber: 17
+            }, this) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 116,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV("a", { href: "#filosofi", className: "hover:text-espresso hover:underline underline-offset-2 transition-colors", children: "Filosofi Sekata" }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 122,
+              columnNumber: 17
+            }, this) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 121,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV("a", { href: "#reserve", className: "hover:text-espresso hover:underline underline-offset-2 transition-colors", children: "Reservasi Meja Slowbar" }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 127,
+              columnNumber: 17
+            }, this) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 126,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV("a", { href: "#cerita", className: "hover:text-espresso hover:underline underline-offset-2 transition-colors", children: "Setiap Pertemuan Punya Cerita" }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 132,
+              columnNumber: 17
+            }, this) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 131,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV("a", { href: "#lokasi", className: "hover:text-espresso hover:underline underline-offset-2 transition-colors", children: "Lokasi & Petunjuk Arah" }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 137,
+              columnNumber: 17
+            }, this) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 136,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 110,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+          lineNumber: 106,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-3 space-y-3", children: [
+          /* @__PURE__ */ jsxDEV("p", { className: "text-[11px] font-mono font-semibold text-espresso uppercase tracking-[0.08em] pb-1 border-b-hairline", children: "KEDAI & JAM BUKA" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 146,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "space-y-3 font-body text-[13px] sm:text-[14px] text-[#5c4d44]", children: [
+            /* @__PURE__ */ jsxDEV("div", { children: [
+              /* @__PURE__ */ jsxDEV("p", { className: "text-espresso font-medium", children: "Sekata Slowbar Tanjungpinang" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                lineNumber: 151,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "text-[#6b584f]", children: "Kepulauan Riau • Indonesia" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                lineNumber: 152,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "text-[#6b584f] mt-1", children: "Senin – Jumat: 10.00 – 22.00 WIB" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                lineNumber: 153,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "text-[#6b584f]", children: "Sabtu – Minggu: 09.00 – 23.00 WIB" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                lineNumber: 154,
+                columnNumber: 17
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 150,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "pt-2 border-t border-espresso/10", children: [
+              /* @__PURE__ */ jsxDEV("p", { className: "text-espresso font-medium", children: "Media Sosial" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                lineNumber: 157,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "text-[#6b584f]", children: [
+                "Instagram: ",
+                /* @__PURE__ */ jsxDEV("a", { href: "https://instagram.com/sekata.tnj", target: "_blank", rel: "noopener noreferrer", className: "text-turquoise hover:underline", children: "@sekata.tnj" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                  lineNumber: 158,
+                  columnNumber: 58
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                lineNumber: 158,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "text-[#6b584f]", children: [
+                "TikTok: ",
+                /* @__PURE__ */ jsxDEV("a", { href: "https://tiktok.com/@sekatatnj", target: "_blank", rel: "noopener noreferrer", className: "text-turquoise hover:underline", children: "@sekatatnj" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                  lineNumber: 159,
+                  columnNumber: 55
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                lineNumber: 159,
+                columnNumber: 17
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 156,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 149,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+          lineNumber: 145,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-2 space-y-4", children: [
+          /* @__PURE__ */ jsxDEV("p", { className: "text-xs font-mono font-medium text-espresso uppercase tracking-[0.05em] pb-1 border-b-hairline", children: "SEMANGAT KAMI" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 166,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "text-xs font-mono text-coffee-dust space-y-2", children: [
+            /* @__PURE__ */ jsxDEV("p", { className: "text-turquoise font-medium", children: "#KecilBertumbuh" }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 170,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "italic font-display text-[15px] text-espresso leading-snug", children: "“Mari Bertemu & Bercerita Tentang Kehidupan.”" }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 171,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 169,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "pt-4", children: /* @__PURE__ */ jsxDEV(
+            "button",
+            {
+              onClick: scrollToTop,
+              className: "btn-ghost w-full flex items-center justify-center gap-1.5 text-xs py-2 rounded-[6px] hover:border-turquoise hover:text-turquoise transition-all duration-200 ease-out active:scale-[0.97]",
+              "aria-label": "Kembali ke atas halaman",
+              children: [
+                /* @__PURE__ */ jsxDEV(ArrowUp, { className: "w-3.5 h-3.5 stroke-[1.5]" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                  lineNumber: 182,
+                  columnNumber: 17
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { children: "KEMBALI KE ATAS" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+                  lineNumber: 183,
+                  columnNumber: 17
+                }, this)
+              ]
+            },
+            void 0,
+            true,
+            {
+              fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+              lineNumber: 177,
+              columnNumber: 15
+            },
+            this
+          ) }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 176,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+          lineNumber: 165,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+        lineNumber: 86,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "mt-14 pt-8 border-t-hairline flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-coffee-dust uppercase tracking-[0.05em]", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: "© 2026 SEKATA COFFEE & SLOWBAR. HAK CIPTA DILINDUNGI." }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+          lineNumber: 192,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "flex flex-wrap items-center gap-4 text-center sm:text-right", children: [
+          /* @__PURE__ */ jsxDEV("span", { children: "SETIAP SEDUHAN PUNYA CERITA" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 196,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: "•" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 197,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "text-turquoise font-medium", children: "#KECILBERTUMBUH" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+            lineNumber: 198,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+          lineNumber: 195,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+        lineNumber: 191,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+      lineNumber: 85,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/SEKATA.TNJ/src/components/Footer.jsx",
+    lineNumber: 42,
+    columnNumber: 5
+  }, this);
+}
+_s(Footer, "nYUy3lHKrVwY57pUd5HCh8MNiOc=");
+_c = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/SEKATA.TNJ/src/components/Footer.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/SEKATA.TNJ/src/components/Footer.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBLE1BR0EsdUJBQUMsU0FBSSxXQUFVLGdLQUNiO0FBQUEsK0JBQUMsU0FBRyxxRUFBSjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBRUE7QUFBQSxRQUNBLHVCQUFDLFNBQUksV0FBVSwrREFDYjtBQUFBLGlDQUFDLFVBQUssMkNBQU47QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFBaUM7QUFBQSxVQUNqQyx1QkFBQyxVQUFLLGlCQUFOO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBQVk7QUFBQSxVQUNaLHVCQUFDLFVBQUssV0FBVSw4QkFBNkIsK0JBQTdDO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBQTREO0FBQUEsYUFIOUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUlBO0FBQUEsV0FSRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBU0E7QUFBQSxTQW5IRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBcUhBO0FBQUEsT0FoS0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQWlLQTtBQUVKO0FBQUNULEdBdEx1QkQsUUFBTTtBQUFBLEtBQU5BO0FBQU0sSUFBQWlCO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIlJlYWN0IiwidXNlU3RhdGUiLCJNYWlsIiwiQ2hlY2siLCJBcnJvd1VwIiwiRm9vdGVyIiwiX3MiLCJuZXdzbGV0dGVyRW1haWwiLCJzZXROZXdzbGV0dGVyRW1haWwiLCJzdWJzY3JpYmVkIiwic2V0U3Vic2NyaWJlZCIsImhhbmRsZU5ld3NsZXR0ZXIiLCJlIiwicHJldmVudERlZmF1bHQiLCJzZXRUaW1lb3V0Iiwic2Nyb2xsVG9Ub3AiLCJ3aW5kb3ciLCJzY3JvbGxUbyIsInRvcCIsImJlaGF2aW9yIiwidGFyZ2V0IiwidmFsdWUiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJGb290ZXIuanN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IE1haWwsIENoZWNrLCBBcnJvd1VwIH0gZnJvbSAnbHVjaWRlLXJlYWN0JztcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gRm9vdGVyKCkge1xuICBjb25zdCBbbmV3c2xldHRlckVtYWlsLCBzZXROZXdzbGV0dGVyRW1haWxdID0gdXNlU3RhdGUoJycpO1xuICBjb25zdCBbc3Vic2NyaWJlZCwgc2V0U3Vic2NyaWJlZF0gPSB1c2VTdGF0ZShmYWxzZSk7XG5cbiAgY29uc3QgaGFuZGxlTmV3c2xldHRlciA9IChlKSA9PiB7XG4gICAgZS5wcmV2ZW50RGVmYXVsdCgpO1xuICAgIGlmICghbmV3c2xldHRlckVtYWlsKSByZXR1cm47XG4gICAgc2V0U3Vic2NyaWJlZCh0cnVlKTtcbiAgICBzZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgIHNldE5ld3NsZXR0ZXJFbWFpbCgnJyk7XG4gICAgICBzZXRTdWJzY3JpYmVkKGZhbHNlKTtcbiAgICB9LCA0MDAwKTtcbiAgfTtcblxuICBjb25zdCBzY3JvbGxUb1RvcCA9ICgpID0+IHtcbiAgICB3aW5kb3cuc2Nyb2xsVG8oeyB0b3A6IDAsIGJlaGF2aW9yOiAnc21vb3RoJyB9KTtcbiAgfTtcblxuICByZXR1cm4gKFxuICAgIDxmb290ZXIgY2xhc3NOYW1lPVwidy1mdWxsIGJnLWNyZWFtIGJvcmRlci10LWhhaXJsaW5lXCI+XG4gICAgICB7LyogU3VyYXQgS2FiYXIgZGFyaSBTbG93YmFyIFN0cmlwICovfVxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJiZy1saW5lbiBib3JkZXItYi1oYWlybGluZSBweS0xMiBzbTpweS0xNlwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lci1tYXhcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LTJ4bCBteC1hdXRvIHRleHQtY2VudGVyXCI+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJiYWRnZS1zdGFtcCBiZy10dXJxdW9pc2UgdGV4dC1jcmVhbSBtYi0zXCI+XG4gICAgICAgICAgICAgIFNVUkFUIEtBQkFSIERBUkkgU0xPV0JBUlxuICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cImZvbnQtZGlzcGxheSB0ZXh0LVszMnB4XSBzbTp0ZXh0LVs0MnB4XSBsZWFkaW5nLVswLjk1XSB0ZXh0LWVzcHJlc3NvIHRyYWNraW5nLVstMC4wNWVtXSBtYi0zXCI+XG4gICAgICAgICAgICAgIERhcGF0a2FuIEthYmFyIFNlZHVoYW4gJmFtcDsgQ2VyaXRhIFRlcmJhcnUuXG4gICAgICAgICAgICA8L2gyPlxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1bMTRweF0gZm9udC1ib2R5IHRleHQtY29mZmVlLWR1c3QgbGVhZGluZy1yZWxheGVkIG1iLTZcIj5cbiAgICAgICAgICAgICAgSW5mb3JtYXNpIGtldGVyc2VkaWFhbiBiaWppIGtvcGkgc2FuZ3JhaSBzZWdhciwgamFkd2FsIHNlc2kgc2xvd2JhciBtaW5nZ3VhbiwgZGFuIGNhdGF0YW4gY2VyaXRhIGRhcmkgVGFuanVuZ3BpbmFuZyBsYW5nc3VuZyBrZSBlbWFpbG11LlxuICAgICAgICAgICAgPC9wPlxuXG4gICAgICAgICAgICB7c3Vic2NyaWJlZCA/IChcbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwLTQgYmctY3JlYW0gYm9yZGVyLWhhaXJsaW5lIHJvdW5kZWQtWzRweF0gaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHRleHQteHMgZm9udC1tb25vIHRleHQtdHVycXVvaXNlXCI+XG4gICAgICAgICAgICAgICAgPENoZWNrIGNsYXNzTmFtZT1cInctNCBoLTRcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuPlRFUklNQSBLQVNJSCEgS0FNVSBTVURBSCBURVJEQUZUQVIgREkgU1VSQVQgS0FCQVIgU0VLQVRBLjwvc3Bhbj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICApIDogKFxuICAgICAgICAgICAgICA8Zm9ybSBvblN1Ym1pdD17aGFuZGxlTmV3c2xldHRlcn0gY2xhc3NOYW1lPVwiZmxleCBmbGV4LWNvbCBzbTpmbGV4LXJvdyBnYXAtMiBtYXgtdy1tZCBteC1hdXRvXCI+XG4gICAgICAgICAgICAgICAgPGlucHV0XG4gICAgICAgICAgICAgICAgICB0eXBlPVwiZW1haWxcIlxuICAgICAgICAgICAgICAgICAgcmVxdWlyZWRcbiAgICAgICAgICAgICAgICAgIHZhbHVlPXtuZXdzbGV0dGVyRW1haWx9XG4gICAgICAgICAgICAgICAgICBvbkNoYW5nZT17KGUpID0+IHNldE5ld3NsZXR0ZXJFbWFpbChlLnRhcmdldC52YWx1ZSl9XG4gICAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cIk1hc3Vra2FuIGFsYW1hdCBlbWFpbCBrYW11Li4uXCJcbiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImZsZXgtMSBweC00IHB5LTIuNSB0ZXh0LXhzIGZvbnQtYm9keSBiZy1jcmVhbSBib3JkZXItaGFpcmxpbmUgcm91bmRlZC1bNnB4XSB0ZXh0LWVzcHJlc3NvIGZvY3VzOmJvcmRlci10dXJxdW9pc2UgZm9jdXM6b3V0bGluZS1ub25lIHBsYWNlaG9sZGVyOnRleHQtY29mZmVlLWR1c3QvNjBcIlxuICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgICAgdHlwZT1cInN1Ym1pdFwiXG4gICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJidG4tZmlsbGVkIHRleHQteHMgcHktMi41IHB4LTYgd2hpdGVzcGFjZS1ub3dyYXAgdHJhY2tpbmctWzAuMDVlbV0gYmctdHVycXVvaXNlIGJvcmRlci10dXJxdW9pc2UgaG92ZXI6YmctdHVycXVvaXNlLWRhcmsgcm91bmRlZC1bNnB4XSB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0yMDAgZWFzZS1vdXQgYWN0aXZlOnNjYWxlLVswLjk3XVwiXG4gICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgTEFOR0dBTkFOXG4gICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgIDwvZm9ybT5cbiAgICAgICAgICAgICl9XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cbiAgICAgIHsvKiBNYWluIEZvb3RlciBTaXRlbWFwIENvbHVtbnMgKi99XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lci1tYXggcHktMTQgc206cHktMjBcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdyaWQtY29scy0xIG1kOmdyaWQtY29scy0yIGxnOmdyaWQtY29scy0xMiBnYXAtMTBcIj5cbiAgICAgICAgICBcbiAgICAgICAgICB7LyogQ29sIDE6IE9yaWdpbmFsIEJyYW5kIExvZ28gJiBJbnRybyAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOmNvbC1zcGFuLTQgc3BhY2UteS00XCI+XG4gICAgICAgICAgICA8YSBocmVmPVwiI1wiIGNsYXNzTmFtZT1cImlubGluZS1ibG9ja1wiPlxuICAgICAgICAgICAgICA8aW1nXG4gICAgICAgICAgICAgICAgc3JjPVwiL2xvZ28ucG5nXCJcbiAgICAgICAgICAgICAgICBhbHQ9XCJTZWthdGEgQ29mZmVlICZhbXA7IFNsb3diYXJcIlxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImgtMTIgdy1hdXRvIG9iamVjdC1jb250YWluXCJcbiAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImZvbnQtYm9keSB0ZXh0LVsxM3B4XSBsZWFkaW5nLXJlbGF4ZWQgdGV4dC1jb2ZmZWUtZHVzdCBtYXgtdy1zbVwiPlxuICAgICAgICAgICAgICBTZWthdGEgQ29mZmVlICZhbXA7IFNsb3diYXIgYWRhbGFoIHJ1YW5nIHRlbXUgZGFuIGtlZGFpIHNlZHVoIGxhbWJhdCBpbmRlcGVuZGVuIGRpIFRhbmp1bmdwaW5hbmcsIEtlcHVsYXVhbiBSaWF1LiBEaWRlZGlrYXNpa2FuIHVudHVrIGFwcmVzaWFzaSByYXNhIGtvcGkgeWFuZyByYW1haCBiYWdpIHNlbXVhIG9yYW5nIGRhbiBrZWhhbmdhdGFuIGJlcnR1a2FyIGNlcml0YSBrZWhpZHVwYW4uXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB0LTIgdGV4dC1bMTFweF0gZm9udC1tb25vIHRleHQtdHVycXVvaXNlIHVwcGVyY2FzZSB0cmFja2luZy1bMC4wNWVtXSBmb250LW1lZGl1bVwiPlxuICAgICAgICAgICAgICBUQU5KVU5HUElOQU5HICZidWxsOyBLRVBVTEFVQU4gUklBVSAmYnVsbDsgI0tFQ0lMQkVSVFVNQlVIXG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgIHsvKiBDb2wgMjogTmF2aWdhdGlvbiAoSW1hZ2UgNSBIdW1hbiBUeXBvZ3JhcGh5KSAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOmNvbC1zcGFuLTMgc3BhY2UteS0zXCI+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LVsxMXB4XSBmb250LW1vbm8gZm9udC1zZW1pYm9sZCB0ZXh0LWVzcHJlc3NvIHVwcGVyY2FzZSB0cmFja2luZy1bMC4wOGVtXSBwYi0xIGJvcmRlci1iLWhhaXJsaW5lXCI+XG4gICAgICAgICAgICAgIE5BVklHQVNJIFNJVFVTXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8dWwgY2xhc3NOYW1lPVwic3BhY2UteS0yLjUgZm9udC1ib2R5IHRleHQtWzE0cHhdIHRleHQtWyM1YzRkNDRdXCI+XG4gICAgICAgICAgICAgIDxsaT5cbiAgICAgICAgICAgICAgICA8YSBocmVmPVwiI21lbnVcIiBjbGFzc05hbWU9XCJob3Zlcjp0ZXh0LWVzcHJlc3NvIGhvdmVyOnVuZGVybGluZSB1bmRlcmxpbmUtb2Zmc2V0LTIgdHJhbnNpdGlvbi1jb2xvcnNcIj5cbiAgICAgICAgICAgICAgICAgIFBpbGloYW4gTWVudSAmYW1wOyBTZWR1aGFuXG4gICAgICAgICAgICAgICAgPC9hPlxuICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICA8bGk+XG4gICAgICAgICAgICAgICAgPGEgaHJlZj1cIiNzbG93YmFyXCIgY2xhc3NOYW1lPVwiaG92ZXI6dGV4dC1lc3ByZXNzbyBob3Zlcjp1bmRlcmxpbmUgdW5kZXJsaW5lLW9mZnNldC0yIHRyYW5zaXRpb24tY29sb3JzXCI+XG4gICAgICAgICAgICAgICAgICBQZW5nYWxhbWFuIE1lamEgU2xvd2JhclxuICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgPGxpPlxuICAgICAgICAgICAgICAgIDxhIGhyZWY9XCIjZmlsb3NvZmlcIiBjbGFzc05hbWU9XCJob3Zlcjp0ZXh0LWVzcHJlc3NvIGhvdmVyOnVuZGVybGluZSB1bmRlcmxpbmUtb2Zmc2V0LTIgdHJhbnNpdGlvbi1jb2xvcnNcIj5cbiAgICAgICAgICAgICAgICAgIEZpbG9zb2ZpIFNla2F0YVxuICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgPGxpPlxuICAgICAgICAgICAgICAgIDxhIGhyZWY9XCIjcmVzZXJ2ZVwiIGNsYXNzTmFtZT1cImhvdmVyOnRleHQtZXNwcmVzc28gaG92ZXI6dW5kZXJsaW5lIHVuZGVybGluZS1vZmZzZXQtMiB0cmFuc2l0aW9uLWNvbG9yc1wiPlxuICAgICAgICAgICAgICAgICAgUmVzZXJ2YXNpIE1lamEgU2xvd2JhclxuICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgPGxpPlxuICAgICAgICAgICAgICAgIDxhIGhyZWY9XCIjY2VyaXRhXCIgY2xhc3NOYW1lPVwiaG92ZXI6dGV4dC1lc3ByZXNzbyBob3Zlcjp1bmRlcmxpbmUgdW5kZXJsaW5lLW9mZnNldC0yIHRyYW5zaXRpb24tY29sb3JzXCI+XG4gICAgICAgICAgICAgICAgICBTZXRpYXAgUGVydGVtdWFuIFB1bnlhIENlcml0YVxuICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgPGxpPlxuICAgICAgICAgICAgICAgIDxhIGhyZWY9XCIjbG9rYXNpXCIgY2xhc3NOYW1lPVwiaG92ZXI6dGV4dC1lc3ByZXNzbyBob3Zlcjp1bmRlcmxpbmUgdW5kZXJsaW5lLW9mZnNldC0yIHRyYW5zaXRpb24tY29sb3JzXCI+XG4gICAgICAgICAgICAgICAgICBMb2thc2kgJmFtcDsgUGV0dW5qdWsgQXJhaFxuICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICB7LyogQ29sIDM6IEtlZGFpIFNla2F0YSBJbmZvICovfVxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibGc6Y29sLXNwYW4tMyBzcGFjZS15LTNcIj5cbiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtWzExcHhdIGZvbnQtbW9ubyBmb250LXNlbWlib2xkIHRleHQtZXNwcmVzc28gdXBwZXJjYXNlIHRyYWNraW5nLVswLjA4ZW1dIHBiLTEgYm9yZGVyLWItaGFpcmxpbmVcIj5cbiAgICAgICAgICAgICAgS0VEQUkgJmFtcDsgSkFNIEJVS0FcbiAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS0zIGZvbnQtYm9keSB0ZXh0LVsxM3B4XSBzbTp0ZXh0LVsxNHB4XSB0ZXh0LVsjNWM0ZDQ0XVwiPlxuICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtZXNwcmVzc28gZm9udC1tZWRpdW1cIj5TZWthdGEgU2xvd2JhciBUYW5qdW5ncGluYW5nPC9wPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtWyM2YjU4NGZdXCI+S2VwdWxhdWFuIFJpYXUgJmJ1bGw7IEluZG9uZXNpYTwvcD5cbiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LVsjNmI1ODRmXSBtdC0xXCI+U2VuaW4g4oCTIEp1bWF0OiAxMC4wMCDigJMgMjIuMDAgV0lCPC9wPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtWyM2YjU4NGZdXCI+U2FidHUg4oCTIE1pbmdndTogMDkuMDAg4oCTIDIzLjAwIFdJQjwvcD5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHQtMiBib3JkZXItdCBib3JkZXItZXNwcmVzc28vMTBcIj5cbiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWVzcHJlc3NvIGZvbnQtbWVkaXVtXCI+TWVkaWEgU29zaWFsPC9wPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtWyM2YjU4NGZdXCI+SW5zdGFncmFtOiA8YSBocmVmPVwiaHR0cHM6Ly9pbnN0YWdyYW0uY29tL3Nla2F0YS50bmpcIiB0YXJnZXQ9XCJfYmxhbmtcIiByZWw9XCJub29wZW5lciBub3JlZmVycmVyXCIgY2xhc3NOYW1lPVwidGV4dC10dXJxdW9pc2UgaG92ZXI6dW5kZXJsaW5lXCI+QHNla2F0YS50bmo8L2E+PC9wPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtWyM2YjU4NGZdXCI+VGlrVG9rOiA8YSBocmVmPVwiaHR0cHM6Ly90aWt0b2suY29tL0BzZWthdGF0bmpcIiB0YXJnZXQ9XCJfYmxhbmtcIiByZWw9XCJub29wZW5lciBub3JlZmVycmVyXCIgY2xhc3NOYW1lPVwidGV4dC10dXJxdW9pc2UgaG92ZXI6dW5kZXJsaW5lXCI+QHNla2F0YXRuajwvYT48L3A+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICB7LyogQ29sIDQ6IFRhZ2xpbmUgJiBCYWNrIHRvIFRvcCAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOmNvbC1zcGFuLTIgc3BhY2UteS00XCI+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzIGZvbnQtbW9ubyBmb250LW1lZGl1bSB0ZXh0LWVzcHJlc3NvIHVwcGVyY2FzZSB0cmFja2luZy1bMC4wNWVtXSBwYi0xIGJvcmRlci1iLWhhaXJsaW5lXCI+XG4gICAgICAgICAgICAgIFNFTUFOR0FUIEtBTUlcbiAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC14cyBmb250LW1vbm8gdGV4dC1jb2ZmZWUtZHVzdCBzcGFjZS15LTJcIj5cbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC10dXJxdW9pc2UgZm9udC1tZWRpdW1cIj4jS2VjaWxCZXJ0dW1idWg8L3A+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cIml0YWxpYyBmb250LWRpc3BsYXkgdGV4dC1bMTVweF0gdGV4dC1lc3ByZXNzbyBsZWFkaW5nLXNudWdcIj5cbiAgICAgICAgICAgICAgICAmbGRxdW87TWFyaSBCZXJ0ZW11ICZhbXA7IEJlcmNlcml0YSBUZW50YW5nIEtlaGlkdXBhbi4mcmRxdW87XG4gICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB0LTRcIj5cbiAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9e3Njcm9sbFRvVG9wfVxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImJ0bi1naG9zdCB3LWZ1bGwgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgZ2FwLTEuNSB0ZXh0LXhzIHB5LTIgcm91bmRlZC1bNnB4XSBob3Zlcjpib3JkZXItdHVycXVvaXNlIGhvdmVyOnRleHQtdHVycXVvaXNlIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTIwMCBlYXNlLW91dCBhY3RpdmU6c2NhbGUtWzAuOTddXCJcbiAgICAgICAgICAgICAgICBhcmlhLWxhYmVsPVwiS2VtYmFsaSBrZSBhdGFzIGhhbGFtYW5cIlxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPEFycm93VXAgY2xhc3NOYW1lPVwidy0zLjUgaC0zLjUgc3Ryb2tlLVsxLjVdXCIgLz5cbiAgICAgICAgICAgICAgICA8c3Bhbj5LRU1CQUxJIEtFIEFUQVM8L3NwYW4+XG4gICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgey8qIEJvdHRvbSBDb2xvcGhvbiAqL31cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtdC0xNCBwdC04IGJvcmRlci10LWhhaXJsaW5lIGZsZXggZmxleC1jb2wgc206ZmxleC1yb3cgaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBnYXAtNCB0ZXh0LVsxMXB4XSBmb250LW1vbm8gdGV4dC1jb2ZmZWUtZHVzdCB1cHBlcmNhc2UgdHJhY2tpbmctWzAuMDVlbV1cIj5cbiAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgJmNvcHk7IDIwMjYgU0VLQVRBIENPRkZFRSAmYW1wOyBTTE9XQkFSLiBIQUsgQ0lQVEEgRElMSU5EVU5HSS5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggZmxleC13cmFwIGl0ZW1zLWNlbnRlciBnYXAtNCB0ZXh0LWNlbnRlciBzbTp0ZXh0LXJpZ2h0XCI+XG4gICAgICAgICAgICA8c3Bhbj5TRVRJQVAgU0VEVUhBTiBQVU5ZQSBDRVJJVEE8L3NwYW4+XG4gICAgICAgICAgICA8c3Bhbj4mYnVsbDs8L3NwYW4+XG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXR1cnF1b2lzZSBmb250LW1lZGl1bVwiPiNLRUNJTEJFUlRVTUJVSDwvc3Bhbj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgIDwvZGl2PlxuICAgIDwvZm9vdGVyPlxuICApO1xufVxuIl0sImZpbGUiOiJEOi9TRUtBVEEuVE5KL3NyYy9jb21wb25lbnRzL0Zvb3Rlci5qc3gifQ==

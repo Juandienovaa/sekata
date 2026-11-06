@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<video id="v" src="http://localhost:3001/herosection.mp4" muted autoplay playsinline style="width:1280px;height:720px;"></video>
+<canvas id="c"></canvas>
+<script>
+  const v = document.getElementById('v');
+  const c = document.getElementById('c');
+  v.addEventListener('playing', () => {
+    setTimeout(() => {
+      c.width = v.videoWidth || 1280;
+      c.height = v.videoHeight || 720;
+      const ctx = c.getContext('2d');
+      ctx.drawImage(v, 0, 0, c.width, c.height);
+      window.capturedFrame = c.toDataURL('image/jpeg', 0.88);
+    }, 200);
+  });
+</script>
+</body>
+</html>

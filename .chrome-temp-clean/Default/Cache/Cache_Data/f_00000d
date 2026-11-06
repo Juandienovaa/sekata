@@ -1,0 +1,174 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/BrandKineticTypography.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=379fe8b8"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=379fe8b8"; const React = __vite__cjsImport3_react.__esModule ? __vite__cjsImport3_react.default : __vite__cjsImport3_react;
+import { Sparkles } from "/node_modules/.vite/deps/lucide-react.js?v=379fe8b8";
+export default function BrandKineticTypography() {
+  const rowTop = [
+    "SEKATA COFFEE & SLOWBAR",
+    "TANJUNGPINANG",
+    "100% SINGLE ORIGIN",
+    "RITUAL SEDUHAN MANUAL",
+    "TEMPAT BERTEMU & BERCERITA",
+    "#KECILBERTUMBUH"
+  ];
+  const rowBottom = [
+    "TANPA TERGESA-GESA",
+    "PERCAKAPAN JUJUR",
+    "KEPULAUAN RIAU",
+    "SEDURAN LAMBAT",
+    "RUANG TERBUKA UNTUK SEMUA",
+    "RASA YANG MENETAP"
+  ];
+  return /* @__PURE__ */ jsxDEV("section", { id: "brand-kinetic", className: "w-full bg-[#0d0806] text-cream py-14 sm:py-20 border-y border-white/10 overflow-hidden select-none relative z-20", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-burnt-orange/10 rounded-full blur-[100px] pointer-events-none" }, void 0, false, {
+      fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+      lineNumber: 46,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "flex animate-marquee whitespace-nowrap will-change-transform mb-6 sm:mb-8", children: [0, 1].map(
+      (blockIdx) => /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-8 sm:gap-14 pr-8 sm:pr-14 flex-shrink-0", children: rowTop.map(
+        (item, idx) => /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-8 sm:gap-14 flex-shrink-0", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "font-sans font-black text-[28px] sm:text-[44px] lg:text-[56px] tracking-[-0.03em] uppercase text-cream hover:text-burnt-orange transition-colors", children: item }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+            lineNumber: 54,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "text-burnt-orange text-xl sm:text-2xl font-bold flex-shrink-0 select-none", children: "✦" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+            lineNumber: 57,
+            columnNumber: 17
+          }, this)
+        ] }, idx, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+          lineNumber: 53,
+          columnNumber: 11
+        }, this)
+      ) }, blockIdx, false, {
+        fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+        lineNumber: 51,
+        columnNumber: 9
+      }, this)
+    ) }, void 0, false, {
+      fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+      lineNumber: 49,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "w-full max-w-[1200px] mx-auto px-4 sm:px-8 my-6 sm:my-10 text-center relative z-10", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream/10 border border-white/15 text-marigold font-mono text-[11px] uppercase tracking-[0.2em] mb-4", children: [
+        /* @__PURE__ */ jsxDEV(Sparkles, { className: "w-3.5 h-3.5" }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+          lineNumber: 69,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: `SLOWBAR MANIFESTO • 0°55'18"N 104°27'06"E` }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+          lineNumber: 70,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+        lineNumber: 68,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("h2", { className: "font-sans font-black text-[32px] sm:text-[54px] lg:text-[70px] leading-[0.98] tracking-[-0.04em] uppercase text-cream max-w-4xl mx-auto", children: [
+        "Bukan hanya tentang kopi.",
+        /* @__PURE__ */ jsxDEV("span", { className: "block text-burnt-orange italic font-bold tracking-tight", children: "Tentang bagaimana kita bertemu." }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+          lineNumber: 75,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+        lineNumber: 73,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { className: "font-sans text-[13px] sm:text-[15px] text-cream/70 tracking-wide font-normal max-w-lg mx-auto mt-4", children: "Menyeduh perlahan di Tanjungpinang, merawat obrolan yang jujur dari satu cangkir ke cangkir berikutnya." }, void 0, false, {
+        fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+        lineNumber: 80,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+      lineNumber: 67,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "flex animate-marquee-reverse whitespace-nowrap will-change-transform mt-6 sm:mt-8", children: [0, 1].map(
+      (blockIdx) => /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-8 sm:gap-14 pr-8 sm:pr-14 flex-shrink-0", children: rowBottom.map(
+        (item, idx) => /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-8 sm:gap-14 flex-shrink-0", children: [
+          /* @__PURE__ */ jsxDEV(
+            "span",
+            {
+              className: "font-sans font-black text-[28px] sm:text-[44px] lg:text-[56px] tracking-[-0.03em] uppercase text-transparent transition-all duration-300",
+              style: {
+                WebkitTextStroke: "1.5px rgba(255, 249, 242, 0.45)"
+              },
+              children: item
+            },
+            void 0,
+            false,
+            {
+              fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+              lineNumber: 91,
+              columnNumber: 17
+            },
+            this
+          ),
+          /* @__PURE__ */ jsxDEV("span", { className: "text-marigold text-lg sm:text-xl font-bold flex-shrink-0 select-none", children: "★" }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+            lineNumber: 99,
+            columnNumber: 17
+          }, this)
+        ] }, idx, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+          lineNumber: 90,
+          columnNumber: 11
+        }, this)
+      ) }, blockIdx, false, {
+        fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+        lineNumber: 88,
+        columnNumber: 9
+      }, this)
+    ) }, void 0, false, {
+      fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+      lineNumber: 86,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx",
+    lineNumber: 43,
+    columnNumber: 5
+  }, this);
+}
+_c = BrandKineticTypography;
+var _c;
+$RefreshReg$(_c, "BrandKineticTypography");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/SEKATA.TNJ/src/components/BrandKineticTypography.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBMEJNOzs7Ozs7Ozs7Ozs7Ozs7O0FBMUJOLE9BQU9BLFdBQVc7QUFDbEIsU0FBU0MsZ0JBQWdCO0FBRXpCLHdCQUF3QkMseUJBQXlCO0FBQy9DLFFBQU1DLFNBQVM7QUFBQSxJQUNiO0FBQUEsSUFDQTtBQUFBLElBQ0E7QUFBQSxJQUNBO0FBQUEsSUFDQTtBQUFBLElBQ0E7QUFBQSxFQUFpQjtBQUduQixRQUFNQyxZQUFZO0FBQUEsSUFDaEI7QUFBQSxJQUNBO0FBQUEsSUFDQTtBQUFBLElBQ0E7QUFBQSxJQUNBO0FBQUEsSUFDQTtBQUFBLEVBQW1CO0FBR3JCLFNBQ0UsdUJBQUMsYUFBUSxJQUFHLGlCQUFnQixXQUFVLG9IQUdwQztBQUFBLDJCQUFDLFNBQUksV0FBVSxzSkFBZjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQWlLO0FBQUEsSUFHakssdUJBQUMsU0FBSSxXQUFVLDZFQUNaLFdBQUMsR0FBRyxDQUFDLEVBQUVDO0FBQUFBLE1BQUksQ0FBQ0MsYUFDWCx1QkFBQyxTQUFtQixXQUFVLGlFQUMzQkgsaUJBQU9FO0FBQUFBLFFBQUksQ0FBQ0UsTUFBTUMsUUFDakIsdUJBQUMsU0FBYyxXQUFVLG1EQUN2QjtBQUFBLGlDQUFDLFVBQUssV0FBVSxvSkFDYkQsa0JBREg7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFFQTtBQUFBLFVBQ0EsdUJBQUMsVUFBSyxXQUFVLDZFQUEyRSxpQkFBM0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFFQTtBQUFBLGFBTlFDLEtBQVY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQU9BO0FBQUEsTUFDRCxLQVZPRixVQUFWO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFXQTtBQUFBLElBQ0QsS0FkSDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBZUE7QUFBQSxJQUdBLHVCQUFDLFNBQUksV0FBVSxzRkFDYjtBQUFBLDZCQUFDLFNBQUksV0FBVSxnS0FDYjtBQUFBLCtCQUFDLFlBQVMsV0FBVSxpQkFBcEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFpQztBQUFBLFFBQ2pDLHVCQUFDLFVBQUsseURBQU47QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFnRjtBQUFBLFdBRmxGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFHQTtBQUFBLE1BRUEsdUJBQUMsUUFBRyxXQUFVLDJJQUF5STtBQUFBO0FBQUEsUUFFckosdUJBQUMsVUFBSyxXQUFVLDJEQUF5RCwrQ0FBekU7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUVBO0FBQUEsV0FKRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBS0E7QUFBQSxNQUVBLHVCQUFDLE9BQUUsV0FBVSxzR0FBb0csdUhBQWpIO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFFQTtBQUFBLFNBZkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQWdCQTtBQUFBLElBR0EsdUJBQUMsU0FBSSxXQUFVLHFGQUNaLFdBQUMsR0FBRyxDQUFDLEVBQUVEO0FBQUFBLE1BQUksQ0FBQ0MsYUFDWCx1QkFBQyxTQUFtQixXQUFVLGlFQUMzQkYsb0JBQVVDO0FBQUFBLFFBQUksQ0FBQ0UsTUFBTUMsUUFDcEIsdUJBQUMsU0FBYyxXQUFVLG1EQUN2QjtBQUFBO0FBQUEsWUFBQztBQUFBO0FBQUEsY0FDQyxXQUFVO0FBQUEsY0FDVixPQUFPO0FBQUEsZ0JBQ0xDLGtCQUFrQjtBQUFBLGNBQ3BCO0FBQUEsY0FFQ0Y7QUFBQUE7QUFBQUEsWUFOSDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsVUFPQTtBQUFBLFVBQ0EsdUJBQUMsVUFBSyxXQUFVLHdFQUFzRSxpQkFBdEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFFQTtBQUFBLGFBWFFDLEtBQVY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQVlBO0FBQUEsTUFDRCxLQWZPRixVQUFWO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFnQkE7QUFBQSxJQUNELEtBbkJIO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FvQkE7QUFBQSxPQS9ERjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBaUVBO0FBRUo7QUFBQ0ksS0F2RnVCUjtBQUFzQixJQUFBUTtBQUFBLGFBQUFBLElBQUEiLCJuYW1lcyI6WyJSZWFjdCIsIlNwYXJrbGVzIiwiQnJhbmRLaW5ldGljVHlwb2dyYXBoeSIsInJvd1RvcCIsInJvd0JvdHRvbSIsIm1hcCIsImJsb2NrSWR4IiwiaXRlbSIsImlkeCIsIldlYmtpdFRleHRTdHJva2UiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJCcmFuZEtpbmV0aWNUeXBvZ3JhcGh5LmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgU3BhcmtsZXMgfSBmcm9tICdsdWNpZGUtcmVhY3QnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBCcmFuZEtpbmV0aWNUeXBvZ3JhcGh5KCkge1xuICBjb25zdCByb3dUb3AgPSBbXG4gICAgJ1NFS0FUQSBDT0ZGRUUgJiBTTE9XQkFSJyxcbiAgICAnVEFOSlVOR1BJTkFORycsXG4gICAgJzEwMCUgU0lOR0xFIE9SSUdJTicsXG4gICAgJ1JJVFVBTCBTRURVSEFOIE1BTlVBTCcsXG4gICAgJ1RFTVBBVCBCRVJURU1VICYgQkVSQ0VSSVRBJyxcbiAgICAnI0tFQ0lMQkVSVFVNQlVIJ1xuICBdO1xuXG4gIGNvbnN0IHJvd0JvdHRvbSA9IFtcbiAgICAnVEFOUEEgVEVSR0VTQS1HRVNBJyxcbiAgICAnUEVSQ0FLQVBBTiBKVUpVUicsXG4gICAgJ0tFUFVMQVVBTiBSSUFVJyxcbiAgICAnU0VEVVJBTiBMQU1CQVQnLFxuICAgICdSVUFORyBURVJCVUtBIFVOVFVLIFNFTVVBJyxcbiAgICAnUkFTQSBZQU5HIE1FTkVUQVAnXG4gIF07XG5cbiAgcmV0dXJuIChcbiAgICA8c2VjdGlvbiBpZD1cImJyYW5kLWtpbmV0aWNcIiBjbGFzc05hbWU9XCJ3LWZ1bGwgYmctWyMwZDA4MDZdIHRleHQtY3JlYW0gcHktMTQgc206cHktMjAgYm9yZGVyLXkgYm9yZGVyLXdoaXRlLzEwIG92ZXJmbG93LWhpZGRlbiBzZWxlY3Qtbm9uZSByZWxhdGl2ZSB6LTIwXCI+XG4gICAgICBcbiAgICAgIHsvKiBTdWJ0bGUgQmFja2dyb3VuZCBHbG93ICovfVxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSB0b3AtMS8yIGxlZnQtMS8yIC10cmFuc2xhdGUteC0xLzIgLXRyYW5zbGF0ZS15LTEvMiB3LVs2MDBweF0gaC1bMzAwcHhdIGJnLWJ1cm50LW9yYW5nZS8xMCByb3VuZGVkLWZ1bGwgYmx1ci1bMTAwcHhdIHBvaW50ZXItZXZlbnRzLW5vbmVcIiAvPlxuXG4gICAgICB7LyogMS4gVE9QIE1BUlFVRUUgU1RSRUFNIOKAlCBTb2xpZCBCb2xkIChNb3ZpbmcgTGVmdCkgKi99XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggYW5pbWF0ZS1tYXJxdWVlIHdoaXRlc3BhY2Utbm93cmFwIHdpbGwtY2hhbmdlLXRyYW5zZm9ybSBtYi02IHNtOm1iLThcIj5cbiAgICAgICAge1swLCAxXS5tYXAoKGJsb2NrSWR4KSA9PiAoXG4gICAgICAgICAgPGRpdiBrZXk9e2Jsb2NrSWR4fSBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtOCBzbTpnYXAtMTQgcHItOCBzbTpwci0xNCBmbGV4LXNocmluay0wXCI+XG4gICAgICAgICAgICB7cm93VG9wLm1hcCgoaXRlbSwgaWR4KSA9PiAoXG4gICAgICAgICAgICAgIDxkaXYga2V5PXtpZHh9IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC04IHNtOmdhcC0xNCBmbGV4LXNocmluay0wXCI+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZm9udC1zYW5zIGZvbnQtYmxhY2sgdGV4dC1bMjhweF0gc206dGV4dC1bNDRweF0gbGc6dGV4dC1bNTZweF0gdHJhY2tpbmctWy0wLjAzZW1dIHVwcGVyY2FzZSB0ZXh0LWNyZWFtIGhvdmVyOnRleHQtYnVybnQtb3JhbmdlIHRyYW5zaXRpb24tY29sb3JzXCI+XG4gICAgICAgICAgICAgICAgICB7aXRlbX1cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1idXJudC1vcmFuZ2UgdGV4dC14bCBzbTp0ZXh0LTJ4bCBmb250LWJvbGQgZmxleC1zaHJpbmstMCBzZWxlY3Qtbm9uZVwiPlxuICAgICAgICAgICAgICAgICAg4pymXG4gICAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICkpfVxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICApKX1cbiAgICAgIDwvZGl2PlxuXG4gICAgICB7LyogMi4gQ0VOVEVSUElFQ0UgRURJVE9SSUFMIE1BTklGRVNUTyAoQXd3d2FyZHMgU3R5bGUpICovfVxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LWZ1bGwgbWF4LXctWzEyMDBweF0gbXgtYXV0byBweC00IHNtOnB4LTggbXktNiBzbTpteS0xMCB0ZXh0LWNlbnRlciByZWxhdGl2ZSB6LTEwXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHB4LTMgcHktMSByb3VuZGVkLWZ1bGwgYmctY3JlYW0vMTAgYm9yZGVyIGJvcmRlci13aGl0ZS8xNSB0ZXh0LW1hcmlnb2xkIGZvbnQtbW9ubyB0ZXh0LVsxMXB4XSB1cHBlcmNhc2UgdHJhY2tpbmctWzAuMmVtXSBtYi00XCI+XG4gICAgICAgICAgPFNwYXJrbGVzIGNsYXNzTmFtZT1cInctMy41IGgtMy41XCIgLz5cbiAgICAgICAgICA8c3Bhbj5TTE9XQkFSIE1BTklGRVNUTyAmYnVsbDsgMCZkZWc7NTUmYXBvczsxOCZxdW90O04gMTA0JmRlZzsyNyZhcG9zOzA2JnF1b3Q7RTwvc3Bhbj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPGgyIGNsYXNzTmFtZT1cImZvbnQtc2FucyBmb250LWJsYWNrIHRleHQtWzMycHhdIHNtOnRleHQtWzU0cHhdIGxnOnRleHQtWzcwcHhdIGxlYWRpbmctWzAuOThdIHRyYWNraW5nLVstMC4wNGVtXSB1cHBlcmNhc2UgdGV4dC1jcmVhbSBtYXgtdy00eGwgbXgtYXV0b1wiPlxuICAgICAgICAgIEJ1a2FuIGhhbnlhIHRlbnRhbmcga29waS5cbiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJibG9jayB0ZXh0LWJ1cm50LW9yYW5nZSBpdGFsaWMgZm9udC1ib2xkIHRyYWNraW5nLXRpZ2h0XCI+XG4gICAgICAgICAgICBUZW50YW5nIGJhZ2FpbWFuYSBraXRhIGJlcnRlbXUuXG4gICAgICAgICAgPC9zcGFuPlxuICAgICAgICA8L2gyPlxuXG4gICAgICAgIDxwIGNsYXNzTmFtZT1cImZvbnQtc2FucyB0ZXh0LVsxM3B4XSBzbTp0ZXh0LVsxNXB4XSB0ZXh0LWNyZWFtLzcwIHRyYWNraW5nLXdpZGUgZm9udC1ub3JtYWwgbWF4LXctbGcgbXgtYXV0byBtdC00XCI+XG4gICAgICAgICAgTWVueWVkdWggcGVybGFoYW4gZGkgVGFuanVuZ3BpbmFuZywgbWVyYXdhdCBvYnJvbGFuIHlhbmcganVqdXIgZGFyaSBzYXR1IGNhbmdraXIga2UgY2FuZ2tpciBiZXJpa3V0bnlhLlxuICAgICAgICA8L3A+XG4gICAgICA8L2Rpdj5cblxuICAgICAgey8qIDMuIEJPVFRPTSBNQVJRVUVFIFNUUkVBTSDigJQgT3V0bGluZWQgU3Ryb2tlIChNb3ZpbmcgUmlnaHQpICovfVxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGFuaW1hdGUtbWFycXVlZS1yZXZlcnNlIHdoaXRlc3BhY2Utbm93cmFwIHdpbGwtY2hhbmdlLXRyYW5zZm9ybSBtdC02IHNtOm10LThcIj5cbiAgICAgICAge1swLCAxXS5tYXAoKGJsb2NrSWR4KSA9PiAoXG4gICAgICAgICAgPGRpdiBrZXk9e2Jsb2NrSWR4fSBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtOCBzbTpnYXAtMTQgcHItOCBzbTpwci0xNCBmbGV4LXNocmluay0wXCI+XG4gICAgICAgICAgICB7cm93Qm90dG9tLm1hcCgoaXRlbSwgaWR4KSA9PiAoXG4gICAgICAgICAgICAgIDxkaXYga2V5PXtpZHh9IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC04IHNtOmdhcC0xNCBmbGV4LXNocmluay0wXCI+XG4gICAgICAgICAgICAgICAgPHNwYW5cbiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImZvbnQtc2FucyBmb250LWJsYWNrIHRleHQtWzI4cHhdIHNtOnRleHQtWzQ0cHhdIGxnOnRleHQtWzU2cHhdIHRyYWNraW5nLVstMC4wM2VtXSB1cHBlcmNhc2UgdGV4dC10cmFuc3BhcmVudCB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0zMDBcIlxuICAgICAgICAgICAgICAgICAgc3R5bGU9e3tcbiAgICAgICAgICAgICAgICAgICAgV2Via2l0VGV4dFN0cm9rZTogJzEuNXB4IHJnYmEoMjU1LCAyNDksIDI0MiwgMC40NSknLFxuICAgICAgICAgICAgICAgICAgfX1cbiAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICB7aXRlbX1cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tYXJpZ29sZCB0ZXh0LWxnIHNtOnRleHQteGwgZm9udC1ib2xkIGZsZXgtc2hyaW5rLTAgc2VsZWN0LW5vbmVcIj5cbiAgICAgICAgICAgICAgICAgIOKYhVxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICApKX1cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKSl9XG4gICAgICA8L2Rpdj5cblxuICAgIDwvc2VjdGlvbj5cbiAgKTtcbn1cbiJdLCJmaWxlIjoiRDovU0VLQVRBLlROSi9zcmMvY29tcG9uZW50cy9CcmFuZEtpbmV0aWNUeXBvZ3JhcGh5LmpzeCJ9

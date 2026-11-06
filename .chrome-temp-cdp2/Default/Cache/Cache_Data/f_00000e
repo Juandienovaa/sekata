@@ -1,0 +1,176 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/ReadyToReserve.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=379fe8b8"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=379fe8b8"; const React = __vite__cjsImport3_react.__esModule ? __vite__cjsImport3_react.default : __vite__cjsImport3_react;
+import { ArrowRight } from "/node_modules/.vite/deps/lucide-react.js?v=379fe8b8";
+export default function ReadyToReserve() {
+  const waUrl = "https://wa.me/6283125525115?text=Halo%20Sekata%20Coffee%20%26%20Slowbar!%20Saya%20mau%20reservasi%20meja%20slowbar.%20Apakah%20spot%20meja%20masih%20tersedia%3F%20Terima%20kasih!";
+  return /* @__PURE__ */ jsxDEV(
+    "section",
+    {
+      id: "reserve",
+      className: "w-full bg-[#18110e] text-cream border-y-2 border-espresso/40 py-5 sm:py-6 scroll-mt-20 select-none relative overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "absolute top-0 right-1/4 w-72 h-72 bg-burnt-orange/10 rounded-full blur-3xl pointer-events-none" }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+          lineNumber: 32,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "absolute bottom-0 left-1/4 w-72 h-72 bg-turquoise/10 rounded-full blur-3xl pointer-events-none" }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+          lineNumber: 33,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "w-full px-5 sm:px-10 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-8 relative z-10", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-4 sm:gap-6 text-left w-full md:w-auto", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-cream border-2 border-cream/30 flex items-center justify-center p-2 shadow-md flex-shrink-0 transition-transform duration-300 hover:scale-105", children: /* @__PURE__ */ jsxDEV(
+              "img",
+              {
+                src: "/pegangkopi.png",
+                onError: (e) => {
+                  e.currentTarget.src = "/logo.png";
+                },
+                alt: "Ilustrasi Pegang Kopi Sekata",
+                className: "w-full h-full object-contain filter drop-shadow-sm"
+              },
+              void 0,
+              false,
+              {
+                fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                lineNumber: 47,
+                columnNumber: 13
+              },
+              this
+            ) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+              lineNumber: 46,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2 mb-1", children: [
+                /* @__PURE__ */ jsxDEV("span", { className: "w-2 h-2 rounded-full bg-turquoise animate-pulse" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                  lineNumber: 58,
+                  columnNumber: 15
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { className: "text-[12px] sm:text-[13px] font-body text-marigold font-medium", children: "Meja Slowbar • Tanjungpinang • Free Booking" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                  lineNumber: 59,
+                  columnNumber: 15
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                lineNumber: 57,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV("h3", { className: "font-display text-[26px] sm:text-[32px] lg:text-[36px] leading-[1.05] text-cream tracking-[-0.03em] mb-1", children: "Ready to Reserve?" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                lineNumber: 64,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "font-body text-[13px] sm:text-[14px] text-cream/80 leading-snug max-w-xl font-normal", children: "Duduk santai di meja slowbar, nikmati ritual seduhan lambat, dan bertukar cerita bersama barista kami. Tanpa biaya booking!" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                lineNumber: 68,
+                columnNumber: 13
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+              lineNumber: 56,
+              columnNumber: 11
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+            lineNumber: 43,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "flex-shrink-0 w-full md:w-auto pt-1 md:pt-0", children: /* @__PURE__ */ jsxDEV(
+            "a",
+            {
+              href: waUrl,
+              target: "_blank",
+              rel: "noopener noreferrer",
+              className: "w-full md:w-auto inline-flex items-center justify-center gap-2.5 font-body text-[14px] px-7 py-3.5 rounded-[8px] font-semibold bg-[#25D366] text-black hover:bg-[#1faa53] hover:text-white shadow-[0_4px_20px_rgba(37,211,102,0.35)] transition-all duration-200 ease-out active:scale-[0.97] group whitespace-nowrap",
+              children: [
+                /* @__PURE__ */ jsxDEV("svg", { className: "w-5 h-5 fill-current", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsxDEV("path", { d: "M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.059-1.127-.08-.276-.089-.634-.207-1.085-.401-1.905-.823-3.14-2.756-3.235-2.883-.095-.127-.775-1.03-.775-1.964 0-.934.489-1.393.663-1.583.174-.19.38-.237.506-.237.126 0 .253.001.364.007.118.006.276-.045.431.328.158.38.539 1.314.586 1.41.047.095.079.206.016.332-.063.127-.095.206-.19.317-.095.11-.2.246-.285.332-.095.095-.195.198-.084.388.111.19.493.814 1.057 1.317.728.648 1.341.85 1.531.945.19.095.301.079.412-.047.111-.127.475-.554.602-.744.127-.19.253-.158.427-.095.174.063 1.109.522 1.3.617.19.095.317.142.364.222.047.079.047.46-.097.865z" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                  lineNumber: 85,
+                  columnNumber: 15
+                }, this) }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                  lineNumber: 84,
+                  columnNumber: 13
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { children: "Reservasi via WhatsApp" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                  lineNumber: 87,
+                  columnNumber: 13
+                }, this),
+                /* @__PURE__ */ jsxDEV(ArrowRight, { className: "w-4 h-4 stroke-[1.5] group-hover:translate-x-1.5 transition-transform duration-200" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+                  lineNumber: 88,
+                  columnNumber: 13
+                }, this)
+              ]
+            },
+            void 0,
+            true,
+            {
+              fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+              lineNumber: 77,
+              columnNumber: 11
+            },
+            this
+          ) }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+            lineNumber: 76,
+            columnNumber: 9
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+          lineNumber: 40,
+          columnNumber: 7
+        }, this)
+      ]
+    },
+    void 0,
+    true,
+    {
+      fileName: "D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx",
+      lineNumber: 27,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c = ReadyToReserve;
+var _c;
+$RefreshReg$(_c, "ReadyToReserve");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/SEKATA.TNJ/src/components/ReadyToReserve.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBWU07Ozs7Ozs7Ozs7Ozs7Ozs7QUFaTixPQUFPQSxXQUFXO0FBQ2xCLFNBQVNDLGtCQUFrQjtBQUUzQix3QkFBd0JDLGlCQUFpQjtBQUN2QyxRQUFNQyxRQUFRO0FBRWQsU0FDRTtBQUFBLElBQUM7QUFBQTtBQUFBLE1BQ0MsSUFBRztBQUFBLE1BQ0gsV0FBVTtBQUFBLE1BR1Y7QUFBQSwrQkFBQyxTQUFJLFdBQVUscUdBQWY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFnSDtBQUFBLFFBQ2hILHVCQUFDLFNBQUksV0FBVSxvR0FBZjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQStHO0FBQUEsUUFPL0csdUJBQUMsU0FBSSxXQUFVLHFIQUdiO0FBQUEsaUNBQUMsU0FBSSxXQUFVLCtEQUdiO0FBQUEsbUNBQUMsU0FBSSxXQUFVLDJMQUNiO0FBQUEsY0FBQztBQUFBO0FBQUEsZ0JBQ0MsS0FBSTtBQUFBLGdCQUNKLFNBQVMsQ0FBQ0MsTUFBTTtBQUFFQSxvQkFBRUMsY0FBY0MsTUFBTTtBQUFBLGdCQUFhO0FBQUEsZ0JBQ3JELEtBQUk7QUFBQSxnQkFDSixXQUFVO0FBQUE7QUFBQSxjQUpaO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQUlnRSxLQUxsRTtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQU9BO0FBQUEsWUFHQSx1QkFBQyxTQUNDO0FBQUEscUNBQUMsU0FBSSxXQUFVLGdDQUNiO0FBQUEsdUNBQUMsVUFBSyxXQUFVLHFEQUFoQjtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUFpRTtBQUFBLGdCQUNqRSx1QkFBQyxVQUFLLFdBQVUsa0VBQWdFLDJEQUFoRjtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUVBO0FBQUEsbUJBSkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFLQTtBQUFBLGNBRUEsdUJBQUMsUUFBRyxXQUFVLDRHQUEwRyxpQ0FBeEg7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFFQTtBQUFBLGNBRUEsdUJBQUMsT0FBRSxXQUFVLHdGQUFzRiwySUFBbkc7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFFQTtBQUFBLGlCQWRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBZUE7QUFBQSxlQTVCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQThCQTtBQUFBLFVBR0EsdUJBQUMsU0FBSSxXQUFVLCtDQUNiO0FBQUEsWUFBQztBQUFBO0FBQUEsY0FDQyxNQUFNSDtBQUFBQSxjQUNOLFFBQU87QUFBQSxjQUNQLEtBQUk7QUFBQSxjQUNKLFdBQVU7QUFBQSxjQUdWO0FBQUEsdUNBQUMsU0FBSSxXQUFVLHdCQUF1QixTQUFRLGFBQzVDLGlDQUFDLFVBQUssR0FBRSw0eEJBQVI7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFBZ3lCLEtBRGx5QjtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUVBO0FBQUEsZ0JBQ0EsdUJBQUMsVUFBSyxzQ0FBTjtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUE0QjtBQUFBLGdCQUM1Qix1QkFBQyxjQUFXLFdBQVUsd0ZBQXRCO0FBQUE7QUFBQTtBQUFBO0FBQUEsdUJBQTBHO0FBQUE7QUFBQTtBQUFBLFlBWDVHO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxVQVlBLEtBYkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFjQTtBQUFBLGFBbERGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFvREE7QUFBQTtBQUFBO0FBQUEsSUFqRUY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBa0VBO0FBRUo7QUFBQ0ksS0F4RXVCTDtBQUFjLElBQUFLO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIlJlYWN0IiwiQXJyb3dSaWdodCIsIlJlYWR5VG9SZXNlcnZlIiwid2FVcmwiLCJlIiwiY3VycmVudFRhcmdldCIsInNyYyIsIl9jIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIlJlYWR5VG9SZXNlcnZlLmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgQXJyb3dSaWdodCB9IGZyb20gJ2x1Y2lkZS1yZWFjdCc7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFJlYWR5VG9SZXNlcnZlKCkge1xuICBjb25zdCB3YVVybCA9ICdodHRwczovL3dhLm1lLzYyODMxMjU1MjUxMTU/dGV4dD1IYWxvJTIwU2VrYXRhJTIwQ29mZmVlJTIwJTI2JTIwU2xvd2JhciElMjBTYXlhJTIwbWF1JTIwcmVzZXJ2YXNpJTIwbWVqYSUyMHNsb3diYXIuJTIwQXBha2FoJTIwc3BvdCUyMG1lamElMjBtYXNpaCUyMHRlcnNlZGlhJTNGJTIwVGVyaW1hJTIwa2FzaWghJztcblxuICByZXR1cm4gKFxuICAgIDxzZWN0aW9uXG4gICAgICBpZD1cInJlc2VydmVcIlxuICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGJnLVsjMTgxMTBlXSB0ZXh0LWNyZWFtIGJvcmRlci15LTIgYm9yZGVyLWVzcHJlc3NvLzQwIHB5LTUgc206cHktNiBzY3JvbGwtbXQtMjAgc2VsZWN0LW5vbmUgcmVsYXRpdmUgb3ZlcmZsb3ctaGlkZGVuXCJcbiAgICA+XG4gICAgICB7LyogU3VidGxlIEJhY2tncm91bmQgR2xvdyAqL31cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgdG9wLTAgcmlnaHQtMS80IHctNzIgaC03MiBiZy1idXJudC1vcmFuZ2UvMTAgcm91bmRlZC1mdWxsIGJsdXItM3hsIHBvaW50ZXItZXZlbnRzLW5vbmVcIiAvPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBib3R0b20tMCBsZWZ0LTEvNCB3LTcyIGgtNzIgYmctdHVycXVvaXNlLzEwIHJvdW5kZWQtZnVsbCBibHVyLTN4bCBwb2ludGVyLWV2ZW50cy1ub25lXCIgLz5cblxuICAgICAgey8qIFxuICAgICAgICBJS0xBTiBQRU1CQVRBUyBNRU5UT0sgS0UgU0FNUElORyAoRlVMTC1CTEVFRCBFREdFLVRPLUVER0UpOlxuICAgICAgICBUaWRhayBhZGEgYm94IG1lbmdhbWJhbmcgZGkgdGVuZ2FoLiBNZWxlYmFyIHBlbnVoIGRhcmkgdWp1bmcga2UgdWp1bmcgbGF5YXIuXG4gICAgICAgIEJhY2tncm91bmQgZGVlcCBlc3ByZXNzbyAoIzE4MTEwZSkg4oCUIEJVS0FOIFBVVElIIVxuICAgICAgKi99XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInctZnVsbCBweC01IHNtOnB4LTEwIGxnOnB4LTE2IGZsZXggZmxleC1jb2wgbWQ6ZmxleC1yb3cgaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBnYXAtNSBzbTpnYXAtOCByZWxhdGl2ZSB6LTEwXCI+XG4gICAgICAgIFxuICAgICAgICB7LyogU2lzaSBLaXJpOiBJbHVzdHJhc2kgcGVnYW5na29waS5wbmcgKyBUZWtzIEp1ZHVsICYgQWpha2FuICovfVxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC00IHNtOmdhcC02IHRleHQtbGVmdCB3LWZ1bGwgbWQ6dy1hdXRvXCI+XG4gICAgICAgICAgXG4gICAgICAgICAgey8qIEJhZGdlIFN0YW1wIEJ1bGF0IHVudHVrIElsdXN0cmFzaSBwZWdhbmdrb3BpLnBuZyAoR2FyaXMgSGl0YW0gVGVybGloYXQgSmVsYXMgJiBFc3RldGlrKSAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMTYgaC0xNiBzbTp3LTIwIHNtOmgtMjAgcm91bmRlZC1mdWxsIGJnLWNyZWFtIGJvcmRlci0yIGJvcmRlci1jcmVhbS8zMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBwLTIgc2hhZG93LW1kIGZsZXgtc2hyaW5rLTAgdHJhbnNpdGlvbi10cmFuc2Zvcm0gZHVyYXRpb24tMzAwIGhvdmVyOnNjYWxlLTEwNVwiPlxuICAgICAgICAgICAgPGltZ1xuICAgICAgICAgICAgICBzcmM9XCIvcGVnYW5na29waS5wbmdcIlxuICAgICAgICAgICAgICBvbkVycm9yPXsoZSkgPT4geyBlLmN1cnJlbnRUYXJnZXQuc3JjID0gJy9sb2dvLnBuZyc7IH19XG4gICAgICAgICAgICAgIGFsdD1cIklsdXN0cmFzaSBQZWdhbmcgS29waSBTZWthdGFcIlxuICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ3LWZ1bGwgaC1mdWxsIG9iamVjdC1jb250YWluIGZpbHRlciBkcm9wLXNoYWRvdy1zbVwiXG4gICAgICAgICAgICAvPlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgey8qIFR1bGlzYW4gU2ltcGxlICYgSmVsYXMgKEZvbnQgSHVtYW5pcyBBbGFtaSkgKi99XG4gICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgbWItMVwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ3LTIgaC0yIHJvdW5kZWQtZnVsbCBiZy10dXJxdW9pc2UgYW5pbWF0ZS1wdWxzZVwiIC8+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtWzEycHhdIHNtOnRleHQtWzEzcHhdIGZvbnQtYm9keSB0ZXh0LW1hcmlnb2xkIGZvbnQtbWVkaXVtXCI+XG4gICAgICAgICAgICAgICAgTWVqYSBTbG93YmFyICZidWxsOyBUYW5qdW5ncGluYW5nICZidWxsOyBGcmVlIEJvb2tpbmdcbiAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJmb250LWRpc3BsYXkgdGV4dC1bMjZweF0gc206dGV4dC1bMzJweF0gbGc6dGV4dC1bMzZweF0gbGVhZGluZy1bMS4wNV0gdGV4dC1jcmVhbSB0cmFja2luZy1bLTAuMDNlbV0gbWItMVwiPlxuICAgICAgICAgICAgICBSZWFkeSB0byBSZXNlcnZlP1xuICAgICAgICAgICAgPC9oMz5cblxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1ib2R5IHRleHQtWzEzcHhdIHNtOnRleHQtWzE0cHhdIHRleHQtY3JlYW0vODAgbGVhZGluZy1zbnVnIG1heC13LXhsIGZvbnQtbm9ybWFsXCI+XG4gICAgICAgICAgICAgIER1ZHVrIHNhbnRhaSBkaSBtZWphIHNsb3diYXIsIG5pa21hdGkgcml0dWFsIHNlZHVoYW4gbGFtYmF0LCBkYW4gYmVydHVrYXIgY2VyaXRhIGJlcnNhbWEgYmFyaXN0YSBrYW1pLiBUYW5wYSBiaWF5YSBib29raW5nIVxuICAgICAgICAgICAgPC9wPlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIHsvKiBTaXNpIEthbmFuOiBUb21ib2wgRGlyZWN0IFdoYXRzQXBwIE1lbmFyaWsgKi99XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC1zaHJpbmstMCB3LWZ1bGwgbWQ6dy1hdXRvIHB0LTEgbWQ6cHQtMFwiPlxuICAgICAgICAgIDxhXG4gICAgICAgICAgICBocmVmPXt3YVVybH1cbiAgICAgICAgICAgIHRhcmdldD1cIl9ibGFua1wiXG4gICAgICAgICAgICByZWw9XCJub29wZW5lciBub3JlZmVycmVyXCJcbiAgICAgICAgICAgIGNsYXNzTmFtZT1cInctZnVsbCBtZDp3LWF1dG8gaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC0yLjUgZm9udC1ib2R5IHRleHQtWzE0cHhdIHB4LTcgcHktMy41IHJvdW5kZWQtWzhweF0gZm9udC1zZW1pYm9sZCBiZy1bIzI1RDM2Nl0gdGV4dC1ibGFjayBob3ZlcjpiZy1bIzFmYWE1M10gaG92ZXI6dGV4dC13aGl0ZSBzaGFkb3ctWzBfNHB4XzIwcHhfcmdiYSgzNywyMTEsMTAyLDAuMzUpXSB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0yMDAgZWFzZS1vdXQgYWN0aXZlOnNjYWxlLVswLjk3XSBncm91cCB3aGl0ZXNwYWNlLW5vd3JhcFwiXG4gICAgICAgICAgPlxuICAgICAgICAgICAgey8qIFdoYXRzQXBwIFNWRyBJY29uICovfVxuICAgICAgICAgICAgPHN2ZyBjbGFzc05hbWU9XCJ3LTUgaC01IGZpbGwtY3VycmVudFwiIHZpZXdCb3g9XCIwIDAgMjQgMjRcIj5cbiAgICAgICAgICAgICAgPHBhdGggZD1cIk0xMi4wMzEgNi4xNzJjLTMuMTgxIDAtNS43NjcgMi41ODYtNS43NjggNS43NjYtLjAwMSAxLjI5OC4zOCAyLjI3IDEuMDE5IDMuMjg3bC0uNTgyIDIuMTI4IDIuMTgyLS41NzNjLjk3OC41OCAxLjkxMS45MjggMy4xNDUuOTI5IDMuMTc4IDAgNS43NjctMi41ODcgNS43NjgtNS43NjYuMDAxLTMuMTg3LTIuNTc1LTUuNzctNS43NjQtNS43NzF6bTMuMzkyIDguMjQ0Yy0uMTQ0LjQwNS0uODM3Ljc3NC0xLjE3LjgyNC0uMzExLjA0NS0uNjk4LjA1OS0xLjEyNy0uMDgtLjI3Ni0uMDg5LS42MzQtLjIwNy0xLjA4NS0uNDAxLTEuOTA1LS44MjMtMy4xNC0yLjc1Ni0zLjIzNS0yLjg4My0uMDk1LS4xMjctLjc3NS0xLjAzLS43NzUtMS45NjQgMC0uOTM0LjQ4OS0xLjM5My42NjMtMS41ODMuMTc0LS4xOS4zOC0uMjM3LjUwNi0uMjM3LjEyNiAwIC4yNTMuMDAxLjM2NC4wMDcuMTE4LjAwNi4yNzYtLjA0NS40MzEuMzI4LjE1OC4zOC41MzkgMS4zMTQuNTg2IDEuNDEuMDQ3LjA5NS4wNzkuMjA2LjAxNi4zMzItLjA2My4xMjctLjA5NS4yMDYtLjE5LjMxNy0uMDk1LjExLS4yLjI0Ni0uMjg1LjMzMi0uMDk1LjA5NS0uMTk1LjE5OC0uMDg0LjM4OC4xMTEuMTkuNDkzLjgxNCAxLjA1NyAxLjMxNy43MjguNjQ4IDEuMzQxLjg1IDEuNTMxLjk0NS4xOS4wOTUuMzAxLjA3OS40MTItLjA0Ny4xMTEtLjEyNy40NzUtLjU1NC42MDItLjc0NC4xMjctLjE5LjI1My0uMTU4LjQyNy0uMDk1LjE3NC4wNjMgMS4xMDkuNTIyIDEuMy42MTcuMTkuMDk1LjMxNy4xNDIuMzY0LjIyMi4wNDcuMDc5LjA0Ny40Ni0uMDk3Ljg2NXpcIi8+XG4gICAgICAgICAgICA8L3N2Zz5cbiAgICAgICAgICAgIDxzcGFuPlJlc2VydmFzaSB2aWEgV2hhdHNBcHA8L3NwYW4+XG4gICAgICAgICAgICA8QXJyb3dSaWdodCBjbGFzc05hbWU9XCJ3LTQgaC00IHN0cm9rZS1bMS41XSBncm91cC1ob3Zlcjp0cmFuc2xhdGUteC0xLjUgdHJhbnNpdGlvbi10cmFuc2Zvcm0gZHVyYXRpb24tMjAwXCIgLz5cbiAgICAgICAgICA8L2E+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICA8L2Rpdj5cbiAgICA8L3NlY3Rpb24+XG4gICk7XG59XG4iXSwiZmlsZSI6IkQ6L1NFS0FUQS5UTkovc3JjL2NvbXBvbmVudHMvUmVhZHlUb1Jlc2VydmUuanN4In0=

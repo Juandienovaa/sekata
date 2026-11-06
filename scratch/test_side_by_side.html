@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-[#fff9f2] antialiased">
+
+  <section class="w-full bg-[#fff5e3] border-t border-b border-black/10 py-6 sm:py-16 px-3 sm:px-8 relative overflow-hidden">
+    <div class="max-w-[1200px] mx-auto flex flex-row items-center gap-3 sm:gap-8 lg:gap-14">
+      
+      <!-- Left Column: Photo (Width ~38% on mobile, 42% on desktop) -->
+      <div class="w-[36%] xs:w-[38%] sm:w-[42%] lg:w-[40%] shrink-0">
+        <div class="relative w-full max-w-[390px] mx-auto">
+          <!-- Marigold Offset -->
+          <div class="absolute inset-0 bg-[#f5ba31] rounded-2xl sm:rounded-3xl transform rotate-2 translate-x-1 sm:translate-x-2 translate-y-1 sm:translate-y-2 opacity-85 shadow-md"></div>
+          
+          <!-- Photo Card -->
+          <div class="relative aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-black/15 bg-[#522c25]">
+            <img src="/CTA.jpg" alt="5 Signature Drinks" class="w-full h-full object-cover">
+            
+            <!-- Badge -->
+            <div class="absolute top-1.5 left-1.5 sm:top-3 sm:left-3 bg-[#f5ba31] text-[#522c25] font-mono text-[7px] sm:text-[11px] font-black px-1.5 py-0.5 sm:px-3 sm:py-1 rounded-full uppercase tracking-wider shadow-xs">
+              5 SIPS
+            </div>
+
+            <div class="absolute inset-x-0 bottom-0 p-1.5 sm:p-4 bg-gradient-to-t from-black/85 via-black/50 to-transparent text-white">
+              <span class="font-mono text-[7px] sm:text-[10px] text-[#f5ba31] block font-bold tracking-wider truncate">
+                #GRABYOURSEKATATODAY
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Content (Width ~62-64% on mobile) -->
+      <div class="flex-1 min-w-0 text-left flex flex-col justify-center">
+        
+        <!-- Hashtag Pill -->
+        <div class="inline-flex items-center gap-1.5 bg-[#522c25] text-[#f5ba31] px-2 sm:px-3.5 py-0.5 sm:py-1.5 rounded-full w-fit mb-1.5 sm:mb-4 shadow-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#f5ba31] animate-pulse"></span>
+          <span class="font-mono text-[8px] xs:text-[9.5px] sm:text-xs font-black uppercase tracking-wider">
+            #GRABYOURSEKATATODAY
+          </span>
+        </div>
+
+        <!-- Headline -->
+        <h2 class="font-sans font-black text-sm xs:text-base sm:text-3xl lg:text-[48px] text-[#522c25] uppercase leading-[0.94] tracking-[-0.035em] mb-1.5 sm:mb-4">
+          GOOD COFFEE,<br/>
+          HONEST TALKS.<br/>
+          <span class="text-[#317576]">GRAB YOUR SEKATA TODAY.</span>
+        </h2>
+
+        <!-- Paragraph -->
+        <p class="font-sans text-[10px] xs:text-[11px] sm:text-sm lg:text-base text-[#522c25]/85 leading-snug sm:leading-relaxed mb-2 sm:mb-6 line-clamp-3 sm:line-clamp-none">
+          From rich manual brews to iced citrus tea and chilled matcha. Stop by our open slowbar table or grab your favorite cup in Tanjungpinang.
+        </p>
+
+        <!-- Pills Cloud (hidden on very small screens, visible on sm) -->
+        <div class="hidden sm:flex flex-wrap gap-1.5 mb-5">
+          <span class="px-2.5 py-0.5 rounded-full bg-[#fff9f2] border border-[#522c25]/15 font-mono text-[10px] font-semibold text-[#522c25]">
+            &bull; Single Origin V60
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full bg-[#fff9f2] border border-[#522c25]/15 font-mono text-[10px] font-semibold text-[#522c25]">
+            &bull; Signature Espresso
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full bg-[#fff9f2] border border-[#522c25]/15 font-mono text-[10px] font-semibold text-[#522c25]">
+            &bull; Tea &amp; Fruit
+          </span>
+        </div>
+
+        <!-- Buttons Row (Side by Side just like PC!) -->
+        <div class="flex flex-row items-center gap-1.5 sm:gap-3">
+          <a href="#" class="inline-flex items-center justify-center gap-1 px-3 sm:px-7 py-2 sm:py-3.5 rounded-full bg-[#317576] text-white font-sans text-[9px] xs:text-[10px] sm:text-xs font-bold tracking-wider uppercase whitespace-nowrap shadow-sm">
+            <span>GRAB VIA WA</span>
+            <span>&nearr;</span>
+          </a>
+
+          <a href="#menu" class="inline-flex items-center justify-center gap-1 px-2.5 sm:px-6 py-2 sm:py-3.5 rounded-full bg-[#fff9f2] border border-[#522c25]/20 text-[#522c25] font-sans text-[9px] xs:text-[10px] sm:text-xs font-bold tracking-wider uppercase whitespace-nowrap">
+            <span>MENU</span>
+            <span>&darr;</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
+

@@ -1,0 +1,681 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/CtaPromoSection.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=0428d391"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=0428d391"; const React = __vite__cjsImport3_react.__esModule ? __vite__cjsImport3_react.default : __vite__cjsImport3_react;
+import { motion } from "/node_modules/.vite/deps/framer-motion.js?v=5bc9e685";
+import { ArrowUpRight, ArrowDown, Sparkles } from "/node_modules/.vite/deps/lucide-react.js?v=0338dd00";
+function GoFoodIcon({ className = "w-4 h-4" }) {
+  return /* @__PURE__ */ jsxDEV("svg", { viewBox: "0 0 24 24", className: `${className} fill-current`, xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ jsxDEV("path", { d: "M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" }, void 0, false, {
+    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+    lineNumber: 27,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+    lineNumber: 26,
+    columnNumber: 5
+  }, this);
+}
+_c = GoFoodIcon;
+export default function CtaPromoSection() {
+  const waUrl = "https://wa.me/6281991445331?text=Halo%20Sekata,%20saya%20mau%20pesan%20kopi%20atau%20reservasi%20meja%20slowbar%20hari%20ini!";
+  const gofoodUrl = "https://gofood.link";
+  const scrollToMenu = () => {
+    const el = document.getElementById("menu");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  return /* @__PURE__ */ jsxDEV(
+    "section",
+    {
+      id: "grab-sekata",
+      className: "w-full bg-[#fff5e3] border-t border-b border-espresso/15 py-4 sm:py-16 lg:py-20 px-3 sm:px-8 relative overflow-hidden select-none",
+      children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "hidden lg:block absolute -right-6 -bottom-10 select-none pointer-events-none opacity-[0.06] font-sans font-black text-[220px] leading-none text-espresso whitespace-nowrap", children: "SEKATA" }, void 0, false, {
+          fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+          lineNumber: 49,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "max-w-[1200px] mx-auto relative z-10", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "block lg:hidden w-full max-w-[390px] mx-auto text-left py-2", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between gap-2 mb-2.5", children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "inline-flex items-center gap-1.5 bg-espresso text-[#f5ba31] px-2.5 py-1 rounded-full shadow-xs", children: [
+                /* @__PURE__ */ jsxDEV("span", { className: "w-1.5 h-1.5 rounded-full bg-[#f5ba31] animate-pulse" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 66,
+                  columnNumber: 15
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { className: "font-mono text-[9px] font-black uppercase tracking-wider", children: "#GRABYOURSEKATATODAY" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 67,
+                  columnNumber: 15
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 65,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV(
+                "a",
+                {
+                  href: gofoodUrl,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  className: "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-[#EE2737]/30 shadow-xs hover:border-[#EE2737] transition-colors",
+                  children: [
+                    /* @__PURE__ */ jsxDEV("span", { className: "w-3.5 h-3.5 rounded-full bg-[#EE2737] flex items-center justify-center shrink-0 text-white", children: /* @__PURE__ */ jsxDEV(GoFoodIcon, { className: "w-2 h-2 text-white" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 80,
+                      columnNumber: 17
+                    }, this) }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 79,
+                      columnNumber: 15
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("span", { className: "font-sans font-black text-[11px] text-[#EE2737] tracking-tight", children: "gofood" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 82,
+                      columnNumber: 15
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("span", { className: "text-[9px] font-mono text-espresso/70 font-semibold", children: "• Delivery" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 83,
+                      columnNumber: 15
+                    }, this)
+                  ]
+                },
+                void 0,
+                true,
+                {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 73,
+                  columnNumber: 13
+                },
+                this
+              )
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+              lineNumber: 64,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ jsxDEV("h2", { className: "font-sans font-black text-[22px] xs:text-[25px] text-espresso uppercase leading-[0.96] tracking-tight mb-3", children: [
+              "GOOD COFFEE, HONEST TALKS.",
+              /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 89,
+                columnNumber: 39
+              }, this),
+              /* @__PURE__ */ jsxDEV("span", { className: "text-turquoise", children: "GRAB YOUR SEKATA TODAY." }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 90,
+                columnNumber: 13
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+              lineNumber: 88,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "w-full relative my-2", children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "absolute inset-0 bg-[#f5ba31] rounded-2xl transform rotate-1 translate-x-1.5 translate-y-1.5 opacity-85 shadow-md" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 96,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV(
+                motion.div,
+                {
+                  whileHover: { scale: 1.02 },
+                  className: "relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-xl border border-espresso/15 bg-espresso group",
+                  children: [
+                    /* @__PURE__ */ jsxDEV(
+                      "img",
+                      {
+                        src: "/CTA.jpg",
+                        alt: "Grab Your Sekata Today — 5 Signature Drinks",
+                        className: "w-full h-full object-cover"
+                      },
+                      void 0,
+                      false,
+                      {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 103,
+                        columnNumber: 15
+                      },
+                      this
+                    ),
+                    /* @__PURE__ */ jsxDEV("div", { className: "absolute top-2.5 left-2.5 bg-[#f5ba31] text-espresso font-mono text-[9px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-xs flex items-center gap-1", children: [
+                      /* @__PURE__ */ jsxDEV(Sparkles, { className: "w-2.5 h-2.5 stroke-[2.5]" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 111,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ jsxDEV("span", { children: "5 SIGNATURE SIPS" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 112,
+                        columnNumber: 17
+                      }, this)
+                    ] }, void 0, true, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 110,
+                      columnNumber: 15
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("div", { className: "absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/85 via-black/50 to-transparent text-cream", children: [
+                      /* @__PURE__ */ jsxDEV("p", { className: "font-sans font-bold text-xs leading-tight text-white", children: "Always a cup that matches your story." }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 117,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ jsxDEV("span", { className: "font-mono text-[9px] text-[#f5ba31] block font-bold tracking-wider mt-0.5", children: "Americano • Matcha • Lemon Tea • Cold Brew" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 120,
+                        columnNumber: 17
+                      }, this)
+                    ] }, void 0, true, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 116,
+                      columnNumber: 15
+                    }, this)
+                  ]
+                },
+                void 0,
+                true,
+                {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 99,
+                  columnNumber: 13
+                },
+                this
+              )
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+              lineNumber: 94,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "font-sans text-xs text-espresso/85 leading-relaxed my-3", children: "Dari manual brew Nusantara hingga matcha dan citrus tea dingin. Nikmati langsung di slowbar kami atau pesan antar ke rumahmu." }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+              lineNumber: 128,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-2 gap-2 mt-2", children: [
+              /* @__PURE__ */ jsxDEV(
+                motion.a,
+                {
+                  href: waUrl,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  whileHover: { scale: 1.02 },
+                  whileTap: { scale: 0.98 },
+                  className: "inline-flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-turquoise hover:bg-turquoise-dark text-cream font-sans text-xs font-bold tracking-wider uppercase transition-colors shadow-md shadow-turquoise/25 cursor-pointer text-center",
+                  children: [
+                    /* @__PURE__ */ jsxDEV("span", { children: "WHATSAPP" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 142,
+                      columnNumber: 15
+                    }, this),
+                    /* @__PURE__ */ jsxDEV(ArrowUpRight, { className: "w-3.5 h-3.5 stroke-[2.5]" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 143,
+                      columnNumber: 15
+                    }, this)
+                  ]
+                },
+                void 0,
+                true,
+                {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 134,
+                  columnNumber: 13
+                },
+                this
+              ),
+              /* @__PURE__ */ jsxDEV(
+                motion.a,
+                {
+                  href: gofoodUrl,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  whileHover: { scale: 1.02 },
+                  whileTap: { scale: 0.98 },
+                  className: "inline-flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-white hover:bg-red-50 text-[#EE2737] border-2 border-[#EE2737] font-sans text-xs font-bold tracking-wider uppercase transition-colors shadow-xs cursor-pointer text-center",
+                  children: [
+                    /* @__PURE__ */ jsxDEV("span", { className: "w-3.5 h-3.5 rounded-full bg-[#EE2737] flex items-center justify-center shrink-0 text-white", children: /* @__PURE__ */ jsxDEV(GoFoodIcon, { className: "w-2 h-2 text-white" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 155,
+                      columnNumber: 17
+                    }, this) }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 154,
+                      columnNumber: 15
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("span", { children: "GOFOOD" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 157,
+                      columnNumber: 15
+                    }, this),
+                    /* @__PURE__ */ jsxDEV(ArrowUpRight, { className: "w-3.5 h-3.5 stroke-[2.5]" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 158,
+                      columnNumber: 15
+                    }, this)
+                  ]
+                },
+                void 0,
+                true,
+                {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 146,
+                  columnNumber: 13
+                },
+                this
+              )
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+              lineNumber: 133,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "text-center mt-2.5 pb-1", children: /* @__PURE__ */ jsxDEV(
+              "button",
+              {
+                onClick: scrollToMenu,
+                className: "inline-flex items-center gap-1 font-sans text-[11px] font-bold text-espresso/70 hover:text-espresso uppercase tracking-wider transition-colors cursor-pointer",
+                children: [
+                  /* @__PURE__ */ jsxDEV("span", { children: "LIHAT MENU LENGKAP" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                    lineNumber: 168,
+                    columnNumber: 15
+                  }, this),
+                  /* @__PURE__ */ jsxDEV(ArrowDown, { className: "w-3 h-3 text-espresso/60" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                    lineNumber: 169,
+                    columnNumber: 15
+                  }, this)
+                ]
+              },
+              void 0,
+              true,
+              {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 164,
+                columnNumber: 13
+              },
+              this
+            ) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+              lineNumber: 163,
+              columnNumber: 11
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+            lineNumber: 61,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "hidden lg:grid lg:grid-cols-12 gap-12 lg:gap-14 items-center", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-5 flex justify-center", children: /* @__PURE__ */ jsxDEV("div", { className: "relative w-full max-w-[390px]", children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "absolute inset-0 bg-[#f5ba31] rounded-3xl transform rotate-2 translate-x-2 translate-y-2 opacity-85 shadow-md" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 187,
+                columnNumber: 15
+              }, this),
+              /* @__PURE__ */ jsxDEV(
+                motion.div,
+                {
+                  whileHover: { scale: 1.02, rotate: -0.5 },
+                  transition: { type: "spring", stiffness: 300, damping: 20 },
+                  className: "relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-2 border-espresso/15 bg-espresso group",
+                  children: [
+                    /* @__PURE__ */ jsxDEV(
+                      "img",
+                      {
+                        src: "/CTA.jpg",
+                        alt: "Grab Your Sekata Today — Signature Drinks",
+                        className: "w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                      },
+                      void 0,
+                      false,
+                      {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 195,
+                        columnNumber: 17
+                      },
+                      this
+                    ),
+                    /* @__PURE__ */ jsxDEV("div", { className: "absolute top-3.5 left-3.5 bg-[#f5ba31] text-espresso font-mono text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5", children: [
+                      /* @__PURE__ */ jsxDEV(Sparkles, { className: "w-3 h-3 stroke-[2.5]" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 203,
+                        columnNumber: 19
+                      }, this),
+                      /* @__PURE__ */ jsxDEV("span", { children: "5 SIGNATURE SIPS" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 204,
+                        columnNumber: 19
+                      }, this)
+                    ] }, void 0, true, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 202,
+                      columnNumber: 17
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("div", { className: "absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/85 via-black/50 to-transparent text-cream", children: [
+                      /* @__PURE__ */ jsxDEV("p", { className: "font-sans font-bold text-sm leading-snug", children: "Always a cup that matches your story." }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 209,
+                        columnNumber: 19
+                      }, this),
+                      /* @__PURE__ */ jsxDEV("span", { className: "font-mono text-[10px] text-[#f5ba31] block mt-0.5 font-bold tracking-wider", children: "#GRABYOURSEKATATODAY" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 212,
+                        columnNumber: 19
+                      }, this)
+                    ] }, void 0, true, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                      lineNumber: 208,
+                      columnNumber: 17
+                    }, this)
+                  ]
+                },
+                void 0,
+                true,
+                {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 190,
+                  columnNumber: 15
+                },
+                this
+              )
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+              lineNumber: 184,
+              columnNumber: 13
+            }, this) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+              lineNumber: 183,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-7 flex flex-col justify-center text-left", children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3 mb-4", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "inline-flex items-center gap-2 bg-espresso text-[#f5ba31] px-3.5 py-1.5 rounded-full shadow-xs", children: [
+                  /* @__PURE__ */ jsxDEV("span", { className: "w-2 h-2 rounded-full bg-[#f5ba31] animate-pulse" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                    lineNumber: 227,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { className: "font-mono text-xs font-black uppercase tracking-[0.14em]", children: "#GRABYOURSEKATATODAY" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                    lineNumber: 228,
+                    columnNumber: 17
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 226,
+                  columnNumber: 15
+                }, this),
+                /* @__PURE__ */ jsxDEV(
+                  "a",
+                  {
+                    href: gofoodUrl,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                    className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#EE2737]/30 shadow-xs hover:border-[#EE2737] transition-all group",
+                    children: [
+                      /* @__PURE__ */ jsxDEV("span", { className: "w-4 h-4 rounded-full bg-[#EE2737] flex items-center justify-center shrink-0 text-white", children: /* @__PURE__ */ jsxDEV(GoFoodIcon, { className: "w-2.5 h-2.5 text-white" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 241,
+                        columnNumber: 19
+                      }, this) }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 240,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ jsxDEV("span", { className: "font-sans font-black text-xs text-[#EE2737] tracking-tight", children: "gofood" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 243,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ jsxDEV("span", { className: "text-[10px] font-mono text-espresso/70 font-semibold", children: "• Tersedia Delivery" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 244,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ jsxDEV(ArrowUpRight, { className: "w-3 h-3 text-[#EE2737] opacity-60 group-hover:opacity-100 transition-opacity" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 245,
+                        columnNumber: 17
+                      }, this)
+                    ]
+                  },
+                  void 0,
+                  true,
+                  {
+                    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                    lineNumber: 234,
+                    columnNumber: 15
+                  },
+                  this
+                )
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 225,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV("h2", { className: "font-sans font-black text-4xl lg:text-[50px] text-espresso uppercase leading-[0.93] tracking-[-0.035em] mb-4", children: [
+                "GOOD COFFEE,",
+                /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 251,
+                  columnNumber: 27
+                }, this),
+                "HONEST TALKS.",
+                /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 252,
+                  columnNumber: 28
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { className: "text-turquoise", children: "GRAB YOUR SEKATA TODAY." }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 253,
+                  columnNumber: 15
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 250,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "font-sans text-base text-espresso/85 leading-relaxed mb-6 max-w-xl", children: "From rich single origin manual brews and velvety white coffee, to iced citrus tea and chilled matcha. Stop by our open slowbar table or grab your favorite cup to accompany your day in Tanjungpinang." }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 257,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "flex flex-wrap gap-2 mb-7", children: [
+                /* @__PURE__ */ jsxDEV("span", { className: "px-3 py-1 rounded-full bg-cream border border-espresso/15 font-mono text-[11px] font-semibold text-espresso", children: "• Single Origin V60" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 263,
+                  columnNumber: 15
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { className: "px-3 py-1 rounded-full bg-cream border border-espresso/15 font-mono text-[11px] font-semibold text-espresso", children: "• Signature Espresso" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 266,
+                  columnNumber: 15
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { className: "px-3 py-1 rounded-full bg-cream border border-espresso/15 font-mono text-[11px] font-semibold text-espresso", children: "• Tea & Fruit Cascade" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 269,
+                  columnNumber: 15
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { className: "px-3 py-1 rounded-full bg-cream border border-espresso/15 font-mono text-[11px] font-semibold text-espresso", children: "• Dine-In & Takeaway" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                  lineNumber: 272,
+                  columnNumber: 15
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 262,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "flex flex-row items-center gap-3", children: [
+                /* @__PURE__ */ jsxDEV(
+                  motion.a,
+                  {
+                    href: waUrl,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                    whileHover: { scale: 1.04, y: -1 },
+                    whileTap: { scale: 0.96 },
+                    transition: { type: "spring", stiffness: 400, damping: 25 },
+                    className: "inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-turquoise hover:bg-turquoise-dark text-cream font-sans text-xs font-bold tracking-wider uppercase transition-colors duration-200 shadow-md shadow-turquoise/25 group cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxDEV("span", { children: "GRAB VIA WHATSAPP" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 288,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ jsxDEV(ArrowUpRight, { className: "w-4 h-4 stroke-[2.5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 289,
+                        columnNumber: 17
+                      }, this)
+                    ]
+                  },
+                  void 0,
+                  true,
+                  {
+                    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                    lineNumber: 279,
+                    columnNumber: 15
+                  },
+                  this
+                ),
+                /* @__PURE__ */ jsxDEV(
+                  motion.a,
+                  {
+                    href: gofoodUrl,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                    whileHover: { scale: 1.04, y: -1 },
+                    whileTap: { scale: 0.96 },
+                    transition: { type: "spring", stiffness: 400, damping: 25 },
+                    className: "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-red-50 text-[#EE2737] border-2 border-[#EE2737]/30 hover:border-[#EE2737] font-sans text-xs font-bold tracking-wider uppercase transition-all duration-200 shadow-sm cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxDEV("span", { className: "w-3.5 h-3.5 rounded-full bg-[#EE2737] flex items-center justify-center shrink-0 text-white", children: /* @__PURE__ */ jsxDEV(GoFoodIcon, { className: "w-2 h-2 text-white" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 302,
+                        columnNumber: 19
+                      }, this) }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 301,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ jsxDEV("span", { children: "ORDER DI GOFOOD" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 304,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ jsxDEV(ArrowUpRight, { className: "w-3.5 h-3.5 stroke-[2.5]" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 305,
+                        columnNumber: 17
+                      }, this)
+                    ]
+                  },
+                  void 0,
+                  true,
+                  {
+                    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                    lineNumber: 292,
+                    columnNumber: 15
+                  },
+                  this
+                ),
+                /* @__PURE__ */ jsxDEV(
+                  motion.button,
+                  {
+                    onClick: scrollToMenu,
+                    whileHover: { scale: 1.02 },
+                    whileTap: { scale: 0.98 },
+                    className: "inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-cream/90 hover:bg-cream border border-espresso/20 text-espresso font-sans text-xs font-bold tracking-wider uppercase transition-colors duration-200 cursor-pointer",
+                    children: [
+                      /* @__PURE__ */ jsxDEV("span", { children: "LIHAT MENU" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 314,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ jsxDEV(ArrowDown, { className: "w-3.5 h-3.5 text-espresso/70" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                        lineNumber: 315,
+                        columnNumber: 17
+                      }, this)
+                    ]
+                  },
+                  void 0,
+                  true,
+                  {
+                    fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                    lineNumber: 308,
+                    columnNumber: 15
+                  },
+                  this
+                )
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+                lineNumber: 278,
+                columnNumber: 13
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+              lineNumber: 222,
+              columnNumber: 11
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+            lineNumber: 180,
+            columnNumber: 9
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+          lineNumber: 53,
+          columnNumber: 7
+        }, this)
+      ]
+    },
+    void 0,
+    true,
+    {
+      fileName: "D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx",
+      lineNumber: 44,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c2 = CtaPromoSection;
+var _c, _c2;
+$RefreshReg$(_c, "GoFoodIcon");
+$RefreshReg$(_c2, "CtaPromoSection");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/SEKATA.TNJ/src/components/CtaPromoSection.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBLHNCQUNoQix1QkFBQyxhQUFVLFdBQVUsa0NBQXJCO0FBQUE7QUFBQTtBQUFBO0FBQUEsNkJBQW1EO0FBQUE7QUFBQTtBQUFBLGtCQVByRDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsZ0JBUUE7QUFBQSxtQkF0Q0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkF1Q0E7QUFBQSxpQkEvRkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFpR0E7QUFBQSxlQTNJRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQTZJQTtBQUFBLGFBNVFGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUE4UUE7QUFBQTtBQUFBO0FBQUEsSUF2UkY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBd1JBO0FBRUo7QUFBQ00sTUF0U3VCZjtBQUFlLElBQUFELElBQUFnQjtBQUFBLGFBQUFoQixJQUFBO0FBQUEsYUFBQWdCLEtBQUEiLCJuYW1lcyI6WyJSZWFjdCIsIm1vdGlvbiIsIkFycm93VXBSaWdodCIsIkFycm93RG93biIsIlNwYXJrbGVzIiwiR29Gb29kSWNvbiIsImNsYXNzTmFtZSIsIl9jIiwiQ3RhUHJvbW9TZWN0aW9uIiwid2FVcmwiLCJnb2Zvb2RVcmwiLCJzY3JvbGxUb01lbnUiLCJlbCIsImRvY3VtZW50IiwiZ2V0RWxlbWVudEJ5SWQiLCJzY3JvbGxJbnRvVmlldyIsImJlaGF2aW9yIiwic2NhbGUiLCJyb3RhdGUiLCJ0eXBlIiwic3RpZmZuZXNzIiwiZGFtcGluZyIsInkiLCJfYzIiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiQ3RhUHJvbW9TZWN0aW9uLmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgbW90aW9uIH0gZnJvbSAnZnJhbWVyLW1vdGlvbic7XG5pbXBvcnQgeyBBcnJvd1VwUmlnaHQsIEFycm93RG93biwgU3BhcmtsZXMgfSBmcm9tICdsdWNpZGUtcmVhY3QnO1xuXG5mdW5jdGlvbiBHb0Zvb2RJY29uKHsgY2xhc3NOYW1lID0gXCJ3LTQgaC00XCIgfSkge1xuICByZXR1cm4gKFxuICAgIDxzdmcgdmlld0JveD1cIjAgMCAyNCAyNFwiIGNsYXNzTmFtZT17YCR7Y2xhc3NOYW1lfSBmaWxsLWN1cnJlbnRgfSB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCI+XG4gICAgICA8cGF0aCBkPVwiTTExIDlIOVYySDd2N0g1VjJIM3Y3YzAgMi4xMiAxLjY2IDMuODQgMy43NSAzLjk3VjIyaDIuNXYtOS4wM0MxMS4zNCAxMi44NCAxMyAxMS4xMiAxMyA5VjJoLTJ2N3ptNS0zdjhoMi41djhIMjFWMmMtMi43NiAwLTUgMi4yNC01IDR6XCIgLz5cbiAgICA8L3N2Zz5cbiAgKTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQ3RhUHJvbW9TZWN0aW9uKCkge1xuICBjb25zdCB3YVVybCA9ICdodHRwczovL3dhLm1lLzYyODE5OTE0NDUzMzE/dGV4dD1IYWxvJTIwU2VrYXRhLCUyMHNheWElMjBtYXUlMjBwZXNhbiUyMGtvcGklMjBhdGF1JTIwcmVzZXJ2YXNpJTIwbWVqYSUyMHNsb3diYXIlMjBoYXJpJTIwaW5pISc7XG4gIGNvbnN0IGdvZm9vZFVybCA9ICdodHRwczovL2dvZm9vZC5saW5rJztcblxuICBjb25zdCBzY3JvbGxUb01lbnUgPSAoKSA9PiB7XG4gICAgY29uc3QgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbWVudScpO1xuICAgIGlmIChlbCkge1xuICAgICAgZWwuc2Nyb2xsSW50b1ZpZXcoeyBiZWhhdmlvcjogJ3Ntb290aCcgfSk7XG4gICAgfVxuICB9O1xuXG4gIHJldHVybiAoXG4gICAgPHNlY3Rpb25cbiAgICAgIGlkPVwiZ3JhYi1zZWthdGFcIlxuICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGJnLVsjZmZmNWUzXSBib3JkZXItdCBib3JkZXItYiBib3JkZXItZXNwcmVzc28vMTUgcHktNCBzbTpweS0xNiBsZzpweS0yMCBweC0zIHNtOnB4LTggcmVsYXRpdmUgb3ZlcmZsb3ctaGlkZGVuIHNlbGVjdC1ub25lXCJcbiAgICA+XG4gICAgICB7LyogQmFja2dyb3VuZCBUeXBvZ3JhcGh5IFdhdGVybWFyayDigJQgT25seSBvbiBkZXNrdG9wIHRvIGF2b2lkIGF3a3dhcmQgdmVydGljYWwgc3BhY2Ugb24gbW9iaWxlICovfVxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJoaWRkZW4gbGc6YmxvY2sgYWJzb2x1dGUgLXJpZ2h0LTYgLWJvdHRvbS0xMCBzZWxlY3Qtbm9uZSBwb2ludGVyLWV2ZW50cy1ub25lIG9wYWNpdHktWzAuMDZdIGZvbnQtc2FucyBmb250LWJsYWNrIHRleHQtWzIyMHB4XSBsZWFkaW5nLW5vbmUgdGV4dC1lc3ByZXNzbyB3aGl0ZXNwYWNlLW5vd3JhcFwiPlxuICAgICAgICBTRUtBVEFcbiAgICAgIDwvZGl2PlxuXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LVsxMjAwcHhdIG14LWF1dG8gcmVsYXRpdmUgei0xMFwiPlxuICAgICAgICBcbiAgICAgICAgey8qID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiAgICAgICAgICAgIDEuIE1PQklMRSBMQVlPVVQgKEtIVVNVUyBIUCAvIDwgbGcpOiBcbiAgICAgICAgICAgICAgIC0gR2FtYmFyIHRlcmVrc3Bvc2UgcGVudWggZGFsYW0gcmFzaW8gcG9ydHJhaXQgYWxhbWkgMzo0ICh0aWRhayB0ZXJwb3RvbmcpLlxuICAgICAgICAgICAgICAgLSBUYXRhIGxldGFrIGJlbnRvIGVkaXRvcmlhbCByYXBpLCB0ZXJzdHJ1a3R1ciwgemVybyBzcGFjZSBrb3NvbmcuXG4gICAgICAgICAgICAgICAtIFBlbmVtcGF0YW4gdG9tYm9sIHByb3BvcnNpb25hbDogV2hhdHNBcHAgJiBHb0Zvb2Qgc2VqYWphciBzZWltYmFuZy5cbiAgICAgICAgICAgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSAqL31cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJibG9jayBsZzpoaWRkZW4gdy1mdWxsIG1heC13LVszOTBweF0gbXgtYXV0byB0ZXh0LWxlZnQgcHktMlwiPlxuICAgICAgICAgIFxuICAgICAgICAgIHsvKiBUb3AgS2lja2VyIEJhcjogSGFzaHRhZyArIEdvRm9vZCBCYWRnZSAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBnYXAtMiBtYi0yLjVcIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0xLjUgYmctZXNwcmVzc28gdGV4dC1bI2Y1YmEzMV0gcHgtMi41IHB5LTEgcm91bmRlZC1mdWxsIHNoYWRvdy14c1wiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ3LTEuNSBoLTEuNSByb3VuZGVkLWZ1bGwgYmctWyNmNWJhMzFdIGFuaW1hdGUtcHVsc2VcIj48L3NwYW4+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtbW9ubyB0ZXh0LVs5cHhdIGZvbnQtYmxhY2sgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyXCI+XG4gICAgICAgICAgICAgICAgI0dSQUJZT1VSU0VLQVRBVE9EQVlcbiAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIHsvKiBHb0Zvb2QgRGVsaXZlcnkgQmFkZ2UgKi99XG4gICAgICAgICAgICA8YVxuICAgICAgICAgICAgICBocmVmPXtnb2Zvb2RVcmx9XG4gICAgICAgICAgICAgIHRhcmdldD1cIl9ibGFua1wiXG4gICAgICAgICAgICAgIHJlbD1cIm5vb3BlbmVyIG5vcmVmZXJyZXJcIlxuICAgICAgICAgICAgICBjbGFzc05hbWU9XCJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEuNSBweC0yLjUgcHktMSByb3VuZGVkLWZ1bGwgYmctd2hpdGUgYm9yZGVyIGJvcmRlci1bI0VFMjczN10vMzAgc2hhZG93LXhzIGhvdmVyOmJvcmRlci1bI0VFMjczN10gdHJhbnNpdGlvbi1jb2xvcnNcIlxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ3LTMuNSBoLTMuNSByb3VuZGVkLWZ1bGwgYmctWyNFRTI3MzddIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHNocmluay0wIHRleHQtd2hpdGVcIj5cbiAgICAgICAgICAgICAgICA8R29Gb29kSWNvbiBjbGFzc05hbWU9XCJ3LTIgaC0yIHRleHQtd2hpdGVcIiAvPlxuICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtc2FucyBmb250LWJsYWNrIHRleHQtWzExcHhdIHRleHQtWyNFRTI3MzddIHRyYWNraW5nLXRpZ2h0XCI+Z29mb29kPC9zcGFuPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LVs5cHhdIGZvbnQtbW9ubyB0ZXh0LWVzcHJlc3NvLzcwIGZvbnQtc2VtaWJvbGRcIj7igKIgRGVsaXZlcnk8L3NwYW4+XG4gICAgICAgICAgICA8L2E+XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICB7LyogTGFyZ2UgQm9sZCBFbmdsaXNoIEhlYWRsaW5lIOKAlCBTYW5nYXQgSmVsYXMgJiBUZWdhcyAqL31cbiAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwiZm9udC1zYW5zIGZvbnQtYmxhY2sgdGV4dC1bMjJweF0geHM6dGV4dC1bMjVweF0gdGV4dC1lc3ByZXNzbyB1cHBlcmNhc2UgbGVhZGluZy1bMC45Nl0gdHJhY2tpbmctdGlnaHQgbWItM1wiPlxuICAgICAgICAgICAgR09PRCBDT0ZGRUUsIEhPTkVTVCBUQUxLUy48YnIgLz5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtdHVycXVvaXNlXCI+R1JBQiBZT1VSIFNFS0FUQSBUT0RBWS48L3NwYW4+XG4gICAgICAgICAgPC9oMj5cblxuICAgICAgICAgIHsvKiBIZXJvIFBob3RvIENhcmQ6IEVYUE9TRUQgSU4gRlVMTCAzOjQgTkFUVVJBTCBQT1JUUkFJVCBSQVRJTyAoNSBDYW5na2lyIExlbmdrYXApICovfVxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy1mdWxsIHJlbGF0aXZlIG15LTJcIj5cbiAgICAgICAgICAgIHsvKiBXYXJtIE1hcmlnb2xkIE9mZnNldCBCYWNrZHJvcCAqL31cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgaW5zZXQtMCBiZy1bI2Y1YmEzMV0gcm91bmRlZC0yeGwgdHJhbnNmb3JtIHJvdGF0ZS0xIHRyYW5zbGF0ZS14LTEuNSB0cmFuc2xhdGUteS0xLjUgb3BhY2l0eS04NSBzaGFkb3ctbWRcIj48L2Rpdj5cblxuICAgICAgICAgICAgey8qIE5hdHVyYWwgQXNwZWN0IDM6NCBQaG90byBGcmFtZSAoVGFucGEgUGVtb3RvbmdhbiBDYW5na2lyKSAqL31cbiAgICAgICAgICAgIDxtb3Rpb24uZGl2XG4gICAgICAgICAgICAgIHdoaWxlSG92ZXI9e3sgc2NhbGU6IDEuMDIgfX1cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicmVsYXRpdmUgYXNwZWN0LVszLzRdIHctZnVsbCByb3VuZGVkLTJ4bCBvdmVyZmxvdy1oaWRkZW4gc2hhZG93LXhsIGJvcmRlciBib3JkZXItZXNwcmVzc28vMTUgYmctZXNwcmVzc28gZ3JvdXBcIlxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICA8aW1nXG4gICAgICAgICAgICAgICAgc3JjPVwiL0NUQS5qcGdcIlxuICAgICAgICAgICAgICAgIGFsdD1cIkdyYWIgWW91ciBTZWthdGEgVG9kYXkg4oCUIDUgU2lnbmF0dXJlIERyaW5rc1wiXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGgtZnVsbCBvYmplY3QtY292ZXJcIlxuICAgICAgICAgICAgICAvPlxuXG4gICAgICAgICAgICAgIHsvKiBGbG9hdGluZyBUb3AgQmFkZ2UgKi99XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgdG9wLTIuNSBsZWZ0LTIuNSBiZy1bI2Y1YmEzMV0gdGV4dC1lc3ByZXNzbyBmb250LW1vbm8gdGV4dC1bOXB4XSBmb250LWJsYWNrIHB4LTIuNSBweS0wLjUgcm91bmRlZC1mdWxsIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBzaGFkb3cteHMgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTFcIj5cbiAgICAgICAgICAgICAgICA8U3BhcmtsZXMgY2xhc3NOYW1lPVwidy0yLjUgaC0yLjUgc3Ryb2tlLVsyLjVdXCIgLz5cbiAgICAgICAgICAgICAgICA8c3Bhbj41IFNJR05BVFVSRSBTSVBTPC9zcGFuPlxuICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICB7LyogQm90dG9tIEZyb3N0ZWQgR2xhc3MgVGFnbGluZSAqL31cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBpbnNldC14LTAgYm90dG9tLTAgcC0zIGJnLWdyYWRpZW50LXRvLXQgZnJvbS1ibGFjay84NSB2aWEtYmxhY2svNTAgdG8tdHJhbnNwYXJlbnQgdGV4dC1jcmVhbVwiPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImZvbnQtc2FucyBmb250LWJvbGQgdGV4dC14cyBsZWFkaW5nLXRpZ2h0IHRleHQtd2hpdGVcIj5cbiAgICAgICAgICAgICAgICAgIEFsd2F5cyBhIGN1cCB0aGF0IG1hdGNoZXMgeW91ciBzdG9yeS5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZm9udC1tb25vIHRleHQtWzlweF0gdGV4dC1bI2Y1YmEzMV0gYmxvY2sgZm9udC1ib2xkIHRyYWNraW5nLXdpZGVyIG10LTAuNVwiPlxuICAgICAgICAgICAgICAgICAgQW1lcmljYW5vICZidWxsOyBNYXRjaGEgJmJ1bGw7IExlbW9uIFRlYSAmYnVsbDsgQ29sZCBCcmV3XG4gICAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvbW90aW9uLmRpdj5cbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgIHsvKiBDbGVhciBMZWFkIENvcHkgKi99XG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1zYW5zIHRleHQteHMgdGV4dC1lc3ByZXNzby84NSBsZWFkaW5nLXJlbGF4ZWQgbXktM1wiPlxuICAgICAgICAgICAgRGFyaSBtYW51YWwgYnJldyBOdXNhbnRhcmEgaGluZ2dhIG1hdGNoYSBkYW4gY2l0cnVzIHRlYSBkaW5naW4uIE5pa21hdGkgbGFuZ3N1bmcgZGkgc2xvd2JhciBrYW1pIGF0YXUgcGVzYW4gYW50YXIga2UgcnVtYWhtdS5cbiAgICAgICAgICA8L3A+XG5cbiAgICAgICAgICB7LyogQWN0aW9uIEJ1dHRvbnM6IFdoYXRzQXBwICYgR29Gb29kIEJhbGFuY2VkIDItQ29sdW1uIEdyaWQgKi99XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdyaWQtY29scy0yIGdhcC0yIG10LTJcIj5cbiAgICAgICAgICAgIDxtb3Rpb24uYVxuICAgICAgICAgICAgICBocmVmPXt3YVVybH1cbiAgICAgICAgICAgICAgdGFyZ2V0PVwiX2JsYW5rXCJcbiAgICAgICAgICAgICAgcmVsPVwibm9vcGVuZXIgbm9yZWZlcnJlclwiXG4gICAgICAgICAgICAgIHdoaWxlSG92ZXI9e3sgc2NhbGU6IDEuMDIgfX1cbiAgICAgICAgICAgICAgd2hpbGVUYXA9e3sgc2NhbGU6IDAuOTggfX1cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC0xLjUgcHktMyBweC0zIHJvdW5kZWQtZnVsbCBiZy10dXJxdW9pc2UgaG92ZXI6YmctdHVycXVvaXNlLWRhcmsgdGV4dC1jcmVhbSBmb250LXNhbnMgdGV4dC14cyBmb250LWJvbGQgdHJhY2tpbmctd2lkZXIgdXBwZXJjYXNlIHRyYW5zaXRpb24tY29sb3JzIHNoYWRvdy1tZCBzaGFkb3ctdHVycXVvaXNlLzI1IGN1cnNvci1wb2ludGVyIHRleHQtY2VudGVyXCJcbiAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgPHNwYW4+V0hBVFNBUFA8L3NwYW4+XG4gICAgICAgICAgICAgIDxBcnJvd1VwUmlnaHQgY2xhc3NOYW1lPVwidy0zLjUgaC0zLjUgc3Ryb2tlLVsyLjVdXCIgLz5cbiAgICAgICAgICAgIDwvbW90aW9uLmE+XG5cbiAgICAgICAgICAgIDxtb3Rpb24uYVxuICAgICAgICAgICAgICBocmVmPXtnb2Zvb2RVcmx9XG4gICAgICAgICAgICAgIHRhcmdldD1cIl9ibGFua1wiXG4gICAgICAgICAgICAgIHJlbD1cIm5vb3BlbmVyIG5vcmVmZXJyZXJcIlxuICAgICAgICAgICAgICB3aGlsZUhvdmVyPXt7IHNjYWxlOiAxLjAyIH19XG4gICAgICAgICAgICAgIHdoaWxlVGFwPXt7IHNjYWxlOiAwLjk4IH19XG4gICAgICAgICAgICAgIGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBnYXAtMS41IHB5LTMgcHgtMyByb3VuZGVkLWZ1bGwgYmctd2hpdGUgaG92ZXI6YmctcmVkLTUwIHRleHQtWyNFRTI3MzddIGJvcmRlci0yIGJvcmRlci1bI0VFMjczN10gZm9udC1zYW5zIHRleHQteHMgZm9udC1ib2xkIHRyYWNraW5nLXdpZGVyIHVwcGVyY2FzZSB0cmFuc2l0aW9uLWNvbG9ycyBzaGFkb3cteHMgY3Vyc29yLXBvaW50ZXIgdGV4dC1jZW50ZXJcIlxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ3LTMuNSBoLTMuNSByb3VuZGVkLWZ1bGwgYmctWyNFRTI3MzddIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHNocmluay0wIHRleHQtd2hpdGVcIj5cbiAgICAgICAgICAgICAgICA8R29Gb29kSWNvbiBjbGFzc05hbWU9XCJ3LTIgaC0yIHRleHQtd2hpdGVcIiAvPlxuICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDxzcGFuPkdPRk9PRDwvc3Bhbj5cbiAgICAgICAgICAgICAgPEFycm93VXBSaWdodCBjbGFzc05hbWU9XCJ3LTMuNSBoLTMuNSBzdHJva2UtWzIuNV1cIiAvPlxuICAgICAgICAgICAgPC9tb3Rpb24uYT5cbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgIHsvKiBDbGVhbiBTdWItQWN0aW9uIE1lbnUgTGluayAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtY2VudGVyIG10LTIuNSBwYi0xXCI+XG4gICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgIG9uQ2xpY2s9e3Njcm9sbFRvTWVudX1cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0xIGZvbnQtc2FucyB0ZXh0LVsxMXB4XSBmb250LWJvbGQgdGV4dC1lc3ByZXNzby83MCBob3Zlcjp0ZXh0LWVzcHJlc3NvIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciB0cmFuc2l0aW9uLWNvbG9ycyBjdXJzb3ItcG9pbnRlclwiXG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIDxzcGFuPkxJSEFUIE1FTlUgTEVOR0tBUDwvc3Bhbj5cbiAgICAgICAgICAgICAgPEFycm93RG93biBjbGFzc05hbWU9XCJ3LTMgaC0zIHRleHQtZXNwcmVzc28vNjBcIiAvPlxuICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgey8qID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiAgICAgICAgICAgIDIuIERFU0tUT1AgLyBQQyBMQVlPVVQgKEtIVVNVUyBQQyAvIGxnOik6XG4gICAgICAgICAgICAgICBTYW1hIHBlcnNpcyBzZXBlcnRpIHNjcmVlbnNob3QgUEMgR2FtYmFyIDEgKFRpZGFrIERpcnViYWgpOlxuICAgICAgICAgICAgICAgRm90byBkaSBraXJpIDUga29sb20sIFRpcG9ncmFmaSBiZXNhciBkaSBrYW5hbiA3IGtvbG9tLlxuICAgICAgICAgICA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09ICovfVxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImhpZGRlbiBsZzpncmlkIGxnOmdyaWQtY29scy0xMiBnYXAtMTIgbGc6Z2FwLTE0IGl0ZW1zLWNlbnRlclwiPlxuICAgICAgICAgIFxuICAgICAgICAgIHsvKiBMZWZ0IENvbHVtbjogUGhvdG8gQ2FyZCB3aXRoIE1hcmlnb2xkIE9mZnNldCAoNSBDb2xzKSAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOmNvbC1zcGFuLTUgZmxleCBqdXN0aWZ5LWNlbnRlclwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWxhdGl2ZSB3LWZ1bGwgbWF4LXctWzM5MHB4XVwiPlxuICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgey8qIFdhcm0gTWFyaWdvbGQgT2Zmc2V0IEJhY2tkcm9wICovfVxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIGluc2V0LTAgYmctWyNmNWJhMzFdIHJvdW5kZWQtM3hsIHRyYW5zZm9ybSByb3RhdGUtMiB0cmFuc2xhdGUteC0yIHRyYW5zbGF0ZS15LTIgb3BhY2l0eS04NSBzaGFkb3ctbWRcIj48L2Rpdj5cblxuICAgICAgICAgICAgICB7LyogTWFpbiBQaG90byBDYXJkICovfVxuICAgICAgICAgICAgICA8bW90aW9uLmRpdlxuICAgICAgICAgICAgICAgIHdoaWxlSG92ZXI9e3sgc2NhbGU6IDEuMDIsIHJvdGF0ZTogLTAuNSB9fVxuICAgICAgICAgICAgICAgIHRyYW5zaXRpb249e3sgdHlwZTogJ3NwcmluZycsIHN0aWZmbmVzczogMzAwLCBkYW1waW5nOiAyMCB9fVxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInJlbGF0aXZlIGFzcGVjdC1bNC81XSByb3VuZGVkLTN4bCBvdmVyZmxvdy1oaWRkZW4gc2hhZG93LTJ4bCBib3JkZXItMiBib3JkZXItZXNwcmVzc28vMTUgYmctZXNwcmVzc28gZ3JvdXBcIlxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPGltZ1xuICAgICAgICAgICAgICAgICAgc3JjPVwiL0NUQS5qcGdcIlxuICAgICAgICAgICAgICAgICAgYWx0PVwiR3JhYiBZb3VyIFNla2F0YSBUb2RheSDigJQgU2lnbmF0dXJlIERyaW5rc1wiXG4gICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ3LWZ1bGwgaC1mdWxsIG9iamVjdC1jb3ZlciBncm91cC1ob3ZlcjpzY2FsZS1bMS4wM10gdHJhbnNpdGlvbi10cmFuc2Zvcm0gZHVyYXRpb24tNTAwIGVhc2Utb3V0XCJcbiAgICAgICAgICAgICAgICAvPlxuXG4gICAgICAgICAgICAgICAgey8qIFRvcCBGbG9hdGluZyBCYWRnZSAqL31cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIHRvcC0zLjUgbGVmdC0zLjUgYmctWyNmNWJhMzFdIHRleHQtZXNwcmVzc28gZm9udC1tb25vIHRleHQtWzExcHhdIGZvbnQtYmxhY2sgcHgtMyBweS0xIHJvdW5kZWQtZnVsbCB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgc2hhZG93LXNtIGZsZXggaXRlbXMtY2VudGVyIGdhcC0xLjVcIj5cbiAgICAgICAgICAgICAgICAgIDxTcGFya2xlcyBjbGFzc05hbWU9XCJ3LTMgaC0zIHN0cm9rZS1bMi41XVwiIC8+XG4gICAgICAgICAgICAgICAgICA8c3Bhbj41IFNJR05BVFVSRSBTSVBTPC9zcGFuPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgey8qIEJvdHRvbSBGcm9zdGVkIEdsYXNzIFRhZ2xpbmUgKi99XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBpbnNldC14LTAgYm90dG9tLTAgcC00IGJnLWdyYWRpZW50LXRvLXQgZnJvbS1ibGFjay84NSB2aWEtYmxhY2svNTAgdG8tdHJhbnNwYXJlbnQgdGV4dC1jcmVhbVwiPlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1zYW5zIGZvbnQtYm9sZCB0ZXh0LXNtIGxlYWRpbmctc251Z1wiPlxuICAgICAgICAgICAgICAgICAgICBBbHdheXMgYSBjdXAgdGhhdCBtYXRjaGVzIHlvdXIgc3RvcnkuXG4gICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJmb250LW1vbm8gdGV4dC1bMTBweF0gdGV4dC1bI2Y1YmEzMV0gYmxvY2sgbXQtMC41IGZvbnQtYm9sZCB0cmFja2luZy13aWRlclwiPlxuICAgICAgICAgICAgICAgICAgICAjR1JBQllPVVJTRUtBVEFUT0RBWVxuICAgICAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8L21vdGlvbi5kaXY+XG5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgey8qIFJpZ2h0IENvbHVtbjogTGFyZ2UgRW5nbGlzaCBUeXBvZ3JhcGh5LCBHb0Zvb2QgQmFkZ2UgJiBBY3Rpb24gQnV0dG9ucyAoNyBDb2xzKSAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOmNvbC1zcGFuLTcgZmxleCBmbGV4LWNvbCBqdXN0aWZ5LWNlbnRlciB0ZXh0LWxlZnRcIj5cbiAgICAgICAgICAgIFxuICAgICAgICAgICAgey8qIFRvcCBSb3c6IEhhc2h0YWcgUGlsbCArIEdvRm9vZCBQYXJ0bmVyIEJhZGdlICovfVxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyBtYi00XCI+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0yIGJnLWVzcHJlc3NvIHRleHQtWyNmNWJhMzFdIHB4LTMuNSBweS0xLjUgcm91bmRlZC1mdWxsIHNoYWRvdy14c1wiPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInctMiBoLTIgcm91bmRlZC1mdWxsIGJnLVsjZjViYTMxXSBhbmltYXRlLXB1bHNlXCI+PC9zcGFuPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtbW9ubyB0ZXh0LXhzIGZvbnQtYmxhY2sgdXBwZXJjYXNlIHRyYWNraW5nLVswLjE0ZW1dXCI+XG4gICAgICAgICAgICAgICAgICAjR1JBQllPVVJTRUtBVEFUT0RBWVxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgey8qIEdvRm9vZCBCYWRnZSAqL31cbiAgICAgICAgICAgICAgPGFcbiAgICAgICAgICAgICAgICBocmVmPXtnb2Zvb2RVcmx9XG4gICAgICAgICAgICAgICAgdGFyZ2V0PVwiX2JsYW5rXCJcbiAgICAgICAgICAgICAgICByZWw9XCJub29wZW5lciBub3JlZmVycmVyXCJcbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgcHgtMyBweS0xLjUgcm91bmRlZC1mdWxsIGJnLXdoaXRlIGJvcmRlciBib3JkZXItWyNFRTI3MzddLzMwIHNoYWRvdy14cyBob3Zlcjpib3JkZXItWyNFRTI3MzddIHRyYW5zaXRpb24tYWxsIGdyb3VwXCJcbiAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInctNCBoLTQgcm91bmRlZC1mdWxsIGJnLVsjRUUyNzM3XSBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBzaHJpbmstMCB0ZXh0LXdoaXRlXCI+XG4gICAgICAgICAgICAgICAgICA8R29Gb29kSWNvbiBjbGFzc05hbWU9XCJ3LTIuNSBoLTIuNSB0ZXh0LXdoaXRlXCIgLz5cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZm9udC1zYW5zIGZvbnQtYmxhY2sgdGV4dC14cyB0ZXh0LVsjRUUyNzM3XSB0cmFja2luZy10aWdodFwiPmdvZm9vZDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LVsxMHB4XSBmb250LW1vbm8gdGV4dC1lc3ByZXNzby83MCBmb250LXNlbWlib2xkXCI+4oCiIFRlcnNlZGlhIERlbGl2ZXJ5PC9zcGFuPlxuICAgICAgICAgICAgICAgIDxBcnJvd1VwUmlnaHQgY2xhc3NOYW1lPVwidy0zIGgtMyB0ZXh0LVsjRUUyNzM3XSBvcGFjaXR5LTYwIGdyb3VwLWhvdmVyOm9wYWNpdHktMTAwIHRyYW5zaXRpb24tb3BhY2l0eVwiIC8+XG4gICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICB7LyogTGFyZ2UgUHVuY2h5IEVuZ2xpc2ggVHlwb2dyYXBoeSBIZWFkbGluZSAoUGVyc2lzIFBDIEdhbWJhciAxKSAqL31cbiAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJmb250LXNhbnMgZm9udC1ibGFjayB0ZXh0LTR4bCBsZzp0ZXh0LVs1MHB4XSB0ZXh0LWVzcHJlc3NvIHVwcGVyY2FzZSBsZWFkaW5nLVswLjkzXSB0cmFja2luZy1bLTAuMDM1ZW1dIG1iLTRcIj5cbiAgICAgICAgICAgICAgR09PRCBDT0ZGRUUsPGJyIC8+XG4gICAgICAgICAgICAgIEhPTkVTVCBUQUxLUy48YnIgLz5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC10dXJxdW9pc2VcIj5HUkFCIFlPVVIgU0VLQVRBIFRPREFZLjwvc3Bhbj5cbiAgICAgICAgICAgIDwvaDI+XG5cbiAgICAgICAgICAgIHsvKiBJbnZpdGluZyBFbmdsaXNoIExlYWQgUGFyYWdyYXBoICovfVxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1zYW5zIHRleHQtYmFzZSB0ZXh0LWVzcHJlc3NvLzg1IGxlYWRpbmctcmVsYXhlZCBtYi02IG1heC13LXhsXCI+XG4gICAgICAgICAgICAgIEZyb20gcmljaCBzaW5nbGUgb3JpZ2luIG1hbnVhbCBicmV3cyBhbmQgdmVsdmV0eSB3aGl0ZSBjb2ZmZWUsIHRvIGljZWQgY2l0cnVzIHRlYSBhbmQgY2hpbGxlZCBtYXRjaGEuIFN0b3AgYnkgb3VyIG9wZW4gc2xvd2JhciB0YWJsZSBvciBncmFiIHlvdXIgZmF2b3JpdGUgY3VwIHRvIGFjY29tcGFueSB5b3VyIGRheSBpbiBUYW5qdW5ncGluYW5nLlxuICAgICAgICAgICAgPC9wPlxuXG4gICAgICAgICAgICB7LyogRmVhdHVyZSBCYWRnZXMgQ2xvdWQgKi99XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggZmxleC13cmFwIGdhcC0yIG1iLTdcIj5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwicHgtMyBweS0xIHJvdW5kZWQtZnVsbCBiZy1jcmVhbSBib3JkZXIgYm9yZGVyLWVzcHJlc3NvLzE1IGZvbnQtbW9ubyB0ZXh0LVsxMXB4XSBmb250LXNlbWlib2xkIHRleHQtZXNwcmVzc29cIj5cbiAgICAgICAgICAgICAgICAmYnVsbDsgU2luZ2xlIE9yaWdpbiBWNjBcbiAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJweC0zIHB5LTEgcm91bmRlZC1mdWxsIGJnLWNyZWFtIGJvcmRlciBib3JkZXItZXNwcmVzc28vMTUgZm9udC1tb25vIHRleHQtWzExcHhdIGZvbnQtc2VtaWJvbGQgdGV4dC1lc3ByZXNzb1wiPlxuICAgICAgICAgICAgICAgICZidWxsOyBTaWduYXR1cmUgRXNwcmVzc29cbiAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJweC0zIHB5LTEgcm91bmRlZC1mdWxsIGJnLWNyZWFtIGJvcmRlciBib3JkZXItZXNwcmVzc28vMTUgZm9udC1tb25vIHRleHQtWzExcHhdIGZvbnQtc2VtaWJvbGQgdGV4dC1lc3ByZXNzb1wiPlxuICAgICAgICAgICAgICAgICZidWxsOyBUZWEgJmFtcDsgRnJ1aXQgQ2FzY2FkZVxuICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInB4LTMgcHktMSByb3VuZGVkLWZ1bGwgYmctY3JlYW0gYm9yZGVyIGJvcmRlci1lc3ByZXNzby8xNSBmb250LW1vbm8gdGV4dC1bMTFweF0gZm9udC1zZW1pYm9sZCB0ZXh0LWVzcHJlc3NvXCI+XG4gICAgICAgICAgICAgICAgJmJ1bGw7IERpbmUtSW4gJmFtcDsgVGFrZWF3YXlcbiAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIHsvKiBBY3Rpb24gQnV0dG9ucyBSb3cgKFdoYXRzQXBwLCBHb0Zvb2QsIE1lbnUpICovfVxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGZsZXgtcm93IGl0ZW1zLWNlbnRlciBnYXAtM1wiPlxuICAgICAgICAgICAgICA8bW90aW9uLmFcbiAgICAgICAgICAgICAgICBocmVmPXt3YVVybH1cbiAgICAgICAgICAgICAgICB0YXJnZXQ9XCJfYmxhbmtcIlxuICAgICAgICAgICAgICAgIHJlbD1cIm5vb3BlbmVyIG5vcmVmZXJyZXJcIlxuICAgICAgICAgICAgICAgIHdoaWxlSG92ZXI9e3sgc2NhbGU6IDEuMDQsIHk6IC0xIH19XG4gICAgICAgICAgICAgICAgd2hpbGVUYXA9e3sgc2NhbGU6IDAuOTYgfX1cbiAgICAgICAgICAgICAgICB0cmFuc2l0aW9uPXt7IHR5cGU6ICdzcHJpbmcnLCBzdGlmZm5lc3M6IDQwMCwgZGFtcGluZzogMjUgfX1cbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgZ2FwLTIuNSBweC03IHB5LTMuNSByb3VuZGVkLWZ1bGwgYmctdHVycXVvaXNlIGhvdmVyOmJnLXR1cnF1b2lzZS1kYXJrIHRleHQtY3JlYW0gZm9udC1zYW5zIHRleHQteHMgZm9udC1ib2xkIHRyYWNraW5nLXdpZGVyIHVwcGVyY2FzZSB0cmFuc2l0aW9uLWNvbG9ycyBkdXJhdGlvbi0yMDAgc2hhZG93LW1kIHNoYWRvdy10dXJxdW9pc2UvMjUgZ3JvdXAgY3Vyc29yLXBvaW50ZXJcIlxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPHNwYW4+R1JBQiBWSUEgV0hBVFNBUFA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPEFycm93VXBSaWdodCBjbGFzc05hbWU9XCJ3LTQgaC00IHN0cm9rZS1bMi41XSBncm91cC1ob3Zlcjp0cmFuc2xhdGUteC0wLjUgZ3JvdXAtaG92ZXI6LXRyYW5zbGF0ZS15LTAuNSB0cmFuc2l0aW9uLXRyYW5zZm9ybVwiIC8+XG4gICAgICAgICAgICAgIDwvbW90aW9uLmE+XG5cbiAgICAgICAgICAgICAgPG1vdGlvbi5hXG4gICAgICAgICAgICAgICAgaHJlZj17Z29mb29kVXJsfVxuICAgICAgICAgICAgICAgIHRhcmdldD1cIl9ibGFua1wiXG4gICAgICAgICAgICAgICAgcmVsPVwibm9vcGVuZXIgbm9yZWZlcnJlclwiXG4gICAgICAgICAgICAgICAgd2hpbGVIb3Zlcj17eyBzY2FsZTogMS4wNCwgeTogLTEgfX1cbiAgICAgICAgICAgICAgICB3aGlsZVRhcD17eyBzY2FsZTogMC45NiB9fVxuICAgICAgICAgICAgICAgIHRyYW5zaXRpb249e3sgdHlwZTogJ3NwcmluZycsIHN0aWZmbmVzczogNDAwLCBkYW1waW5nOiAyNSB9fVxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBnYXAtMiBweC02IHB5LTMuNSByb3VuZGVkLWZ1bGwgYmctd2hpdGUgaG92ZXI6YmctcmVkLTUwIHRleHQtWyNFRTI3MzddIGJvcmRlci0yIGJvcmRlci1bI0VFMjczN10vMzAgaG92ZXI6Ym9yZGVyLVsjRUUyNzM3XSBmb250LXNhbnMgdGV4dC14cyBmb250LWJvbGQgdHJhY2tpbmctd2lkZXIgdXBwZXJjYXNlIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTIwMCBzaGFkb3ctc20gY3Vyc29yLXBvaW50ZXJcIlxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidy0zLjUgaC0zLjUgcm91bmRlZC1mdWxsIGJnLVsjRUUyNzM3XSBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBzaHJpbmstMCB0ZXh0LXdoaXRlXCI+XG4gICAgICAgICAgICAgICAgICA8R29Gb29kSWNvbiBjbGFzc05hbWU9XCJ3LTIgaC0yIHRleHQtd2hpdGVcIiAvPlxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3Bhbj5PUkRFUiBESSBHT0ZPT0Q8L3NwYW4+XG4gICAgICAgICAgICAgICAgPEFycm93VXBSaWdodCBjbGFzc05hbWU9XCJ3LTMuNSBoLTMuNSBzdHJva2UtWzIuNV1cIiAvPlxuICAgICAgICAgICAgICA8L21vdGlvbi5hPlxuXG4gICAgICAgICAgICAgIDxtb3Rpb24uYnV0dG9uXG4gICAgICAgICAgICAgICAgb25DbGljaz17c2Nyb2xsVG9NZW51fVxuICAgICAgICAgICAgICAgIHdoaWxlSG92ZXI9e3sgc2NhbGU6IDEuMDIgfX1cbiAgICAgICAgICAgICAgICB3aGlsZVRhcD17eyBzY2FsZTogMC45OCB9fVxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBnYXAtMiBweC01IHB5LTMuNSByb3VuZGVkLWZ1bGwgYmctY3JlYW0vOTAgaG92ZXI6YmctY3JlYW0gYm9yZGVyIGJvcmRlci1lc3ByZXNzby8yMCB0ZXh0LWVzcHJlc3NvIGZvbnQtc2FucyB0ZXh0LXhzIGZvbnQtYm9sZCB0cmFja2luZy13aWRlciB1cHBlcmNhc2UgdHJhbnNpdGlvbi1jb2xvcnMgZHVyYXRpb24tMjAwIGN1cnNvci1wb2ludGVyXCJcbiAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIDxzcGFuPkxJSEFUIE1FTlU8L3NwYW4+XG4gICAgICAgICAgICAgICAgPEFycm93RG93biBjbGFzc05hbWU9XCJ3LTMuNSBoLTMuNSB0ZXh0LWVzcHJlc3NvLzcwXCIgLz5cbiAgICAgICAgICAgICAgPC9tb3Rpb24uYnV0dG9uPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICA8L2Rpdj5cblxuICAgICAgPC9kaXY+XG4gICAgPC9zZWN0aW9uPlxuICApO1xufVxuIl0sImZpbGUiOiJEOi9TRUtBVEEuVE5KL3NyYy9jb21wb25lbnRzL0N0YVByb21vU2VjdGlvbi5qc3gifQ==

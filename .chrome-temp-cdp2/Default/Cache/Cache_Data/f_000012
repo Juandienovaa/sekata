@@ -1,0 +1,919 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/CommunityBoard.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=379fe8b8"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("D:/SEKATA.TNJ/src/components/CommunityBoard.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=379fe8b8"; const React = __vite__cjsImport3_react.__esModule ? __vite__cjsImport3_react.default : __vite__cjsImport3_react; const useState = __vite__cjsImport3_react["useState"];
+import { motion } from "/node_modules/.vite/deps/framer-motion.js?v=379fe8b8";
+import { ArrowLeft, ArrowRight, X, Play, Pause, SkipForward, SkipBack, Disc3, Volume2 } from "/node_modules/.vite/deps/lucide-react.js?v=379fe8b8";
+import { ARTICLES } from "/src/data/articles.js?t=1793880308012";
+export default function CommunityBoard() {
+  _s();
+  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [activeTrackIndex, setActiveTrackIndex] = useState(0);
+  const playlist = [
+    { title: "Suasana Pagi Tanjungpinang", artist: "Sekata Slowbar Session", duration: "03:40" },
+    { title: "Harum Biji Sangrai Gayo", artist: "Sekata Slowbar Session", duration: "04:21" },
+    { title: "Obrolan Santai di Meja Seduh", artist: "Sekata Slowbar Session", duration: "03:15" },
+    { title: "Hujan Sore & Manual Brew", artist: "Sekata Slowbar Session", duration: "04:32" }
+  ];
+  const currentTrack = playlist[activeTrackIndex];
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
+  const nextTrack = () => {
+    setActiveTrackIndex((prev) => (prev + 1) % playlist.length);
+  };
+  const prevTrack = () => {
+    setActiveTrackIndex((prev) => prev === 0 ? playlist.length - 1 : prev - 1);
+  };
+  return /* @__PURE__ */ jsxDEV(
+    "section",
+    {
+      id: "cerita",
+      className: "w-full py-16 sm:py-24 bg-[#cde8e5] border-y-2 border-espresso/15 scroll-mt-20 overflow-hidden select-none",
+      children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "container-max px-4 sm:px-8", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "bg-[#fffbf6] rounded-[24px] sm:rounded-[32px] border-2 border-espresso/15 p-6 sm:p-10 lg:p-12 shadow-md mb-12", children: /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-5 text-left flex flex-col justify-between h-full", children: [
+              /* @__PURE__ */ jsxDEV("div", { children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3 mb-3 flex-wrap", children: [
+                  /* @__PURE__ */ jsxDEV("h2", { className: "font-display text-[32px] sm:text-[42px] lg:text-[46px] leading-[1.0] text-espresso tracking-[-0.035em]", children: [
+                    "Setiap Pertemuan",
+                    /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 73,
+                      columnNumber: 37
+                    }, this),
+                    "Punya Cerita."
+                  ] }, void 0, true, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 72,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV(
+                    "img",
+                    {
+                      src: "/pegangkopi.png",
+                      onError: (e) => {
+                        e.currentTarget.src = "/logo.png";
+                      },
+                      alt: "Sekata Coffee & Slowbar",
+                      className: "h-10 sm:h-12 w-auto object-contain -rotate-6 inline-block filter drop-shadow-sm"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 76,
+                      columnNumber: 19
+                    },
+                    this
+                  )
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 71,
+                  columnNumber: 17
+                }, this),
+                /* @__PURE__ */ jsxDEV("p", { className: "font-body text-[14px] sm:text-[15px] text-[#6b584f] leading-relaxed max-w-sm mb-6", children: "Kisah-kisah kecil di balik seduhan kopi, rasa penasaran yang terjawab, dan kehangatan yang tumbuh di meja slowbar Tanjungpinang." }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 84,
+                  columnNumber: 17
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 70,
+                columnNumber: 15
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "pt-6 border-t border-espresso/10", children: [
+                /* @__PURE__ */ jsxDEV("span", { className: "text-[11px] font-mono uppercase text-burnt-orange font-bold tracking-wider block mb-2", children: "KUNJUNGI KEDAI" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 91,
+                  columnNumber: 17
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "font-body text-[13px] sm:text-[14px] text-[#5c4d44] space-y-1", children: [
+                  /* @__PURE__ */ jsxDEV("p", { children: "Jl. Pos No. 12, Kota Tanjungpinang" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 95,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("p", { children: "Kepulauan Riau • Buka Setiap Hari: 10:00 – 22:00 WIB" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 96,
+                    columnNumber: 19
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 94,
+                  columnNumber: 17
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "mt-3 flex items-center gap-4 text-[13px] font-body text-[#6b584f]", children: [
+                  /* @__PURE__ */ jsxDEV(
+                    "a",
+                    {
+                      href: "https://instagram.com/sekata.tnj",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className: "hover:text-espresso underline underline-offset-2 transition-colors",
+                      children: "Instagram: @sekata.tnj"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 101,
+                      columnNumber: 19
+                    },
+                    this
+                  ),
+                  /* @__PURE__ */ jsxDEV("span", { children: "•" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 109,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV(
+                    "a",
+                    {
+                      href: "https://tiktok.com/@sekatatnj",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className: "hover:text-espresso underline underline-offset-2 transition-colors",
+                      children: "TikTok"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 110,
+                      columnNumber: 19
+                    },
+                    this
+                  )
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 100,
+                  columnNumber: 17
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 90,
+                columnNumber: 15
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+              lineNumber: 69,
+              columnNumber: 13
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 text-left pt-1", children: [
+              /* @__PURE__ */ jsxDEV("div", { children: [
+                /* @__PURE__ */ jsxDEV("span", { className: "text-[11px] font-mono uppercase text-espresso/70 font-semibold tracking-wider block mb-3", children: "CATATAN SLOWBAR" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 128,
+                  columnNumber: 17
+                }, this),
+                /* @__PURE__ */ jsxDEV("ul", { className: "space-y-2.5 font-body text-[14px] text-[#5c4d44]", children: [
+                  ARTICLES.slice(0, 2).map(
+                    (art) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
+                      "button",
+                      {
+                        onClick: () => setSelectedArticle(art),
+                        className: "text-left hover:text-espresso hover:underline underline-offset-2 transition-colors",
+                        children: art.title.split(":")[0]
+                      },
+                      void 0,
+                      false,
+                      {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 134,
+                        columnNumber: 23
+                      },
+                      this
+                    ) }, art.id, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 133,
+                      columnNumber: 19
+                    }, this)
+                  ),
+                  /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: () => setSelectedArticle(ARTICLES[0]),
+                      className: "text-left hover:text-espresso hover:underline underline-offset-2 transition-colors",
+                      children: "Ritual Seduhan Pagi"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 143,
+                      columnNumber: 21
+                    },
+                    this
+                  ) }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 142,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: () => setSelectedArticle(ARTICLES[1]),
+                      className: "text-left hover:text-espresso hover:underline underline-offset-2 transition-colors",
+                      children: "Kalibrasi Rasa Barista"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 151,
+                      columnNumber: 21
+                    },
+                    this
+                  ) }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 150,
+                    columnNumber: 19
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 131,
+                  columnNumber: 17
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 127,
+                columnNumber: 15
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { children: [
+                /* @__PURE__ */ jsxDEV("span", { className: "text-[11px] font-mono uppercase text-espresso/70 font-semibold tracking-wider block mb-3", children: "KOMUNITAS" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 163,
+                  columnNumber: 17
+                }, this),
+                /* @__PURE__ */ jsxDEV("ul", { className: "space-y-2.5 font-body text-[14px] text-[#5c4d44]", children: [
+                  /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: () => setSelectedArticle(ARTICLES[2]),
+                      className: "text-left hover:text-espresso hover:underline underline-offset-2 transition-colors",
+                      children: "#KecilBertumbuh"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 168,
+                      columnNumber: 21
+                    },
+                    this
+                  ) }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 167,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: () => setSelectedArticle(ARTICLES[1]),
+                      className: "text-left hover:text-espresso hover:underline underline-offset-2 transition-colors",
+                      children: "Edukasi Biji Single Origin"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 176,
+                      columnNumber: 21
+                    },
+                    this
+                  ) }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 175,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: () => setSelectedArticle(ARTICLES[0]),
+                      className: "text-left hover:text-espresso hover:underline underline-offset-2 transition-colors",
+                      children: "Ruang Temu Tanjungpinang"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 184,
+                      columnNumber: 21
+                    },
+                    this
+                  ) }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 183,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: () => setSelectedArticle(ARTICLES[0]),
+                      className: "text-left text-burnt-orange font-medium hover:underline underline-offset-2 transition-colors",
+                      children: "Semua Catatan Cerita →"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 192,
+                      columnNumber: 21
+                    },
+                    this
+                  ) }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 191,
+                    columnNumber: 19
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 166,
+                  columnNumber: 17
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 162,
+                columnNumber: 15
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+              lineNumber: 124,
+              columnNumber: 13
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-4 w-full", children: /* @__PURE__ */ jsxDEV("div", { className: "bg-[#382b27] text-cream rounded-[20px] p-5 sm:p-6 shadow-xl border border-white/10 text-left relative overflow-hidden", children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "absolute top-0 right-0 w-32 h-32 bg-marigold/10 rounded-full blur-2xl pointer-events-none" }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 209,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between mb-4 pb-3 border-b border-white/10", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3", children: [
+                  /* @__PURE__ */ jsxDEV("div", { className: "w-10 h-10 rounded-[8px] overflow-hidden bg-sandstone border border-white/10 relative", children: /* @__PURE__ */ jsxDEV(
+                    "img",
+                    {
+                      src: "/konten1.jpg",
+                      alt: "Slowbar Session",
+                      className: `w-full h-full object-cover ${isPlaying ? "scale-105 rotate-3" : ""} transition-transform duration-700`
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 215,
+                      columnNumber: 23
+                    },
+                    this
+                  ) }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 214,
+                    columnNumber: 21
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("div", { children: [
+                    /* @__PURE__ */ jsxDEV("h4", { className: "font-display text-[15px] text-cream leading-tight", children: "SLOWBAR SOUNDTRACK" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 222,
+                      columnNumber: 23
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("p", { className: "text-[11px] font-body text-cream/70", children: "Sekata Coffee Tanjungpinang" }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 225,
+                      columnNumber: 23
+                    }, this)
+                  ] }, void 0, true, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 221,
+                    columnNumber: 21
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 213,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "w-6 h-6 rounded-full bg-[#1DB954] flex items-center justify-center text-black flex-shrink-0", children: /* @__PURE__ */ jsxDEV("svg", { className: "w-3.5 h-3.5 fill-current", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsxDEV("path", { d: "M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.494 17.306c-.215.353-.674.464-1.026.249-2.812-1.718-6.353-2.107-10.523-1.155-.403.092-.807-.161-.899-.564-.092-.402.161-.806.564-.898 4.567-1.042 8.484-.593 11.636 1.341.352.216.463.675.248 1.027zm1.465-3.259c-.27.439-.844.58-1.282.31-3.218-1.978-8.125-2.55-11.93-1.393-.497.15-1.024-.132-1.175-.628-.15-.497.132-1.024.628-1.175 4.356-1.322 9.775-.681 13.45 1.604.438.27.579.844.309 1.282zm.126-3.398C15.228 8.35 8.877 8.14 5.17 9.266c-.604.183-1.246-.164-1.429-.768-.183-.604.164-1.246.768-1.429 4.259-1.293 11.272-1.05 15.69 1.572.544.323.722 1.028.4 1.572-.323.543-1.027.722-1.571.399z" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 234,
+                  columnNumber: 23
+                }, this) }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 233,
+                  columnNumber: 21
+                }, this) }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 232,
+                  columnNumber: 19
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 212,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "mb-4", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between text-xs font-mono text-marigold mb-1", children: [
+                  /* @__PURE__ */ jsxDEV("span", { className: "flex items-center gap-1.5", children: [
+                    /* @__PURE__ */ jsxDEV(Disc3, { className: `w-3.5 h-3.5 ${isPlaying ? "animate-spin" : ""}` }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 243,
+                      columnNumber: 23
+                    }, this),
+                    "NOW PLAYING"
+                  ] }, void 0, true, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 242,
+                    columnNumber: 21
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { className: "text-[11px] text-cream/50", children: currentTrack.duration }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 246,
+                    columnNumber: 21
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 241,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV("p", { className: "font-display text-[15px] text-cream truncate", children: currentTrack.title }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 248,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV("p", { className: "text-[11px] font-body text-cream/70", children: currentTrack.artist }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 251,
+                  columnNumber: 19
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 240,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between pt-2 mb-4", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3", children: [
+                  /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: prevTrack,
+                      className: "text-cream/75 hover:text-cream transition-colors p-1 active:scale-[0.97]",
+                      "aria-label": "Previous track",
+                      children: /* @__PURE__ */ jsxDEV(SkipBack, { className: "w-4 h-4 stroke-[1.5]" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 264,
+                        columnNumber: 23
+                      }, this)
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 259,
+                      columnNumber: 21
+                    },
+                    this
+                  ),
+                  /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: togglePlay,
+                      className: "w-9 h-9 rounded-full bg-cream text-espresso hover:bg-white flex items-center justify-center transition-all duration-200 ease-out active:scale-[0.97] shadow-md",
+                      "aria-label": isPlaying ? "Pause" : "Play",
+                      children: isPlaying ? /* @__PURE__ */ jsxDEV(Pause, { className: "w-4 h-4 fill-current stroke-[1.5]" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 273,
+                        columnNumber: 23
+                      }, this) : /* @__PURE__ */ jsxDEV(Play, { className: "w-4 h-4 fill-current ml-0.5 stroke-[1.5]" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 275,
+                        columnNumber: 23
+                      }, this)
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 267,
+                      columnNumber: 21
+                    },
+                    this
+                  ),
+                  /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: nextTrack,
+                      className: "text-cream/75 hover:text-cream transition-colors p-1 active:scale-[0.97]",
+                      "aria-label": "Next track",
+                      children: /* @__PURE__ */ jsxDEV(SkipForward, { className: "w-4 h-4 stroke-[1.5]" }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 284,
+                        columnNumber: 23
+                      }, this)
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 279,
+                      columnNumber: 21
+                    },
+                    this
+                  )
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 258,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-1.5 text-[11px] font-mono text-cream/60", children: [
+                  /* @__PURE__ */ jsxDEV(Volume2, { className: "w-3.5 h-3.5 text-turquoise stroke-[1.5]" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 290,
+                    columnNumber: 21
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "SLOWBAR LO-FI" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 291,
+                    columnNumber: 21
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 289,
+                  columnNumber: 19
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 257,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "space-y-2 pt-3 border-t border-white/10 text-xs font-body", children: playlist.map(
+                (track, idx) => /* @__PURE__ */ jsxDEV(
+                  "button",
+                  {
+                    onClick: () => {
+                      setActiveTrackIndex(idx);
+                      setIsPlaying(true);
+                    },
+                    className: `w-full flex items-center justify-between py-1 text-left transition-colors ${activeTrackIndex === idx ? "text-marigold font-medium" : "text-cream/65 hover:text-cream"}`,
+                    children: [
+                      /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2 truncate pr-2", children: [
+                        /* @__PURE__ */ jsxDEV("span", { className: "font-mono text-[11px] text-cream/40 min-w-[14px]", children: idx + 1 }, void 0, false, {
+                          fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                          lineNumber: 311,
+                          columnNumber: 25
+                        }, this),
+                        /* @__PURE__ */ jsxDEV("span", { className: "truncate", children: track.title }, void 0, false, {
+                          fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                          lineNumber: 314,
+                          columnNumber: 25
+                        }, this)
+                      ] }, void 0, true, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 310,
+                        columnNumber: 23
+                      }, this),
+                      /* @__PURE__ */ jsxDEV("span", { className: "font-mono text-[11px] text-cream/40 flex-shrink-0", children: track.duration }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 316,
+                        columnNumber: 23
+                      }, this)
+                    ]
+                  },
+                  idx,
+                  true,
+                  {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 298,
+                    columnNumber: 19
+                  },
+                  this
+                )
+              ) }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 296,
+                columnNumber: 17
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+              lineNumber: 206,
+              columnNumber: 15
+            }, this) }, void 0, false, {
+              fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+              lineNumber: 205,
+              columnNumber: 13
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+            lineNumber: 66,
+            columnNumber: 11
+          }, this) }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+            lineNumber: 64,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 perspective-[1200px]", children: ARTICLES.map(
+            (article, index) => /* @__PURE__ */ jsxDEV(
+              motion.article,
+              {
+                initial: { opacity: 0, y: 50, scale: 0.94 },
+                whileInView: { opacity: 1, y: 0, scale: 1 },
+                viewport: { once: true, amount: 0.15 },
+                transition: {
+                  duration: 0.6,
+                  delay: index * 0.12,
+                  ease: [0.21, 0.47, 0.32, 0.98]
+                },
+                whileHover: { y: -6, transition: { duration: 0.25 } },
+                className: "p-6 flex flex-col justify-between transition-all duration-300 rounded-[20px] bg-[#fffbf6] border-2 border-espresso/15 shadow-sm hover:shadow-lg",
+                children: [
+                  /* @__PURE__ */ jsxDEV("div", { children: [
+                    /* @__PURE__ */ jsxDEV("div", { className: "w-full aspect-[16/10] rounded-[12px] overflow-hidden border border-espresso/15 bg-sandstone mb-4 relative group", children: [
+                      /* @__PURE__ */ jsxDEV(
+                        "img",
+                        {
+                          src: article.image,
+                          alt: article.title,
+                          className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                        },
+                        void 0,
+                        false,
+                        {
+                          fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                          lineNumber: 352,
+                          columnNumber: 19
+                        },
+                        this
+                      ),
+                      /* @__PURE__ */ jsxDEV("div", { className: "absolute top-3 left-3 bg-[#fffbf6]/95 backdrop-blur-sm px-2.5 py-1 rounded-[6px] border border-espresso/10 text-[10px] font-mono uppercase tracking-[0.06em] text-espresso font-semibold shadow-xs", children: article.tag }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 359,
+                        columnNumber: 19
+                      }, this)
+                    ] }, void 0, true, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 351,
+                      columnNumber: 17
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between text-[12px] font-body text-[#6b584f] mb-2.5", children: [
+                      /* @__PURE__ */ jsxDEV("span", { children: article.date }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 366,
+                        columnNumber: 19
+                      }, this),
+                      /* @__PURE__ */ jsxDEV("span", { children: article.readTime }, void 0, false, {
+                        fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                        lineNumber: 367,
+                        columnNumber: 19
+                      }, this)
+                    ] }, void 0, true, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 365,
+                      columnNumber: 17
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("h3", { className: "font-display text-[20px] sm:text-[22px] leading-[1.2] text-espresso tracking-[-0.02em] mb-2.5", children: article.title }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 371,
+                      columnNumber: 17
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("p", { className: "font-body text-[14px] text-[#5c4d44] leading-relaxed line-clamp-3 mb-6 font-normal", children: article.excerpt }, void 0, false, {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 376,
+                      columnNumber: 17
+                    }, this)
+                  ] }, void 0, true, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 349,
+                    columnNumber: 15
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("div", { children: /* @__PURE__ */ jsxDEV(
+                    "button",
+                    {
+                      onClick: () => setSelectedArticle(article),
+                      className: "w-full font-body text-[13px] py-2.5 px-4 rounded-[6px] font-medium bg-[#1e6b7b] text-white hover:bg-[#15505c] transition-all duration-200 ease-out active:scale-[0.97] shadow-sm",
+                      children: "Baca Catatan Lengkap →"
+                    },
+                    void 0,
+                    false,
+                    {
+                      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                      lineNumber: 382,
+                      columnNumber: 17
+                    },
+                    this
+                  ) }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 381,
+                    columnNumber: 15
+                  }, this)
+                ]
+              },
+              article.id,
+              true,
+              {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 336,
+                columnNumber: 11
+              },
+              this
+            )
+          ) }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+            lineNumber: 334,
+            columnNumber: 9
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+          lineNumber: 56,
+          columnNumber: 7
+        }, this),
+        selectedArticle && /* @__PURE__ */ jsxDEV("div", { className: "fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-espresso/60 backdrop-blur-sm animate-fadeIn", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "fixed inset-0", onClick: () => setSelectedArticle(null) }, void 0, false, {
+            fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+            lineNumber: 398,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "relative w-full max-w-2xl bg-[#fffbf6] border-2 border-espresso/20 rounded-[20px] overflow-hidden z-10 max-h-[90vh] flex flex-col shadow-2xl", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between px-6 py-4 border-b border-espresso/10 bg-[#f8f1e8]", children: [
+              /* @__PURE__ */ jsxDEV("span", { className: "text-[13px] font-body text-espresso font-medium", children: [
+                "Catatan Sekata • ",
+                selectedArticle.date
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 402,
+                columnNumber: 15
+              }, this),
+              /* @__PURE__ */ jsxDEV(
+                "button",
+                {
+                  onClick: () => setSelectedArticle(null),
+                  className: "p-1.5 text-espresso hover:text-turquoise border border-espresso/15 rounded-[6px] bg-white",
+                  "aria-label": "Tutup cerita",
+                  children: /* @__PURE__ */ jsxDEV(X, { className: "w-4 h-4" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 410,
+                    columnNumber: 17
+                  }, this)
+                },
+                void 0,
+                false,
+                {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 405,
+                  columnNumber: 15
+                },
+                this
+              )
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+              lineNumber: 401,
+              columnNumber: 13
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "p-6 sm:p-8 overflow-y-auto space-y-6", children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "w-full aspect-[16/9] rounded-[12px] overflow-hidden border border-espresso/15", children: /* @__PURE__ */ jsxDEV(
+                "img",
+                {
+                  src: selectedArticle.image,
+                  alt: selectedArticle.title,
+                  className: "w-full h-full object-cover"
+                },
+                void 0,
+                false,
+                {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 416,
+                  columnNumber: 17
+                },
+                this
+              ) }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 415,
+                columnNumber: 15
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3 text-[13px] font-body text-[#6b584f] mb-2", children: [
+                  /* @__PURE__ */ jsxDEV("span", { children: [
+                    "Ditulis oleh ",
+                    selectedArticle.author
+                  ] }, void 0, true, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 425,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "•" }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 426,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: selectedArticle.readTime }, void 0, false, {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 427,
+                    columnNumber: 19
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 424,
+                  columnNumber: 17
+                }, this),
+                /* @__PURE__ */ jsxDEV("h3", { className: "font-display text-[26px] sm:text-[32px] leading-tight text-espresso mb-4", children: selectedArticle.title }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 429,
+                  columnNumber: 17
+                }, this)
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 423,
+                columnNumber: 15
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "font-body text-[15px] leading-relaxed text-[#2d1813] space-y-4 whitespace-pre-line border-t border-espresso/10 pt-4", children: selectedArticle.content }, void 0, false, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 434,
+                columnNumber: 15
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "pt-6 border-t border-espresso/10 flex justify-between items-center text-[13px] font-body text-[#6b584f]", children: [
+                /* @__PURE__ */ jsxDEV("span", { children: "Sekata Coffee & Slowbar Tanjungpinang" }, void 0, false, {
+                  fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                  lineNumber: 439,
+                  columnNumber: 17
+                }, this),
+                /* @__PURE__ */ jsxDEV(
+                  "button",
+                  {
+                    onClick: () => setSelectedArticle(null),
+                    className: "font-body text-[13px] text-espresso hover:underline underline-offset-2",
+                    children: "Tutup Catatan"
+                  },
+                  void 0,
+                  false,
+                  {
+                    fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                    lineNumber: 440,
+                    columnNumber: 17
+                  },
+                  this
+                )
+              ] }, void 0, true, {
+                fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+                lineNumber: 438,
+                columnNumber: 15
+              }, this)
+            ] }, void 0, true, {
+              fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+              lineNumber: 414,
+              columnNumber: 13
+            }, this)
+          ] }, void 0, true, {
+            fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+            lineNumber: 400,
+            columnNumber: 11
+          }, this)
+        ] }, void 0, true, {
+          fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+          lineNumber: 397,
+          columnNumber: 7
+        }, this)
+      ]
+    },
+    void 0,
+    true,
+    {
+      fileName: "D:/SEKATA.TNJ/src/components/CommunityBoard.jsx",
+      lineNumber: 52,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s(CommunityBoard, "iQArEJ3a1oysdz0XfGv7OvKKdeo=");
+_c = CommunityBoard;
+var _c;
+$RefreshReg$(_c, "CommunityBoard");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("D:/SEKATA.TNJ/src/components/CommunityBoard.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("D:/SEKATA.TNJ/src/components/CommunityBoard.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBcURvQzs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFyRHBDLE9BQU9BLFNBQVNDLGdCQUFnQjtBQUNoQyxTQUFTQyxjQUFjO0FBQ3ZCLFNBQVNDLFdBQVdDLFlBQVlDLEdBQUdDLE1BQU1DLE9BQU9DLGFBQWFDLFVBQVVDLE9BQU9DLGVBQWU7QUFDN0YsU0FBU0MsZ0JBQWdCO0FBRXpCLHdCQUF3QkMsaUJBQWlCO0FBQUFDLEtBQUE7QUFDdkMsUUFBTSxDQUFDQyxpQkFBaUJDLGtCQUFrQixJQUFJZixTQUFTLElBQUk7QUFDM0QsUUFBTSxDQUFDZ0IsV0FBV0MsWUFBWSxJQUFJakIsU0FBUyxLQUFLO0FBQ2hELFFBQU0sQ0FBQ2tCLGtCQUFrQkMsbUJBQW1CLElBQUluQixTQUFTLENBQUM7QUFFMUQsUUFBTW9CLFdBQVc7QUFBQSxJQUNmLEVBQUVDLE9BQU8sOEJBQThCQyxRQUFRLDBCQUEwQkMsVUFBVSxRQUFRO0FBQUEsSUFDM0YsRUFBRUYsT0FBTywyQkFBMkJDLFFBQVEsMEJBQTBCQyxVQUFVLFFBQVE7QUFBQSxJQUN4RixFQUFFRixPQUFPLGdDQUFnQ0MsUUFBUSwwQkFBMEJDLFVBQVUsUUFBUTtBQUFBLElBQzdGLEVBQUVGLE9BQU8sNEJBQTRCQyxRQUFRLDBCQUEwQkMsVUFBVSxRQUFRO0FBQUEsRUFBQztBQUc1RixRQUFNQyxlQUFlSixTQUFTRixnQkFBZ0I7QUFFOUMsUUFBTU8sYUFBYUEsTUFBTTtBQUN2QlIsaUJBQWEsQ0FBQ0QsU0FBUztBQUFBLEVBQ3pCO0FBRUEsUUFBTVUsWUFBWUEsTUFBTTtBQUN0QlAsd0JBQW9CLENBQUNRLFVBQVVBLE9BQU8sS0FBS1AsU0FBU1EsTUFBTTtBQUFBLEVBQzVEO0FBRUEsUUFBTUMsWUFBWUEsTUFBTTtBQUN0QlYsd0JBQW9CLENBQUNRLFNBQVVBLFNBQVMsSUFBSVAsU0FBU1EsU0FBUyxJQUFJRCxPQUFPLENBQUU7QUFBQSxFQUM3RTtBQUVBLFNBQ0U7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLElBQUc7QUFBQSxNQUNILFdBQVU7QUFBQSxNQUVWO0FBQUEsK0JBQUMsU0FBSSxXQUFVLDhCQVFiO0FBQUEsaUNBQUMsU0FBSSxXQUFVLGlIQUViLGlDQUFDLFNBQUksV0FBVSxnRUFHYjtBQUFBLG1DQUFDLFNBQUksV0FBVSxnRUFDYjtBQUFBLHFDQUFDLFNBQ0M7QUFBQSx1Q0FBQyxTQUFJLFdBQVUsMENBQ2I7QUFBQSx5Q0FBQyxRQUFHLFdBQVUsMEdBQXdHO0FBQUE7QUFBQSxvQkFDcEcsdUJBQUMsVUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLDJCQUFHO0FBQUEsb0JBQUc7QUFBQSx1QkFEeEI7QUFBQTtBQUFBO0FBQUE7QUFBQSx5QkFFQTtBQUFBLGtCQUVBO0FBQUEsb0JBQUM7QUFBQTtBQUFBLHNCQUNDLEtBQUk7QUFBQSxzQkFDSixTQUFTLENBQUNHLE1BQU07QUFBRUEsMEJBQUVDLGNBQWNDLE1BQU07QUFBQSxzQkFBYTtBQUFBLHNCQUNyRCxLQUFJO0FBQUEsc0JBQ0osV0FBVTtBQUFBO0FBQUEsb0JBSlo7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGtCQUk2RjtBQUFBLHFCQVQvRjtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQVdBO0FBQUEsZ0JBRUEsdUJBQUMsT0FBRSxXQUFVLHFGQUFtRixnSkFBaEc7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFFQTtBQUFBLG1CQWhCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQWlCQTtBQUFBLGNBR0EsdUJBQUMsU0FBSSxXQUFVLG9DQUNiO0FBQUEsdUNBQUMsVUFBSyxXQUFVLHlGQUF1Riw4QkFBdkc7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFFQTtBQUFBLGdCQUNBLHVCQUFDLFNBQUksV0FBVSxpRUFDYjtBQUFBLHlDQUFDLE9BQUUsa0RBQUg7QUFBQTtBQUFBO0FBQUE7QUFBQSx5QkFBcUM7QUFBQSxrQkFDckMsdUJBQUMsT0FBRSxvRUFBSDtBQUFBO0FBQUE7QUFBQTtBQUFBLHlCQUE0RDtBQUFBLHFCQUY5RDtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUdBO0FBQUEsZ0JBR0EsdUJBQUMsU0FBSSxXQUFVLHFFQUNiO0FBQUE7QUFBQSxvQkFBQztBQUFBO0FBQUEsc0JBQ0MsTUFBSztBQUFBLHNCQUNMLFFBQU87QUFBQSxzQkFDUCxLQUFJO0FBQUEsc0JBQ0osV0FBVTtBQUFBLHNCQUFvRTtBQUFBO0FBQUEsb0JBSmhGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxrQkFPQTtBQUFBLGtCQUNBLHVCQUFDLFVBQUssaUJBQU47QUFBQTtBQUFBO0FBQUE7QUFBQSx5QkFBWTtBQUFBLGtCQUNaO0FBQUEsb0JBQUM7QUFBQTtBQUFBLHNCQUNDLE1BQUs7QUFBQSxzQkFDTCxRQUFPO0FBQUEsc0JBQ1AsS0FBSTtBQUFBLHNCQUNKLFdBQVU7QUFBQSxzQkFBb0U7QUFBQTtBQUFBLG9CQUpoRjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBT0E7QUFBQSxxQkFqQkY7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFrQkE7QUFBQSxtQkE1QkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkE2QkE7QUFBQSxpQkFsREY7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFvREE7QUFBQSxZQUdBLHVCQUFDLFNBQUksV0FBVSxxRkFHYjtBQUFBLHFDQUFDLFNBQ0M7QUFBQSx1Q0FBQyxVQUFLLFdBQVUsNEZBQTBGLCtCQUExRztBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUVBO0FBQUEsZ0JBQ0EsdUJBQUMsUUFBRyxXQUFVLG9EQUNYckI7QUFBQUEsMkJBQVNzQixNQUFNLEdBQUcsQ0FBQyxFQUFFQztBQUFBQSxvQkFBSSxDQUFDQyxRQUN6Qix1QkFBQyxRQUNDO0FBQUEsc0JBQUM7QUFBQTtBQUFBLHdCQUNDLFNBQVMsTUFBTXBCLG1CQUFtQm9CLEdBQUc7QUFBQSx3QkFDckMsV0FBVTtBQUFBLHdCQUVUQSxjQUFJZCxNQUFNZSxNQUFNLEdBQUcsRUFBRSxDQUFDO0FBQUE7QUFBQSxzQkFKekI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLG9CQUtBLEtBTk9ELElBQUlFLElBQWI7QUFBQTtBQUFBO0FBQUE7QUFBQSwyQkFPQTtBQUFBLGtCQUNEO0FBQUEsa0JBQ0QsdUJBQUMsUUFDQztBQUFBLG9CQUFDO0FBQUE7QUFBQSxzQkFDQyxTQUFTLE1BQU10QixtQkFBbUJKLFNBQVMsQ0FBQyxDQUFDO0FBQUEsc0JBQzdDLFdBQVU7QUFBQSxzQkFBb0Y7QUFBQTtBQUFBLG9CQUZoRztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBS0EsS0FORjtBQUFBO0FBQUE7QUFBQTtBQUFBLHlCQU9BO0FBQUEsa0JBQ0EsdUJBQUMsUUFDQztBQUFBLG9CQUFDO0FBQUE7QUFBQSxzQkFDQyxTQUFTLE1BQU1JLG1CQUFtQkosU0FBUyxDQUFDLENBQUM7QUFBQSxzQkFDN0MsV0FBVTtBQUFBLHNCQUFvRjtBQUFBO0FBQUEsb0JBRmhHO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxrQkFLQSxLQU5GO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBT0E7QUFBQSxxQkExQkY7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkEyQkE7QUFBQSxtQkEvQkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFnQ0E7QUFBQSxjQUdBLHVCQUFDLFNBQ0M7QUFBQSx1Q0FBQyxVQUFLLFdBQVUsNEZBQTBGLHlCQUExRztBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUVBO0FBQUEsZ0JBQ0EsdUJBQUMsUUFBRyxXQUFVLG9EQUNaO0FBQUEseUNBQUMsUUFDQztBQUFBLG9CQUFDO0FBQUE7QUFBQSxzQkFDQyxTQUFTLE1BQU1JLG1CQUFtQkosU0FBUyxDQUFDLENBQUM7QUFBQSxzQkFDN0MsV0FBVTtBQUFBLHNCQUFvRjtBQUFBO0FBQUEsb0JBRmhHO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxrQkFLQSxLQU5GO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBT0E7QUFBQSxrQkFDQSx1QkFBQyxRQUNDO0FBQUEsb0JBQUM7QUFBQTtBQUFBLHNCQUNDLFNBQVMsTUFBTUksbUJBQW1CSixTQUFTLENBQUMsQ0FBQztBQUFBLHNCQUM3QyxXQUFVO0FBQUEsc0JBQW9GO0FBQUE7QUFBQSxvQkFGaEc7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGtCQUtBLEtBTkY7QUFBQTtBQUFBO0FBQUE7QUFBQSx5QkFPQTtBQUFBLGtCQUNBLHVCQUFDLFFBQ0M7QUFBQSxvQkFBQztBQUFBO0FBQUEsc0JBQ0MsU0FBUyxNQUFNSSxtQkFBbUJKLFNBQVMsQ0FBQyxDQUFDO0FBQUEsc0JBQzdDLFdBQVU7QUFBQSxzQkFBb0Y7QUFBQTtBQUFBLG9CQUZoRztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBS0EsS0FORjtBQUFBO0FBQUE7QUFBQTtBQUFBLHlCQU9BO0FBQUEsa0JBQ0EsdUJBQUMsUUFDQztBQUFBLG9CQUFDO0FBQUE7QUFBQSxzQkFDQyxTQUFTLE1BQU1JLG1CQUFtQkosU0FBUyxDQUFDLENBQUM7QUFBQSxzQkFDN0MsV0FBVTtBQUFBLHNCQUE4RjtBQUFBO0FBQUEsb0JBRjFHO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxrQkFLQSxLQU5GO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBT0E7QUFBQSxxQkFoQ0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFpQ0E7QUFBQSxtQkFyQ0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFzQ0E7QUFBQSxpQkE1RUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkE4RUE7QUFBQSxZQUdBLHVCQUFDLFNBQUksV0FBVSx3QkFDYixpQ0FBQyxTQUFJLFdBQVUseUhBR2I7QUFBQSxxQ0FBQyxTQUFJLFdBQVUsK0ZBQWY7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFBMEc7QUFBQSxjQUcxRyx1QkFBQyxTQUFJLFdBQVUsd0VBQ2I7QUFBQSx1Q0FBQyxTQUFJLFdBQVUsMkJBQ2I7QUFBQSx5Q0FBQyxTQUFJLFdBQVUsd0ZBQ2I7QUFBQSxvQkFBQztBQUFBO0FBQUEsc0JBQ0MsS0FBSTtBQUFBLHNCQUNKLEtBQUk7QUFBQSxzQkFDSixXQUFXLDhCQUE4QkssWUFBWSx1QkFBdUIsRUFBRTtBQUFBO0FBQUEsb0JBSGhGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxrQkFHcUgsS0FKdkg7QUFBQTtBQUFBO0FBQUE7QUFBQSx5QkFNQTtBQUFBLGtCQUNBLHVCQUFDLFNBQ0M7QUFBQSwyQ0FBQyxRQUFHLFdBQVUscURBQW1ELGtDQUFqRTtBQUFBO0FBQUE7QUFBQTtBQUFBLDJCQUVBO0FBQUEsb0JBQ0EsdUJBQUMsT0FBRSxXQUFVLHVDQUFxQywyQ0FBbEQ7QUFBQTtBQUFBO0FBQUE7QUFBQSwyQkFFQTtBQUFBLHVCQU5GO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBT0E7QUFBQSxxQkFmRjtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQWdCQTtBQUFBLGdCQUdBLHVCQUFDLFNBQUksV0FBVSwrRkFDYixpQ0FBQyxTQUFJLFdBQVUsNEJBQTJCLFNBQVEsYUFDaEQsaUNBQUMsVUFBSyxHQUFFLDRwQkFBUjtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUFncUIsS0FEbHFCO0FBQUE7QUFBQTtBQUFBO0FBQUEsdUJBRUEsS0FIRjtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQUlBO0FBQUEsbUJBeEJGO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBeUJBO0FBQUEsY0FHQSx1QkFBQyxTQUFJLFdBQVUsUUFDYjtBQUFBLHVDQUFDLFNBQUksV0FBVSwwRUFDYjtBQUFBLHlDQUFDLFVBQUssV0FBVSw2QkFDZDtBQUFBLDJDQUFDLFNBQU0sV0FBVyxlQUFlQSxZQUFZLGlCQUFpQixFQUFFLE1BQWhFO0FBQUE7QUFBQTtBQUFBO0FBQUEsMkJBQW1FO0FBQUE7QUFBQSx1QkFEckU7QUFBQTtBQUFBO0FBQUE7QUFBQSx5QkFHQTtBQUFBLGtCQUNBLHVCQUFDLFVBQUssV0FBVSw2QkFBNkJRLHVCQUFhRCxZQUExRDtBQUFBO0FBQUE7QUFBQTtBQUFBLHlCQUFtRTtBQUFBLHFCQUxyRTtBQUFBO0FBQUE7QUFBQTtBQUFBLHVCQU1BO0FBQUEsZ0JBQ0EsdUJBQUMsT0FBRSxXQUFVLGdEQUNWQyx1QkFBYUgsU0FEaEI7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFFQTtBQUFBLGdCQUNBLHVCQUFDLE9BQUUsV0FBVSx1Q0FDVkcsdUJBQWFGLFVBRGhCO0FBQUE7QUFBQTtBQUFBO0FBQUEsdUJBRUE7QUFBQSxtQkFiRjtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQWNBO0FBQUEsY0FHQSx1QkFBQyxTQUFJLFdBQVUsK0NBQ2I7QUFBQSx1Q0FBQyxTQUFJLFdBQVUsMkJBQ2I7QUFBQTtBQUFBLG9CQUFDO0FBQUE7QUFBQSxzQkFDQyxTQUFTTztBQUFBQSxzQkFDVCxXQUFVO0FBQUEsc0JBQ1YsY0FBVztBQUFBLHNCQUVYLGlDQUFDLFlBQVMsV0FBVSwwQkFBcEI7QUFBQTtBQUFBO0FBQUE7QUFBQSw2QkFBMEM7QUFBQTtBQUFBLG9CQUw1QztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBTUE7QUFBQSxrQkFFQTtBQUFBLG9CQUFDO0FBQUE7QUFBQSxzQkFDQyxTQUFTSjtBQUFBQSxzQkFDVCxXQUFVO0FBQUEsc0JBQ1YsY0FBWVQsWUFBWSxVQUFVO0FBQUEsc0JBRWpDQSxzQkFDQyx1QkFBQyxTQUFNLFdBQVUsdUNBQWpCO0FBQUE7QUFBQTtBQUFBO0FBQUEsNkJBQW9ELElBRXBELHVCQUFDLFFBQUssV0FBVSw4Q0FBaEI7QUFBQTtBQUFBO0FBQUE7QUFBQSw2QkFBMEQ7QUFBQTtBQUFBLG9CQVI5RDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBVUE7QUFBQSxrQkFFQTtBQUFBLG9CQUFDO0FBQUE7QUFBQSxzQkFDQyxTQUFTVTtBQUFBQSxzQkFDVCxXQUFVO0FBQUEsc0JBQ1YsY0FBVztBQUFBLHNCQUVYLGlDQUFDLGVBQVksV0FBVSwwQkFBdkI7QUFBQTtBQUFBO0FBQUE7QUFBQSw2QkFBNkM7QUFBQTtBQUFBLG9CQUwvQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBTUE7QUFBQSxxQkEzQkY7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkE0QkE7QUFBQSxnQkFHQSx1QkFBQyxTQUFJLFdBQVUsaUVBQ2I7QUFBQSx5Q0FBQyxXQUFRLFdBQVUsNkNBQW5CO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBQTREO0FBQUEsa0JBQzVELHVCQUFDLFVBQUssNkJBQU47QUFBQTtBQUFBO0FBQUE7QUFBQSx5QkFBbUI7QUFBQSxxQkFGckI7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFHQTtBQUFBLG1CQW5DRjtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQW9DQTtBQUFBLGNBR0EsdUJBQUMsU0FBSSxXQUFVLDZEQUNaTixtQkFBU2M7QUFBQUEsZ0JBQUksQ0FBQ0ksT0FBT0MsUUFDcEI7QUFBQSxrQkFBQztBQUFBO0FBQUEsb0JBRUMsU0FBUyxNQUFNO0FBQ2JwQiwwQ0FBb0JvQixHQUFHO0FBQ3ZCdEIsbUNBQWEsSUFBSTtBQUFBLG9CQUNuQjtBQUFBLG9CQUNBLFdBQVcsNkVBQ1RDLHFCQUFxQnFCLE1BQ2pCLDhCQUNBLGdDQUFnQztBQUFBLG9CQUd0QztBQUFBLDZDQUFDLFNBQUksV0FBVSx5Q0FDYjtBQUFBLCtDQUFDLFVBQUssV0FBVSxvREFDYkEsZ0JBQU0sS0FEVDtBQUFBO0FBQUE7QUFBQTtBQUFBLCtCQUVBO0FBQUEsd0JBQ0EsdUJBQUMsVUFBSyxXQUFVLFlBQVlELGdCQUFNakIsU0FBbEM7QUFBQTtBQUFBO0FBQUE7QUFBQSwrQkFBd0M7QUFBQSwyQkFKMUM7QUFBQTtBQUFBO0FBQUE7QUFBQSw2QkFLQTtBQUFBLHNCQUNBLHVCQUFDLFVBQUssV0FBVSxxREFDYmlCLGdCQUFNZixZQURUO0FBQUE7QUFBQTtBQUFBO0FBQUEsNkJBRUE7QUFBQTtBQUFBO0FBQUEsa0JBbkJLZ0I7QUFBQUEsa0JBRFA7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxnQkFxQkE7QUFBQSxjQUNELEtBeEJIO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBeUJBO0FBQUEsaUJBbkhGO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBcUhBLEtBdEhGO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBdUhBO0FBQUEsZUFsUUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFvUUEsS0F0UUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkF3UUE7QUFBQSxVQU1BLHVCQUFDLFNBQUksV0FBVSxzRkFDWjVCLG1CQUFTdUI7QUFBQUEsWUFBSSxDQUFDTSxTQUFTQyxVQUN0QjtBQUFBLGNBQUMsT0FBTztBQUFBLGNBQVA7QUFBQSxnQkFFQyxTQUFTLEVBQUVDLFNBQVMsR0FBR0MsR0FBRyxJQUFJQyxPQUFPLEtBQUs7QUFBQSxnQkFDMUMsYUFBYSxFQUFFRixTQUFTLEdBQUdDLEdBQUcsR0FBR0MsT0FBTyxFQUFFO0FBQUEsZ0JBQzFDLFVBQVUsRUFBRUMsTUFBTSxNQUFNQyxRQUFRLEtBQUs7QUFBQSxnQkFDckMsWUFBWTtBQUFBLGtCQUNWdkIsVUFBVTtBQUFBLGtCQUNWd0IsT0FBT04sUUFBUTtBQUFBLGtCQUNmTyxNQUFNLENBQUMsTUFBTSxNQUFNLE1BQU0sSUFBSTtBQUFBLGdCQUMvQjtBQUFBLGdCQUNBLFlBQVksRUFBRUwsR0FBRyxJQUFJTSxZQUFZLEVBQUUxQixVQUFVLEtBQUssRUFBRTtBQUFBLGdCQUNwRCxXQUFVO0FBQUEsZ0JBRVY7QUFBQSx5Q0FBQyxTQUVDO0FBQUEsMkNBQUMsU0FBSSxXQUFVLG1IQUNiO0FBQUE7QUFBQSx3QkFBQztBQUFBO0FBQUEsMEJBQ0MsS0FBS2lCLFFBQVFVO0FBQUFBLDBCQUNiLEtBQUtWLFFBQVFuQjtBQUFBQSwwQkFDYixXQUFVO0FBQUE7QUFBQSx3QkFIWjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsc0JBR3lHO0FBQUEsc0JBSXpHLHVCQUFDLFNBQUksV0FBVSxzTUFDWm1CLGtCQUFRVyxPQURYO0FBQUE7QUFBQTtBQUFBO0FBQUEsNkJBRUE7QUFBQSx5QkFWRjtBQUFBO0FBQUE7QUFBQTtBQUFBLDJCQVdBO0FBQUEsb0JBR0EsdUJBQUMsU0FBSSxXQUFVLGlGQUNiO0FBQUEsNkNBQUMsVUFBTVgsa0JBQVFZLFFBQWY7QUFBQTtBQUFBO0FBQUE7QUFBQSw2QkFBb0I7QUFBQSxzQkFDcEIsdUJBQUMsVUFBTVosa0JBQVFhLFlBQWY7QUFBQTtBQUFBO0FBQUE7QUFBQSw2QkFBd0I7QUFBQSx5QkFGMUI7QUFBQTtBQUFBO0FBQUE7QUFBQSwyQkFHQTtBQUFBLG9CQUdBLHVCQUFDLFFBQUcsV0FBVSxpR0FDWGIsa0JBQVFuQixTQURYO0FBQUE7QUFBQTtBQUFBO0FBQUEsMkJBRUE7QUFBQSxvQkFHQSx1QkFBQyxPQUFFLFdBQVUsc0ZBQ1ZtQixrQkFBUWMsV0FEWDtBQUFBO0FBQUE7QUFBQTtBQUFBLDJCQUVBO0FBQUEsdUJBN0JGO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBOEJBO0FBQUEsa0JBRUEsdUJBQUMsU0FDQztBQUFBLG9CQUFDO0FBQUE7QUFBQSxzQkFDQyxTQUFTLE1BQU12QyxtQkFBbUJ5QixPQUFPO0FBQUEsc0JBQ3pDLFdBQVU7QUFBQSxzQkFBa0w7QUFBQTtBQUFBLG9CQUY5TDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBS0EsS0FORjtBQUFBO0FBQUE7QUFBQTtBQUFBLHlCQU9BO0FBQUE7QUFBQTtBQUFBLGNBbkRLQSxRQUFRSDtBQUFBQSxjQURmO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFxREE7QUFBQSxVQUNELEtBeERIO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBeURBO0FBQUEsYUEvVUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQWlWQTtBQUFBLFFBR0N2QixtQkFDQyx1QkFBQyxTQUFJLFdBQVUsaUhBQ2I7QUFBQSxpQ0FBQyxTQUFJLFdBQVUsaUJBQWdCLFNBQVMsTUFBTUMsbUJBQW1CLElBQUksS0FBckU7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFBd0U7QUFBQSxVQUV4RSx1QkFBQyxTQUFJLFdBQVUsZ0pBQ2I7QUFBQSxtQ0FBQyxTQUFJLFdBQVUsd0ZBQ2I7QUFBQSxxQ0FBQyxVQUFLLFdBQVUsbURBQWlEO0FBQUE7QUFBQSxnQkFDeENELGdCQUFnQnNDO0FBQUFBLG1CQUR6QztBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQUVBO0FBQUEsY0FDQTtBQUFBLGdCQUFDO0FBQUE7QUFBQSxrQkFDQyxTQUFTLE1BQU1yQyxtQkFBbUIsSUFBSTtBQUFBLGtCQUN0QyxXQUFVO0FBQUEsa0JBQ1YsY0FBVztBQUFBLGtCQUVYLGlDQUFDLEtBQUUsV0FBVSxhQUFiO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBQXNCO0FBQUE7QUFBQSxnQkFMeEI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBTUE7QUFBQSxpQkFWRjtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQVdBO0FBQUEsWUFFQSx1QkFBQyxTQUFJLFdBQVUsd0NBQ2I7QUFBQSxxQ0FBQyxTQUFJLFdBQVUsaUZBQ2I7QUFBQSxnQkFBQztBQUFBO0FBQUEsa0JBQ0MsS0FBS0QsZ0JBQWdCb0M7QUFBQUEsa0JBQ3JCLEtBQUtwQyxnQkFBZ0JPO0FBQUFBLGtCQUNyQixXQUFVO0FBQUE7QUFBQSxnQkFIWjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FHd0MsS0FKMUM7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFNQTtBQUFBLGNBRUEsdUJBQUMsU0FDQztBQUFBLHVDQUFDLFNBQUksV0FBVSxxRUFDYjtBQUFBLHlDQUFDLFVBQUs7QUFBQTtBQUFBLG9CQUFjUCxnQkFBZ0J5QztBQUFBQSx1QkFBcEM7QUFBQTtBQUFBO0FBQUE7QUFBQSx5QkFBMkM7QUFBQSxrQkFDM0MsdUJBQUMsVUFBSyxpQkFBTjtBQUFBO0FBQUE7QUFBQTtBQUFBLHlCQUFZO0FBQUEsa0JBQ1osdUJBQUMsVUFBTXpDLDBCQUFnQnVDLFlBQXZCO0FBQUE7QUFBQTtBQUFBO0FBQUEseUJBQWdDO0FBQUEscUJBSGxDO0FBQUE7QUFBQTtBQUFBO0FBQUEsdUJBSUE7QUFBQSxnQkFDQSx1QkFBQyxRQUFHLFdBQVUsNEVBQ1h2QywwQkFBZ0JPLFNBRG5CO0FBQUE7QUFBQTtBQUFBO0FBQUEsdUJBRUE7QUFBQSxtQkFSRjtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQVNBO0FBQUEsY0FFQSx1QkFBQyxTQUFJLFdBQVUsdUhBQ1pQLDBCQUFnQjBDLFdBRG5CO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBRUE7QUFBQSxjQUVBLHVCQUFDLFNBQUksV0FBVSwyR0FDYjtBQUFBLHVDQUFDLFVBQUsscURBQU47QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFBK0M7QUFBQSxnQkFDL0M7QUFBQSxrQkFBQztBQUFBO0FBQUEsb0JBQ0MsU0FBUyxNQUFNekMsbUJBQW1CLElBQUk7QUFBQSxvQkFDdEMsV0FBVTtBQUFBLG9CQUF3RTtBQUFBO0FBQUEsa0JBRnBGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxnQkFLQTtBQUFBLG1CQVBGO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBUUE7QUFBQSxpQkFoQ0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFpQ0E7QUFBQSxlQS9DRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQWdEQTtBQUFBLGFBbkRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFvREE7QUFBQTtBQUFBO0FBQUEsSUE3WUo7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBK1lBO0FBRUo7QUFBQ0YsR0E1YXVCRCxnQkFBYztBQUFBLEtBQWRBO0FBQWMsSUFBQTZDO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbIlJlYWN0IiwidXNlU3RhdGUiLCJtb3Rpb24iLCJBcnJvd0xlZnQiLCJBcnJvd1JpZ2h0IiwiWCIsIlBsYXkiLCJQYXVzZSIsIlNraXBGb3J3YXJkIiwiU2tpcEJhY2siLCJEaXNjMyIsIlZvbHVtZTIiLCJBUlRJQ0xFUyIsIkNvbW11bml0eUJvYXJkIiwiX3MiLCJzZWxlY3RlZEFydGljbGUiLCJzZXRTZWxlY3RlZEFydGljbGUiLCJpc1BsYXlpbmciLCJzZXRJc1BsYXlpbmciLCJhY3RpdmVUcmFja0luZGV4Iiwic2V0QWN0aXZlVHJhY2tJbmRleCIsInBsYXlsaXN0IiwidGl0bGUiLCJhcnRpc3QiLCJkdXJhdGlvbiIsImN1cnJlbnRUcmFjayIsInRvZ2dsZVBsYXkiLCJuZXh0VHJhY2siLCJwcmV2IiwibGVuZ3RoIiwicHJldlRyYWNrIiwiZSIsImN1cnJlbnRUYXJnZXQiLCJzcmMiLCJzbGljZSIsIm1hcCIsImFydCIsInNwbGl0IiwiaWQiLCJ0cmFjayIsImlkeCIsImFydGljbGUiLCJpbmRleCIsIm9wYWNpdHkiLCJ5Iiwic2NhbGUiLCJvbmNlIiwiYW1vdW50IiwiZGVsYXkiLCJlYXNlIiwidHJhbnNpdGlvbiIsImltYWdlIiwidGFnIiwiZGF0ZSIsInJlYWRUaW1lIiwiZXhjZXJwdCIsImF1dGhvciIsImNvbnRlbnQiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJDb21tdW5pdHlCb2FyZC5qc3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgbW90aW9uIH0gZnJvbSAnZnJhbWVyLW1vdGlvbic7XG5pbXBvcnQgeyBBcnJvd0xlZnQsIEFycm93UmlnaHQsIFgsIFBsYXksIFBhdXNlLCBTa2lwRm9yd2FyZCwgU2tpcEJhY2ssIERpc2MzLCBWb2x1bWUyIH0gZnJvbSAnbHVjaWRlLXJlYWN0JztcbmltcG9ydCB7IEFSVElDTEVTIH0gZnJvbSAnLi4vZGF0YS9hcnRpY2xlcyc7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIENvbW11bml0eUJvYXJkKCkge1xuICBjb25zdCBbc2VsZWN0ZWRBcnRpY2xlLCBzZXRTZWxlY3RlZEFydGljbGVdID0gdXNlU3RhdGUobnVsbCk7XG4gIGNvbnN0IFtpc1BsYXlpbmcsIHNldElzUGxheWluZ10gPSB1c2VTdGF0ZShmYWxzZSk7XG4gIGNvbnN0IFthY3RpdmVUcmFja0luZGV4LCBzZXRBY3RpdmVUcmFja0luZGV4XSA9IHVzZVN0YXRlKDApO1xuXG4gIGNvbnN0IHBsYXlsaXN0ID0gW1xuICAgIHsgdGl0bGU6ICdTdWFzYW5hIFBhZ2kgVGFuanVuZ3BpbmFuZycsIGFydGlzdDogJ1Nla2F0YSBTbG93YmFyIFNlc3Npb24nLCBkdXJhdGlvbjogJzAzOjQwJyB9LFxuICAgIHsgdGl0bGU6ICdIYXJ1bSBCaWppIFNhbmdyYWkgR2F5bycsIGFydGlzdDogJ1Nla2F0YSBTbG93YmFyIFNlc3Npb24nLCBkdXJhdGlvbjogJzA0OjIxJyB9LFxuICAgIHsgdGl0bGU6ICdPYnJvbGFuIFNhbnRhaSBkaSBNZWphIFNlZHVoJywgYXJ0aXN0OiAnU2VrYXRhIFNsb3diYXIgU2Vzc2lvbicsIGR1cmF0aW9uOiAnMDM6MTUnIH0sXG4gICAgeyB0aXRsZTogJ0h1amFuIFNvcmUgJiBNYW51YWwgQnJldycsIGFydGlzdDogJ1Nla2F0YSBTbG93YmFyIFNlc3Npb24nLCBkdXJhdGlvbjogJzA0OjMyJyB9LFxuICBdO1xuXG4gIGNvbnN0IGN1cnJlbnRUcmFjayA9IHBsYXlsaXN0W2FjdGl2ZVRyYWNrSW5kZXhdO1xuXG4gIGNvbnN0IHRvZ2dsZVBsYXkgPSAoKSA9PiB7XG4gICAgc2V0SXNQbGF5aW5nKCFpc1BsYXlpbmcpO1xuICB9O1xuXG4gIGNvbnN0IG5leHRUcmFjayA9ICgpID0+IHtcbiAgICBzZXRBY3RpdmVUcmFja0luZGV4KChwcmV2KSA9PiAocHJldiArIDEpICUgcGxheWxpc3QubGVuZ3RoKTtcbiAgfTtcblxuICBjb25zdCBwcmV2VHJhY2sgPSAoKSA9PiB7XG4gICAgc2V0QWN0aXZlVHJhY2tJbmRleCgocHJldikgPT4gKHByZXYgPT09IDAgPyBwbGF5bGlzdC5sZW5ndGggLSAxIDogcHJldiAtIDEpKTtcbiAgfTtcblxuICByZXR1cm4gKFxuICAgIDxzZWN0aW9uXG4gICAgICBpZD1cImNlcml0YVwiXG4gICAgICBjbGFzc05hbWU9XCJ3LWZ1bGwgcHktMTYgc206cHktMjQgYmctWyNjZGU4ZTVdIGJvcmRlci15LTIgYm9yZGVyLWVzcHJlc3NvLzE1IHNjcm9sbC1tdC0yMCBvdmVyZmxvdy1oaWRkZW4gc2VsZWN0LW5vbmVcIlxuICAgID5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyLW1heCBweC00IHNtOnB4LThcIj5cbiAgICAgICAgXG4gICAgICAgIHsvKiBcbiAgICAgICAgICBFRElUT1JJQUwgQ09NTVVOSVRZIFBBTkVMIOKAlCBQRVJTSVMgUEVMRVRBS0FOIEdBTUJBUiA0IChMSVRUTEUgQU1QUyBTVFlMRSk6XG4gICAgICAgICAgLSBLaXJpOiBKdWR1bCBcIlNldGlhcCBQZXJ0ZW11YW4gUHVueWEgQ2VyaXRhLlwiICsgSWx1c3RyYXNpIENhbmdraXIgS29waSArIEluZm8gS3VuanVuZ2FuIChWaXNpdCBVcylcbiAgICAgICAgICAtIFRlbmdhaDogS29sb20gTmF2aWdhc2kgQ2F0YXRhbiBDZXJpdGEgZGVuZ2FuIEZvbnQgQmVyc2loIEFsYW1pIChQZXJzaXMgR2FtYmFyIDUsIEFudGkgQUktU2xvcClcbiAgICAgICAgICAtIEthbmFuOiBGbG9hdGluZyBTcG90aWZ5LVN0eWxlIE1peHRhcGUgV2lkZ2V0IChQZXJzaXMgUGxheWVyIFNwb3RpZnkgR2FtYmFyIDQpXG4gICAgICAgICovfVxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLVsjZmZmYmY2XSByb3VuZGVkLVsyNHB4XSBzbTpyb3VuZGVkLVszMnB4XSBib3JkZXItMiBib3JkZXItZXNwcmVzc28vMTUgcC02IHNtOnAtMTAgbGc6cC0xMiBzaGFkb3ctbWQgbWItMTJcIj5cbiAgICAgICAgICBcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1jb2xzLTEgbGc6Z3JpZC1jb2xzLTEyIGdhcC04IGxnOmdhcC0xMCBpdGVtcy1zdGFydFwiPlxuICAgICAgICAgICAgXG4gICAgICAgICAgICB7LyogS29sb20gS2lyaTogSnVkdWwgQmVzYXIgKyBJbHVzdHJhc2kgTGluZS1BcnQgKyBWaXNpdCBJbmZvICovfVxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJsZzpjb2wtc3Bhbi01IHRleHQtbGVmdCBmbGV4IGZsZXgtY29sIGp1c3RpZnktYmV0d2VlbiBoLWZ1bGxcIj5cbiAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIG1iLTMgZmxleC13cmFwXCI+XG4gICAgICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwiZm9udC1kaXNwbGF5IHRleHQtWzMycHhdIHNtOnRleHQtWzQycHhdIGxnOnRleHQtWzQ2cHhdIGxlYWRpbmctWzEuMF0gdGV4dC1lc3ByZXNzbyB0cmFja2luZy1bLTAuMDM1ZW1dXCI+XG4gICAgICAgICAgICAgICAgICAgIFNldGlhcCBQZXJ0ZW11YW48YnIgLz5QdW55YSBDZXJpdGEuXG4gICAgICAgICAgICAgICAgICA8L2gyPlxuICAgICAgICAgICAgICAgICAgey8qIEN1dGUgTGluZS1BcnQgQ29mZmVlIE1hc2NvdCAvIElsbHVzdHJhdGlvbiBwZXJzaXMgR2FtYmFyIDQgKi99XG4gICAgICAgICAgICAgICAgICA8aW1nXG4gICAgICAgICAgICAgICAgICAgIHNyYz1cIi9wZWdhbmdrb3BpLnBuZ1wiXG4gICAgICAgICAgICAgICAgICAgIG9uRXJyb3I9eyhlKSA9PiB7IGUuY3VycmVudFRhcmdldC5zcmMgPSAnL2xvZ28ucG5nJzsgfX1cbiAgICAgICAgICAgICAgICAgICAgYWx0PVwiU2VrYXRhIENvZmZlZSAmYW1wOyBTbG93YmFyXCJcbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiaC0xMCBzbTpoLTEyIHctYXV0byBvYmplY3QtY29udGFpbiAtcm90YXRlLTYgaW5saW5lLWJsb2NrIGZpbHRlciBkcm9wLXNoYWRvdy1zbVwiXG4gICAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1ib2R5IHRleHQtWzE0cHhdIHNtOnRleHQtWzE1cHhdIHRleHQtWyM2YjU4NGZdIGxlYWRpbmctcmVsYXhlZCBtYXgtdy1zbSBtYi02XCI+XG4gICAgICAgICAgICAgICAgICBLaXNhaC1raXNhaCBrZWNpbCBkaSBiYWxpayBzZWR1aGFuIGtvcGksIHJhc2EgcGVuYXNhcmFuIHlhbmcgdGVyamF3YWIsIGRhbiBrZWhhbmdhdGFuIHlhbmcgdHVtYnVoIGRpIG1lamEgc2xvd2JhciBUYW5qdW5ncGluYW5nLlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgey8qIFZpc2l0IFVzIEluZm8gKFBlcnNpcyBmb3JtYXQgXCJWSVNJVCBVU1wiIGRpIEdhbWJhciA0IGRlbmdhbiBGb250IEdhbWJhciA1KSAqL31cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwdC02IGJvcmRlci10IGJvcmRlci1lc3ByZXNzby8xMFwiPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtWzExcHhdIGZvbnQtbW9ubyB1cHBlcmNhc2UgdGV4dC1idXJudC1vcmFuZ2UgZm9udC1ib2xkIHRyYWNraW5nLXdpZGVyIGJsb2NrIG1iLTJcIj5cbiAgICAgICAgICAgICAgICAgIEtVTkpVTkdJIEtFREFJXG4gICAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZm9udC1ib2R5IHRleHQtWzEzcHhdIHNtOnRleHQtWzE0cHhdIHRleHQtWyM1YzRkNDRdIHNwYWNlLXktMVwiPlxuICAgICAgICAgICAgICAgICAgPHA+SmwuIFBvcyBOby4gMTIsIEtvdGEgVGFuanVuZ3BpbmFuZzwvcD5cbiAgICAgICAgICAgICAgICAgIDxwPktlcHVsYXVhbiBSaWF1ICZidWxsOyBCdWthIFNldGlhcCBIYXJpOiAxMDowMCDigJMgMjI6MDAgV0lCPC9wPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgIHsvKiBTb2NpYWwgbGlua3MgKEltYWdlIDUgc3R5bGUpICovfVxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXQtMyBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtNCB0ZXh0LVsxM3B4XSBmb250LWJvZHkgdGV4dC1bIzZiNTg0Zl1cIj5cbiAgICAgICAgICAgICAgICAgIDxhXG4gICAgICAgICAgICAgICAgICAgIGhyZWY9XCJodHRwczovL2luc3RhZ3JhbS5jb20vc2VrYXRhLnRualwiXG4gICAgICAgICAgICAgICAgICAgIHRhcmdldD1cIl9ibGFua1wiXG4gICAgICAgICAgICAgICAgICAgIHJlbD1cIm5vb3BlbmVyIG5vcmVmZXJyZXJcIlxuICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJob3Zlcjp0ZXh0LWVzcHJlc3NvIHVuZGVybGluZSB1bmRlcmxpbmUtb2Zmc2V0LTIgdHJhbnNpdGlvbi1jb2xvcnNcIlxuICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICBJbnN0YWdyYW06IEBzZWthdGEudG5qXG4gICAgICAgICAgICAgICAgICA8L2E+XG4gICAgICAgICAgICAgICAgICA8c3Bhbj4mYnVsbDs8L3NwYW4+XG4gICAgICAgICAgICAgICAgICA8YVxuICAgICAgICAgICAgICAgICAgICBocmVmPVwiaHR0cHM6Ly90aWt0b2suY29tL0BzZWthdGF0bmpcIlxuICAgICAgICAgICAgICAgICAgICB0YXJnZXQ9XCJfYmxhbmtcIlxuICAgICAgICAgICAgICAgICAgICByZWw9XCJub29wZW5lciBub3JlZmVycmVyXCJcbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiaG92ZXI6dGV4dC1lc3ByZXNzbyB1bmRlcmxpbmUgdW5kZXJsaW5lLW9mZnNldC0yIHRyYW5zaXRpb24tY29sb3JzXCJcbiAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgVGlrVG9rXG4gICAgICAgICAgICAgICAgICA8L2E+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgey8qIEtvbG9tIFRlbmdhaDogMiBLb2xvbSBMaW5rIEFydGlrZWwgJiBDZXJpdGEgKEZvbnQgR2FtYmFyIDUsIEFudGkgQUktU2xvcCkgKi99XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOmNvbC1zcGFuLTMgZ3JpZCBncmlkLWNvbHMtMSBzbTpncmlkLWNvbHMtMiBsZzpncmlkLWNvbHMtMSBnYXAtNiB0ZXh0LWxlZnQgcHQtMVwiPlxuICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgey8qIEdydXAgMTogQ2F0YXRhbiBTbG93YmFyICovfVxuICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtWzExcHhdIGZvbnQtbW9ubyB1cHBlcmNhc2UgdGV4dC1lc3ByZXNzby83MCBmb250LXNlbWlib2xkIHRyYWNraW5nLXdpZGVyIGJsb2NrIG1iLTNcIj5cbiAgICAgICAgICAgICAgICAgIENBVEFUQU4gU0xPV0JBUlxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8dWwgY2xhc3NOYW1lPVwic3BhY2UteS0yLjUgZm9udC1ib2R5IHRleHQtWzE0cHhdIHRleHQtWyM1YzRkNDRdXCI+XG4gICAgICAgICAgICAgICAgICB7QVJUSUNMRVMuc2xpY2UoMCwgMikubWFwKChhcnQpID0+IChcbiAgICAgICAgICAgICAgICAgICAgPGxpIGtleT17YXJ0LmlkfT5cbiAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRTZWxlY3RlZEFydGljbGUoYXJ0KX1cbiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInRleHQtbGVmdCBob3Zlcjp0ZXh0LWVzcHJlc3NvIGhvdmVyOnVuZGVybGluZSB1bmRlcmxpbmUtb2Zmc2V0LTIgdHJhbnNpdGlvbi1jb2xvcnNcIlxuICAgICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICAgIHthcnQudGl0bGUuc3BsaXQoJzonKVswXX1cbiAgICAgICAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgICAgICAgPGxpPlxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0U2VsZWN0ZWRBcnRpY2xlKEFSVElDTEVTWzBdKX1cbiAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ0ZXh0LWxlZnQgaG92ZXI6dGV4dC1lc3ByZXNzbyBob3Zlcjp1bmRlcmxpbmUgdW5kZXJsaW5lLW9mZnNldC0yIHRyYW5zaXRpb24tY29sb3JzXCJcbiAgICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICAgIFJpdHVhbCBTZWR1aGFuIFBhZ2lcbiAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICAgICAgPGxpPlxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0U2VsZWN0ZWRBcnRpY2xlKEFSVElDTEVTWzFdKX1cbiAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ0ZXh0LWxlZnQgaG92ZXI6dGV4dC1lc3ByZXNzbyBob3Zlcjp1bmRlcmxpbmUgdW5kZXJsaW5lLW9mZnNldC0yIHRyYW5zaXRpb24tY29sb3JzXCJcbiAgICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICAgIEthbGlicmFzaSBSYXNhIEJhcmlzdGFcbiAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgIHsvKiBHcnVwIDI6IEtvbXVuaXRhcyAmIFJ1YW5nICovfVxuICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtWzExcHhdIGZvbnQtbW9ubyB1cHBlcmNhc2UgdGV4dC1lc3ByZXNzby83MCBmb250LXNlbWlib2xkIHRyYWNraW5nLXdpZGVyIGJsb2NrIG1iLTNcIj5cbiAgICAgICAgICAgICAgICAgIEtPTVVOSVRBU1xuICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8dWwgY2xhc3NOYW1lPVwic3BhY2UteS0yLjUgZm9udC1ib2R5IHRleHQtWzE0cHhdIHRleHQtWyM1YzRkNDRdXCI+XG4gICAgICAgICAgICAgICAgICA8bGk+XG4gICAgICAgICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRTZWxlY3RlZEFydGljbGUoQVJUSUNMRVNbMl0pfVxuICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInRleHQtbGVmdCBob3Zlcjp0ZXh0LWVzcHJlc3NvIGhvdmVyOnVuZGVybGluZSB1bmRlcmxpbmUtb2Zmc2V0LTIgdHJhbnNpdGlvbi1jb2xvcnNcIlxuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgI0tlY2lsQmVydHVtYnVoXG4gICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgICAgIDxsaT5cbiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldFNlbGVjdGVkQXJ0aWNsZShBUlRJQ0xFU1sxXSl9XG4gICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidGV4dC1sZWZ0IGhvdmVyOnRleHQtZXNwcmVzc28gaG92ZXI6dW5kZXJsaW5lIHVuZGVybGluZS1vZmZzZXQtMiB0cmFuc2l0aW9uLWNvbG9yc1wiXG4gICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICBFZHVrYXNpIEJpamkgU2luZ2xlIE9yaWdpblxuICAgICAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgICAgICA8bGk+XG4gICAgICAgICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRTZWxlY3RlZEFydGljbGUoQVJUSUNMRVNbMF0pfVxuICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInRleHQtbGVmdCBob3Zlcjp0ZXh0LWVzcHJlc3NvIGhvdmVyOnVuZGVybGluZSB1bmRlcmxpbmUtb2Zmc2V0LTIgdHJhbnNpdGlvbi1jb2xvcnNcIlxuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgUnVhbmcgVGVtdSBUYW5qdW5ncGluYW5nXG4gICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgICAgIDxsaT5cbiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldFNlbGVjdGVkQXJ0aWNsZShBUlRJQ0xFU1swXSl9XG4gICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidGV4dC1sZWZ0IHRleHQtYnVybnQtb3JhbmdlIGZvbnQtbWVkaXVtIGhvdmVyOnVuZGVybGluZSB1bmRlcmxpbmUtb2Zmc2V0LTIgdHJhbnNpdGlvbi1jb2xvcnNcIlxuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgU2VtdWEgQ2F0YXRhbiBDZXJpdGEgJnJhcnI7XG4gICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIHsvKiBLb2xvbSBLYW5hbjogRmxvYXRpbmcgU3BvdGlmeS1TdHlsZSBNaXh0YXBlIFBsYXllciAoUGVyc2lzIFBsYXllciBTcG90aWZ5IGRpIEdhbWJhciA0KSAqL31cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibGc6Y29sLXNwYW4tNCB3LWZ1bGxcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiZy1bIzM4MmIyN10gdGV4dC1jcmVhbSByb3VuZGVkLVsyMHB4XSBwLTUgc206cC02IHNoYWRvdy14bCBib3JkZXIgYm9yZGVyLXdoaXRlLzEwIHRleHQtbGVmdCByZWxhdGl2ZSBvdmVyZmxvdy1oaWRkZW5cIj5cbiAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICB7LyogU3VidGxlIEFtYmVyIEdsb3cgKi99XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSB0b3AtMCByaWdodC0wIHctMzIgaC0zMiBiZy1tYXJpZ29sZC8xMCByb3VuZGVkLWZ1bGwgYmx1ci0yeGwgcG9pbnRlci1ldmVudHMtbm9uZVwiIC8+XG5cbiAgICAgICAgICAgICAgICB7LyogUGxheWVyIEhlYWRlciB3aXRoIFNwb3RpZnkgQnJhbmRpbmcgKi99XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gbWItNCBwYi0zIGJvcmRlci1iIGJvcmRlci13aGl0ZS8xMFwiPlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtM1wiPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMTAgaC0xMCByb3VuZGVkLVs4cHhdIG92ZXJmbG93LWhpZGRlbiBiZy1zYW5kc3RvbmUgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCByZWxhdGl2ZVwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxpbWdcbiAgICAgICAgICAgICAgICAgICAgICAgIHNyYz1cIi9rb250ZW4xLmpwZ1wiXG4gICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJTbG93YmFyIFNlc3Npb25cIlxuICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgdy1mdWxsIGgtZnVsbCBvYmplY3QtY292ZXIgJHtpc1BsYXlpbmcgPyAnc2NhbGUtMTA1IHJvdGF0ZS0zJyA6ICcnfSB0cmFuc2l0aW9uLXRyYW5zZm9ybSBkdXJhdGlvbi03MDBgfVxuICAgICAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJmb250LWRpc3BsYXkgdGV4dC1bMTVweF0gdGV4dC1jcmVhbSBsZWFkaW5nLXRpZ2h0XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICBTTE9XQkFSIFNPVU5EVFJBQ0tcbiAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxuICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtWzExcHhdIGZvbnQtYm9keSB0ZXh0LWNyZWFtLzcwXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICBTZWthdGEgQ29mZmVlIFRhbmp1bmdwaW5hbmdcbiAgICAgICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgICAgIHsvKiBTcG90aWZ5IEdyZWVuIEljb24gKi99XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctNiBoLTYgcm91bmRlZC1mdWxsIGJnLVsjMURCOTU0XSBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB0ZXh0LWJsYWNrIGZsZXgtc2hyaW5rLTBcIj5cbiAgICAgICAgICAgICAgICAgICAgPHN2ZyBjbGFzc05hbWU9XCJ3LTMuNSBoLTMuNSBmaWxsLWN1cnJlbnRcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCI+XG4gICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD1cIk0xMiAwQzUuMzczIDAgMCA1LjM3MyAwIDEyczUuMzczIDEyIDEyIDEyIDEyLTUuMzczIDEyLTEyUzE4LjYyNyAwIDEyIDB6bTUuNDk0IDE3LjMwNmMtLjIxNS4zNTMtLjY3NC40NjQtMS4wMjYuMjQ5LTIuODEyLTEuNzE4LTYuMzUzLTIuMTA3LTEwLjUyMy0xLjE1NS0uNDAzLjA5Mi0uODA3LS4xNjEtLjg5OS0uNTY0LS4wOTItLjQwMi4xNjEtLjgwNi41NjQtLjg5OCA0LjU2Ny0xLjA0MiA4LjQ4NC0uNTkzIDExLjYzNiAxLjM0MS4zNTIuMjE2LjQ2My42NzUuMjQ4IDEuMDI3em0xLjQ2NS0zLjI1OWMtLjI3LjQzOS0uODQ0LjU4LTEuMjgyLjMxLTMuMjE4LTEuOTc4LTguMTI1LTIuNTUtMTEuOTMtMS4zOTMtLjQ5Ny4xNS0xLjAyNC0uMTMyLTEuMTc1LS42MjgtLjE1LS40OTcuMTMyLTEuMDI0LjYyOC0xLjE3NSA0LjM1Ni0xLjMyMiA5Ljc3NS0uNjgxIDEzLjQ1IDEuNjA0LjQzOC4yNy41NzkuODQ0LjMwOSAxLjI4MnptLjEyNi0zLjM5OEMxNS4yMjggOC4zNSA4Ljg3NyA4LjE0IDUuMTcgOS4yNjZjLS42MDQuMTgzLTEuMjQ2LS4xNjQtMS40MjktLjc2OC0uMTgzLS42MDQuMTY0LTEuMjQ2Ljc2OC0xLjQyOSA0LjI1OS0xLjI5MyAxMS4yNzItMS4wNSAxNS42OSAxLjU3Mi41NDQuMzIzLjcyMiAxLjAyOC40IDEuNTcyLS4zMjMuNTQzLTEuMDI3LjcyMi0xLjU3MS4zOTl6XCIvPlxuICAgICAgICAgICAgICAgICAgICA8L3N2Zz5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgey8qIEN1cnJlbnRseSBQbGF5aW5nIFRyYWNrIEhpZ2hsaWdodCAqL31cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1iLTRcIj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIHRleHQteHMgZm9udC1tb25vIHRleHQtbWFyaWdvbGQgbWItMVwiPlxuICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMS41XCI+XG4gICAgICAgICAgICAgICAgICAgICAgPERpc2MzIGNsYXNzTmFtZT17YHctMy41IGgtMy41ICR7aXNQbGF5aW5nID8gJ2FuaW1hdGUtc3BpbicgOiAnJ31gfSAvPlxuICAgICAgICAgICAgICAgICAgICAgIE5PVyBQTEFZSU5HXG4gICAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1bMTFweF0gdGV4dC1jcmVhbS81MFwiPntjdXJyZW50VHJhY2suZHVyYXRpb259PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LWRpc3BsYXkgdGV4dC1bMTVweF0gdGV4dC1jcmVhbSB0cnVuY2F0ZVwiPlxuICAgICAgICAgICAgICAgICAgICB7Y3VycmVudFRyYWNrLnRpdGxlfVxuICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1bMTFweF0gZm9udC1ib2R5IHRleHQtY3JlYW0vNzBcIj5cbiAgICAgICAgICAgICAgICAgICAge2N1cnJlbnRUcmFjay5hcnRpc3R9XG4gICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgICB7LyogTWluaSBQbGF5ZXIgQ29udHJvbHMgKFBlcnNpcyBHYW1iYXIgNCkgKi99XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gcHQtMiBtYi00XCI+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0zXCI+XG4gICAgICAgICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXtwcmV2VHJhY2t9XG4gICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidGV4dC1jcmVhbS83NSBob3Zlcjp0ZXh0LWNyZWFtIHRyYW5zaXRpb24tY29sb3JzIHAtMSBhY3RpdmU6c2NhbGUtWzAuOTddXCJcbiAgICAgICAgICAgICAgICAgICAgICBhcmlhLWxhYmVsPVwiUHJldmlvdXMgdHJhY2tcIlxuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgPFNraXBCYWNrIGNsYXNzTmFtZT1cInctNCBoLTQgc3Ryb2tlLVsxLjVdXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17dG9nZ2xlUGxheX1cbiAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ3LTkgaC05IHJvdW5kZWQtZnVsbCBiZy1jcmVhbSB0ZXh0LWVzcHJlc3NvIGhvdmVyOmJnLXdoaXRlIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTIwMCBlYXNlLW91dCBhY3RpdmU6c2NhbGUtWzAuOTddIHNoYWRvdy1tZFwiXG4gICAgICAgICAgICAgICAgICAgICAgYXJpYS1sYWJlbD17aXNQbGF5aW5nID8gJ1BhdXNlJyA6ICdQbGF5J31cbiAgICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICAgIHtpc1BsYXlpbmcgPyAoXG4gICAgICAgICAgICAgICAgICAgICAgICA8UGF1c2UgY2xhc3NOYW1lPVwidy00IGgtNCBmaWxsLWN1cnJlbnQgc3Ryb2tlLVsxLjVdXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICApIDogKFxuICAgICAgICAgICAgICAgICAgICAgICAgPFBsYXkgY2xhc3NOYW1lPVwidy00IGgtNCBmaWxsLWN1cnJlbnQgbWwtMC41IHN0cm9rZS1bMS41XVwiIC8+XG4gICAgICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17bmV4dFRyYWNrfVxuICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInRleHQtY3JlYW0vNzUgaG92ZXI6dGV4dC1jcmVhbSB0cmFuc2l0aW9uLWNvbG9ycyBwLTEgYWN0aXZlOnNjYWxlLVswLjk3XVwiXG4gICAgICAgICAgICAgICAgICAgICAgYXJpYS1sYWJlbD1cIk5leHQgdHJhY2tcIlxuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgPFNraXBGb3J3YXJkIGNsYXNzTmFtZT1cInctNCBoLTQgc3Ryb2tlLVsxLjVdXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICAgICAgey8qIFZvbHVtZSAvIEFtYmllbnQgYmFkZ2UgKi99XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0xLjUgdGV4dC1bMTFweF0gZm9udC1tb25vIHRleHQtY3JlYW0vNjBcIj5cbiAgICAgICAgICAgICAgICAgICAgPFZvbHVtZTIgY2xhc3NOYW1lPVwidy0zLjUgaC0zLjUgdGV4dC10dXJxdW9pc2Ugc3Ryb2tlLVsxLjVdXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4+U0xPV0JBUiBMTy1GSTwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgey8qIFRyYWNrbGlzdCBJdGVtcyAoUGVyc2lzIEdhbWJhciA0KSAqL31cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktMiBwdC0zIGJvcmRlci10IGJvcmRlci13aGl0ZS8xMCB0ZXh0LXhzIGZvbnQtYm9keVwiPlxuICAgICAgICAgICAgICAgICAge3BsYXlsaXN0Lm1hcCgodHJhY2ssIGlkeCkgPT4gKFxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgICAgICAga2V5PXtpZHh9XG4gICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgICAgc2V0QWN0aXZlVHJhY2tJbmRleChpZHgpO1xuICAgICAgICAgICAgICAgICAgICAgICAgc2V0SXNQbGF5aW5nKHRydWUpO1xuICAgICAgICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgdy1mdWxsIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBweS0xIHRleHQtbGVmdCB0cmFuc2l0aW9uLWNvbG9ycyAke1xuICAgICAgICAgICAgICAgICAgICAgICAgYWN0aXZlVHJhY2tJbmRleCA9PT0gaWR4XG4gICAgICAgICAgICAgICAgICAgICAgICAgID8gJ3RleHQtbWFyaWdvbGQgZm9udC1tZWRpdW0nXG4gICAgICAgICAgICAgICAgICAgICAgICAgIDogJ3RleHQtY3JlYW0vNjUgaG92ZXI6dGV4dC1jcmVhbSdcbiAgICAgICAgICAgICAgICAgICAgICB9YH1cbiAgICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgdHJ1bmNhdGUgcHItMlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZm9udC1tb25vIHRleHQtWzExcHhdIHRleHQtY3JlYW0vNDAgbWluLXctWzE0cHhdXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIHtpZHggKyAxfVxuICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidHJ1bmNhdGVcIj57dHJhY2sudGl0bGV9PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtbW9ubyB0ZXh0LVsxMXB4XSB0ZXh0LWNyZWFtLzQwIGZsZXgtc2hyaW5rLTBcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIHt0cmFjay5kdXJhdGlvbn1cbiAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIHsvKiBcbiAgICAgICAgICAzIEtBUlRVIENFUklUQSAoU0tJUEVSIDEwNCBTQ1JPTEwgUkVWRUFMIENBUkRTKVxuICAgICAgICAgIERlbmdhbiBGb250IEJlcnNpaCBBbGFtaSAoUGVyc2lzIEdhbWJhciA1LCBUYW5wYSBBSS1TbG9wKVxuICAgICAgICAqL31cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdyaWQtY29scy0xIG1kOmdyaWQtY29scy0yIGxnOmdyaWQtY29scy0zIGdhcC02IGxnOmdhcC04IHBlcnNwZWN0aXZlLVsxMjAwcHhdXCI+XG4gICAgICAgICAge0FSVElDTEVTLm1hcCgoYXJ0aWNsZSwgaW5kZXgpID0+IChcbiAgICAgICAgICAgIDxtb3Rpb24uYXJ0aWNsZVxuICAgICAgICAgICAgICBrZXk9e2FydGljbGUuaWR9XG4gICAgICAgICAgICAgIGluaXRpYWw9e3sgb3BhY2l0eTogMCwgeTogNTAsIHNjYWxlOiAwLjk0IH19XG4gICAgICAgICAgICAgIHdoaWxlSW5WaWV3PXt7IG9wYWNpdHk6IDEsIHk6IDAsIHNjYWxlOiAxIH19XG4gICAgICAgICAgICAgIHZpZXdwb3J0PXt7IG9uY2U6IHRydWUsIGFtb3VudDogMC4xNSB9fVxuICAgICAgICAgICAgICB0cmFuc2l0aW9uPXt7XG4gICAgICAgICAgICAgICAgZHVyYXRpb246IDAuNixcbiAgICAgICAgICAgICAgICBkZWxheTogaW5kZXggKiAwLjEyLFxuICAgICAgICAgICAgICAgIGVhc2U6IFswLjIxLCAwLjQ3LCAwLjMyLCAwLjk4XVxuICAgICAgICAgICAgICB9fVxuICAgICAgICAgICAgICB3aGlsZUhvdmVyPXt7IHk6IC02LCB0cmFuc2l0aW9uOiB7IGR1cmF0aW9uOiAwLjI1IH0gfX1cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicC02IGZsZXggZmxleC1jb2wganVzdGlmeS1iZXR3ZWVuIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTMwMCByb3VuZGVkLVsyMHB4XSBiZy1bI2ZmZmJmNl0gYm9yZGVyLTIgYm9yZGVyLWVzcHJlc3NvLzE1IHNoYWRvdy1zbSBob3ZlcjpzaGFkb3ctbGdcIlxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIHsvKiBJbWFnZSBGcmFtZSAqL31cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctZnVsbCBhc3BlY3QtWzE2LzEwXSByb3VuZGVkLVsxMnB4XSBvdmVyZmxvdy1oaWRkZW4gYm9yZGVyIGJvcmRlci1lc3ByZXNzby8xNSBiZy1zYW5kc3RvbmUgbWItNCByZWxhdGl2ZSBncm91cFwiPlxuICAgICAgICAgICAgICAgICAgPGltZ1xuICAgICAgICAgICAgICAgICAgICBzcmM9e2FydGljbGUuaW1hZ2V9XG4gICAgICAgICAgICAgICAgICAgIGFsdD17YXJ0aWNsZS50aXRsZX1cbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGgtZnVsbCBvYmplY3QtY292ZXIgZ3JvdXAtaG92ZXI6c2NhbGUtMTA1IHRyYW5zaXRpb24tdHJhbnNmb3JtIGR1cmF0aW9uLTUwMCBlYXNlLW91dFwiXG4gICAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgICB7LyogU3VidGxlIGNhdGVnb3J5IHRhZyBpbiBJbWFnZSA1IGZvbnQgKi99XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIHRvcC0zIGxlZnQtMyBiZy1bI2ZmZmJmNl0vOTUgYmFja2Ryb3AtYmx1ci1zbSBweC0yLjUgcHktMSByb3VuZGVkLVs2cHhdIGJvcmRlciBib3JkZXItZXNwcmVzc28vMTAgdGV4dC1bMTBweF0gZm9udC1tb25vIHVwcGVyY2FzZSB0cmFja2luZy1bMC4wNmVtXSB0ZXh0LWVzcHJlc3NvIGZvbnQtc2VtaWJvbGQgc2hhZG93LXhzXCI+XG4gICAgICAgICAgICAgICAgICAgIHthcnRpY2xlLnRhZ31cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgey8qIE1ldGFkYXRhIGluIEltYWdlIDUgZm9udCAoQW50aSBBSS1TbG9wKSAqL31cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiB0ZXh0LVsxMnB4XSBmb250LWJvZHkgdGV4dC1bIzZiNTg0Zl0gbWItMi41XCI+XG4gICAgICAgICAgICAgICAgICA8c3Bhbj57YXJ0aWNsZS5kYXRlfTwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgIDxzcGFuPnthcnRpY2xlLnJlYWRUaW1lfTwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICAgIHsvKiBUaXRsZSAqL31cbiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwiZm9udC1kaXNwbGF5IHRleHQtWzIwcHhdIHNtOnRleHQtWzIycHhdIGxlYWRpbmctWzEuMl0gdGV4dC1lc3ByZXNzbyB0cmFja2luZy1bLTAuMDJlbV0gbWItMi41XCI+XG4gICAgICAgICAgICAgICAgICB7YXJ0aWNsZS50aXRsZX1cbiAgICAgICAgICAgICAgICA8L2gzPlxuXG4gICAgICAgICAgICAgICAgey8qIEV4Y2VycHQgKi99XG4gICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1ib2R5IHRleHQtWzE0cHhdIHRleHQtWyM1YzRkNDRdIGxlYWRpbmctcmVsYXhlZCBsaW5lLWNsYW1wLTMgbWItNiBmb250LW5vcm1hbFwiPlxuICAgICAgICAgICAgICAgICAge2FydGljbGUuZXhjZXJwdH1cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0U2VsZWN0ZWRBcnRpY2xlKGFydGljbGUpfVxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGZvbnQtYm9keSB0ZXh0LVsxM3B4XSBweS0yLjUgcHgtNCByb3VuZGVkLVs2cHhdIGZvbnQtbWVkaXVtIGJnLVsjMWU2YjdiXSB0ZXh0LXdoaXRlIGhvdmVyOmJnLVsjMTU1MDVjXSB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0yMDAgZWFzZS1vdXQgYWN0aXZlOnNjYWxlLVswLjk3XSBzaGFkb3ctc21cIlxuICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgIEJhY2EgQ2F0YXRhbiBMZW5na2FwICZyYXJyO1xuICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvbW90aW9uLmFydGljbGU+XG4gICAgICAgICAgKSl9XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICA8L2Rpdj5cblxuICAgICAgey8qIFJlYWRpbmcgTW9kYWwgKi99XG4gICAgICB7c2VsZWN0ZWRBcnRpY2xlICYmIChcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmaXhlZCBpbnNldC0wIHotNTAgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcC00IHNtOnAtNiBiZy1lc3ByZXNzby82MCBiYWNrZHJvcC1ibHVyLXNtIGFuaW1hdGUtZmFkZUluXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmaXhlZCBpbnNldC0wXCIgb25DbGljaz17KCkgPT4gc2V0U2VsZWN0ZWRBcnRpY2xlKG51bGwpfT48L2Rpdj5cbiAgICAgICAgICBcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJlbGF0aXZlIHctZnVsbCBtYXgtdy0yeGwgYmctWyNmZmZiZjZdIGJvcmRlci0yIGJvcmRlci1lc3ByZXNzby8yMCByb3VuZGVkLVsyMHB4XSBvdmVyZmxvdy1oaWRkZW4gei0xMCBtYXgtaC1bOTB2aF0gZmxleCBmbGV4LWNvbCBzaGFkb3ctMnhsXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBweC02IHB5LTQgYm9yZGVyLWIgYm9yZGVyLWVzcHJlc3NvLzEwIGJnLVsjZjhmMWU4XVwiPlxuICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LVsxM3B4XSBmb250LWJvZHkgdGV4dC1lc3ByZXNzbyBmb250LW1lZGl1bVwiPlxuICAgICAgICAgICAgICAgIENhdGF0YW4gU2VrYXRhICZidWxsOyB7c2VsZWN0ZWRBcnRpY2xlLmRhdGV9XG4gICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldFNlbGVjdGVkQXJ0aWNsZShudWxsKX1cbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJwLTEuNSB0ZXh0LWVzcHJlc3NvIGhvdmVyOnRleHQtdHVycXVvaXNlIGJvcmRlciBib3JkZXItZXNwcmVzc28vMTUgcm91bmRlZC1bNnB4XSBiZy13aGl0ZVwiXG4gICAgICAgICAgICAgICAgYXJpYS1sYWJlbD1cIlR1dHVwIGNlcml0YVwiXG4gICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICA8WCBjbGFzc05hbWU9XCJ3LTQgaC00XCIgLz5cbiAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwLTYgc206cC04IG92ZXJmbG93LXktYXV0byBzcGFjZS15LTZcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LWZ1bGwgYXNwZWN0LVsxNi85XSByb3VuZGVkLVsxMnB4XSBvdmVyZmxvdy1oaWRkZW4gYm9yZGVyIGJvcmRlci1lc3ByZXNzby8xNVwiPlxuICAgICAgICAgICAgICAgIDxpbWdcbiAgICAgICAgICAgICAgICAgIHNyYz17c2VsZWN0ZWRBcnRpY2xlLmltYWdlfVxuICAgICAgICAgICAgICAgICAgYWx0PXtzZWxlY3RlZEFydGljbGUudGl0bGV9XG4gICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ3LWZ1bGwgaC1mdWxsIG9iamVjdC1jb3ZlclwiXG4gICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIHRleHQtWzEzcHhdIGZvbnQtYm9keSB0ZXh0LVsjNmI1ODRmXSBtYi0yXCI+XG4gICAgICAgICAgICAgICAgICA8c3Bhbj5EaXR1bGlzIG9sZWgge3NlbGVjdGVkQXJ0aWNsZS5hdXRob3J9PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgPHNwYW4+JmJ1bGw7PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgPHNwYW4+e3NlbGVjdGVkQXJ0aWNsZS5yZWFkVGltZX08L3NwYW4+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cImZvbnQtZGlzcGxheSB0ZXh0LVsyNnB4XSBzbTp0ZXh0LVszMnB4XSBsZWFkaW5nLXRpZ2h0IHRleHQtZXNwcmVzc28gbWItNFwiPlxuICAgICAgICAgICAgICAgICAge3NlbGVjdGVkQXJ0aWNsZS50aXRsZX1cbiAgICAgICAgICAgICAgICA8L2gzPlxuICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZvbnQtYm9keSB0ZXh0LVsxNXB4XSBsZWFkaW5nLXJlbGF4ZWQgdGV4dC1bIzJkMTgxM10gc3BhY2UteS00IHdoaXRlc3BhY2UtcHJlLWxpbmUgYm9yZGVyLXQgYm9yZGVyLWVzcHJlc3NvLzEwIHB0LTRcIj5cbiAgICAgICAgICAgICAgICB7c2VsZWN0ZWRBcnRpY2xlLmNvbnRlbnR9XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHQtNiBib3JkZXItdCBib3JkZXItZXNwcmVzc28vMTAgZmxleCBqdXN0aWZ5LWJldHdlZW4gaXRlbXMtY2VudGVyIHRleHQtWzEzcHhdIGZvbnQtYm9keSB0ZXh0LVsjNmI1ODRmXVwiPlxuICAgICAgICAgICAgICAgIDxzcGFuPlNla2F0YSBDb2ZmZWUgJmFtcDsgU2xvd2JhciBUYW5qdW5ncGluYW5nPC9zcGFuPlxuICAgICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldFNlbGVjdGVkQXJ0aWNsZShudWxsKX1cbiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImZvbnQtYm9keSB0ZXh0LVsxM3B4XSB0ZXh0LWVzcHJlc3NvIGhvdmVyOnVuZGVybGluZSB1bmRlcmxpbmUtb2Zmc2V0LTJcIlxuICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgIFR1dHVwIENhdGF0YW5cbiAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICApfVxuICAgIDwvc2VjdGlvbj5cbiAgKTtcbn1cbiJdLCJmaWxlIjoiRDovU0VLQVRBLlROSi9zcmMvY29tcG9uZW50cy9Db21tdW5pdHlCb2FyZC5qc3gifQ==
