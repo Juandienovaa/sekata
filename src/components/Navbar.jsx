@@ -50,10 +50,23 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [scrolled, setScrolled] = useState(false);
 
-  // Monitor scroll for subtle hairline appearance
+  // Monitor scroll for subtle hairline appearance (throttled with rAF, zero redundant renders)
   useEffect(() => {
+    let ticking = false;
+    let prevScrolled = false;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 40;
+          if (isScrolled !== prevScrolled) {
+            setScrolled(isScrolled);
+            prevScrolled = isScrolled;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -101,15 +114,16 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
     <>
       {/* 
         ========================================================================
-        1. ALWAYS VISIBLE NAVBAR (Transparent at Hero, Glassmorphism on Scroll)
-        Sesuai request: Transparan saat di Hero / bagian atas, tanpa background cream
+        1. ALWAYS VISIBLE NAVBAR (Hardware-Accelerated, Zero Frame Drops)
+        Transparan saat di Hero, solid cream lembut saat di-scroll.
+        Tanpa backdrop-blur berat agar transisi scroll 100% mulus (60/120fps).
         ========================================================================
       */}
       <header
-        className={`fixed top-0 left-0 right-0 z-40 w-full transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 w-full transition-[background-color,border-color,box-shadow] duration-200 ease-out py-1 sm:py-2 ${
           scrolled
-            ? 'bg-cream/95 backdrop-blur-md border-b border-espresso/15 shadow-[0_4px_20px_rgba(82,44,37,0.06)] py-0'
-            : 'bg-transparent border-b border-transparent py-1 sm:py-2'
+            ? 'bg-[#fff9f2] border-b border-espresso/15 shadow-[0_2px_12px_rgba(82,44,37,0.06)]'
+            : 'bg-transparent border-b border-transparent shadow-none'
         }`}
       >
         <div className="container-max h-16 sm:h-20 flex items-center justify-between px-4 sm:px-8">
@@ -123,9 +137,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
             <img
               src="/logo.png"
               alt="Sekata Coffee &amp; Slowbar"
-              className={`h-9 sm:h-11 w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
-                !scrolled ? 'filter drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]' : ''
-              }`}
+              className="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
             />
           </a>
 
@@ -137,10 +149,10 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
               onClick={onOpenSearch}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.94 }}
-              className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-mono transition-colors duration-200 focus:outline-none cursor-pointer ${
+              className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-mono transition-colors duration-150 focus:outline-none cursor-pointer ${
                 scrolled
                   ? 'border border-espresso/20 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
-                  : 'bg-black/35 backdrop-blur-md border border-white/25 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
+                  : 'bg-[#140e0c]/70 border border-white/20 text-cream hover:bg-[#140e0c]/85 hover:border-white/40 shadow-sm'
               }`}
               aria-label="Cari Menu atau Biji Kopi"
               title="Cari Menu"
@@ -153,10 +165,10 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
               onClick={onOpenCart}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.94 }}
-              className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium transition-colors duration-200 focus:outline-none cursor-pointer ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.08em] font-medium transition-colors duration-150 focus:outline-none cursor-pointer ${
                 scrolled
                   ? 'border border-espresso/20 hover:border-turquoise text-espresso hover:text-turquoise bg-cream hover:bg-turquoise/5'
-                  : 'bg-black/35 backdrop-blur-md border border-white/25 text-cream hover:bg-black/50 hover:border-white/50 shadow-md'
+                  : 'bg-[#140e0c]/70 border border-white/20 text-cream hover:bg-[#140e0c]/85 hover:border-white/40 shadow-sm'
               }`}
               aria-label={`Buka Keranjang Pesanan (${cartCount} item)`}
             >
@@ -172,19 +184,19 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }) {
               onClick={() => setIsMenuOpen(true)}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.94 }}
-              className={`group relative flex items-center gap-2 sm:gap-2.5 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.16em] font-semibold transition-colors duration-200 focus:outline-none cursor-pointer ${
+              className={`group relative flex items-center gap-2 sm:gap-2.5 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full font-mono text-[11px] sm:text-xs uppercase tracking-[0.16em] font-semibold transition-colors duration-150 focus:outline-none cursor-pointer ${
                 scrolled
                   ? 'bg-espresso text-cream hover:bg-turquoise shadow-md'
-                  : 'bg-cream text-espresso hover:bg-turquoise hover:text-cream shadow-[0_4px_16px_rgba(0,0,0,0.3)]'
+                  : 'bg-cream text-espresso hover:bg-turquoise hover:text-cream shadow-md'
               }`}
               aria-label="Buka Menu Navigasi Fullscreen"
             >
               <span>MENU</span>
               <span className="flex flex-col gap-[3px] w-3.5 sm:w-4 justify-center items-end">
-                <span className={`w-3.5 sm:w-4 h-[1.5px] transition-all duration-200 ${
+                <span className={`w-3.5 sm:w-4 h-[1.5px] transition-all duration-150 ${
                   scrolled ? 'bg-cream group-hover:w-4' : 'bg-espresso group-hover:bg-cream group-hover:w-4'
                 }`} />
-                <span className={`w-2 sm:w-2.5 h-[1.5px] transition-all duration-200 ${
+                <span className={`w-2 sm:w-2.5 h-[1.5px] transition-all duration-150 ${
                   scrolled ? 'bg-cream group-hover:w-4' : 'bg-espresso group-hover:bg-cream group-hover:w-4'
                 }`} />
               </span>

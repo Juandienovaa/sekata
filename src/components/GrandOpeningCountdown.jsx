@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 export default function GrandOpeningCountdown() {
-  // Target: Jumat 6 November 2026, 09:00 WIB
-  const targetDate = new Date('2026-11-06T09:00:00+07:00').getTime();
+  // Target: Malam ini, Jumat 6 November 2026, 20:00 WIB (Ba'da Isya)
+  const targetDate = new Date('2026-11-06T20:00:00+07:00').getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -44,7 +44,7 @@ export default function GrandOpeningCountdown() {
         
         {/* Top Kicker Date */}
         <span className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.22em] text-turquoise font-bold block mb-2">
-          06 &bull; 07 &bull; 08 NOVEMBER 2026
+          MALAM INI &bull; JUMAT 6 NOV 2026 &bull; 20:00 WIB (BA'DA ISYA)
         </span>
 
         {/* Minimalist Bold Title (Gambar 3 Reference Style) */}

@@ -1,10 +1,32 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 export default function HeroSection() {
   const videoRef = useRef(null);
   const waReserveUrl = 'https://wa.me/6281991445331?text=Hello%20Sekata!%20I%20would%20like%20to%20reserve%20a%20slowbar%20table.%20Is%20there%20a%20spot%20available%3F%20Thank%20you!';
+
+  // Pause video when out of viewport to free GPU/CPU cycles for ultra-smooth scrolling
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   const scrollToMenu = () => {
     const el = document.getElementById('menu');
@@ -24,7 +46,7 @@ export default function HeroSection() {
           muted
           playsInline
           preload="auto"
-          className="w-full h-full object-cover scale-105 pointer-events-none"
+          className="w-full h-full object-cover pointer-events-none will-change-transform"
         />
         {/* Layered cinematic scrim */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#140e0c]/90 via-[#140e0c]/50 to-[#140e0c]/60 pointer-events-none" />
@@ -79,7 +101,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.03, y: -1 }}
               whileTap={{ scale: 0.96 }}
               transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-              className="inline-flex items-center justify-center font-sans text-[13px] sm:text-[14px] px-6 py-3.5 tracking-wide uppercase rounded-full font-semibold bg-white/10 hover:bg-white/20 text-cream backdrop-blur-md border border-white/20 transition-colors duration-200 text-center cursor-pointer"
+              className="inline-flex items-center justify-center font-sans text-[13px] sm:text-[14px] px-6 py-3.5 tracking-wide uppercase rounded-full font-semibold bg-white/15 hover:bg-white/25 text-cream border border-white/25 transition-colors duration-200 text-center cursor-pointer"
             >
               <span>RESERVE A TABLE</span>
               <ArrowUpRight className="w-4 h-4 ml-1.5 stroke-[2]" />
