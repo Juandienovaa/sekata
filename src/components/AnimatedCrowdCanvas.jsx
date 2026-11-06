@@ -5,7 +5,7 @@ export default function AnimatedCrowdCanvas({
   src = "/images/peeps/all-peeps.png",
   rows = 15,
   cols = 7,
-  height = "260px",
+  height = "clamp(160px, 22vw, 240px)",
   className = ""
 }) {
   const canvasRef = useRef(null);
@@ -285,14 +285,14 @@ export default function AnimatedCrowdCanvas({
 
   return (
     <div
-      className={`relative w-full overflow-hidden select-none border-b-hairline bg-cream ${className}`}
+      className={`relative w-full overflow-hidden select-none border-b-hairline bg-cream pointer-events-none ${className}`}
       style={{ height }}
     >
-      {/* The Animated Canvas */}
+      {/* The Animated Canvas — pointer-events-none ensures touch scrolling glides right through */}
       <canvas
         ref={canvasRef}
-        className="w-full h-full block"
-        style={{ width: '100%', height: '100%' }}
+        className="w-full h-full block pointer-events-none"
+        style={{ width: '100%', height: '100%', touchAction: 'pan-y' }}
       />
     </div>
   );

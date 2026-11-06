@@ -21,7 +21,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="lokasi" className="w-full py-16 sm:py-24 bg-cream border-b-hairline scroll-mt-20">
+    <section id="lokasi" className="w-full py-10 sm:py-20 lg:py-24 bg-cream border-b-hairline scroll-mt-20">
       <div className="container-max">
         
         {/* Section Header */}

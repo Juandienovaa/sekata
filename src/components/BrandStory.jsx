@@ -82,7 +82,7 @@ export default function BrandStory() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 pt-8 sm:pt-16 items-stretch">
           
           {/* Sisi Kiri: Foto Roastery & Slowbar Bersih Tanpa Frame Kartu Bertumpuk */}
-          <div className="lg:col-span-5 relative rounded-[18px] sm:rounded-[24px] overflow-hidden bg-espresso shadow-md min-h-[360px] sm:min-h-[460px] group">
+          <div className="lg:col-span-5 relative rounded-[18px] sm:rounded-[24px] overflow-hidden bg-espresso shadow-md min-h-[260px] sm:min-h-[460px] group">
             <img
               src="/konten2.jpg"
               alt="Dokumentasi Suasana Seduhan dan Meja Slowbar Sekata"

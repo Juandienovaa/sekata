@@ -27,7 +27,7 @@ export default function QuickViewModal({ product, isOpen, onClose, onAddToCart }
     }
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     };
   }, [isOpen, onClose]);
 

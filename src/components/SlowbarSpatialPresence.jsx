@@ -55,7 +55,7 @@ export default function SlowbarSpatialPresence() {
         </div>
 
         {/* Cinematic Spatial Visual Frame */}
-        <div className="relative w-full h-[360px] sm:h-[480px] lg:h-[560px] rounded-[24px] sm:rounded-[32px] overflow-hidden border border-espresso/15 bg-espresso shadow-lg mb-8 group">
+        <div className="relative w-full h-[260px] xs:h-[300px] sm:h-[480px] lg:h-[560px] rounded-[20px] sm:rounded-[32px] overflow-hidden border border-espresso/15 bg-espresso shadow-lg mb-8 group">
           <img
             src="/konten3.jpg"
             alt="Suasana Ruang Seduh dan Meja Slowbar Sekata"

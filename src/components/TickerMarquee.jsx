@@ -12,9 +12,9 @@ export default function TickerMarquee() {
   ];
 
   return (
-    <div className="w-full bg-[#110b09] text-white py-3.5 sm:py-4 border-y-2 border-espresso/40 overflow-hidden select-none relative z-20 shadow-md">
+    <div className="w-full bg-[#110b09] text-white py-3.5 sm:py-4 border-y-2 border-espresso/40 overflow-hidden select-none relative z-20 shadow-md pointer-events-none">
       {/* Infinite Scrolling Ticker (Persis Gambar 5 User) */}
-      <div className="flex animate-marquee whitespace-nowrap will-change-transform">
+      <div className="flex animate-marquee whitespace-nowrap will-change-transform pointer-events-none">
         {[0, 1].map((blockIdx) => (
           <div
             key={blockIdx}

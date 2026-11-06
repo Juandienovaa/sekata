@@ -14,8 +14,8 @@ export default function HeroSection() {
   return (
     <section id="hero" className="relative w-full min-h-[100dvh] bg-espresso flex flex-col justify-between overflow-hidden select-none">
       
-      {/* Background Video — Fullscreen Edge-to-Edge with Film Scrim */}
-      <div className="absolute inset-0 w-full h-full z-0 bg-[#140e0c]">
+      {/* Background Video — Fullscreen Edge-to-Edge with Film Scrim (pointer-events-none ensures zero touch scroll blocking) */}
+      <div className="absolute inset-0 w-full h-full z-0 bg-[#140e0c] pointer-events-none">
         <video
           ref={videoRef}
           src="/herosection.mp4"
@@ -24,7 +24,7 @@ export default function HeroSection() {
           muted
           playsInline
           preload="auto"
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full object-cover scale-105 pointer-events-none"
         />
         {/* Layered cinematic scrim */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#140e0c]/90 via-[#140e0c]/50 to-[#140e0c]/60 pointer-events-none" />
